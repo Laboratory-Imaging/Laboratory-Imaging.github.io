@@ -43,7 +43,7 @@ As we can see in the recipe, the analysis is done in 5 parts:
 
 1) [Preprocessing of the input image](#1-preprocessing)
 2) [Detecting whole neuron](#2-neuron-detection)
-3) [Find center of neuron and create spherical shells](#3-find-center-of-neuron-and-create-spherical-shells)
+3) [Find center of neuron and create spherical shells](#3-find-center-of-the-neuron-and-create-spherical-shells)
 4) [Highlight intersections of neuron branches and the spherical shells](#4-highlight-intersections-of-neuron-branches-and-the-spherical-shells)
 5) [Plot the results in a graph](#5-plot-the-results-in-a-graph)
 
