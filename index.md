@@ -10,4 +10,7 @@ See these repos:
 - [JOBS examples](https://github.com/Laboratory-Imaging/JOBS-examples-private)
 
 ## Coming soon...
+
 - ND2 file format specifications
+
+[Test link of rendering markdown files on GitHub Pages](./GA3-examples/28-Sholl_Analysis/)
