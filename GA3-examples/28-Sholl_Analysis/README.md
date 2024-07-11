@@ -69,13 +69,13 @@ Detecting neuron in the image will be done with following nodes:
 
 ![image](./images/22_close_settings.png "Image 8 - Close settings")
 
-**SelLargestObject** will select biggest object from selected binary layer, in this case this select only the object with the neuron.
+**SelLargestObject** will select biggest object from selected binary layer, in this case this selects only the object with the neuron.
 
 After step 2, we have highlighted the neuron in the image:
 
 ![image](./images/23_result.png "Image 9 - Highlighted neuron")
 
-### 3. Find center of neuron and create spherical shells
+### 3. Find center of the neuron and create spherical shells
 
 We will use following nodes to find center of the neuron and to draw circles around it:
 
@@ -119,7 +119,7 @@ After this node we can see spherical shell centered around neuron centre 40 pixe
 
 ![image](./images/38_dilate_result.png "Image 18 - Dilate result")
 
-As we can see in the image, some circles go over the edge of the image, which splits the circle in several segments, each such segment has it's own ID, however we can check the distance of each segment to the original neuron center to later bin circle segments back together.
+As we can see in the image, some circles go over the edge of the image, which splits the circle into several segments, each such segment has it's own ID, however we can check the distance of each segment to the original neuron center to later bin circle segments back together.
 
 **Children** node will be used to match each circle or circle segment back with the center, we will also check distance between circle or circle segment with the neuron center. This node hs following settings:
 
@@ -127,7 +127,7 @@ As we can see in the image, some circles go over the edge of the image, which sp
 
 And here is the output of the node:
 
-![image](./images/391_children_result.png "Image 20 - Children result")
+![image](./images/39.1_children_result.png "Image 20 - Children result")
 
 As we can see in highlighted rows 6 and 7, those 2 circle objects have roughly the same distance from the center, which means they make up the same circle that was just split into multiple segments by the edge of the image.
 
@@ -151,7 +151,7 @@ After this node we can see intersections of neuron and circles as a red dot:
 
 At this point, we have segmented the neuron, we have found its center and drew spherical shells around it (and we prepared those for binning in case of segmentation) and we have found intersections of the neuron with circle of circle segments.
 
-We now will count number of intersections in each circle or circle segment, bin circle segments if needed and sum number of intersections for circle segments in the same bin, then we will plot a line chart with number of intersections at each circle.
+We will now count number of intersections in each circle or circle segment, bin circle segments if needed and sum number of intersections for circle segments in the same bin, then we will plot a line chart with number of intersections at each circle.
 
 This will be done with following nodes:
 
