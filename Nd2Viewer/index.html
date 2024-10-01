@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="light">
+    <head>
+        <title>ND2 Viewer</title>        
+        <link rel="icon" type="image/x-icon" href="/res/favicon_lim.ico">
+        <style>
+            body {
+                font-family: Tahoma;
+                font-size: 11pt;
+            }            
+            dl.inline-flex {
+                display: flex;
+                flex-flow: row;
+                flex-wrap: wrap;
+                width: 400px;      /* set the container width*/
+                overflow: visible;
+            }
+            dl.inline-flex dt {
+                flex: 0 0 30%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            dl.inline-flex dd {
+                flex:0 0 70%;
+                margin-left: auto;
+                text-align: left;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }        
+            kbd {
+                background-color: #eee;
+                border-radius: 3px;
+                border: 1px solid #b4b4b4;
+                box-shadow:
+                    0 1px 1px rgba(0, 0, 0, 0.2),
+                    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+                color: #333;
+                display: inline-block;
+                font-size: 0.85em;
+                font-weight: 700;
+                line-height: 1;
+                padding: 2px 4px;
+                white-space: nowrap;
+            }            
+        </style>
+    </head>
+    <body>
+        <h1>ND2 Viewer</h1>
+        <small>Version 1.0.0</small>
+        <p>The ND2 viewer is a simple visualizer of ND2 files produced by <a href="https://www.nis-elements.cz/en">NIS Elements software</a>.</p>
+
+        <h2>Capabilities</h2>
+        <ul>
+            <li>Visualize ND2 files in both 2D image view and 3D volume view.</li>
+            <li>View individual channel or all channels.</li>
+            <li>View binary layers.</li>
+            <li>Use look-up-tables (LUTs) to enhance image contrast for viewing.</li>
+            <li>Navigate through the ND2 frames in all dimensions.</li>
+            <li>Explore image attributes.</li>
+        </ul>
+
+        <h2>Download</h2>
+        <ul>
+            <li><a href="https://laboratory-imaging.github.io/Nd2Viewer/Nd2Viewer.exe" download="Nd2Viewer.exe">Nd2Viewer.exe for Windows x64</a></li>
+        </ul>
+            
+        <small>&copy; 2024 Laboratory imaging s.r.o.</small>
+    </body>
+</html>
