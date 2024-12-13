@@ -1,0 +1,3054 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../nd2/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+    
+    
+      
+        <title>API Overview - LimND2</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LimND2" class="md-header__button md-logo" aria-label="LimND2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LimND2
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LimND2" class="md-nav__button md-logo" aria-label="LimND2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    LimND2
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    API Overview
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    API Overview
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.nd2" class="md-nav__link">
+    <span class="md-ellipsis">
+      nd2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nd2Reader
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nd2Reader">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader--usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Writer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nd2Writer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      attributes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ImageAttributes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ImageAttributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.componentBytes" class="md-nav__link">
+    <span class="md-ellipsis">
+      componentBytes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.componentCount" class="md-nav__link">
+    <span class="md-ellipsis">
+      componentCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.dtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      dtype
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.frameCount" class="md-nav__link">
+    <span class="md-ellipsis">
+      frameCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.height" class="md-nav__link">
+    <span class="md-ellipsis">
+      height
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.imageBytes" class="md-nav__link">
+    <span class="md-ellipsis">
+      imageBytes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.lowerPowSizeList" class="md-nav__link">
+    <span class="md-ellipsis">
+      lowerPowSizeList
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.pixelBytes" class="md-nav__link">
+    <span class="md-ellipsis">
+      pixelBytes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.powSize" class="md-nav__link">
+    <span class="md-ellipsis">
+      powSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.powSizeBase" class="md-nav__link">
+    <span class="md-ellipsis">
+      powSizeBase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.safe_dtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      safe_dtype
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      shape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.strides" class="md-nav__link">
+    <span class="md-ellipsis">
+      strides
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.width" class="md-nav__link">
+    <span class="md-ellipsis">
+      width
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.widthBytes" class="md-nav__link">
+    <span class="md-ellipsis">
+      widthBytes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.calcWidthBytes" class="md-nav__link">
+    <span class="md-ellipsis">
+      calcWidthBytes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.create" class="md-nav__link">
+    <span class="md-ellipsis">
+      create
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.from_lv" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_lv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.from_var" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_var
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.makeDownsampled" class="md-nav__link">
+    <span class="md-ellipsis">
+      makeDownsampled
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.makeDownsampledFromPowBase" class="md-nav__link">
+    <span class="md-ellipsis">
+      makeDownsampledFromPowBase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.to_lv" class="md-nav__link">
+    <span class="md-ellipsis">
+      to_lv
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributesCompression" class="md-nav__link">
+    <span class="md-ellipsis">
+      ImageAttributesCompression
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributesPixelType" class="md-nav__link">
+    <span class="md-ellipsis">
+      ImageAttributesPixelType
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nd2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nd2.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../attributes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    attributes.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.nd2" class="md-nav__link">
+    <span class="md-ellipsis">
+      nd2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nd2Reader
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nd2Reader">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader--usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Writer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nd2Writer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      attributes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ImageAttributes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ImageAttributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.componentBytes" class="md-nav__link">
+    <span class="md-ellipsis">
+      componentBytes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.componentCount" class="md-nav__link">
+    <span class="md-ellipsis">
+      componentCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.dtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      dtype
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.frameCount" class="md-nav__link">
+    <span class="md-ellipsis">
+      frameCount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.height" class="md-nav__link">
+    <span class="md-ellipsis">
+      height
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.imageBytes" class="md-nav__link">
+    <span class="md-ellipsis">
+      imageBytes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.lowerPowSizeList" class="md-nav__link">
+    <span class="md-ellipsis">
+      lowerPowSizeList
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.pixelBytes" class="md-nav__link">
+    <span class="md-ellipsis">
+      pixelBytes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.powSize" class="md-nav__link">
+    <span class="md-ellipsis">
+      powSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.powSizeBase" class="md-nav__link">
+    <span class="md-ellipsis">
+      powSizeBase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.safe_dtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      safe_dtype
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      shape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.strides" class="md-nav__link">
+    <span class="md-ellipsis">
+      strides
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.width" class="md-nav__link">
+    <span class="md-ellipsis">
+      width
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.widthBytes" class="md-nav__link">
+    <span class="md-ellipsis">
+      widthBytes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.calcWidthBytes" class="md-nav__link">
+    <span class="md-ellipsis">
+      calcWidthBytes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.create" class="md-nav__link">
+    <span class="md-ellipsis">
+      create
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.from_lv" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_lv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.from_var" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_var
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.makeDownsampled" class="md-nav__link">
+    <span class="md-ellipsis">
+      makeDownsampled
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.makeDownsampledFromPowBase" class="md-nav__link">
+    <span class="md-ellipsis">
+      makeDownsampledFromPowBase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributes.to_lv" class="md-nav__link">
+    <span class="md-ellipsis">
+      to_lv
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributesCompression" class="md-nav__link">
+    <span class="md-ellipsis">
+      ImageAttributesCompression
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.attributes.ImageAttributesPixelType" class="md-nav__link">
+    <span class="md-ellipsis">
+      ImageAttributesPixelType
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="api-documentation">API Documentation</h1>
+<h2 id="classes">Classes</h2>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="limnd2.nd2"></a>
+    <div class="doc doc-contents first">
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="limnd2.nd2.Nd2Reader" class="doc doc-heading">
+            <code>Nd2Reader</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Class for reading ND2 files and its attributes, metadata, properties, image data and so on.</p>
+<h5 id="limnd2.nd2.Nd2Reader--usage">Usage</h5>
+<p>Create Nd2 reader instance like this (use <code>with</code> statement to automatically close a file).</p>
+<pre><code class="language-python">import limnd2
+with limnd2.Nd2Reader('file.nd2') as nd2:
+    attributes = nd2.imageAttributes       # to get image attributes, see ImageAttributes class
+    experiment = nd2.experiment            # to get experiments in an image, see ExperimentLevel class
+    metadata = nd2.pictureMetadata         # to get image metadata, see PictureMetadata class
+
+
+    print(f&quot;Image resolution: {attributes.width} x {attributes.height}, # of components: {attributes.componentCount}&quot;)
+
+    for i in range(attributes.componentCount):
+        image = nd2.image(i)                            # get image with given sequence index
+</code></pre>
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>limnd2/nd2.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Nd2Reader</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class for reading ND2 files and its attributes, metadata, properties, image data and so on.</span>
+
+<span class="sd">    ### Usage</span>
+
+<span class="sd">    Create Nd2 reader instance like this (use `with` statement to automatically close a file).</span>
+
+<span class="sd">    ```python</span>
+<span class="sd">    import limnd2</span>
+<span class="sd">    with limnd2.Nd2Reader(&#39;file.nd2&#39;) as nd2:</span>
+<span class="sd">        attributes = nd2.imageAttributes       # to get image attributes, see ImageAttributes class</span>
+<span class="sd">        experiment = nd2.experiment            # to get experiments in an image, see ExperimentLevel class</span>
+<span class="sd">        metadata = nd2.pictureMetadata         # to get image metadata, see PictureMetadata class</span>
+
+
+<span class="sd">        print(f&quot;Image resolution: {attributes.width} x {attributes.height}, # of components: {attributes.componentCount}&quot;)</span>
+
+<span class="sd">        for i in range(attributes.componentCount):</span>
+<span class="sd">            image = nd2.image(i)                            # get image with given sequence index</span>
+<span class="sd">    ```</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">create_chunker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">LimBinaryIOChunker</span><span class="p">:</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;readonly&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="n">_create_chunker</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file</span> <span class="p">:</span> <span class="n">FileLikeObject</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">chunker_kwargs</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{})</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_chunker</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">chunker_kwargs</span><span class="o">=</span><span class="n">chunker_kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">finalize</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">filename</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="o">|</span><span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">filename</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">version</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">fileVersion</span>
+
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">cached_property</span>
+    <span class="k">def</span> <span class="nf">is3d</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="n">exp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment</span>
+        <span class="k">if</span> <span class="n">exp</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="n">dims</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">dimnames</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">dims</span> <span class="ow">and</span> <span class="s1">&#39;z&#39;</span> <span class="ow">in</span> <span class="n">dims</span>
+
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">cached_property</span>
+    <span class="k">def</span> <span class="nf">is8bitRgb</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">8</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">imageAttributes</span><span class="o">.</span><span class="n">uiBpcSignificant</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">pictureMetadata</span><span class="o">.</span><span class="n">isRgb</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">imageAttributes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ImageAttributes</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">imageAttributes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">pictureMetadata</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PictureMetadata</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">pictureMetadata</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">experiment</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ExperimentLevel</span><span class="o">|</span><span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">experiment</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">imageTextInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ImageTextInfo</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">imageTextInfo</span>
+
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">cached_property</span>
+    <span class="k">def</span> <span class="nf">wellplateDesc</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">WellplateDesc</span><span class="o">|</span><span class="kc">None</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chunk</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;CustomData|WellPlateDesc_0!&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">WellplateDesc</span><span class="o">.</span><span class="n">from_lv</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">cached_property</span>
+    <span class="k">def</span> <span class="nf">wellplateFrameInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">WellplateFrameInfo</span><span class="o">|</span><span class="kc">None</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chunk</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;CustomData|WellPlateFrameInfoZJSON!&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">WellplateFrameInfo</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">cached_property</span>
+    <span class="k">def</span> <span class="nf">appInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AppInfo</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chunk</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;CustomDataVar|AppInfo_V1_0!&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">AppInfo</span><span class="o">.</span><span class="n">from_var</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">software</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">appInfo</span><span class="o">.</span><span class="n">software</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">acqFrames</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumpyArrayLike</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">acqFrames</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">acqTimes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumpyArrayLike</span><span class="o">|</span><span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">acqTimes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">acqTimes2</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumpyArrayLike</span><span class="o">|</span><span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">acqTimes2</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">compFrameRange</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumpyArrayLike</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">compFrameRange</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">compRange</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumpyArrayLike</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">compRange</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">recordedData</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RecordedData</span><span class="p">:</span>
+        <span class="n">recData</span> <span class="o">=</span> <span class="n">RecordedData</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">acqTimes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">strings</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">ms</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">acqTimes</span><span class="p">:</span>
+                <span class="n">ss</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">ms</span><span class="o">/</span><span class="mi">1_000</span><span class="p">)</span><span class="o">%</span><span class="mi">60</span><span class="p">)</span>
+                <span class="n">mm</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">ms</span><span class="o">/</span><span class="p">(</span><span class="mi">60_000</span><span class="p">))</span><span class="o">%</span><span class="mi">60</span><span class="p">)</span>
+                <span class="n">hh</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ms</span><span class="o">/</span><span class="p">(</span><span class="mi">3_600_000</span><span class="p">))</span>
+                <span class="n">ms</span> <span class="o">-=</span> <span class="p">(</span><span class="mi">3_600_000</span><span class="p">)</span><span class="o">*</span><span class="n">hh</span> <span class="o">+</span> <span class="p">(</span><span class="mi">60_000</span><span class="p">)</span><span class="o">*</span><span class="n">mm</span> <span class="o">+</span> <span class="mi">60</span><span class="o">*</span><span class="n">ss</span>
+                <span class="n">strings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">:</span><span class="si">%02d</span><span class="s2">:</span><span class="si">%02d</span><span class="s2">.</span><span class="si">%03d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">hh</span><span class="p">,</span> <span class="n">mm</span><span class="p">,</span> <span class="n">ss</span><span class="p">,</span> <span class="n">ms</span> <span class="o">%</span> <span class="mi">1000</span><span class="p">))</span>
+            <span class="n">recData</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">RecordedDataItem</span><span class="p">(</span><span class="n">ID</span><span class="o">=</span><span class="s1">&#39;ACQTIME&#39;</span><span class="p">,</span> <span class="n">Desc</span><span class="o">=</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="n">Unit</span><span class="o">=</span><span class="s1">&#39;h:m:s.ms&#39;</span><span class="p">,</span> <span class="n">Type</span><span class="o">=</span><span class="n">RecordedDataType</span><span class="o">.</span><span class="n">eString</span><span class="p">,</span> <span class="n">Group</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">Size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">strings</span><span class="p">),</span> <span class="n">Data</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">strings</span><span class="p">)))</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chunk</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;CustomDataVar|CustomDataV2_0!&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">decoded</span> <span class="o">=</span> <span class="n">decode_var</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">desc</span> <span class="o">=</span> <span class="n">decoded</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;CustomTagDescription_v1.0&#39;</span><span class="p">,</span> <span class="p">{})</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">desc</span><span class="p">)):</span>
+                <span class="n">itemDesc</span> <span class="o">=</span> <span class="n">desc</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tag</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">itemDesc</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">colData</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chunk</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;CustomData|</span><span class="si">%s</span><span class="s1">!&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">itemDesc</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ID&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)))</span>
+                    <span class="n">recData</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">RecordedDataItem</span><span class="o">.</span><span class="n">from_desc_and_data</span><span class="p">(</span><span class="n">itemDesc</span><span class="p">,</span> <span class="n">colData</span><span class="p">))</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">recData</span><span class="p">):</span>
+            <span class="n">recData</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">RecordedDataItem</span><span class="p">(</span><span class="n">ID</span><span class="o">=</span><span class="s1">&#39;INDEX&#39;</span><span class="p">,</span> <span class="n">Desc</span><span class="o">=</span><span class="s1">&#39;Index&#39;</span><span class="p">,</span> <span class="n">Unit</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">Type</span><span class="o">=</span><span class="n">RecordedDataType</span><span class="o">.</span><span class="n">eInt</span><span class="p">,</span> <span class="n">Group</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">Size</span><span class="o">=</span><span class="n">recData</span><span class="o">.</span><span class="n">rowCount</span><span class="p">,</span> <span class="n">Data</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">recData</span><span class="o">.</span><span class="n">rowCount</span><span class="o">+</span><span class="mi">1</span><span class="p">)))</span>
+            <span class="n">recData</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">recData</span>
+
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">cached_property</span>
+    <span class="k">def</span> <span class="nf">generalImageInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">any</span><span class="p">]:</span>
+        <span class="n">ia</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">imageAttributes</span>
+        <span class="n">loops</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">exp_level</span><span class="o">.</span><span class="n">shortName</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">exp_level</span><span class="o">.</span><span class="n">count</span><span class="si">}</span><span class="s2">)&quot;</span> <span class="k">for</span> <span class="n">exp_level</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment</span> <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">exp_level</span><span class="o">.</span><span class="n">count</span> <span class="p">])</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+        <span class="n">bit_depth</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ia</span><span class="o">.</span><span class="n">uiBpcSignificant</span><span class="si">}</span><span class="s2">bit </span><span class="si">{</span><span class="n">ImageAttributesPixelType</span><span class="o">.</span><span class="n">short_name</span><span class="p">(</span><span class="n">ia</span><span class="o">.</span><span class="n">ePixelType</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">frame_res</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ia</span><span class="o">.</span><span class="n">width</span><span class="si">}</span><span class="s2"> x </span><span class="si">{</span><span class="n">ia</span><span class="o">.</span><span class="n">height</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">dimension</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">frame_res</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">ia</span><span class="o">.</span><span class="n">componentCount</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s2">&quot;comps&quot;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">ia</span><span class="o">.</span><span class="n">componentCount</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s2">&quot;comp&quot;</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">bit_depth</span><span class="si">}</span><span class="s2">)&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot; x </span><span class="si">{</span><span class="n">ia</span><span class="o">.</span><span class="n">uiSequenceCount</span><span class="si">}</span><span class="s2"> frames&quot;</span> <span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="n">ia</span><span class="o">.</span><span class="n">uiSequenceCount</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">+</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;: </span><span class="si">{</span><span class="n">loops</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">loops</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="n">file_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chunker</span><span class="o">.</span><span class="n">filesize</span>
+        <span class="n">frame_size</span> <span class="o">=</span> <span class="n">_size_fmt</span><span class="p">(</span><span class="n">ia</span><span class="o">.</span><span class="n">height</span><span class="o">*</span><span class="n">ia</span><span class="o">.</span><span class="n">widthBytes</span><span class="p">)</span>
+        <span class="n">z_count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment</span><span class="o">.</span><span class="n">dims</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="n">volume_size</span> <span class="o">=</span> <span class="n">_size_fmt</span><span class="p">(</span><span class="n">ia</span><span class="o">.</span><span class="n">height</span><span class="o">*</span><span class="n">ia</span><span class="o">.</span><span class="n">widthBytes</span><span class="o">*</span><span class="n">z_count</span><span class="p">)</span>
+        <span class="n">sizes</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">_size_fmt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chunker</span><span class="o">.</span><span class="n">filesize</span><span class="p">)</span><span class="si">}</span><span class="s2"> on disk, </span><span class="si">{</span><span class="n">frame_size</span><span class="si">}</span><span class="s2"> frame&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;, </span><span class="si">{</span><span class="n">volume_size</span><span class="si">}</span><span class="s2"> volume&quot;</span> <span class="k">if</span> <span class="n">z_count</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="n">calibration</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">pictureMetadata</span><span class="o">.</span><span class="n">dCalibration</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> µm/px&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pictureMetadata</span><span class="o">.</span><span class="n">bCalibrated</span> <span class="k">else</span> <span class="s2">&quot;Uncalibrated&quot;</span>
+        <span class="n">mtime</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">chunker</span><span class="o">.</span><span class="n">filelastmodified</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%x</span><span class="s1"> </span><span class="si">%X</span><span class="s1">&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">app_created</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">appInfo</span><span class="o">.</span><span class="n">software</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span> <span class="n">bit_depth</span><span class="o">=</span><span class="n">bit_depth</span><span class="p">,</span> <span class="n">loops</span><span class="o">=</span><span class="n">loops</span><span class="p">,</span> <span class="n">dimension</span><span class="o">=</span><span class="n">dimension</span><span class="p">,</span> <span class="n">file_size</span><span class="o">=</span><span class="n">file_size</span><span class="p">,</span> <span class="n">frame_res</span><span class="o">=</span><span class="n">frame_res</span><span class="p">,</span> <span class="n">volume_size</span><span class="o">=</span><span class="n">volume_size</span><span class="p">,</span> <span class="n">sizes</span><span class="o">=</span><span class="n">sizes</span><span class="p">,</span> <span class="n">calibration</span><span class="o">=</span><span class="n">calibration</span><span class="p">,</span> <span class="n">mtime</span><span class="o">=</span><span class="n">mtime</span><span class="p">,</span> <span class="n">app_created</span><span class="o">=</span><span class="n">app_created</span><span class="p">)</span>
+
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">cached_property</span>
+    <span class="k">def</span> <span class="nf">customDescription</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CustomDescription</span><span class="o">|</span><span class="kc">None</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chunk</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;CustomData|CustomDescriptionV1_0!&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="n">CustomDescription</span><span class="o">.</span><span class="n">from_lv</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">generateLoopIndexes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">named</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="n">exp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment</span>
+        <span class="k">if</span> <span class="n">exp</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[]</span>
+        <span class="n">wp_desc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wellplateDesc</span>
+        <span class="n">wp_frameinfo</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wellplateFrameInfo</span>
+        <span class="n">names</span><span class="p">,</span> <span class="n">shape</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment</span><span class="o">.</span><span class="n">dimnames</span><span class="p">(</span><span class="n">skipSpectralLoop</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">skipSpectralLoop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">wp_desc</span><span class="p">,</span> <span class="n">WellplateDesc</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">wp_frameinfo</span><span class="p">,</span> <span class="n">WellplateFrameInfo</span><span class="p">)</span> <span class="ow">and</span> <span class="s1">&#39;m&#39;</span> <span class="ow">in</span> <span class="n">names</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">wp_frameinfo</span><span class="p">):</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="n">names</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+            <span class="n">names</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="p">)</span> <span class="o">+</span> <span class="n">names</span>
+            <span class="n">mp_size</span><span class="p">,</span> <span class="n">wp_size</span> <span class="o">=</span> <span class="n">shape</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">wp_frameinfo</span><span class="o">.</span><span class="n">nwells</span>
+            <span class="n">true_mp_size</span> <span class="o">=</span> <span class="n">mp_size</span> <span class="o">//</span> <span class="n">wp_size</span>
+            <span class="k">for</span> <span class="n">idexes</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment</span><span class="o">.</span><span class="n">generateLoopIndexes</span><span class="p">(</span><span class="n">named</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+                <span class="n">lst</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">idexes</span><span class="p">)</span>
+                <span class="n">windex</span><span class="p">,</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">//</span> <span class="n">true_mp_size</span><span class="p">,</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="n">true_mp_size</span>
+                <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">windex</span><span class="p">]</span> <span class="o">+</span> <span class="n">lst</span>
+                <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">lst</span><span class="p">))</span> <span class="k">if</span> <span class="n">named</span> <span class="k">else</span> <span class="n">lst</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">ret</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment</span><span class="o">.</span><span class="n">generateLoopIndexes</span><span class="p">(</span><span class="n">named</span><span class="o">=</span><span class="n">named</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">binaryRleMetadata</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BinaryRleMetadata</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">binaryRleMetadata</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">binaryRasterMetadata</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BinaryRasterMetadata</span><span class="p">:</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">binaryRasterMetadata</span><span class="p">)</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">binaryRleMetadata</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">binaryRleMetadata</span><span class="o">.</span><span class="n">makeRasterMetadata</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">imageAttributes</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">imageAttributes</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">binaryRasterMetadata</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">chunker</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span>
+
+    <span class="k">def</span> <span class="nf">chunk</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">bytes</span><span class="o">|</span><span class="nb">str</span><span class="p">,</span> <span class="n">asbytes</span> <span class="p">:</span> <span class="nb">bool</span><span class="o">|</span><span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="o">|</span><span class="nb">memoryview</span><span class="o">|</span><span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">chunk</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seqindex</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumpyArrayLike</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="n">seqindex</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">downsampledImage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seqindex</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">downsize</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumpyArrayLike</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">downsampledImage</span><span class="p">(</span><span class="n">seqindex</span><span class="p">,</span> <span class="n">downsize</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">binaryRasterData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binid</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">seqindex</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">xtile</span><span class="p">:</span><span class="nb">int</span><span class="o">|</span><span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ytile</span><span class="p">:</span><span class="nb">int</span><span class="o">|</span><span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumpyArrayLike</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">binaryRasterData</span><span class="p">(</span><span class="n">binid</span><span class="p">,</span> <span class="n">seqindex</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">downsampledBinaryRasterData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binid</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">seqindex</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">downsize</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">xtile</span><span class="p">:</span><span class="nb">int</span><span class="o">|</span><span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ytile</span><span class="p">:</span><span class="nb">int</span><span class="o">|</span><span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumpyArrayLike</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">downsampledBinaryRasterData</span><span class="p">(</span><span class="n">binid</span><span class="p">,</span> <span class="n">seqindex</span><span class="p">,</span> <span class="n">downsize</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">finalize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">finalize</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="limnd2.nd2.Nd2Writer" class="doc doc-heading">
+            <code>Nd2Writer</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Experimental ND2 file writer.</p>
+<p>Supports encoding od all image attributes, most commonly used experiments and most of image metadata.
+Currently does not support encoding of Wellplates, binary layers, ROIs and any custom data and text into chunk.</p>
+<p>Python dataclasses encodeable by this writer inherit from LVSerializable class, in those classes attributes stored with
+UNKNOWN, ENCODING_NOT_IMPLEMENTED and DO_NOT_ENCODE enum will not be encoded.</p>
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>limnd2/nd2.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Nd2Writer</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Experimental ND2 file writer.</span>
+
+<span class="sd">    Supports encoding od all image attributes, most commonly used experiments and most of image metadata.</span>
+<span class="sd">    Currently does not support encoding of Wellplates, binary layers, ROIs and any custom data and text into chunk.</span>
+
+<span class="sd">    Python dataclasses encodeable by this writer inherit from LVSerializable class, in those classes attributes stored with</span>
+<span class="sd">    UNKNOWN, ENCODING_NOT_IMPLEMENTED and DO_NOT_ENCODE enum will not be encoded.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">create_chunker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">LimBinaryIOChunker</span><span class="p">:</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;readonly&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="n">_create_chunker</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file</span> <span class="p">:</span> <span class="n">FileLikeObject</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">append</span> <span class="p">:</span> <span class="nb">bool</span><span class="o">|</span><span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">chunker_kwargs</span><span class="p">:</span><span class="nb">dict</span> <span class="o">=</span> <span class="p">{})</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_chunker</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="n">append</span><span class="p">,</span> <span class="n">chunker_kwargs</span><span class="o">=</span><span class="n">chunker_kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">finalize</span><span class="p">()</span>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">version</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">fileVersion</span>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">imageAttributes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ImageAttributes</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">imageAttributes</span>
+
+    <span class="nd">@imageAttributes</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">imageAttributes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">:</span> <span class="n">ImageAttributes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">imageAttributes</span> <span class="o">=</span> <span class="n">val</span>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">experiment</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ExperimentLevel</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">experiment</span>
+
+    <span class="nd">@experiment</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">experiment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">:</span> <span class="n">ExperimentLevel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">experiment</span> <span class="o">=</span> <span class="n">val</span>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">pictureMetadata</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PictureMetadata</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">pictureMetadata</span>
+
+    <span class="nd">@pictureMetadata</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">pictureMetadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">:</span> <span class="n">PictureMetadata</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">pictureMetadata</span> <span class="o">=</span> <span class="n">val</span>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">chunker</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span>
+
+    <span class="k">def</span> <span class="nf">setChunk</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">bytes</span><span class="o">|</span><span class="nb">str</span><span class="p">,</span> <span class="n">data</span> <span class="p">:</span> <span class="nb">bytes</span><span class="o">|</span><span class="nb">memoryview</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">setChunk</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">setImage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seq_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">NumpyArrayLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">setImage</span><span class="p">(</span><span class="n">seq_index</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">finalize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">finalize</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">rollback</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chunker</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="limnd2.attributes"></a>
+    <div class="doc doc-contents first">
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="limnd2.attributes.ImageAttributes" class="doc doc-heading">
+            <code>ImageAttributes</code>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="limnd2.lite_variant.LVSerializable">LVSerializable</span></code></p>
+
+
+        <p>Dataclass for ND2 Image attributes chunk, stores mostly information about image width, height,
+number of components and bit depth of each pixel, as well as information about compression and total number of images.</p>
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>limnd2/attributes.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">kw_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">ImageAttributes</span><span class="p">(</span><span class="n">LVSerializable</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Dataclass for ND2 Image attributes chunk, stores mostly information about image width, height,</span>
+<span class="sd">    number of components and bit depth of each pixel, as well as information about compression and total number of images.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">uiWidth</span><span class="p">:</span> <span class="nb">int</span>                                <span class="o">=</span> <span class="n">LV_field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span>                                       <span class="n">LVType</span><span class="o">.</span><span class="n">UINT32</span><span class="p">)</span>
+    <span class="n">uiWidthBytes</span><span class="p">:</span> <span class="nb">int</span>                           <span class="o">=</span> <span class="n">LV_field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span>                                       <span class="n">LVType</span><span class="o">.</span><span class="n">UINT32</span><span class="p">)</span>
+    <span class="n">uiHeight</span><span class="p">:</span> <span class="nb">int</span>                               <span class="o">=</span> <span class="n">LV_field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span>                                       <span class="n">LVType</span><span class="o">.</span><span class="n">UINT32</span><span class="p">)</span>
+    <span class="n">uiComp</span><span class="p">:</span> <span class="nb">int</span>                                 <span class="o">=</span> <span class="n">LV_field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span>                                       <span class="n">LVType</span><span class="o">.</span><span class="n">UINT32</span><span class="p">)</span>
+    <span class="n">uiBpcInMemory</span><span class="p">:</span> <span class="nb">int</span>                          <span class="o">=</span> <span class="n">LV_field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span>                                       <span class="n">LVType</span><span class="o">.</span><span class="n">INT32</span><span class="p">)</span>
+    <span class="n">uiBpcSignificant</span><span class="p">:</span> <span class="nb">int</span>                       <span class="o">=</span> <span class="n">LV_field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span>                                       <span class="n">LVType</span><span class="o">.</span><span class="n">INT32</span><span class="p">)</span>
+    <span class="n">uiSequenceCount</span><span class="p">:</span> <span class="nb">int</span>                        <span class="o">=</span> <span class="n">LV_field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span>                                       <span class="n">LVType</span><span class="o">.</span><span class="n">UINT32</span><span class="p">)</span>
+    <span class="n">uiTileWidth</span><span class="p">:</span> <span class="nb">int</span>                            <span class="o">=</span> <span class="n">LV_field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span>                                       <span class="n">LVType</span><span class="o">.</span><span class="n">UINT32</span><span class="p">)</span>
+    <span class="n">uiTileHeight</span><span class="p">:</span> <span class="nb">int</span>                           <span class="o">=</span> <span class="n">LV_field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span>                                       <span class="n">LVType</span><span class="o">.</span><span class="n">UINT32</span><span class="p">)</span>
+    <span class="n">eCompression</span><span class="p">:</span> <span class="n">ImageAttributesCompression</span>    <span class="o">=</span> <span class="n">LV_field</span><span class="p">(</span><span class="n">ImageAttributesCompression</span><span class="o">.</span><span class="n">ictNone</span><span class="p">,</span>      <span class="n">LVType</span><span class="o">.</span><span class="n">INT32</span><span class="p">)</span>
+    <span class="n">dCompressionParam</span><span class="p">:</span> <span class="nb">float</span>                    <span class="o">=</span> <span class="n">LV_field</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span>                                     <span class="n">LVType</span><span class="o">.</span><span class="n">DOUBLE</span><span class="p">)</span>
+    <span class="n">ePixelType</span><span class="p">:</span> <span class="n">ImageAttributesPixelType</span>        <span class="o">=</span> <span class="n">LV_field</span><span class="p">(</span><span class="n">ImageAttributesPixelType</span><span class="o">.</span><span class="n">pxtUnsigned</span><span class="p">,</span>    <span class="n">LVType</span><span class="o">.</span><span class="n">INT32</span><span class="p">)</span>
+    <span class="n">uiVirtualComponents</span><span class="p">:</span> <span class="nb">int</span>                    <span class="o">=</span> <span class="n">LV_field</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span>                                       <span class="n">LVType</span><span class="o">.</span><span class="n">UINT32</span><span class="p">)</span>
+
+    <span class="n">MinDownsampledSize</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">ClassVar</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">ND2_MIN_DOWNSAMPLED_SIZE</span>
+
+    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">object</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;eCompression&#39;</span><span class="p">,</span> <span class="n">ImageAttributesCompression</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">eCompression</span><span class="p">))</span>
+        <span class="nb">object</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;ePixelType&#39;</span><span class="p">,</span> <span class="n">ImageAttributesPixelType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ePixelType</span><span class="p">))</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">calcWidthBytes</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">bits</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">comps</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calculates number of bytes per single image row.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">width</span> <span class="o">*</span> <span class="n">comps</span> <span class="o">*</span> <span class="p">(</span><span class="n">bits</span> <span class="o">+</span> <span class="mi">7</span><span class="p">)</span> <span class="o">//</span> <span class="mi">8</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">//</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">4</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">component_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">bits</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">sequence_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ImageAttributes</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create ImageAttributes instance from simplified parameters:</span>
+
+<span class="sd">        width: int              - width in pixels</span>
+<span class="sd">        height: int             - height in pixels</span>
+<span class="sd">        component_count: int    - number of components</span>
+<span class="sd">        bits: int               - number of bits per pixel component</span>
+<span class="sd">        sequence_count: int     - total number of frames in ND2 file (product of size of each dimension)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">component_count</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">bits</span> <span class="o">==</span> <span class="mi">32</span><span class="p">:</span>
+            <span class="n">pixel_type</span> <span class="o">=</span> <span class="n">ImageAttributesPixelType</span><span class="o">.</span><span class="n">pxtReal</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">pixel_type</span> <span class="o">=</span> <span class="n">ImageAttributesPixelType</span><span class="o">.</span><span class="n">pxtUnsigned</span>
+
+        <span class="n">components</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">2</span> <span class="k">else</span> <span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="n">ImageAttributes</span><span class="p">(</span>
+            <span class="n">uiWidth</span> <span class="o">=</span> <span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+            <span class="n">uiWidthBytes</span> <span class="o">=</span> <span class="n">ImageAttributes</span><span class="o">.</span><span class="n">calcWidthBytes</span><span class="p">(</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">bits</span><span class="p">,</span> <span class="n">components</span><span class="p">),</span>
+            <span class="n">uiHeight</span> <span class="o">=</span> <span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="n">uiComp</span> <span class="o">=</span> <span class="n">components</span><span class="p">,</span>
+            <span class="n">uiBpcInMemory</span> <span class="o">=</span> <span class="n">bits</span> <span class="k">if</span> <span class="n">bits</span> <span class="o">%</span> <span class="mi">8</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">bits</span> <span class="o">/</span> <span class="mi">8</span><span class="p">)</span> <span class="o">*</span> <span class="mi">8</span><span class="p">,</span>
+            <span class="n">uiBpcSignificant</span> <span class="o">=</span> <span class="n">bits</span><span class="p">,</span>
+            <span class="n">uiSequenceCount</span> <span class="o">=</span> <span class="n">sequence_count</span><span class="p">,</span>
+            <span class="n">uiTileWidth</span> <span class="o">=</span> <span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+            <span class="n">uiTileHeight</span> <span class="o">=</span> <span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="n">uiVirtualComponents</span> <span class="o">=</span> <span class="n">components</span><span class="p">,</span>
+            <span class="n">ePixelType</span> <span class="o">=</span> <span class="n">pixel_type</span>
+        <span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">width</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns width of the image in pixels.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiWidth</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">height</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns height of the image in pixels.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiHeight</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">componentCount</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns number of components in the image.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiComp</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">imageBytes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Total size of the image in bytes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiWidthBytes</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiHeight</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">widthBytes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Size of image row in bytes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiWidthBytes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">componentBytes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Size of component in bytes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiBpcInMemory</span> <span class="o">//</span> <span class="mi">8</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">pixelBytes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Size of pixel in bytes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">uiBpcInMemory</span> <span class="o">//</span> <span class="mi">8</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiComp</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dtype</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumpyDTypeLike</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns numpy datatype used for storing image data in Python.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">SINT_DTYPES</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">,</span> <span class="mi">2</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">,</span> <span class="mi">4</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span> <span class="p">}</span>
+        <span class="n">UINT_DTYPES</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">,</span> <span class="mi">2</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">uint16</span><span class="p">,</span> <span class="mi">4</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span> <span class="p">}</span>
+        <span class="n">REAL_DTYPES</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">2</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">float16</span><span class="p">,</span> <span class="mi">4</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="mi">8</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span> <span class="p">}</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ePixelType</span> <span class="o">==</span> <span class="n">ImageAttributesPixelType</span><span class="o">.</span><span class="n">pxtSigned</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">SINT_DTYPES</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">componentBytes</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">ePixelType</span> <span class="o">==</span> <span class="n">ImageAttributesPixelType</span><span class="o">.</span><span class="n">pxtUnsigned</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">UINT_DTYPES</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">componentBytes</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">ePixelType</span> <span class="o">==</span> <span class="n">ImageAttributesPixelType</span><span class="o">.</span><span class="n">pxtReal</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">REAL_DTYPES</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">componentBytes</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Unsupported data type&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">safe_dtype</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NumpyDTypeLike</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns numpy datatype that will always be big enough to fit pixel component data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ePixelType</span> <span class="o">==</span> <span class="n">ImageAttributesPixelType</span><span class="o">.</span><span class="n">pxtSigned</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">ePixelType</span> <span class="o">==</span> <span class="n">ImageAttributesPixelType</span><span class="o">.</span><span class="n">pxtUnsigned</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">ePixelType</span> <span class="o">==</span> <span class="n">ImageAttributesPixelType</span><span class="o">.</span><span class="n">pxtReal</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Unsupported data type&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">shape</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns shape of the image which can be used with in array (height_pixels, width_pixels, component_count)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">uiHeight</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiWidth</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiComp</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">strides</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the strides of the image which can be used in numpy array</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">widthBytes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pixelBytes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">componentBytes</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">frameCount</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns number of frames in the ND2 file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiSequenceCount</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">powSize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns next power of 2 for bigger dimension.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">full_res_size</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">uiWidth</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiHeight</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">powSizeBase</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns exponent used in powSize() function.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">_full_res_base_pow2</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">uiWidth</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiHeight</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">lowerPowSizeList</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns list of powers of 2 between ND2_MIN_DOWNSAMPLED_SIZE and image resolution.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ret</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">full_res_size</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">uiWidth</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiHeight</span><span class="p">)</span>
+        <span class="k">while</span> <span class="n">ND2_MIN_DOWNSAMPLED_SIZE</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">:</span>
+            <span class="n">size</span> <span class="o">//=</span> <span class="mi">2</span>
+            <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="k">def</span> <span class="nf">makeDownsampledFromPowBase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">powBase</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ImageAttributes</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns ImageAttributes for downsampled image using power of 2 exponent.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">makeDownsampled</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">powBase</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">makeDownsampled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">downsize</span> <span class="p">:</span> <span class="nb">int</span><span class="o">|</span><span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ImageAttributes</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns ImageAttributes for downsampled image using power of 2 image size.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">full_size</span> <span class="o">=</span> <span class="n">full_res_size</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">uiWidth</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiHeight</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">downsize</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">downsize</span> <span class="o">=</span> <span class="n">full_size</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="k">if</span> <span class="n">downsize</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unexpected downsize: </span><span class="si">{</span><span class="n">downsize</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiWidth</span> <span class="o">*</span> <span class="n">downsize</span> <span class="o">//</span> <span class="n">full_size</span>
+        <span class="n">h</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiHeight</span> <span class="o">*</span> <span class="n">downsize</span> <span class="o">//</span> <span class="n">full_size</span>
+        <span class="n">wb</span> <span class="o">=</span> <span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">uiBpcInMemory</span> <span class="o">//</span> <span class="mi">8</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiComp</span> <span class="o">*</span> <span class="n">w</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">//</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">4</span>
+        <span class="k">return</span> <span class="n">ImageAttributes</span><span class="p">(</span><span class="n">uiWidth</span><span class="o">=</span><span class="n">w</span><span class="p">,</span> <span class="n">uiWidthBytes</span><span class="o">=</span><span class="n">wb</span><span class="p">,</span> <span class="n">uiHeight</span><span class="o">=</span><span class="n">h</span><span class="p">,</span> <span class="n">uiComp</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uiComp</span><span class="p">,</span>
+                               <span class="n">uiBpcInMemory</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uiBpcInMemory</span><span class="p">,</span> <span class="n">uiBpcSignificant</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uiBpcSignificant</span><span class="p">,</span>
+                               <span class="n">uiSequenceCount</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uiSequenceCount</span><span class="p">,</span> <span class="n">ePixelType</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ePixelType</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">to_lv</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Encodes ImageAttributes to ND2 lite variant chunk.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">encode_lv</span><span class="p">({</span><span class="s2">&quot;SLxImageAttributes&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_serializable_dict</span><span class="p">()})</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">from_lv</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="o">|</span><span class="nb">memoryview</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ImageAttributes</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Decodes ImageAttributes from ND2 lite variant chunk.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">ImageAttributes</span><span class="p">(</span><span class="o">**</span><span class="p">(</span><span class="n">decode_lv</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SLxImageAttributes&#39;</span><span class="p">,</span> <span class="p">{})))</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">from_var</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="o">|</span><span class="nb">memoryview</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ImageAttributes</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Decodes ImageAttributes from ND2 XML chunk.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">decoded</span> <span class="o">=</span> <span class="n">decode_var</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ImageAttributes</span><span class="p">(</span><span class="o">**</span><span class="n">decoded</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="limnd2.attributes.ImageAttributes.componentBytes" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">componentBytes</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Size of component in bytes.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="limnd2.attributes.ImageAttributes.componentCount" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">componentCount</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Returns number of components in the image.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="limnd2.attributes.ImageAttributes.dtype" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">dtype</span><span class="p">:</span> <span class="n">NumpyDTypeLike</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Returns numpy datatype used for storing image data in Python.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="limnd2.attributes.ImageAttributes.frameCount" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">frameCount</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Returns number of frames in the ND2 file.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="limnd2.attributes.ImageAttributes.height" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">height</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Returns height of the image in pixels.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="limnd2.attributes.ImageAttributes.imageBytes" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">imageBytes</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Total size of the image in bytes.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="limnd2.attributes.ImageAttributes.lowerPowSizeList" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">lowerPowSizeList</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Returns list of powers of 2 between ND2_MIN_DOWNSAMPLED_SIZE and image resolution.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="limnd2.attributes.ImageAttributes.pixelBytes" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">pixelBytes</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Size of pixel in bytes.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="limnd2.attributes.ImageAttributes.powSize" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">powSize</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Returns next power of 2 for bigger dimension.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="limnd2.attributes.ImageAttributes.powSizeBase" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">powSizeBase</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Returns exponent used in powSize() function.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="limnd2.attributes.ImageAttributes.safe_dtype" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">safe_dtype</span><span class="p">:</span> <span class="n">NumpyDTypeLike</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Returns numpy datatype that will always be big enough to fit pixel component data.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="limnd2.attributes.ImageAttributes.shape" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">shape</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Returns shape of the image which can be used with in array (height_pixels, width_pixels, component_count)</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="limnd2.attributes.ImageAttributes.strides" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">strides</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Returns the strides of the image which can be used in numpy array</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="limnd2.attributes.ImageAttributes.width" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">width</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Returns width of the image in pixels.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="limnd2.attributes.ImageAttributes.widthBytes" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">widthBytes</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Size of image row in bytes.</p>
+    </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="limnd2.attributes.ImageAttributes.calcWidthBytes" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">calcWidthBytes</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">bits</span><span class="p">,</span> <span class="n">comps</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Calculates number of bytes per single image row.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>limnd2/attributes.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">calcWidthBytes</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">bits</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">comps</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates number of bytes per single image row.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">width</span> <span class="o">*</span> <span class="n">comps</span> <span class="o">*</span> <span class="p">(</span><span class="n">bits</span> <span class="o">+</span> <span class="mi">7</span><span class="p">)</span> <span class="o">//</span> <span class="mi">8</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">//</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">4</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="limnd2.attributes.ImageAttributes.create" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">create</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">component_count</span><span class="p">,</span> <span class="n">bits</span><span class="p">,</span> <span class="n">sequence_count</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Create ImageAttributes instance from simplified parameters:</p>
+<p>width: int              - width in pixels
+height: int             - height in pixels
+component_count: int    - number of components
+bits: int               - number of bits per pixel component
+sequence_count: int     - total number of frames in ND2 file (product of size of each dimension)</p>
+
+            <details class="quote">
+              <summary>Source code in <code>limnd2/attributes.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">component_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">bits</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">sequence_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ImageAttributes</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create ImageAttributes instance from simplified parameters:</span>
+
+<span class="sd">    width: int              - width in pixels</span>
+<span class="sd">    height: int             - height in pixels</span>
+<span class="sd">    component_count: int    - number of components</span>
+<span class="sd">    bits: int               - number of bits per pixel component</span>
+<span class="sd">    sequence_count: int     - total number of frames in ND2 file (product of size of each dimension)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">component_count</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">bits</span> <span class="o">==</span> <span class="mi">32</span><span class="p">:</span>
+        <span class="n">pixel_type</span> <span class="o">=</span> <span class="n">ImageAttributesPixelType</span><span class="o">.</span><span class="n">pxtReal</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">pixel_type</span> <span class="o">=</span> <span class="n">ImageAttributesPixelType</span><span class="o">.</span><span class="n">pxtUnsigned</span>
+
+    <span class="n">components</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">2</span> <span class="k">else</span> <span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">ImageAttributes</span><span class="p">(</span>
+        <span class="n">uiWidth</span> <span class="o">=</span> <span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="n">uiWidthBytes</span> <span class="o">=</span> <span class="n">ImageAttributes</span><span class="o">.</span><span class="n">calcWidthBytes</span><span class="p">(</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">bits</span><span class="p">,</span> <span class="n">components</span><span class="p">),</span>
+        <span class="n">uiHeight</span> <span class="o">=</span> <span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">uiComp</span> <span class="o">=</span> <span class="n">components</span><span class="p">,</span>
+        <span class="n">uiBpcInMemory</span> <span class="o">=</span> <span class="n">bits</span> <span class="k">if</span> <span class="n">bits</span> <span class="o">%</span> <span class="mi">8</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">bits</span> <span class="o">/</span> <span class="mi">8</span><span class="p">)</span> <span class="o">*</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="n">uiBpcSignificant</span> <span class="o">=</span> <span class="n">bits</span><span class="p">,</span>
+        <span class="n">uiSequenceCount</span> <span class="o">=</span> <span class="n">sequence_count</span><span class="p">,</span>
+        <span class="n">uiTileWidth</span> <span class="o">=</span> <span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="n">uiTileHeight</span> <span class="o">=</span> <span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">uiVirtualComponents</span> <span class="o">=</span> <span class="n">components</span><span class="p">,</span>
+        <span class="n">ePixelType</span> <span class="o">=</span> <span class="n">pixel_type</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="limnd2.attributes.ImageAttributes.from_lv" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">from_lv</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Decodes ImageAttributes from ND2 lite variant chunk.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>limnd2/attributes.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">from_lv</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="o">|</span><span class="nb">memoryview</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ImageAttributes</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Decodes ImageAttributes from ND2 lite variant chunk.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">ImageAttributes</span><span class="p">(</span><span class="o">**</span><span class="p">(</span><span class="n">decode_lv</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SLxImageAttributes&#39;</span><span class="p">,</span> <span class="p">{})))</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="limnd2.attributes.ImageAttributes.from_var" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">from_var</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Decodes ImageAttributes from ND2 XML chunk.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>limnd2/attributes.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">from_var</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="o">|</span><span class="nb">memoryview</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ImageAttributes</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Decodes ImageAttributes from ND2 XML chunk.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">decoded</span> <span class="o">=</span> <span class="n">decode_var</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ImageAttributes</span><span class="p">(</span><span class="o">**</span><span class="n">decoded</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="limnd2.attributes.ImageAttributes.makeDownsampled" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">makeDownsampled</span><span class="p">(</span><span class="n">downsize</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Returns ImageAttributes for downsampled image using power of 2 image size.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>limnd2/attributes.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">makeDownsampled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">downsize</span> <span class="p">:</span> <span class="nb">int</span><span class="o">|</span><span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ImageAttributes</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns ImageAttributes for downsampled image using power of 2 image size.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">full_size</span> <span class="o">=</span> <span class="n">full_res_size</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">uiWidth</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiHeight</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">downsize</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">downsize</span> <span class="o">=</span> <span class="n">full_size</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">downsize</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unexpected downsize: </span><span class="si">{</span><span class="n">downsize</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiWidth</span> <span class="o">*</span> <span class="n">downsize</span> <span class="o">//</span> <span class="n">full_size</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiHeight</span> <span class="o">*</span> <span class="n">downsize</span> <span class="o">//</span> <span class="n">full_size</span>
+    <span class="n">wb</span> <span class="o">=</span> <span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">uiBpcInMemory</span> <span class="o">//</span> <span class="mi">8</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">uiComp</span> <span class="o">*</span> <span class="n">w</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">//</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">4</span>
+    <span class="k">return</span> <span class="n">ImageAttributes</span><span class="p">(</span><span class="n">uiWidth</span><span class="o">=</span><span class="n">w</span><span class="p">,</span> <span class="n">uiWidthBytes</span><span class="o">=</span><span class="n">wb</span><span class="p">,</span> <span class="n">uiHeight</span><span class="o">=</span><span class="n">h</span><span class="p">,</span> <span class="n">uiComp</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uiComp</span><span class="p">,</span>
+                           <span class="n">uiBpcInMemory</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uiBpcInMemory</span><span class="p">,</span> <span class="n">uiBpcSignificant</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uiBpcSignificant</span><span class="p">,</span>
+                           <span class="n">uiSequenceCount</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">uiSequenceCount</span><span class="p">,</span> <span class="n">ePixelType</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ePixelType</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="limnd2.attributes.ImageAttributes.makeDownsampledFromPowBase" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">makeDownsampledFromPowBase</span><span class="p">(</span><span class="n">powBase</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Returns ImageAttributes for downsampled image using power of 2 exponent.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>limnd2/attributes.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">makeDownsampledFromPowBase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">powBase</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ImageAttributes</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns ImageAttributes for downsampled image using power of 2 exponent.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">makeDownsampled</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">powBase</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="limnd2.attributes.ImageAttributes.to_lv" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">to_lv</span><span class="p">()</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Encodes ImageAttributes to ND2 lite variant chunk.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>limnd2/attributes.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_lv</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Encodes ImageAttributes to ND2 lite variant chunk.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">encode_lv</span><span class="p">({</span><span class="s2">&quot;SLxImageAttributes&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_serializable_dict</span><span class="p">()})</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="limnd2.attributes.ImageAttributesCompression" class="doc doc-heading">
+            <code>ImageAttributesCompression</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="enum.IntEnum">IntEnum</span></code></p>
+
+
+        <p>Enum for image compression.</p>
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>limnd2/attributes.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">ImageAttributesCompression</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">IntEnum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Enum for image compression.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ictLossLess</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">ictLossy</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">ictNone</span> <span class="o">=</span> <span class="mi">2</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="limnd2.attributes.ImageAttributesPixelType" class="doc doc-heading">
+            <code>ImageAttributesPixelType</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="enum.IntEnum">IntEnum</span></code></p>
+
+
+        <p>Enum for pixel type.</p>
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>limnd2/attributes.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">ImageAttributesPixelType</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">IntEnum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Enum for pixel type.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">pxtSigned</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">pxtUnsigned</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">pxtReal</span> <span class="o">=</span> <span class="mi">2</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">short_name</span><span class="p">(</span><span class="nb">type</span> <span class="p">:</span> <span class="n">ImageAttributesPixelType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">match</span> <span class="nb">type</span><span class="p">:</span>
+            <span class="k">case</span> <span class="n">ImageAttributesPixelType</span><span class="o">.</span><span class="n">pxtSigned</span><span class="p">:</span>
+                <span class="k">return</span> <span class="s2">&quot;int&quot;</span>
+            <span class="k">case</span> <span class="n">ImageAttributesPixelType</span><span class="o">.</span><span class="n">pxtUnsigned</span><span class="p">:</span>
+                <span class="k">return</span> <span class="s2">&quot;uint&quot;</span>
+            <span class="k">case</span> <span class="n">ImageAttributesPixelType</span><span class="o">.</span><span class="n">pxtReal</span><span class="p">:</span>
+                <span class="k">return</span> <span class="s2">&quot;float&quot;</span>
+            <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+                <span class="k">return</span> <span class="s2">&quot;unknown&quot;</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
