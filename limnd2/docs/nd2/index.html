@@ -780,7 +780,7 @@ with limnd2.Nd2Reader('file.nd2') as nd2:
         <span class="k">if</span> <span class="n">exp</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">False</span>
         <span class="n">dims</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">dimnames</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">dims</span> <span class="ow">and</span> <span class="s1">&#39;z&#39;</span> <span class="ow">in</span> <span class="n">dims</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">dims</span> <span class="ow">and</span> <span class="s1">&#39;z&#39;</span> <span class="ow">in</span> <span class="n">dims</span><span class="p">)</span>
 
     <span class="nd">@functools</span><span class="o">.</span><span class="n">cached_property</span>
     <span class="k">def</span> <span class="nf">is8bitRgb</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
