@@ -629,7 +629,7 @@
         
   
   <span class="md-ellipsis">
-    Home
+    QuickStart
   </span>
   
 
@@ -778,6 +778,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#limnd2.experiment.ExperimentLevel" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExperimentLevel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.experiment.ExperimentLoopType" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExperimentLoopType
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -871,6 +889,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#limnd2.experiment.ExperimentLevel" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExperimentLevel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.experiment.ExperimentLoopType" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExperimentLoopType
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -898,6 +934,138 @@
 
 <a id="limnd2.experiment"></a>
     <div class="doc doc-contents first">
+
+        <p>This file is for experiments</p>
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="limnd2.experiment.ExperimentLevel" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">ExperimentLevel</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#limnd2.experiment.ExperimentLevel" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="limnd2.lite_variant.LVSerializable">LVSerializable</span></code></p>
+
+
+        <p>Experiment Level</p>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="limnd2.experiment.ExperimentLoopType" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">ExperimentLoopType</span>
+
+
+<a href="#limnd2.experiment.ExperimentLoopType" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="enum.IntEnum">IntEnum</span></code></p>
+
+
+        <p>Enum specifiying which experiment type was used in <a href="./#limnd2.experiment.ExperimentLevel"><code>ExperimentLevel</code></a></p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.experiment.ExperimentLoopType.eEtTimeLoop">eEtTimeLoop</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Timeloop experiment</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.experiment.ExperimentLoopType.eEtXYPosLoop">eEtXYPosLoop</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Multipoint experiment</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.experiment.ExperimentLoopType.eEtZStackLoop">eEtZStackLoop</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Z-stack experiment</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 
 
@@ -927,6 +1095,15 @@
 
 
 
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
 
 
 
@@ -940,6 +1117,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -979,7 +1158,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.tracking", "navigation.top", "search.highlight", "icons", "dark-mode-toggle", "content.code.copy"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.tracking", "navigation.top", "search.highlight", "icons", "dark-mode-toggle", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
