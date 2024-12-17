@@ -774,6 +774,75 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#writing-to-nd2-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing to .nd2 file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Writing to .nd2 file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opening-creating-nd2-file-for-writing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opening / creating .nd2 file for writing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-and-writing-image-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating and writing image attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-and-writing-image-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating and writing image data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-and-writing-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating and writing experiments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-and-writing-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating and writing metadata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Saving file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1086,6 +1155,75 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#writing-to-nd2-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing to .nd2 file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Writing to .nd2 file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opening-creating-nd2-file-for-writing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opening / creating .nd2 file for writing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-and-writing-image-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating and writing image attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-and-writing-image-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating and writing image data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-and-writing-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating and writing experiments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-and-writing-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating and writing metadata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Saving file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1194,7 +1332,7 @@ Run following commands in a folder where you want to install this package.
 -->
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <h3 id="reading-nd2-files">Reading <code>.nd2</code> files<a class="headerlink" href="#reading-nd2-files" title="Permanent link">&para;</a></h3>
-<p>An example Python file showcasing how to read an <code>.nd2</code> file with this library is found at GitHub repo for this page: <a href="https://github.com/Laboratory-Imaging/limnd2/examples/example_reader.py">example_reader.py</a>.</p>
+<p>An example Python file showcasing how to read an <code>.nd2</code> file with this library is found at GitHub repo for this page: <a href="https://github.com/Laboratory-Imaging/limnd2/blob/main/examples/example_reader.py">example_reader.py</a>.</p>
 <h4 id="opening-nd2-file">Opening <code>.nd2</code> file<a class="headerlink" href="#opening-nd2-file" title="Permanent link">&para;</a></h4>
 <p>An <code>.nd2</code> file can be opened using <code>Nd2Reader</code> class like this:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">nd2</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">Nd2Reader</span><span class="p">(</span><span class="s2">&quot;file.nd2&quot;</span><span class="p">)</span>
@@ -1537,6 +1675,149 @@ number of components and number of frames in nd2 file.</p>
 <h4 id="getting-other-data">Getting other data<a class="headerlink" href="#getting-other-data" title="Permanent link">&para;</a></h4>
 <p>Attributes, experiments, metadata, and image data are the most important parts of an .nd2 file, which is why they were the focus of this guide. The limnd2 module can also access information about binary layers, ROIs, and other data stored in the file. However, at this time, we do not provide a guide on how to read these additional components.</p>
 <p>If this causes any issues or you need further clarification, please feel free to head over to the <a href="https://github.com/Laboratory-Imaging/limnd2/discussions">Discussion page on our GitHub repository</a> and let us know.</p>
+<h3 id="writing-to-nd2-file">Writing to <code>.nd2</code> file<a class="headerlink" href="#writing-to-nd2-file" title="Permanent link">&para;</a></h3>
+<p>This package also allows you to write into and create <code>.nd2</code> files, an example of how to do this, you can look into <a href="https://github.com/Laboratory-Imaging/limnd2/blob/main/examples/example_writer.py">example_writer.py</a>, which will also be described below.</p>
+<p>In the example below we will create new <code>.nd2</code> file with preset width, height, bits per component, component count and sequence count. Instead of using actual image data we will use NumPy to generate arrays filled with random noise, which we will store in the result file.</p>
+<p>Here are the settings that will be used to generate image attributes and NumPy arrays with image data.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-26">26</a></span>
+<span class="normal"><a href="#__codelineno-26-27">27</a></span>
+<span class="normal"><a href="#__codelineno-26-28">28</a></span>
+<span class="normal"><a href="#__codelineno-26-29">29</a></span>
+<span class="normal"><a href="#__codelineno-26-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-26-26"><a id="__codelineno-26-26" name="__codelineno-26-26"></a><span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>
+</span><span id="__span-26-27"><a id="__codelineno-26-27" name="__codelineno-26-27"></a><span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">200</span>
+</span><span id="__span-26-28"><a id="__codelineno-26-28" name="__codelineno-26-28"></a><span class="n">COMPONENT_COUNT</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span id="__span-26-29"><a id="__codelineno-26-29" name="__codelineno-26-29"></a><span class="n">BITS</span> <span class="o">=</span> <span class="mi">8</span>
+</span><span id="__span-26-30"><a id="__codelineno-26-30" name="__codelineno-26-30"></a><span class="n">SEQUENCE_COUNT</span> <span class="o">=</span> <span class="mi">10</span>
+</span></code></pre></div></td></tr></table></div>
+<p>We will also add 2 experiments in the file to showcase how Experiment creation works. We have 10 frames as defined above, we will split them into 5 timeloop indices and 2 Z-stack indices, we will also define step between frames on each axis:</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-33">33</a></span>
+<span class="normal"><a href="#__codelineno-27-34">34</a></span>
+<span class="normal"><a href="#__codelineno-27-35">35</a></span>
+<span class="normal"><a href="#__codelineno-27-36">36</a></span>
+<span class="normal"><a href="#__codelineno-27-37">37</a></span>
+<span class="normal"><a href="#__codelineno-27-38">38</a></span>
+<span class="normal"><a href="#__codelineno-27-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-27-33"><a id="__codelineno-27-33" name="__codelineno-27-33"></a><span class="c1"># timeloop experiment settings</span>
+</span><span id="__span-27-34"><a id="__codelineno-27-34" name="__codelineno-27-34"></a><span class="n">TIMELOOP_COUNT</span> <span class="o">=</span> <span class="mi">5</span>
+</span><span id="__span-27-35"><a id="__codelineno-27-35" name="__codelineno-27-35"></a><span class="n">TIMELOOP_STEP</span> <span class="o">=</span> <span class="mi">150</span>
+</span><span id="__span-27-36"><a id="__codelineno-27-36" name="__codelineno-27-36"></a>
+</span><span id="__span-27-37"><a id="__codelineno-27-37" name="__codelineno-27-37"></a><span class="c1"># zstack experiment settings</span>
+</span><span id="__span-27-38"><a id="__codelineno-27-38" name="__codelineno-27-38"></a><span class="n">ZSTACK_COUNT</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span id="__span-27-39"><a id="__codelineno-27-39" name="__codelineno-27-39"></a><span class="n">ZSTACK_STEP</span> <span class="o">=</span> <span class="mi">100</span>
+</span></code></pre></div></td></tr></table></div>
+<h4 id="opening-creating-nd2-file-for-writing">Opening / creating <code>.nd2</code> file for writing<a class="headerlink" href="#opening-creating-nd2-file-for-writing" title="Permanent link">&para;</a></h4>
+<p>With constants defined, we can open <code>.nd2</code> file for reading using Nd2Writer class and <code>with</code> clause for automatic file closure.</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-28-41"><a id="__codelineno-28-41" name="__codelineno-28-41"></a><span class="k">with</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">Nd2Writer</span><span class="p">(</span><span class="s2">&quot;outfile.nd2&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">nd2</span><span class="p">:</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you are creating brand new <code>.nd2</code> files, make sure the filename does not already exist or delete such file if it does, <code>Nd2Writer</code> class can also write to existing files which may lead to unexpected results.</p>
+</div>
+<h4 id="creating-and-writing-image-attributes">Creating and writing image attributes<a class="headerlink" href="#creating-and-writing-image-attributes" title="Permanent link">&para;</a></h4>
+<p>Image attributes can be created using <code>ImageAttributes.create()</code> method, we can simply assign those to <code>imageAttributes</code> property of <code>Nd2Writer</code>.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-44">44</a></span>
+<span class="normal"><a href="#__codelineno-29-45">45</a></span>
+<span class="normal"><a href="#__codelineno-29-46">46</a></span>
+<span class="normal"><a href="#__codelineno-29-47">47</a></span>
+<span class="normal"><a href="#__codelineno-29-48">48</a></span>
+<span class="normal"><a href="#__codelineno-29-49">49</a></span>
+<span class="normal"><a href="#__codelineno-29-50">50</a></span>
+<span class="normal"><a href="#__codelineno-29-51">51</a></span>
+<span class="normal"><a href="#__codelineno-29-52">52</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-29-44"><a id="__codelineno-29-44" name="__codelineno-29-44"></a><span class="n">attributes</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">ImageAttributes</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+</span><span id="__span-29-45"><a id="__codelineno-29-45" name="__codelineno-29-45"></a>    <span class="n">width</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="p">,</span>
+</span><span id="__span-29-46"><a id="__codelineno-29-46" name="__codelineno-29-46"></a>    <span class="n">height</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="p">,</span>
+</span><span id="__span-29-47"><a id="__codelineno-29-47" name="__codelineno-29-47"></a>    <span class="n">component_count</span> <span class="o">=</span> <span class="n">COMPONENT_COUNT</span><span class="p">,</span>
+</span><span id="__span-29-48"><a id="__codelineno-29-48" name="__codelineno-29-48"></a>    <span class="n">bits</span> <span class="o">=</span> <span class="n">BITS</span><span class="p">,</span>
+</span><span id="__span-29-49"><a id="__codelineno-29-49" name="__codelineno-29-49"></a>    <span class="n">sequence_count</span> <span class="o">=</span> <span class="n">SEQUENCE_COUNT</span>
+</span><span id="__span-29-50"><a id="__codelineno-29-50" name="__codelineno-29-50"></a><span class="p">)</span>
+</span><span id="__span-29-51"><a id="__codelineno-29-51" name="__codelineno-29-51"></a>
+</span><span id="__span-29-52"><a id="__codelineno-29-52" name="__codelineno-29-52"></a><span class="n">nd2</span><span class="o">.</span><span class="n">imageAttributes</span> <span class="o">=</span> <span class="n">attributes</span>
+</span></code></pre></div></td></tr></table></div>
+<h4 id="creating-and-writing-image-data">Creating and writing image data<a class="headerlink" href="#creating-and-writing-image-data" title="Permanent link">&para;</a></h4>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Image data can only be written <strong>after image attributes are set</strong> as the copy operation requires known NumPy array size.</p>
+</div>
+<p>After writing image attributes, we can create random noise data and store them in the <code>.nd2</code> file, for this we will use <code>create_random_noise()</code> function (see <code>example_writer.py</code> for function definition) and send the result array to <code>setImage()</code> method.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>You must manually keep track of index or the image you are storing, also as we with with random noise, the order in which images are inserted does not matter, however the images must be inserted in correct order with respect to used experiments.</p>
+<p>This is especially important if you are converting multidimensional image sequence to <code>.nd2</code> file.</p>
+</div>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-56">56</a></span>
+<span class="normal"><a href="#__codelineno-30-57">57</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-30-56"><a id="__codelineno-30-56" name="__codelineno-30-56"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">SEQUENCE_COUNT</span><span class="p">):</span>
+</span><span id="__span-30-57"><a id="__codelineno-30-57" name="__codelineno-30-57"></a>    <span class="n">nd2</span><span class="o">.</span><span class="n">setImage</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">create_random_noise</span><span class="p">(</span><span class="n">WIDTH</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">,</span> <span class="n">COMPONENT_COUNT</span><span class="p">,</span> <span class="n">BITS</span><span class="p">))</span>
+</span></code></pre></div></td></tr></table></div>
+<h4 id="creating-and-writing-experiments">Creating and writing experiments<a class="headerlink" href="#creating-and-writing-experiments" title="Permanent link">&para;</a></h4>
+<p>Experiments can be created using simplified experiment settings from <code>experiment_factory</code> module, each experiment is supplied with frame count and information relevant to given experiment, created instances are then converted into experiment using <code>experiment_factory.create_experiment()</code> function and the result is once again stored in writer instance.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-61">61</a></span>
+<span class="normal"><a href="#__codelineno-31-62">62</a></span>
+<span class="normal"><a href="#__codelineno-31-63">63</a></span>
+<span class="normal"><a href="#__codelineno-31-64">64</a></span>
+<span class="normal"><a href="#__codelineno-31-65">65</a></span>
+<span class="normal"><a href="#__codelineno-31-66">66</a></span>
+<span class="normal"><a href="#__codelineno-31-67">67</a></span>
+<span class="normal"><a href="#__codelineno-31-68">68</a></span>
+<span class="normal"><a href="#__codelineno-31-69">69</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-31-61"><a id="__codelineno-31-61" name="__codelineno-31-61"></a><span class="n">texp</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">experiment_factory</span><span class="o">.</span><span class="n">TExp</span><span class="p">(</span><span class="n">frame_count</span> <span class="o">=</span> <span class="n">TIMELOOP_COUNT</span><span class="p">,</span>
+</span><span id="__span-31-62"><a id="__codelineno-31-62" name="__codelineno-31-62"></a>                                        <span class="n">time_delta</span> <span class="o">=</span> <span class="n">TIMELOOP_STEP</span><span class="p">)</span>
+</span><span id="__span-31-63"><a id="__codelineno-31-63" name="__codelineno-31-63"></a>
+</span><span id="__span-31-64"><a id="__codelineno-31-64" name="__codelineno-31-64"></a><span class="n">zexp</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">experiment_factory</span><span class="o">.</span><span class="n">ZExp</span><span class="p">(</span><span class="n">frame_count</span> <span class="o">=</span> <span class="n">ZSTACK_COUNT</span><span class="p">,</span>
+</span><span id="__span-31-65"><a id="__codelineno-31-65" name="__codelineno-31-65"></a>                                        <span class="n">stack_delta</span> <span class="o">=</span> <span class="n">ZSTACK_STEP</span><span class="p">)</span>
+</span><span id="__span-31-66"><a id="__codelineno-31-66" name="__codelineno-31-66"></a>
+</span><span id="__span-31-67"><a id="__codelineno-31-67" name="__codelineno-31-67"></a><span class="n">experiment</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">experiment_factory</span><span class="o">.</span><span class="n">create_experiment</span><span class="p">(</span><span class="n">texp</span><span class="p">,</span> <span class="n">zexp</span><span class="p">)</span>
+</span><span id="__span-31-68"><a id="__codelineno-31-68" name="__codelineno-31-68"></a>
+</span><span id="__span-31-69"><a id="__codelineno-31-69" name="__codelineno-31-69"></a><span class="n">nd2</span><span class="o">.</span><span class="n">experiment</span> <span class="o">=</span> <span class="n">experiment</span>
+</span></code></pre></div></td></tr></table></div>
+<h4 id="creating-and-writing-metadata">Creating and writing metadata<a class="headerlink" href="#creating-and-writing-metadata" title="Permanent link">&para;</a></h4>
+<p>Metadata are created in similar way to experiments, also using simplified classes with the most important data. As there are 2 components, we will create one channel for each using <code>metadata.ChannelSettings</code>, we will add microscope using <code>metadata.MicroscopeSettings</code> and we will turn those simplified settings into metadata using <code>metadata.create_metadata()</code> function, the result of which we will assign into writer instance.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-73">73</a></span>
+<span class="normal"><a href="#__codelineno-32-74">74</a></span>
+<span class="normal"><a href="#__codelineno-32-75">75</a></span>
+<span class="normal"><a href="#__codelineno-32-76">76</a></span>
+<span class="normal"><a href="#__codelineno-32-77">77</a></span>
+<span class="normal"><a href="#__codelineno-32-78">78</a></span>
+<span class="normal"><a href="#__codelineno-32-79">79</a></span>
+<span class="normal"><a href="#__codelineno-32-80">80</a></span>
+<span class="normal"><a href="#__codelineno-32-81">81</a></span>
+<span class="normal"><a href="#__codelineno-32-82">82</a></span>
+<span class="normal"><a href="#__codelineno-32-83">83</a></span>
+<span class="normal"><a href="#__codelineno-32-84">84</a></span>
+<span class="normal"><a href="#__codelineno-32-85">85</a></span>
+<span class="normal"><a href="#__codelineno-32-86">86</a></span>
+<span class="normal"><a href="#__codelineno-32-87">87</a></span>
+<span class="normal"><a href="#__codelineno-32-88">88</a></span>
+<span class="normal"><a href="#__codelineno-32-89">89</a></span>
+<span class="normal"><a href="#__codelineno-32-90">90</a></span>
+<span class="normal"><a href="#__codelineno-32-91">91</a></span>
+<span class="normal"><a href="#__codelineno-32-92">92</a></span>
+<span class="normal"><a href="#__codelineno-32-93">93</a></span>
+<span class="normal"><a href="#__codelineno-32-94">94</a></span>
+<span class="normal"><a href="#__codelineno-32-95">95</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-32-73"><a id="__codelineno-32-73" name="__codelineno-32-73"></a><span class="n">channel1</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">ChannelSettings</span><span class="p">(</span>
+</span><span id="__span-32-74"><a id="__codelineno-32-74" name="__codelineno-32-74"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Blue channel&quot;</span><span class="p">,</span>
+</span><span id="__span-32-75"><a id="__codelineno-32-75" name="__codelineno-32-75"></a>    <span class="n">modality</span> <span class="o">=</span> <span class="s2">&quot;Confocal, Fluo&quot;</span><span class="p">,</span>
+</span><span id="__span-32-76"><a id="__codelineno-32-76" name="__codelineno-32-76"></a>    <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span>
+</span><span id="__span-32-77"><a id="__codelineno-32-77" name="__codelineno-32-77"></a><span class="p">)</span>
+</span><span id="__span-32-78"><a id="__codelineno-32-78" name="__codelineno-32-78"></a>
+</span><span id="__span-32-79"><a id="__codelineno-32-79" name="__codelineno-32-79"></a><span class="n">channel2</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">ChannelSettings</span><span class="p">(</span>
+</span><span id="__span-32-80"><a id="__codelineno-32-80" name="__codelineno-32-80"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Red channel&quot;</span><span class="p">,</span>
+</span><span id="__span-32-81"><a id="__codelineno-32-81" name="__codelineno-32-81"></a>    <span class="n">modality</span> <span class="o">=</span> <span class="s2">&quot;Confocal, Fluo&quot;</span><span class="p">,</span>
+</span><span id="__span-32-82"><a id="__codelineno-32-82" name="__codelineno-32-82"></a>    <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span>
+</span><span id="__span-32-83"><a id="__codelineno-32-83" name="__codelineno-32-83"></a><span class="p">)</span>
+</span><span id="__span-32-84"><a id="__codelineno-32-84" name="__codelineno-32-84"></a>
+</span><span id="__span-32-85"><a id="__codelineno-32-85" name="__codelineno-32-85"></a><span class="n">microscope</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">MicroscopeSettings</span><span class="p">(</span><span class="n">zoom_magnification</span> <span class="o">=</span> <span class="mf">200.0</span><span class="p">,</span>
+</span><span id="__span-32-86"><a id="__codelineno-32-86" name="__codelineno-32-86"></a>                                                <span class="n">objective_magnification</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+</span><span id="__span-32-87"><a id="__codelineno-32-87" name="__codelineno-32-87"></a>                                                <span class="n">pinhole_diameter</span> <span class="o">=</span> <span class="mi">50</span>
+</span><span id="__span-32-88"><a id="__codelineno-32-88" name="__codelineno-32-88"></a>                                                <span class="p">)</span>
+</span><span id="__span-32-89"><a id="__codelineno-32-89" name="__codelineno-32-89"></a>
+</span><span id="__span-32-90"><a id="__codelineno-32-90" name="__codelineno-32-90"></a><span class="n">metadata</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">create_metadata</span><span class="p">(</span><span class="n">channels</span> <span class="o">=</span> <span class="p">[</span><span class="n">channel1</span><span class="p">,</span> <span class="n">channel2</span><span class="p">],</span>
+</span><span id="__span-32-91"><a id="__codelineno-32-91" name="__codelineno-32-91"></a>                                        <span class="n">pixel_calibration</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">,</span>
+</span><span id="__span-32-92"><a id="__codelineno-32-92" name="__codelineno-32-92"></a>                                        <span class="n">microscope</span> <span class="o">=</span> <span class="n">microscope</span>
+</span><span id="__span-32-93"><a id="__codelineno-32-93" name="__codelineno-32-93"></a>                                        <span class="p">)</span>
+</span><span id="__span-32-94"><a id="__codelineno-32-94" name="__codelineno-32-94"></a>
+</span><span id="__span-32-95"><a id="__codelineno-32-95" name="__codelineno-32-95"></a><span class="n">nd2</span><span class="o">.</span><span class="n">pictureMetadata</span> <span class="o">=</span> <span class="n">metadata</span>
+</span></code></pre></div></td></tr></table></div>
+<h4 id="saving-file">Saving file<a class="headerlink" href="#saving-file" title="Permanent link">&para;</a></h4>
+<p>As we used <code>with</code> context manager, file is automatically saved and closed, if you did not use context manager, you need to manually call <code>.finalize()</code> method from <code>Nd2Writer</code> instance.</p>
+<p>With this done, you can now run the Python script and open the file in NIS Elements.</p>
 <h2 id="full-api-reference">Full API reference<a class="headerlink" href="#full-api-reference" title="Permanent link">&para;</a></h2>
 <p>Here are the most important files in this library and an overview of what they contain:</p>
 <ul>
