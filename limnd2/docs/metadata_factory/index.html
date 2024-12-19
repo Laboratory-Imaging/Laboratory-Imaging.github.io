@@ -13,10 +13,8 @@
       
       
       
-        <link rel="prev" href="../experiment_factory/">
+        <link rel="prev" href="../metadata/">
       
-      
-        <link rel="next" href="../metadata_factory/">
       
       
       <link rel="icon" href="../static/lim_logo.png">
@@ -24,7 +22,7 @@
     
     
       
-        <title>metadata.py - LimND2</title>
+        <title>metadata_factory.py - LimND2</title>
       
     
     
@@ -78,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#metadata-module" class="md-skip">
+        <a href="#metadata-factory-module" class="md-skip">
           Skip to content
         </a>
       
@@ -298,7 +296,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              metadata.py
+              metadata_factory.py
             
           </span>
         </div>
@@ -763,6 +761,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    metadata.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -779,7 +798,7 @@
           
   
   <span class="md-ellipsis">
-    metadata.py
+    metadata_factory.py
   </span>
   
 
@@ -790,7 +809,7 @@
         
   
   <span class="md-ellipsis">
-    metadata.py
+    metadata_factory.py
   </span>
   
 
@@ -812,55 +831,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#limnd2.metadata" class="md-nav__link">
+  <a href="#limnd2.metadata_factory" class="md-nav__link">
     <span class="md-ellipsis">
-      metadata
+      metadata_factory
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#limnd2.metadata.PictureMetadataPicturePlanes" class="md-nav__link">
+  <a href="#limnd2.metadata_factory.MetadataFactory" class="md-nav__link">
     <span class="md-ellipsis">
-      PictureMetadataPicturePlanes
+      MetadataFactory
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="PictureMetadataPicturePlanes">
+    <nav class="md-nav" aria-label="MetadataFactory">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#limnd2.metadata.PictureMetadataPicturePlanes.valid" class="md-nav__link">
+  <a href="#limnd2.metadata_factory.MetadataFactory--sample-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      valid
+      Sample usage
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#limnd2.metadata.PictureMetadataPicturePlanes.makeValid" class="md-nav__link">
+  <a href="#limnd2.metadata_factory.MetadataFactory.__call__" class="md-nav__link">
     <span class="md-ellipsis">
-      makeValid
+      __call__
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#limnd2.metadata.PictureMetadataPicturePlanes.to_serializable_dict" class="md-nav__link">
+  <a href="#limnd2.metadata_factory.MetadataFactory.addPlane" class="md-nav__link">
     <span class="md-ellipsis">
-      to_serializable_dict
+      addPlane
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#limnd2.metadata.PictureMetadataPicturePlanes.to_table" class="md-nav__link">
+  <a href="#limnd2.metadata_factory.MetadataFactory.createMetadata" class="md-nav__link">
     <span class="md-ellipsis">
-      to_table
+      createMetadata
     </span>
   </a>
   
@@ -872,102 +891,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneDesc" class="md-nav__link">
+  <a href="#limnd2.metadata_factory.Plane" class="md-nav__link">
     <span class="md-ellipsis">
-      PicturePlaneDesc
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="PicturePlaneDesc">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneDesc.to_serializable_dict" class="md-nav__link">
-    <span class="md-ellipsis">
-      to_serializable_dict
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneModality" class="md-nav__link">
-    <span class="md-ellipsis">
-      PicturePlaneModality
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneModalityFlags" class="md-nav__link">
-    <span class="md-ellipsis">
-      PicturePlaneModalityFlags
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="PicturePlaneModalityFlags">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneModalityFlags.from_modality" class="md-nav__link">
-    <span class="md-ellipsis">
-      from_modality
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneModalityFlags.from_modality_string" class="md-nav__link">
-    <span class="md-ellipsis">
-      from_modality_string
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneModalityFlags.modality_list" class="md-nav__link">
-    <span class="md-ellipsis">
-      modality_list
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneModalityFlags.modality_string_map" class="md-nav__link">
-    <span class="md-ellipsis">
-      modality_string_map
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneModalityFlags.to_str_list" class="md-nav__link">
-    <span class="md-ellipsis">
-      to_str_list
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limnd2.metadata.calculateColor" class="md-nav__link">
-    <span class="md-ellipsis">
-      calculateColor
+      Plane
     </span>
   </a>
   
@@ -977,27 +903,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../metadata_factory/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    metadata_factory.py
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1037,55 +942,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#limnd2.metadata" class="md-nav__link">
+  <a href="#limnd2.metadata_factory" class="md-nav__link">
     <span class="md-ellipsis">
-      metadata
+      metadata_factory
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#limnd2.metadata.PictureMetadataPicturePlanes" class="md-nav__link">
+  <a href="#limnd2.metadata_factory.MetadataFactory" class="md-nav__link">
     <span class="md-ellipsis">
-      PictureMetadataPicturePlanes
+      MetadataFactory
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="PictureMetadataPicturePlanes">
+    <nav class="md-nav" aria-label="MetadataFactory">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#limnd2.metadata.PictureMetadataPicturePlanes.valid" class="md-nav__link">
+  <a href="#limnd2.metadata_factory.MetadataFactory--sample-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      valid
+      Sample usage
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#limnd2.metadata.PictureMetadataPicturePlanes.makeValid" class="md-nav__link">
+  <a href="#limnd2.metadata_factory.MetadataFactory.__call__" class="md-nav__link">
     <span class="md-ellipsis">
-      makeValid
+      __call__
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#limnd2.metadata.PictureMetadataPicturePlanes.to_serializable_dict" class="md-nav__link">
+  <a href="#limnd2.metadata_factory.MetadataFactory.addPlane" class="md-nav__link">
     <span class="md-ellipsis">
-      to_serializable_dict
+      addPlane
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#limnd2.metadata.PictureMetadataPicturePlanes.to_table" class="md-nav__link">
+  <a href="#limnd2.metadata_factory.MetadataFactory.createMetadata" class="md-nav__link">
     <span class="md-ellipsis">
-      to_table
+      createMetadata
     </span>
   </a>
   
@@ -1097,102 +1002,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneDesc" class="md-nav__link">
+  <a href="#limnd2.metadata_factory.Plane" class="md-nav__link">
     <span class="md-ellipsis">
-      PicturePlaneDesc
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="PicturePlaneDesc">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneDesc.to_serializable_dict" class="md-nav__link">
-    <span class="md-ellipsis">
-      to_serializable_dict
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneModality" class="md-nav__link">
-    <span class="md-ellipsis">
-      PicturePlaneModality
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneModalityFlags" class="md-nav__link">
-    <span class="md-ellipsis">
-      PicturePlaneModalityFlags
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="PicturePlaneModalityFlags">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneModalityFlags.from_modality" class="md-nav__link">
-    <span class="md-ellipsis">
-      from_modality
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneModalityFlags.from_modality_string" class="md-nav__link">
-    <span class="md-ellipsis">
-      from_modality_string
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneModalityFlags.modality_list" class="md-nav__link">
-    <span class="md-ellipsis">
-      modality_list
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneModalityFlags.modality_string_map" class="md-nav__link">
-    <span class="md-ellipsis">
-      modality_string_map
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneModalityFlags.to_str_list" class="md-nav__link">
-    <span class="md-ellipsis">
-      to_str_list
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limnd2.metadata.calculateColor" class="md-nav__link">
-    <span class="md-ellipsis">
-      calculateColor
+      Plane
     </span>
   </a>
   
@@ -1216,15 +1028,23 @@
   
 
 
-<h1 id="metadata-module">Metadata module<a class="headerlink" href="#metadata-module" title="Permanent link">&para;</a></h1>
+<h1 id="metadata-factory-module">Metadata factory module<a class="headerlink" href="#metadata-factory-module" title="Permanent link">&para;</a></h1>
 
 
 <div class="doc doc-object doc-module">
 
 
 
-<a id="limnd2.metadata"></a>
+<a id="limnd2.metadata_factory"></a>
     <div class="doc doc-contents first">
+
+        <p>This module contains helper classes and functions for creating <code>PictureMetadata</code> instances using simplified parameters for channels and microscope settings.
+Those instances should be used with <code>Nd2Writer</code> instance for altering / creating <code>.nd2</code> files.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Since this module is used to creating metadata data structures, you should not use any part of this module if you only read an .nd2 file.</p>
+</div>
+<p>For creating metadata, you should use <a href="./#limnd2.metadata_factory.MetadataFactory"><code>MetadataFactory</code></a> class.</p>
 
 
 
@@ -1246,21 +1066,77 @@
 
 
 
-<h2 id="limnd2.metadata.PictureMetadataPicturePlanes" class="doc doc-heading">
-            <span class="doc doc-object-name doc-class-name">PictureMetadataPicturePlanes</span>
+<h2 id="limnd2.metadata_factory.MetadataFactory" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">MetadataFactory</span>
 
 
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
-  </span>
-
-<a href="#limnd2.metadata.PictureMetadataPicturePlanes" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#limnd2.metadata_factory.MetadataFactory" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
     <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><span title="limnd2.lite_variant.LVSerializable">LVSerializable</span></code></p>
 
+
+        <p>Helper class for creating metada, see examples below on how to create metadata witch channels and microscope settings.</p>
+<p>To actually create metadata instance, make sure to call either <a href="./#limnd2.metadata_factory.MetadataFactory.createMetadata"><code>.createMetadata()</code></a>
+method or use call operator.</p>
+<h4 id="limnd2.metadata_factory.MetadataFactory--sample-usage">Sample usage<a class="headerlink" href="#limnd2.metadata_factory.MetadataFactory--sample-usage" title="Permanent link">&para;</a></h4>
+<p>Make sure to import MetadataFactory class before using it, optionally you can use Plane dataclass if you wish to use it.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">limnd2.metadata_factory</span> <span class="kn">import</span> <span class="n">MetadataFactory</span><span class="p">,</span> <span class="n">Plane</span>
+</span></code></pre></div>
+<p>You can create channels and microscope settings on <a href="./#limnd2.metadata_factory.MetadataFactory"><code>MetadataFactory</code></a> constructor,
+or add them later using <a href="./#limnd2.metadata_factory.MetadataFactory.addPlane"><code>.addPlane()</code></a> method.</p>
+<p>When you add microscope settings to <a href="./#limnd2.metadata_factory.MetadataFactory"><code>MetadataFactory</code></a> constructor, those settings will be used for all channels,
+unless you overwrite them by providing replacement values when creating individual channel.</p>
+<p>In following example <code>objective_magnification</code> is applied to all channels, <code>immersion_refractive_index</code> however is only applied to <code>Channel2</code>.</p>
+<p>To see whole list of microscope settings that can be applied per channel or per whole factory, see <a href="./#limnd2.metadata_factory.Plane"><code>Plane</code></a> dataclass.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Create all data on constructor (miscroscope settings and channels)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">factory</span> <span class="o">=</span> <span class="n">MetadataFactory</span><span class="p">([{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Channel1&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;red&quot;</span><span class="p">},</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>                           <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Channel2&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;immersion_refractive_index&quot;</span> <span class="p">:</span> <span class="mf">1.2</span><span class="p">}],</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>                          <span class="n">pixel_calibration</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>                          <span class="n">objective_magnification</span> <span class="o">=</span> <span class="mf">40.0</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">factory</span><span class="o">.</span><span class="n">createMetadata</span><span class="p">())</span>
+</span></code></pre></div>
+<p>You can also create factory instance with global microscope settings and add channels later.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Create factory instance with global microscope settings</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">factory</span> <span class="o">=</span> <span class="n">MetadataFactory</span><span class="p">(</span><span class="n">immersion_refractive_index</span><span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>                        <span class="n">objective_magnification</span><span class="o">=</span> <span class="mf">40.0</span><span class="p">,</span> <span class="n">pixel_calibration</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</span></code></pre></div>
+<p>You can add channel using named arguments.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>factory.addPlane(name = &quot;Channel 1&quot;,
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>                 emission_wavelength = 500,
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>                 color = &quot;blue&quot;)
+</span></code></pre></div>
+You can add channel using <a href="./#limnd2.metadata_factory.Plane"><code>Plane</code></a> dataclass.
+<div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">factory</span><span class="o">.</span><span class="n">addPlane</span><span class="p">(</span><span class="n">Plane</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Channel 2&quot;</span><span class="p">,</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>                       <span class="n">excitation_wavelength</span> <span class="o">=</span> <span class="mi">600</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>                       <span class="n">emission_wavelength</span> <span class="o">=</span> <span class="mi">700</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>                       <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span><span class="p">))</span>
+</span></code></pre></div></p>
+<p>Or you can add channels using a dictionary.
+<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">factory</span><span class="o">.</span><span class="n">addPlane</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Channel 3&quot;</span><span class="p">,</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>                <span class="s2">&quot;immersion_refractive_index&quot;</span><span class="p">:</span> <span class="mf">1.6</span><span class="p">,</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>                <span class="s2">&quot;objective_magnification&quot;</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">})</span>
+</span></code></pre></div></p>
+<p>You can also create channel, store it in a variable and modify it.
+<div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">plane</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">addPlane</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Channel 4&quot;</span><span class="p">})</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">plane</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;green&quot;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">plane</span><span class="o">.</span><span class="n">camera_name</span> <span class="o">=</span> <span class="s2">&quot;Camera channel 4&quot;</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">plane</span><span class="o">.</span><span class="n">modality</span> <span class="o">=</span> <span class="s2">&quot;Brightfield&quot;</span>
+</span></code></pre></div></p>
+<p>Or you can access existing channel using its index</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">factory</span><span class="o">.</span><span class="n">getChannel</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">pinhole_diameter</span> <span class="o">=</span> <span class="mi">50</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">factory</span><span class="o">.</span><span class="n">getChannel</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">microscope_name</span> <span class="o">=</span> <span class="s2">&quot;Microscope for channel 3&quot;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">factory</span><span class="o">.</span><span class="n">getChannel</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;green&quot;</span>
+</span></code></pre></div>
+<p>Or you can access existing channel using its channel name</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">factory</span><span class="o">.</span><span class="n">getChannel</span><span class="p">(</span><span class="s2">&quot;Channel 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">factory</span><span class="o">.</span><span class="n">getChannel</span><span class="p">(</span><span class="s2">&quot;Channel 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">immersion_refractive_index</span> <span class="o">=</span> <span class="mf">1.6</span>
+</span></code></pre></div>
+<p>Finally create metadata using createMetadata method
+<div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">factory</span><span class="o">.</span><span class="n">createMetadata</span><span class="p">())</span>
+</span></code></pre></div></p>
 
 
 
@@ -1278,73 +1154,42 @@
 
 
 
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="limnd2.metadata.PictureMetadataPicturePlanes.valid" class="doc doc-heading">
-            <span class="doc doc-object-name doc-attribute-name">valid</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-  </span>
-
-<a href="#limnd2.metadata.PictureMetadataPicturePlanes.valid" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">valid</span><span class="p">:</span> <span class="n">bool</span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Checks if PictureMetadataPicturePlanes insance has valid number of channels.</p>
-
-
-    <p><span class="doc-section-title">Returns:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                  <code>bool</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>True if number of channels is valid, False otherwise.</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-    </div>
-
-</div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-<h3 id="limnd2.metadata.PictureMetadataPicturePlanes.makeValid" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">makeValid</span>
+<h3 id="limnd2.metadata_factory.MetadataFactory.__call__" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">__call__</span>
 
 
-<a href="#limnd2.metadata.PictureMetadataPicturePlanes.makeValid" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">makeValid</span><span class="p">(</span><span class="n">comps</span><span class="p">:</span> <span class="n">int</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<a href="#limnd2.metadata_factory.MetadataFactory.__call__" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="fm">__call__</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nf"><span title="limnd2.metadata.PictureMetadata">PictureMetadata</span></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
-        <p>Attempts to fix info about channels using specified number of channels.</p>
-<p>This function creates channel info basec on component count like this:</p>
-<p>comps = 1: function creates one Mono channel</p>
-<p>comps = 2: function creates channels Channel_1, Channel_2</p>
-<p>comps = 3: function creates one RGB channel</p>
-<p>comps &gt;= 4: function creates channels Channel_1 ... Channel_N</p>
+        <p>Creates a new PictureMetadata instance from the factory settings.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="limnd2.metadata_factory.MetadataFactory.addPlane" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">addPlane</span>
+
+
+<a href="#limnd2.metadata_factory.MetadataFactory.addPlane" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">addPlane</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata_factory.Plane" href="#limnd2.metadata_factory.Plane">Plane</a></span> <span class="o">|</span> <span class="n">dict</span><span class="p">[</span><span class="n">str</span><span class="p">,</span> <span class="n"><span title="limnd2.metadata.Any">Any</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata_factory.Plane" href="#limnd2.metadata_factory.Plane">Plane</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Adds a new channel to the factory, see examples on how to use this method and
+<a href="./#limnd2.metadata_factory.Plane"><code>Plane</code></a> dataclass to see what settings can be applied.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -1360,18 +1205,18 @@
       <tbody>
           <tr class="doc-section-item">
             <td>
-                <code>comps</code>
+                <code>plane</code>
             </td>
             <td>
-                  <code>int</code>
+                  <code><a class="autorefs autorefs-internal" title="limnd2.metadata_factory.Plane" href="#limnd2.metadata_factory.Plane">Plane</a> | dict[str, <span title="limnd2.metadata.Any">Any</span>]</code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>The number of components in the image.</p>
+                <p>A <a href="./#limnd2.metadata_factory.Plane"><code>Plane</code></a> object or a dictionary with plane settings.</p>
               </div>
             </td>
             <td>
-                <em>required</em>
+                  <code>None</code>
             </td>
           </tr>
           <tr class="doc-section-item">
@@ -1383,7 +1228,7 @@
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Additional parameters to pass to each plane.</p>
+                <p>Additional settings for the plane.</p>
               </div>
             </td>
             <td>
@@ -1400,36 +1245,17 @@
 <div class="doc doc-object doc-function">
 
 
-<h3 id="limnd2.metadata.PictureMetadataPicturePlanes.to_serializable_dict" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">to_serializable_dict</span>
+<h3 id="limnd2.metadata_factory.MetadataFactory.createMetadata" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">createMetadata</span>
 
 
-<a href="#limnd2.metadata.PictureMetadataPicturePlanes.to_serializable_dict" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">to_serializable_dict</span><span class="p">(</span><span class="n">parent_path</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<a href="#limnd2.metadata_factory.MetadataFactory.createMetadata" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">createMetadata</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="limnd2.metadata.PictureMetadata">PictureMetadata</span></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
-        <p>Converts dataclass to Python dictionary encodeable with LV encoder.</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="limnd2.metadata.PictureMetadataPicturePlanes.to_table" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">to_table</span>
-
-
-<a href="#limnd2.metadata.PictureMetadataPicturePlanes.to_table" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">to_table</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">dict</span><span class="p">[</span><span class="n">str</span><span class="p">,</span> <span class="n">any</span><span class="p">]</span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Converts picture planes metadata to a treeview table.</p>
+        <p>Creates a new PictureMetadata instance from the factory settings.</p>
 
     </div>
 
@@ -1447,507 +1273,194 @@
 
 
 
-<h2 id="limnd2.metadata.PicturePlaneDesc" class="doc doc-heading">
-            <span class="doc doc-object-name doc-class-name">PicturePlaneDesc</span>
+<h2 id="limnd2.metadata_factory.Plane" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">Plane</span>
 
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
 
-<a href="#limnd2.metadata.PicturePlaneDesc" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#limnd2.metadata_factory.Plane" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
     <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><span title="limnd2.lite_variant.LVSerializable">LVSerializable</span></code></p>
 
 
+        <p>A class to represent a plane in metadata, see attributes list to see what settings can be applied.</p>
 
 
-
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="limnd2.metadata.PicturePlaneDesc.to_serializable_dict" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">to_serializable_dict</span>
-
-
-<a href="#limnd2.metadata.PicturePlaneDesc.to_serializable_dict" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">to_serializable_dict</span><span class="p">(</span><span class="n">parent_path</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Custom serialization for this object - "sizeObjFullChip_cy" has to be renamed to "sizeObjFullChip.cy"</p>
-
-    </div>
-
-</div>
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="limnd2.metadata.PicturePlaneModality" class="doc doc-heading">
-            <span class="doc doc-object-name doc-class-name">PicturePlaneModality</span>
-
-
-<a href="#limnd2.metadata.PicturePlaneModality" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-    <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><span title="enum.IntEnum">IntEnum</span></code></p>
-
-
-        <p>Enum for modality of given plane.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>In modern .nd2 files this modality enum should be converted to <a href="./#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a> instance using <a href="./#limnd2.metadata.PicturePlaneModalityFlags.from_modality">from_modality()</a> function.</p>
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="limnd2.metadata.PicturePlaneModalityFlags" class="doc doc-heading">
-            <span class="doc doc-object-name doc-class-name">PicturePlaneModalityFlags</span>
-
-
-<a href="#limnd2.metadata.PicturePlaneModalityFlags" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-    <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><span title="enum.IntFlag">IntFlag</span></code></p>
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="limnd2.metadata.PicturePlaneModalityFlags.from_modality" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">from_modality</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
-  </span>
-
-<a href="#limnd2.metadata.PicturePlaneModalityFlags.from_modality" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">from_modality</span><span class="p">(</span><span class="n">mod</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModality" href="#limnd2.metadata.PicturePlaneModality">PicturePlaneModality</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Converts modality enum to PicturePlaneModalityFlags.</p>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
+<p><span class="doc-section-title">Attributes:</span></p>
     <table>
       <thead>
         <tr>
           <th>Name</th>
           <th>Type</th>
           <th>Description</th>
-          <th>Default</th>
         </tr>
       </thead>
       <tbody>
           <tr class="doc-section-item">
-            <td>
-                <code>mod</code>
-            </td>
-            <td>
-                  <code><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModality" href="#limnd2.metadata.PicturePlaneModality">PicturePlaneModality</a></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>modality enum instance</p>
-              </div>
-            </td>
-            <td>
-                <em>required</em>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-    <p><span class="doc-section-title">Returns:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                  <code><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Modalify flag for given modality</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="limnd2.metadata.PicturePlaneModalityFlags.from_modality_string" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">from_modality_string</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
-  </span>
-
-<a href="#limnd2.metadata.PicturePlaneModalityFlags.from_modality_string" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">from_modality_string</span><span class="p">(</span><span class="n">modality</span><span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Converts modality string to PicturePlaneModalityFlags.</p>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Description</th>
-          <th>Default</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                <code>modality</code>
-            </td>
-            <td>
-                  <code>string</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>modality string (for example "Wide-field", "Brightfield", "Phase", ...)</p>
-              </div>
-            </td>
-            <td>
-                <em>required</em>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-    <p><span class="doc-section-title">Returns:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                  <code><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Modalify flag for given modality, 0 for "undefined"</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="limnd2.metadata.PicturePlaneModalityFlags.modality_list" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">modality_list</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
-  </span>
-
-<a href="#limnd2.metadata.PicturePlaneModalityFlags.modality_list" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">modality_list</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Returns list of known modality strings ("Wide-field", "Brightfield", ...).</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="limnd2.metadata.PicturePlaneModalityFlags.modality_string_map" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">modality_string_map</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
-  </span>
-
-<a href="#limnd2.metadata.PicturePlaneModalityFlags.modality_string_map" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">modality_string_map</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">dict</span><span class="p">[</span><span class="n">str</span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span><span class="p">]</span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Returns mapping of known modality strings ("Wide-field", "Brightfield", ...) to PicturePlaneModalityFlags.</p>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="limnd2.metadata.PicturePlaneModalityFlags.to_str_list" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">to_str_list</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
-  </span>
-
-<a href="#limnd2.metadata.PicturePlaneModalityFlags.to_str_list" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">to_str_list</span><span class="p">(</span><span class="n">flags</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">list</span><span class="p">[</span><span class="n">str</span><span class="p">]</span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Converts modality flags to list of human readable strings.</p>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Description</th>
-          <th>Default</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                <code>flags</code>
-            </td>
-            <td>
-                  <code><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>odality flags</p>
-              </div>
-            </td>
-            <td>
-                <em>required</em>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-    <p><span class="doc-section-title">Returns:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                  <code>list[str]</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>human readable string list, for example ["Brightfield", "Phase"]</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-    </div>
-
-</div>
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-<h2 id="limnd2.metadata.calculateColor" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">calculateColor</span>
-
-
-<a href="#limnd2.metadata.calculateColor" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">calculateColor</span><span class="p">(</span><span class="n">color_string</span><span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">int</span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Calculates channel color integer (used as uiColor).</p>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Description</th>
-          <th>Default</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                <code>color_string</code>
-            </td>
+            <td><code><span title="limnd2.metadata_factory.Plane.name">name</span></code></td>
             <td>
                   <code>str</code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Color to be converted, either as hex string ("#ff0000"), common colors are also supported ("Red").</p>
+                <p>The name of the plane.</p>
               </div>
             </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata_factory.Plane.modality">modality</span></code></td>
             <td>
-                <em>required</em>
+                  <code>str | <a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModality" href="../metadata/#limnd2.metadata.PicturePlaneModality">PicturePlaneModality</a> | <a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="../metadata/#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The modality of the plane, can be a string (e.g., fluorescence, brightfield) or an instance of PicturePlaneModality or PicturePlaneModalityFlags.</p>
+              </div>
             </td>
           </tr>
-      </tbody>
-    </table>
-
-
-    <p><span class="doc-section-title">Returns:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
           <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata_factory.Plane.excitation_wavelength">excitation_wavelength</span></code></td>
             <td>
                   <code>int</code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>converted color value</p>
+                <p>The excitation wavelength in nanometers.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata_factory.Plane.emission_wavelength">emission_wavelength</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The emission wavelength in nanometers.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata_factory.Plane.color">color</span></code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The color associated with the plane.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata_factory.Plane.objective_magnification">objective_magnification</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The magnification of the objective lens. (overrides setting from MetadataFactory)</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata_factory.Plane.objective_numerical_aperture">objective_numerical_aperture</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The numerical aperture of the objective lens. (overrides setting from MetadataFactory)</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata_factory.Plane.zoom_magnification">zoom_magnification</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The zoom magnification. (overrides setting from MetadataFactory)</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata_factory.Plane.immersion_refractive_index">immersion_refractive_index</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The refractive index of the immersion medium. (overrides setting from MetadataFactory)</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata_factory.Plane.pinhole_diameter">pinhole_diameter</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The diameter of the pinhole. (overrides setting from MetadataFactory)</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata_factory.Plane.camera_name">camera_name</span></code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the camera used. (overrides setting from MetadataFactory)</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata_factory.Plane.microscope_name">microscope_name</span></code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the microscope used. (overrides setting from MetadataFactory)</p>
               </div>
             </td>
           </tr>
       </tbody>
     </table>
 
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
     </div>
 
 </div>
+
 
 
 
