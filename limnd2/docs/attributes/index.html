@@ -1800,7 +1800,7 @@ number of components and bit depth of each pixel, as well as information about c
   </span>
 
 <a href="#limnd2.attributes.ImageAttributes.create" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">create</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="n">int</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="n">int</span><span class="p">,</span> <span class="n">component_count</span><span class="p">:</span> <span class="n">int</span><span class="p">,</span> <span class="n">bits</span><span class="p">:</span> <span class="n">int</span><span class="p">,</span> <span class="n">sequence_count</span><span class="p">:</span> <span class="n">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.attributes.ImageAttributes" href="#limnd2.attributes.ImageAttributes">ImageAttributes</a></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">create</span><span class="p">(</span><span class="n">height</span><span class="p">:</span> <span class="n">int</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="n">int</span><span class="p">,</span> <span class="n">component_count</span><span class="p">:</span> <span class="n">int</span><span class="p">,</span> <span class="n">bits</span><span class="p">:</span> <span class="n">int</span><span class="p">,</span> <span class="n">sequence_count</span><span class="p">:</span> <span class="n">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.attributes.ImageAttributes" href="#limnd2.attributes.ImageAttributes">ImageAttributes</a></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1810,7 +1810,7 @@ number of components and bit depth of each pixel, as well as information about c
 <p>This function is used for creating new ImageAttributes instance, usually for creating new .nd2 files with <a href="../nd2/#limnd2.nd2.Nd2Writer">Nd2Writer</a> class.
 Do not use this function if you only read <code>.nd2</code> file.</p>
 </div>
-<p>Create ImageAttributes instance from simplified parameters:</p>
+<p>Create ImageAttributes instance from following arguments (all must be passed as named arguments)</p>
 
 
 <table>
@@ -1823,11 +1823,11 @@ Do not use this function if you only read <code>.nd2</code> file.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                <code>width</code>
+                <code>height</code>
             </td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>width in pixels</p>
+                <p>height in pixels</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -1839,11 +1839,11 @@ Do not use this function if you only read <code>.nd2</code> file.</p>
           </tr>
           <tr class="doc-section-item">
             <td>
-                <code>height</code>
+                <code>width</code>
             </td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>height in pixels</p>
+                <p>width in pixels</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
