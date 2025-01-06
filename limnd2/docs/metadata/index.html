@@ -812,6 +812,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#limnd2.metadata.PictureMetadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      PictureMetadata
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#limnd2.metadata.PictureMetadataPicturePlanes" class="md-nav__link">
     <span class="md-ellipsis">
       PictureMetadataPicturePlanes
@@ -834,39 +843,6 @@
   <a href="#limnd2.metadata.PictureMetadataPicturePlanes.makeValid" class="md-nav__link">
     <span class="md-ellipsis">
       makeValid
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata.PictureMetadataPicturePlanes.to_serializable_dict" class="md-nav__link">
-    <span class="md-ellipsis">
-      to_serializable_dict
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneDesc" class="md-nav__link">
-    <span class="md-ellipsis">
-      PicturePlaneDesc
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="PicturePlaneDesc">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneDesc.to_serializable_dict" class="md-nav__link">
-    <span class="md-ellipsis">
-      to_serializable_dict
     </span>
   </a>
   
@@ -992,6 +968,71 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Compatability
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Compatability
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nd2file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nd2file.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1019,6 +1060,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#limnd2.metadata.PictureMetadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      PictureMetadata
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#limnd2.metadata.PictureMetadataPicturePlanes" class="md-nav__link">
     <span class="md-ellipsis">
       PictureMetadataPicturePlanes
@@ -1041,39 +1091,6 @@
   <a href="#limnd2.metadata.PictureMetadataPicturePlanes.makeValid" class="md-nav__link">
     <span class="md-ellipsis">
       makeValid
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata.PictureMetadataPicturePlanes.to_serializable_dict" class="md-nav__link">
-    <span class="md-ellipsis">
-      to_serializable_dict
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneDesc" class="md-nav__link">
-    <span class="md-ellipsis">
-      PicturePlaneDesc
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="PicturePlaneDesc">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata.PicturePlaneDesc.to_serializable_dict" class="md-nav__link">
-    <span class="md-ellipsis">
-      to_serializable_dict
     </span>
   </a>
   
@@ -1190,6 +1207,21 @@
 
     <div class="doc doc-contents first">
 
+        <p>This module module stores comprehensive metadata related to microscopy images. Key data includes:</p>
+<ul>
+<li>
+<p><strong>Picture Planes</strong>: Descriptions of individual image components or channels, including their modalities and spectral properties.</p>
+<p>See <a href="./#limnd2.metadata.PicturePlaneDesc"><code>PicturePlaneDesc</code></a> class storing information abut individual image plane.</p>
+<p>Or <a href="./#limnd2.metadata.PictureMetadataPicturePlanes"><code>PictureMetadataPicturePlanes</code></a> class storing information about all image planes.</p>
+</li>
+<li>
+<p><strong>Sample settings</strong>: The SampleSettings class stores various settings and configurations related to the sample being imaged.
+    One sample setting can be used by one or multiple image planes in <a href="./#limnd2.metadata.PictureMetadataPicturePlanes"><code>PictureMetadataPicturePlanes</code></a>.</p>
+<p>See <a href="./#limnd2.metadata.SampleSettings"><code>SampleSettings</code></a> dataclass for more information.</p>
+</li>
+</ul>
+<p>All data about planes and their settings are stored in <a href="./#limnd2.metadata.PictureMetadata"><code>PictureMetadata</code></a> class.</p>
+
 
 
 
@@ -1210,6 +1242,205 @@
 
 
 
+<h2 id="limnd2.metadata.PictureMetadata" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">PictureMetadata</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+<a href="#limnd2.metadata.PictureMetadata" class="headerlink" title="Permanent link">&para;</a></h2>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">PictureMetadata</span><span class="p">()</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+
+        <p>Dataclass for storing metadata associated with a captured picture.</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">ATTRIBUTE</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata.PictureMetadata.dTimeAbsolute">dTimeAbsolute</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>The absolute time the picture was captured, specified as a Julian Day Number.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code>float</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata.PictureMetadata.sPicturePlanes">sPicturePlanes</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p><strong>Information about the picture's planes and their settings</strong>.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.PictureMetadataPicturePlanes" href="#limnd2.metadata.PictureMetadataPicturePlanes">PictureMetadataPicturePlanes</a></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata.PictureMetadata.dCalibration">dCalibration</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Calibration factor specifying the conversion from microns to pixels.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code>float</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata.PictureMetadata.dCalibPrecision">dCalibPrecision</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>The precision of the calibration in microns.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code>float</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata.PictureMetadata.bCalibrated">bCalibrated</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>Indicates whether the calibration is valid.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code>bool</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata.PictureMetadata.dAspect">dAspect</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>The pixel aspect ratio.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code>float</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata.PictureMetadata.dObjectiveMag">dObjectiveMag</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>The magnification factor of the objective lens.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code>float</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata.PictureMetadata.dObjectiveNA">dObjectiveNA</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>The numerical aperture of the objective lens.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code>float</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata.PictureMetadata.dRefractIndex1">dRefractIndex1</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>The refractive index of the medium at the objective side.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code>float</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="limnd2.metadata.PictureMetadata.dZoom">dZoom</span></code></td>
+            <td class="doc-attribute-details">
+              <div class="doc-md-description">
+                <p>The zoom factor used during image capture.</p>
+              </div>
+              <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code>float</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
 <h2 id="limnd2.metadata.PictureMetadataPicturePlanes" class="doc doc-heading">
             <span class="doc doc-object-name doc-class-name">PictureMetadataPicturePlanes</span>
 
@@ -1223,8 +1454,6 @@
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><span title="limnd2.lite_variant.LVSerializable">LVSerializable</span></code></p>
 
 
 
@@ -1365,91 +1594,6 @@
 
 </div>
 
-<div class="doc doc-object doc-function">
-
-
-<h3 id="limnd2.metadata.PictureMetadataPicturePlanes.to_serializable_dict" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">to_serializable_dict</span>
-
-
-<a href="#limnd2.metadata.PictureMetadataPicturePlanes.to_serializable_dict" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">to_serializable_dict</span><span class="p">(</span><span class="n">parent_path</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Converts dataclass to Python dictionary encodeable with LV encoder.</p>
-
-    </div>
-
-</div>
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="limnd2.metadata.PicturePlaneDesc" class="doc doc-heading">
-            <span class="doc doc-object-name doc-class-name">PicturePlaneDesc</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
-  </span>
-
-<a href="#limnd2.metadata.PicturePlaneDesc" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">PicturePlaneDesc</span><span class="p">()</span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><span title="limnd2.lite_variant.LVSerializable">LVSerializable</span></code></p>
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="limnd2.metadata.PicturePlaneDesc.to_serializable_dict" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">to_serializable_dict</span>
-
-
-<a href="#limnd2.metadata.PicturePlaneDesc.to_serializable_dict" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">to_serializable_dict</span><span class="p">(</span><span class="n">parent_path</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Custom serialization for this object - "sizeObjFullChip_cy" has to be renamed to "sizeObjFullChip.cy"</p>
-
-    </div>
-
-</div>
-
 
 
   </div>
@@ -1470,8 +1614,6 @@
 
 
     <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><span title="enum.IntEnum">IntEnum</span></code></p>
 
 
         <p>Enum for modality of given plane.</p>
@@ -1518,8 +1660,6 @@
 
 
     <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><span title="enum.IntFlag">IntFlag</span></code></p>
 
 
 
