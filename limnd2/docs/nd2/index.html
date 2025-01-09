@@ -828,6 +828,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.chunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      chunk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.crestDeepSimRawData" class="md-nav__link">
+    <span class="md-ellipsis">
+      crestDeepSimRawData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.crestDeepSimRawDataIndices" class="md-nav__link">
+    <span class="md-ellipsis">
+      crestDeepSimRawDataIndices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#limnd2.nd2.Nd2Reader.generateLoopIndexes" class="md-nav__link">
     <span class="md-ellipsis">
       generateLoopIndexes
@@ -1217,6 +1244,33 @@
   <a href="#limnd2.nd2.Nd2Reader.version" class="md-nav__link">
     <span class="md-ellipsis">
       version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.chunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      chunk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.crestDeepSimRawData" class="md-nav__link">
+    <span class="md-ellipsis">
+      crestDeepSimRawData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.crestDeepSimRawDataIndices" class="md-nav__link">
+    <span class="md-ellipsis">
+      crestDeepSimRawDataIndices
     </span>
   </a>
   
@@ -1676,6 +1730,252 @@ example of how to use this class and how to read individual chunks, attributes, 
 </div>
 
 
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="limnd2.nd2.Nd2Reader.chunk" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">chunk</span>
+
+
+<a href="#limnd2.nd2.Nd2Reader.chunk" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">chunk</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">bytes</span> <span class="o">|</span> <span class="n">str</span><span class="p">,</span> <span class="n">asbytes</span><span class="p">:</span> <span class="n">bool</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">bytes</span> <span class="o">|</span> <span class="n">memoryview</span> <span class="o">|</span> <span class="kc">None</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns data for specific chunk name</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>name</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Name of the chunk to retrieve.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code>bytes | str</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="limnd2.nd2.Nd2Reader.crestDeepSimRawData" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">crestDeepSimRawData</span>
+
+
+<a href="#limnd2.nd2.Nd2Reader.crestDeepSimRawData" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">crestDeepSimRawData</span><span class="p">(</span><span class="n">seqindex</span><span class="p">:</span> <span class="n">int</span><span class="p">,</span> <span class="n">componentindex</span><span class="p">:</span> <span class="n">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="limnd2.base.NumpyArrayLike">NumpyArrayLike</span></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>This method retrieves deepSIM data for a specific sequence index and component.</p>
+<p>The data is returned as a tuple containing deepsim data (see Returns section below).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Even if file contains deepSIM data, not all channels or sequence indices must have deepSim data,
+use <a href="./#limnd2.Nd2Reader.crestDeepSimRawDataIndices"><code>crestDeepSimRawDataIndices()</code></a> method to
+see all valid indices for deepSIM data.</p>
+</div>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>seqindex</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The index of the sequence for which the deepSIM data is being retrieved.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code>int</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>componentindex</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The index of the component for which the deepSIM data is requested.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code>str</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><span title="numpy.ndarray">ndarray</span></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>A 3D array of deepSIM image data with shape (channel_count, height, width).</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>str</code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>A string representing the calibration key.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>str</code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>A string containing the XML data generated by the Crest deepSIM library.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>tuple[float, float]</code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>Point spread function values (used, default).</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>tuple[int, int]</code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>Number of iterations for reconstruction (used, default).</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code>tuple[int, int]</code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>ROI offsets (x, y).</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RAISES</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+              <span class="doc-raises-annotation">
+                  <code><span title="limnd2.base.NameNotInChunkmapError">NameNotInChunkmapError</span></code>
+              </span>
+            </td>
+            <td class="doc-raises-details">
+              <div class="doc-md-description">
+                <p>If chunk with given sequence and component index is missing.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="limnd2.nd2.Nd2Reader.crestDeepSimRawDataIndices" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">crestDeepSimRawDataIndices</span>
+
+
+<a href="#limnd2.nd2.Nd2Reader.crestDeepSimRawDataIndices" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">crestDeepSimRawDataIndices</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">list</span><span class="p">[</span><span class="n">tuple</span><span class="p">[</span><span class="n">int</span><span class="p">,</span> <span class="n">int</span><span class="p">]]</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns all valid indices for deepSIM data in the <code>.nd2</code> file.</p>
+<p>Indices are returned as tuples of (sequence_index, component_index) in a list.</p>
+<p>See <a href="./#limnd2.Nd2Reader.crestDeepSimRawData"><code>crestDeepSimRawData()</code></a> method that uses those indices to retrieve deepSIM data.</p>
+
+    </div>
+
+</div>
 
 <div class="doc doc-object doc-function">
 
