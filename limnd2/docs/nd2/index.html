@@ -1792,13 +1792,47 @@ example of how to use this class and how to read individual chunks, attributes, 
     <div class="doc doc-contents ">
 
         <p>This method retrieves deepSIM data for a specific sequence index and component.</p>
-<p>The data is returned as a tuple containing deepsim data (see Returns section below).</p>
+<p>The data is returned as a tuple containing deepSIM data (see <code>Returns</code> section below).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Even if file contains deepSIM data, not all channels or sequence indices must have deepSim data,
 use <a href="./#limnd2.nd2.Nd2Reader.crestDeepSimRawDataIndices"><code>crestDeepSimRawDataIndices()</code></a> method to
 see all valid indices for deepSIM data.</p>
 </div>
+<p>Reading all deepSIM data can be done using following code:
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">with</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">Nd2Reader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="k">as</span> <span class="n">nd2</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">results</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="k">for</span> <span class="n">indices</span> <span class="ow">in</span> <span class="n">nd2</span><span class="o">.</span><span class="n">crestDeepSimRawDataIndices</span><span class="p">():</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="n">results</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span> <span class="o">=</span> <span class="n">nd2</span><span class="o">.</span><span class="n">crestDeepSimRawData</span><span class="p">(</span><span class="o">*</span><span class="n">indices</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">results</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Input indices:&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;    Final image (shape):&quot;</span><span class="p">,</span> <span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;    Calibration key:&quot;</span><span class="p">,</span> <span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;    Calibration data: (length of XML)&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;    PSF: (set, default)&quot;</span><span class="p">,</span> <span class="n">r</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;    Iter: (set, default)&quot;</span><span class="p">,</span> <span class="n">r</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;    ROI offsets: (x, y)&quot;</span><span class="p">,</span> <span class="n">r</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+</span></code></pre></div></p>
+<details class="example">
+<summary>See example output</summary>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Input indices: (0, 0)
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    Final image (shape): (65, 1024, 1024)
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    Calibration key: zoom60000_na1400_ex561_pitch15000_size1500_im65_tm0
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    Calibration data: (length of XML) 880341
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    PSF: (set, default) (2.0, 2.0)
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    Iter: (set, default) (25, 25)
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    ROI offsets: (x, y) (0, 0)
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Input indices: (0, 1)
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    Final image (shape): (65, 1024, 1024)
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    Calibration key: zoom60000_na1400_ex488_pitch15000_size1500_im65_tm0
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    Calibration data: (length of XML) 884538
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    PSF: (set, default) (2.0, 2.0)
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    Iter: (set, default) (25, 25)
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    ROI offsets: (x, y) (0, 0)
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>...
+</span></code></pre></div>
+</details>
 
 
 <table>
@@ -1897,7 +1931,7 @@ see all valid indices for deepSIM data.</p>
             </td>
             <td class="doc-returns-details">
               <div class="doc-md-description">
-                <p>Point spread function values (used, default).</p>
+                <p>PSF values (used, default).</p>
               </div>
             </td>
           </tr>
