@@ -1434,6 +1434,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#limnd2.metadata.PicturePlaneModalityFlags.modality_OME_map" class="md-nav__link">
+    <span class="md-ellipsis">
+      modality_OME_map
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#limnd2.metadata.PicturePlaneModalityFlags.modality_list" class="md-nav__link">
     <span class="md-ellipsis">
       modality_list
@@ -2219,6 +2228,15 @@
   <a href="#limnd2.metadata.PicturePlaneModalityFlags.from_modality_string" class="md-nav__link">
     <span class="md-ellipsis">
       from_modality_string
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.metadata.PicturePlaneModalityFlags.modality_OME_map" class="md-nav__link">
+    <span class="md-ellipsis">
+      modality_OME_map
     </span>
   </a>
   
@@ -5855,6 +5873,34 @@ the wavelengths at which the probe emits light after excitation.</p>
           </tr>
       </tbody>
     </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="limnd2.metadata.PicturePlaneModalityFlags.modality_OME_map" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">modality_OME_map</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#limnd2.metadata.PicturePlaneModalityFlags.modality_OME_map" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">modality_OME_map</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">dict</span><span class="p">[</span><span class="n">str</span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span><span class="p">]</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns mapping of modality strings of OME-XML <code>AcquisitionMode</code> and <code>ContrastMethod</code> attributes to <code>PicturePlaneModalityFlags</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When parsing OME-XML, you must convert <code>AcquisitionMode</code> and <code>ContrastMethod</code> attributes separately
+and use binary or with the flags.</p>
+</div>
 
     </div>
 
