@@ -1,0 +1,19 @@
+body {
+    font-family: Tahoma;
+    font-size: 11pt;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.screenshot {
+    max-width: 40%;
+    margin: 20px
+}
+.screenshot-bigger {
+    max-width: 60%;
+    margin: 20px
+}
+
+.lim-copyright::before {
+    font-size: small;
+    content: "© 2025 Laboratory imaging s.r.o.";
+}
