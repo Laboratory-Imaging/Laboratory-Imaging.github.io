@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Accessing SE Server from outside</title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="favicon_lim.ico">
+        <link href="lim.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Accessing SE Server from outside</h1>
+
+        <p>Usually it is not possible (or desirable) to expose the server to the internet due to security reasons.</p>
+
+        <p>To overcome this limitation technologies like VPN emerged. They act as tunnel over HTTPS that connects
+            a location outside of the local network and the local network. To the client it appears as if it were inside
+            the local network.</p>
+
+        <p>Usually there is a program running on the local network and a program on the client PC outside of the local network that make
+            the connection possible.</p>
+
+        <p>It is likely that your institution is already using some VPN. In that case it can be used to access the SE Server.
+            Otherwise here is step-by-step guide on how to set up a Twingate kind of VPN.</p>
+
+        <h2>Twingate</h2>
+
+        <p>Here is an example how to set up <a href="https://twingate.com">Twingate</a>. It is easy to setup, free for up to 5 users and
+            provides lots of features.</p>
+
+        <h3>Prerequisites</h3>
+
+        <h5>WSL - Linux on Windows</h5>
+
+        <p>After following this <a href="https://learn.microsoft.com/en-us/windows/wsl/install">guide</a> a default distribution (Ubuntu) should
+            be installed and available in the terminal window.</p>
+
+        <img src="images/WSL_Ubuntu.png" />
+
+        <h5>Docker Desktop</h5>
+
+        <p>Download and install <a href="https://www.docker.com/">Docker Desktop</a>. Skip the signup and make sure you select the WSL2 virtualization.</p>
+
+        <p>After successful installation check the Settings and make sure that following two options are check.</p>
+        <ul>
+            <li>Start Docker Desktop when you sign in to your computer.</li>
+            <li>Use WSL2 based engine.</li>
+        </ul>
+
+        <img src="images/Docker_Settings.png" />
+
+        <p>Open the Ubuntu terminal and type:</p>
+        <pre>docker --version</pre>
+        <pre>Docker version 27.4.0, build bde2b89</pre>
+
+        <p>The version should same as in docker app.</p>
+
+        <img class="screenshot" src="images/Docker_Desktop_Version.png"/>
+        <img class="screenshot" src="images/Docker_Version.png"/>
+
+        <h3>Twingate signup</h3>
+
+        <p>Click <mark>Try Twingate for Free &gt;</mark> at <a href="https://www.twingate.com">twingate.com</a> and fill following three pages:</p>
+
+        <ol>
+            <li>Work email</li><img src="images/Twingate_Signup_1.png">
+            <li>Company Name</li><img src="images/Twingate_Signup_2.png">
+            <li>Network name and URL</li>
+            <p>The Network Name can be changed later and represents the network with the seserver computer.</p>
+            <p>The Network URL is important as the account is identified by the URL.</p>
+            <img src="images/Twingate_Signup_3.png">
+        </ol>
+
+        <h3>Twingate setup</h3>
+
+        <p>Setup the resource (seserver computer) in three steps. It can be deleted and created again.</p>
+
+        <p>Prepare the IP address of the seserver computer. Use</p>
+        <pre>ipconfig</pre>
+        <p>command. And find an Ethernet adapter which is connected:</p>
+
+        <img src="images/Twingate_Setup_0.png">
+
+        <ol>
+            <li>Resource</li>
+            <p>Select "An IP Address",  "Server (Windows, Linux, etc.)" and type in the IP address of the seserver.</p>
+            <img src="images/Twingate_Setup_1.png">
+            <li>Connector</li>
+            <p>Select "Docker",  click "Generate Tokens" (authenticate), check the "Make Connector available on local network".</p>
+            <img src="images/Twingate_Setup_2a.png">
+            <p>Click the "Copy command" and paste into the Ubuntu terminal and press enter.</p>
+            <img src="images/Twingate_Setup_2b.png">
+            <p>The command downloads an image and runs it as a container in docker. Check it in the Docker Desktop.</p>
+            <img class="screenshot" src="images/Twingate_Setup_2c.png">
+            <img class="screenshot" src="images/Twingate_Setup_2d.png">
+            <li>Download the client app for your system which is outside the office (home).</li>
+            <p>See below how to test the connection with your phone.</p>
+        </ol>
+
+        <h3>Twingate edit the resource</h3>
+
+        <p>Now, lets add an alias to the server Resource so we can use it as with DNS.</p>
+
+        <p>Navigate to Resources, click the three vertical dots and select edit. Rename the Resource if you want
+            and click on the alias icon. The write the FQDN you use in the browser.</p>
+
+        <p>You can restrict the ports to 443 only.</p>
+
+        <img src="images/Twingate_Edit_Resource.png">
+
+
+        <h3>Managing access to resources</h3>
+
+        <p>The resource must be granted access rights. Set it to everyone. Everyone means just you (see the team) right now.</p>
+
+        <img src="images/Twingate_managing_access.png"/>
+
+
+        <h3>Test the SE Server on the phone</h3>
+
+        <p>To check that the resource is accessible lets try to connect to the seserver using a phone.</p>
+        <ul>
+            <li>Make sure the SEServer is running.</li>
+            <li>Disconnect from the local WiFi to be sure the phone is not on local network.</li>
+            <li>Make sure you set the alias above.</li>
+            <li>Download the "Twingate" client app from App Store or Google Play.</li>
+        </ul>
+
+        <p>After authenticating in the app, the resource is visible.</p>
+
+        <p>Open the browser and navigate to the alias.</p>
+
+        <img class="screenshot" src="images/Client_App_1.png">
+        <img class="screenshot" src="images/Client_App_2.png">
+        <img src="images/Client_App_3.png">
+
+        <p class="lim-copyright" />
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SE Server localhost testing</title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="favicon_lim.ico">
+        <link href="lim.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Setting up the SE Server on localhost for testing</h1>
+
+        <p>This is the simplest installation where the server accepts requests only from the current machine.
+            Because of this significant limitation we can skip the https and SSL certificate configuration.</p>
+
+        <h2>Access to SE Acquisition machine configuration and data</h2>
+
+        <p>The server needs a configuration file from the Platform folder on the Acquisition machine (will call it SE Platform).
+            The folder is located here:</p>
+
+        <pre>C:\ProgramData\Laboratory Imaging\Platform</pre>
+
+        <p>The server reads the folders users acquire to as defined in the settings dialog:</p>
+
+        <img class="screenshot-bigger" src="images/SE_Assay_User_Settings.png" />
+
+        <p>Therefore following must ne ensured:</p>
+        <ul>
+            <li>The SE Platform folder must be shared (and accessible by the server),</li>
+            <li>all users data folders must be shared (and accessible by the server) and</li>
+            <li>the location SE Platform must be specified to the sever on the command line.</li>
+        </ul>
+
+        <p>The simplest way is to run the server as Administrator and Share the drive C: (and others if necessary)
+            on the SE Acquisition machine.</p>
+
+        <h2>Run the server</h2>
+
+        <p>Suppose the SE Acquisition machine is named SEMACHINE and C: drive has been shared. Executing following command runs the server:</p>
+        <pre>SEServer.exe --not-secure --se-platform "\\SEMACHINE\C\ProgramData\Laboratory Imaging\Platform"</pre>
+
+        <p>If everything went well the output looks like this:</p>
+        <pre>
+Using LDAP server at: your.dns.domain
+Users will be authenticated as: &lt;username&gt;@YOURDOMAIN
+SE settings will be taken from: \\SEMACHINE\C\ProgramData\Laboratory Imaging\Platform
+[2025-02-04 09:18:47 +0100] [31488] [INFO] Running on http://127.0.0.1:8000 (CTRL + C to quit)
+        </pre>
+
+        <p>Open your browser and try to put this <tt>http://127.0.0.1:8000</tt> into the address bar.</p>
+
+        <img class="screenshot-bigger" src="images/SE_Login.png" />
+
+        <p>Insert your Windows account credentials. If successful the folder specified in NIS Elements Assay Settings should be listed:</p>
+
+        <img class="screenshot-bigger" src="images/SE_Loggin_Sucess.png" />
+
+        <h2>Login troubleshooting</h2>
+
+        <p>To authenticate Windows users the server uses your domain LDAP server. By default it looks into <tt>USERDNSDOMAIN</tt>
+            system environment variable. It can be overridden by <tt>LDAP_SERVER</tt> environment variable or <tt>--ldap-server</tt>
+            command line option.</p>
+
+        <p>The username entered into the dialog is is used together with the domain name <tt>&lt;username&gt;@YOURDOMAIN</tt>.
+            The domain name is taken by default from <tt>USERDOMAIN</tt> system environment variable. It can be overridden by
+            <tt>SE_USERS_DOMAIN</tt> environment variable or <tt>--se-users-domain</tt> command line option.</p>
+
+        <p>To authenticate Windows users the following code is used:</p>
+
+        <pre>
+from ldap3 import Server, Connection, ALL
+server = Server(_ldap_server, get_info=ALL)
+try:
+    conn = Connection(server, f'{username}@{_se_users_domain}', login_form.password, auto_bind=True)
+    conn.unbind()
+except Exception as e:
+    raise HTTPException(status_code=401, detail="Invalid credentials")
+        </pre>
+
+        <p class="lim-copyright" />
+    </body>
+</html>

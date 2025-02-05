@@ -2,40 +2,28 @@
 <html>
     <head>
         <title>SE Server</title>
-        <link rel="icon" type="image/x-icon" href="/res/favicon_lim.ico">
-        <style>
-            body {
-                font-family: Tahoma;
-                font-size: 11pt;
-                max-width: 800px;
-                margin: 0 auto;
-            }
-            .screenshot {
-                max-width: 40%;
-                margin: 20px
-            }
-            .screenshot-bigger {
-                max-width: 60%;
-                margin: 20px
-            }
-        </style>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="favicon_lim.ico">
+        <link href="lim.css" rel="stylesheet">
     </head>
     <body>
         <h1>Installing self-signed certificate on client machine</h1>
 
+        <p>This workflow works on Chromio based browsers (Chrome, Edge, ...) and Firefox.</p>
+
         <h2>1. Export the certificate</h2>
 
-        <p>After navigating to the server address (here https://pc-lim-394/) the following warning appears</p>
+        <p>After navigating to the server address (here <tt>https://pc-lim-394.firma.lim.cz</tt>) the following warning appears</p>
 
-        <img class="screenshot-bigger" src="connection_not_private.png"/>
+        <img class="screenshot-bigger" src="images/connection_not_private.png"/>
 
         <p>Click on the red "Not secure" button in the address bar and select "Certificate details".</p>
 
-        <img class="screenshot-bigger" src="certificate_details.png"/>
+        <img class="screenshot-bigger" src="images/certificate_details.png"/>
 
         <p>Go to "Details" tab and click the "Export" button at the bottom of the page.</p>
 
-        <img class="screenshot-bigger" src="export_certificate.png"/>
+        <img class="screenshot-bigger" src="images/export_certificate.png"/>
 
         <p>Save the certificate in some temporary folder (e.g. Downloads).</p>
 
@@ -47,7 +35,7 @@
 
         <p>Certificate manager will appear.</p>
 
-        <img class="screenshot-bigger" src="mgr_import_certificate.png"/>
+        <img class="screenshot-bigger" src="images/mgr_import_certificate.png"/>
 
         <p>Right-click on "Certificates" under "Trusted Root Certification Authorities" and in the
             context menu select "All Tasks" then "Import..." In the import wizard select the certificate
@@ -58,12 +46,8 @@
 
         <p>Restart the browser for the imported certificate to take effect.</p>
 
-        <img class="screenshot-bigger" src="no_warnings.png"/>
+        <img class="screenshot-bigger" src="images/no_warnings.png"/>
 
-        <h2>3. Import the certificate into Firefox store</h2>
-
-        <p>TBD...</p>
-
-        <p><small>&copy; 2025 Laboratory imaging s.r.o.</small></p>
+        <p class="lim-copyright" />
     </body>
 </html>

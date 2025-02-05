@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SE Server on local network</title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="favicon_lim.ico">
+        <link href="lim.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>SE Server on local network</h1>
+
+        <p>Stepping from localhost to the local network requires secure connection using https. For a server to
+            provide secure connection it needs a certificate with the server name.</p>
+
+        <h2>Generate self-signed certificate</h2>
+
+        <p>The simplest form of the certificate is self-signed certificate. As the name implies the certificate is sign by the user.
+            As a consequence browsers do not trust self-signed certificates.</p>
+
+        <p>To create a self-signed certificate for a specific computer name use its Full Qualified Domain Name (FQDN) <tt>seserver.mydomain</tt> (replace it with the name your computer name)
+            run the following command:</p>
+        <pre>SEServer.exe --gen-cert seserver.mydomain</pre>
+
+        After successful certificate creation two files (<tt>cert.pem</tt> and <tt>key.pem</tt>) are available in:
+        <pre>C:\Users\&lt;username&gt;\AppData\Roaming\Laboratory Imaging\SE Server</pre>
+
+        <h2>Run the server</h2>
+
+        <p>Now the SE Server can be run without <tt>--not-secure</tt> option:</p>
+        <pre>SEServer.exe --se-platform "\\SEMACHINE\C\ProgramData\Laboratory Imaging\Platform"</pre>
+
+        <p>The last line of the output should be different (0.0.0.0 - listening all IPs and on HTTPS port):</p>
+        <pre>[2025-02-04 10:41:10 +0100] [34132] [INFO] Running on https://0.0.0.0:443 (CTRL + C to quit)</pre>
+
+        <p>Open your browser and put this <tt>https://SESERVER</tt> (replace it with the name your computer name) into the address bar and
+            continue with the <a href="client_cert.html">How to install self-signed certificate on client machine</a>  guide.</p>
+
+        <h2>Better options</h2>
+
+        <p>Self-signed certificates are painful to use. They produce all the warnings until imported and trusted.</p>
+
+        <p>It is possible (and likely) that your institution has a domain Certification Authority (CA) and that the IT department
+            can provide a Certificate that is signed by that CA. The benefit is that such a signed certificate is trusted by default.</p>
+
+        <p>You can replace the <tt>cert.pem</tt> and <tt>key.pem</tt> with the files provided by the IT department or use command line options:</p>
+        <pre>SEServer.exe --cert-file "better\cert.pem" --cert-key "better\key.pem" --se-platform ...</pre>
+
+        <p class="lim-copyright" />
+    </body>
+</html>
