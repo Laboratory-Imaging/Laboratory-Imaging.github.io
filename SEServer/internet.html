@@ -19,44 +19,30 @@
             the connection possible.</p>
 
         <p>It is likely that your institution is already using some VPN. In that case it can be used to access the SE Server.
-            Otherwise here is step-by-step guide on how to set up a Twingate kind of VPN.</p>
+            Otherwise use <a href="https://twingate.com">Twingate</a> as an example of a "VPN-like" solution. It is user friendly
+        and we like the features. It is free for up-to 5 users.</p>
 
-        <h2>Twingate</h2>
+        <h1>Twingate</h1>
 
-        <p>Here is an example how to set up <a href="https://twingate.com">Twingate</a>. It is easy to setup, free for up to 5 users and
-            provides lots of features.</p>
+        <p>The Twingate solution uses a Connector (a program) to provide access to the Resources (e.g. computers, subnets)
+            on your private network.</p>
 
-        <h3>Prerequisites</h3>
-
-        <h5>WSL - Linux on Windows</h5>
-
-        <p>After following this <a href="https://learn.microsoft.com/en-us/windows/wsl/install">guide</a> a default distribution (Ubuntu) should
-            be installed and available in the terminal window.</p>
-
-        <img src="images/WSL_Ubuntu.png" />
-
-        <h5>Docker Desktop</h5>
-
-        <p>Download and install <a href="https://www.docker.com/">Docker Desktop</a>. Skip the signup and make sure you select the WSL2 virtualization.</p>
-
-        <p>After successful installation check the Settings and make sure that following two options are check.</p>
+        <p>The connector should be run on linux - either on physical or virtual machine:</p>
         <ul>
-            <li>Start Docker Desktop when you sign in to your computer.</li>
-            <li>Use WSL2 based engine.</li>
+            <li>Physical machine running Ubuntu 22.04 LTS.</li>
+            <p>Use SSH or PuTTY to log in to the linux machine.</p>
+            <img src="images/Physical_Ubuntu.png"/>
+            <li>Virtual machine running Ubuntu 22.04 using Windows Hyper-V Manager</li>
+            <p>Use "Hyper-V Quick Create" from the Start menu and select Ubuntu 22.04 LTS.</p>
+            <img class="screenshot" src="images/Create_Virtual_Machine.png"/>
+            <img class="screenshot" src="images/Ubuntu_Virtual_Machine.png"/>
         </ul>
 
-        <img src="images/Docker_Settings.png" />
+        <p>Check on either system that you can access the relevant resource (The PC running the SEServer).</p>
 
-        <p>Open the Ubuntu terminal and type:</p>
-        <pre>docker --version</pre>
-        <pre>Docker version 27.4.0, build bde2b89</pre>
+        <img src="images/Twingate_linux_prereq.png">
 
-        <p>The version should same as in docker app.</p>
-
-        <img class="screenshot" src="images/Docker_Desktop_Version.png"/>
-        <img class="screenshot" src="images/Docker_Version.png"/>
-
-        <h3>Twingate signup</h3>
+        <h2>Sing up</h2>
 
         <p>Click <mark>Try Twingate for Free &gt;</mark> at <a href="https://www.twingate.com">twingate.com</a> and fill following three pages:</p>
 
@@ -69,52 +55,58 @@
             <img src="images/Twingate_Signup_3.png">
         </ol>
 
-        <h3>Twingate setup</h3>
+        <h2>Setup: Twingate Onboarding</h2>
 
-        <p>Setup the resource (seserver computer) in three steps. It can be deleted and created again.</p>
-
-        <p>Prepare the IP address of the seserver computer. Use</p>
-        <pre>ipconfig</pre>
-        <p>command. And find an Ethernet adapter which is connected:</p>
-
-        <img src="images/Twingate_Setup_0.png">
+        <h3>Add your first resource</h3>
 
         <ol>
-            <li>Resource</li>
-            <p>Select "An IP Address",  "Server (Windows, Linux, etc.)" and type in the IP address of the seserver.</p>
-            <img src="images/Twingate_Setup_1.png">
-            <li>Connector</li>
-            <p>Select "Docker",  click "Generate Tokens" (authenticate), check the "Make Connector available on local network".</p>
-            <img src="images/Twingate_Setup_2a.png">
-            <p>Click the "Copy command" and paste into the Ubuntu terminal and press enter.</p>
-            <img src="images/Twingate_Setup_2b.png">
-            <p>The command downloads an image and runs it as a container in docker. Check it in the Docker Desktop.</p>
-            <img class="screenshot" src="images/Twingate_Setup_2c.png">
-            <img class="screenshot" src="images/Twingate_Setup_2d.png">
-            <li>Download the client app for your system which is outside the office (home).</li>
-            <p>See below how to test the connection with your phone.</p>
+            <li>Select the "Fully Qualified Domain Name" (or "IP Address") that you verified earlier,</li>
+            <li>select the "Server (Windows, Linux, etc.)" and</li>
+            <li>enter the FQDN or IP Address (e.g. <tt>pc-lim-394.firma.lim.cz</tt> or <tt>192.168.11.116</tt>).</li>
         </ol>
 
-        <h3>Twingate edit the resource</h3>
+        <img src="images/Twingate_Setup_1.png">
 
-        <p>Now, lets add an alias to the server Resource so we can use it as with DNS.</p>
+        <h3>Connect your network</h3>
 
-        <p>Navigate to Resources, click the three vertical dots and select edit. Rename the Resource if you want
-            and click on the alias icon. The write the FQDN you use in the browser.</p>
+        <ol>
+            <li>Select Linux button,</li>
+            <li>click the "Generate New Tokens" and authenticate,</li>
+            <li>click the "Copy Command" and paste the command into the linux terminal.</li>
+        </ol>
 
-        <p>You can restrict the ports to 443 only.</p>
+        <img src="images/Twingate_linux_Connector1.png">
 
-        <img src="images/Twingate_Edit_Resource.png">
+        <img src="images/Twingate_linux_Connector2.png">
 
 
-        <h3>Managing access to resources</h3>
+        <h2>Edit the resource</h2>
 
-        <p>The resource must be granted access rights. Set it to everyone. Everyone means just you (see the team) right now.</p>
+        <p>Go to "Network", "Resources" and "Edit" inside the menu on three dots (...)</p>
+
+        <p>There you can:</p>
+        <ul>
+            <li>rename the resource,</li>
+            <li>restrict the ports (to 443 only) or</li>
+            <li>add an alias in the form of FQDN (to act as DNS if you used IP address).</li>
+        </ul>
+
+        <img class="screenshot" src="images/Twingate_Resourse_443.png">
+        <img class="screenshot" src="images/Twingate_Edit_Resource.png">
+
+
+        <h2>Managing access to the resources</h2>
+
+        <p>Go to "Network", "Resources" and "Add Access" inside the menu on three dots (...)</p>
+
+        <p>The resource must be granted access rights. Set it to Everyone. Everyone means just you (see the team) right now.</p>
+
+        <p>You can restrict it later whe you will have more users or groups.</p>
 
         <img src="images/Twingate_managing_access.png"/>
 
 
-        <h3>Test the SE Server on the phone</h3>
+        <h2>Test the SE Server on the phone (Android)</h2>
 
         <p>To check that the resource is accessible lets try to connect to the seserver using a phone.</p>
         <ul>
@@ -131,6 +123,7 @@
         <img class="screenshot" src="images/Client_App_1.png">
         <img class="screenshot" src="images/Client_App_2.png">
         <img src="images/Client_App_3.png">
+
 
         <p class="lim-copyright" />
     </body>
