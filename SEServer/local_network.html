@@ -29,13 +29,44 @@
         <p>Now the SE Server can be run without <tt>--not-secure</tt> option:</p>
         <pre>SEServer.exe --se-platform "\\SEMACHINE\C\ProgramData\Laboratory Imaging\Platform"</pre>
 
-        <p>The last line of the output should be different (0.0.0.0 - listening all IPs and on HTTPS port):</p>
+        <p>The output should contain the URL address and different last line: (0.0.0.0 - listening all IPs and on HTTPS port):</p>
+
+        <pre>Go to: <u>https://seserver.mydomain</u></pre>
         <pre>[2025-02-04 10:41:10 +0100] [34132] [INFO] Running on https://0.0.0.0:443 (CTRL + C to quit)</pre>
 
-        <p>Open your browser and put this <tt>https://SESERVER</tt> (replace it with the name your computer name) into the address bar and
-            continue with the <a href="client_cert.html">How to install self-signed certificate on client machine</a>  guide.</p>
+        <p>You should be able to click the URL and open it in a browser.</p>
+        <p>In order to get rid of the warning continue with the
+            <a href="client_cert.html">How to install self-signed certificate on client machine</a>  guide.</p>
 
-        <h2>Better options</h2>
+        <h2>Windows firewall</h2>
+
+        <p>Try to access the <tt><u>https://seserver.mydomain</u></tt> URL from a different computer on the same network.
+            It is likely that it will not be accessible (it will take long and the timeout) right away.</p>
+
+        <p>Most likely the computer where the server is running is blocking inbound access. To confirm the hypothesis,
+            try disabling the firewall on the computer running the server with following command.
+            Note that you need administrator privileges.</p>
+
+        <pre>netsh advfirewall set allprofiles state off</pre>
+
+        <p>Try accessing the URL again from different computer. If it is still inaccessible you should contact the IT department.
+            Otherwise we must create a rule that allows inbound traffic on port 443:</p>
+
+        <pre>netsh advfirewall firewall add rule name="Allow443" dir=in action=allow protocol=TCP localport=443 edge=yes</pre>
+
+        <p>And enable the the firewall again:</p>
+
+        <pre>netsh advfirewall set allprofiles state on</pre>
+
+        <p>Check all profiles are on:</p>
+
+        <pre>netsh advfirewall show allprofiles</pre>
+
+        <p>If the URL is still inaccessible you will have to inspect the firewall GUI manually by opening Run (Win + R) and typing:</p>
+
+        <pre>wf.msc</pre>
+
+        <h2>Trusted certificate</h2>
 
         <p>Self-signed certificates are painful to use. They produce all the warnings until imported and trusted.</p>
 
