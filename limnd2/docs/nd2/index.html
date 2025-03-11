@@ -1490,6 +1490,7 @@
 
 
 
+
   <div class="doc doc-children">
 
 
@@ -1511,6 +1512,7 @@
 
 
     <div class="doc doc-contents ">
+
 
 
 
@@ -1548,6 +1550,7 @@
     <div class="doc doc-contents ">
 
         <p>Returns the modify time of the file on disk.</p>
+
     </div>
 
 </div>
@@ -1571,6 +1574,7 @@
     <div class="doc doc-contents ">
 
         <p>Returns the number of bytes the file takes on disk.</p>
+
     </div>
 
 </div>
@@ -1594,6 +1598,7 @@
     <div class="doc doc-contents ">
 
         <p>Returns the version of the <code>.nd2</code> file as a tuple of two integers.</p>
+
     </div>
 
 </div>
@@ -1684,6 +1689,7 @@ example of how to use this class and how to read individual chunks, attributes, 
 
 
 
+
   <div class="doc doc-children">
 
 
@@ -1705,7 +1711,12 @@ example of how to use this class and how to read individual chunks, attributes, 
   </span>
 
 <a href="#limnd2.nd2.Nd2Reader.experiment" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">experiment</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.experiment.ExperimentLevel" href="../experiment/#limnd2.experiment.ExperimentLevel">ExperimentLevel</a></span> <span class="o">|</span> <span class="kc">None</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">experiment</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="ExperimentLevel
+
+
+  
+      dataclass
+   (limnd2.experiment.ExperimentLevel)" href="../experiment/#limnd2.experiment.ExperimentLevel">ExperimentLevel</a></span> <span class="o">|</span> <span class="kc">None</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1713,6 +1724,7 @@ example of how to use this class and how to read individual chunks, attributes, 
         <p>Attribute to get experiments in an <code>.nd2</code> file.</p>
 <p>See <a href="../experiment/#limnd2.experiment.ExperimentLevel"><code>ExperimentLevel</code></a> class for more information.</p>
 <p>In order to create an instance of <code>ExperimentLevel</code> class, use <a href="../experiment_factory/#limnd2.experiment_factory.ExperimentFactory"><code>ExperimentFactory</code></a> class.</p>
+
     </div>
 
 </div>
@@ -1737,6 +1749,7 @@ example of how to use this class and how to read individual chunks, attributes, 
     <div class="doc doc-contents ">
 
         <p>Returns general information about the image as a dictionary.</p>
+
     </div>
 
 </div>
@@ -1754,7 +1767,12 @@ example of how to use this class and how to read individual chunks, attributes, 
   </span>
 
 <a href="#limnd2.nd2.Nd2Reader.imageAttributes" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">imageAttributes</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.base.ImageAttributes" href="../attributes/#limnd2.attributes.ImageAttributes">ImageAttributes</a></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">imageAttributes</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="ImageAttributes
+
+
+  
+      dataclass
+   (limnd2.base.ImageAttributes)" href="../attributes/#limnd2.attributes.ImageAttributes">ImageAttributes</a></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1762,6 +1780,7 @@ example of how to use this class and how to read individual chunks, attributes, 
         <p>Attribute to get attributes of an <code>.nd2</code> file.</p>
 <p>See <a href="../attributes/#limnd2.attributes.ImageAttributes"><code>ImageAttributes</code></a> class for more information.</p>
 <p>In order to create an instance of <code>ImageAttributes</code> class from simple parameters, use <a href="../attributes/#limnd2.attributes.ImageAttributes.create"><code>ImageAttributes.create</code></a> method.</p>
+
     </div>
 
 </div>
@@ -1786,6 +1805,7 @@ example of how to use this class and how to read individual chunks, attributes, 
     <div class="doc doc-contents ">
 
         <p>Returns <code>True</code> if the file contains valid z-stack, otherwise <code>False</code>.</p>
+
     </div>
 
 </div>
@@ -1810,6 +1830,7 @@ example of how to use this class and how to read individual chunks, attributes, 
     <div class="doc doc-contents ">
 
         <p>Returns <code>True</code> if the file contains 8-bit RGB data, otherwise <code>False</code>.</p>
+
     </div>
 
 </div>
@@ -1834,6 +1855,7 @@ example of how to use this class and how to read individual chunks, attributes, 
     <div class="doc doc-contents ">
 
         <p>Returns <code>True</code> if the file data is 32-bit float, otherwise <code>False</code>.</p>
+
     </div>
 
 </div>
@@ -1858,6 +1880,7 @@ example of how to use this class and how to read individual chunks, attributes, 
     <div class="doc doc-contents ">
 
         <p>Returns <code>True</code> if the file contains only one component, otherwise <code>False</code>.</p>
+
     </div>
 
 </div>
@@ -1882,6 +1905,7 @@ example of how to use this class and how to read individual chunks, attributes, 
     <div class="doc doc-contents ">
 
         <p>Returns <code>True</code> if the file contains RGB data, otherwise <code>False</code>.</p>
+
     </div>
 
 </div>
@@ -1899,7 +1923,12 @@ example of how to use this class and how to read individual chunks, attributes, 
   </span>
 
 <a href="#limnd2.nd2.Nd2Reader.pictureMetadata" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pictureMetadata</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PictureMetadata" href="../metadata/#limnd2.metadata.PictureMetadata">PictureMetadata</a></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pictureMetadata</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="PictureMetadata
+
+
+  
+      dataclass
+   (limnd2.metadata.PictureMetadata)" href="../metadata/#limnd2.metadata.PictureMetadata">PictureMetadata</a></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1907,6 +1936,7 @@ example of how to use this class and how to read individual chunks, attributes, 
         <p>Attribute to get metadata of an <code>.nd2</code> file.</p>
 <p>See <a href="../metadata/#limnd2.metadata.PictureMetadata"><code>PictureMetadata</code></a> class for more information.</p>
 <p>In order to create an instance of <code>PictureMetadata</code> class, use <a href="../metadata_factory/#limnd2.metadata_factory.MetadataFactory"><code>MetadataFactory</code></a> class.</p>
+
     </div>
 
 </div>
@@ -1932,6 +1962,7 @@ example of how to use this class and how to read individual chunks, attributes, 
 
         <p>Returns a dictionary of all results in the accompanying <code>.h5</code> file.</p>
 <p>Each result potentially contains tabular results (tables, graphs, ...) and binary layers.</p>
+
     </div>
 
 </div>
@@ -1980,6 +2011,7 @@ example of how to use this class and how to read individual chunks, attributes, 
           </tr>
       </tbody>
     </table>
+
 
     </div>
 
@@ -2198,6 +2230,7 @@ for example <code>zoom60000_na1400_ex561_pitch15000_size1500_im65_tm0</code>.</p
       </tbody>
     </table>
 
+
     </div>
 
 </div>
@@ -2219,6 +2252,7 @@ for example <code>zoom60000_na1400_ex561_pitch15000_size1500_im65_tm0</code>.</p
 <p>Indices are returned as tuples of (sequence_index, component_index) in a list.</p>
 <p>See <a href="./#limnd2.nd2.Nd2Reader.crestDeepSimRawData"><code>crestDeepSimRawData()</code></a> method that uses those indices to retrieve deepSIM data.</p>
 
+
     </div>
 
 </div>
@@ -2237,6 +2271,7 @@ for example <code>zoom60000_na1400_ex561_pitch15000_size1500_im65_tm0</code>.</p
     <div class="doc doc-contents ">
 
         <p>Generates indexes for all loops in the experiment.</p>
+
 
     </div>
 
@@ -2304,6 +2339,7 @@ for example <code>zoom60000_na1400_ex561_pitch15000_size1500_im65_tm0</code>.</p
           </tr>
       </tbody>
     </table>
+
 
     </div>
 
@@ -2420,6 +2456,7 @@ however you can do so after you know how many frames there is.</p>
 
 
 
+
   <div class="doc doc-children">
 
 
@@ -2442,7 +2479,12 @@ however you can do so after you know how many frames there is.</p>
   </span>
 
 <a href="#limnd2.nd2.Nd2Writer.experiment" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">experiment</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.experiment.ExperimentLevel" href="../experiment/#limnd2.experiment.ExperimentLevel">ExperimentLevel</a></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">experiment</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="ExperimentLevel
+
+
+  
+      dataclass
+   (limnd2.experiment.ExperimentLevel)" href="../experiment/#limnd2.experiment.ExperimentLevel">ExperimentLevel</a></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -2450,6 +2492,7 @@ however you can do so after you know how many frames there is.</p>
         <p>Attribute to get or set experiments in an <code>.nd2</code> file.</p>
 <p>See <a href="../experiment/#limnd2.experiment.ExperimentLevel"><code>ExperimentLevel</code></a> class for more information.</p>
 <p>In order to create an instance of <code>ExperimentLevel</code> class, use <a href="../experiment_factory/#limnd2.experiment_factory.ExperimentFactory"><code>ExperimentFactory</code></a> class.</p>
+
     </div>
 
 </div>
@@ -2468,7 +2511,12 @@ however you can do so after you know how many frames there is.</p>
   </span>
 
 <a href="#limnd2.nd2.Nd2Writer.imageAttributes" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">imageAttributes</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.base.ImageAttributes" href="../attributes/#limnd2.attributes.ImageAttributes">ImageAttributes</a></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">imageAttributes</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="ImageAttributes
+
+
+  
+      dataclass
+   (limnd2.base.ImageAttributes)" href="../attributes/#limnd2.attributes.ImageAttributes">ImageAttributes</a></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -2476,6 +2524,7 @@ however you can do so after you know how many frames there is.</p>
         <p>Attribute to get or set attributes of an <code>.nd2</code> file.</p>
 <p>See <a href="../attributes/#limnd2.attributes.ImageAttributes"><code>ImageAttributes</code></a> class for more information.</p>
 <p>In order to create an instance of <code>ImageAttributes</code> class from simple parameters, use <a href="../attributes/#limnd2.attributes.ImageAttributes.create"><code>ImageAttributes.create</code></a> method.</p>
+
     </div>
 
 </div>
@@ -2494,7 +2543,12 @@ however you can do so after you know how many frames there is.</p>
   </span>
 
 <a href="#limnd2.nd2.Nd2Writer.pictureMetadata" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pictureMetadata</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PictureMetadata" href="../metadata/#limnd2.metadata.PictureMetadata">PictureMetadata</a></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pictureMetadata</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="PictureMetadata
+
+
+  
+      dataclass
+   (limnd2.metadata.PictureMetadata)" href="../metadata/#limnd2.metadata.PictureMetadata">PictureMetadata</a></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -2502,6 +2556,7 @@ however you can do so after you know how many frames there is.</p>
         <p>Attribute to get or set metadata of an <code>.nd2</code> file.</p>
 <p>See <a href="../metadata/#limnd2.metadata.PictureMetadata"><code>PictureMetadata</code></a> class for more information.</p>
 <p>In order to create an instance of <code>PictureMetadata</code> class, use <a href="../metadata_factory/#limnd2.metadata_factory.MetadataFactory"><code>MetadataFactory</code></a> class.</p>
+
     </div>
 
 </div>
@@ -2522,6 +2577,7 @@ however you can do so after you know how many frames there is.</p>
     <div class="doc doc-contents ">
 
         <p>Explicitly finalize the file, this is not needed if you use <code>with</code> statement.</p>
+
 
     </div>
 
@@ -2546,6 +2602,7 @@ however you can do so after you know how many frames there is.</p>
 <p>You must manually keep track of the frame index and make sure that you are not
 overwriting the same frame multiple times and that images are written sequentially.</p>
 </div>
+
 
     </div>
 

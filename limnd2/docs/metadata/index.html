@@ -2345,6 +2345,7 @@
 
 
 
+
   <div class="doc doc-children">
 
 
@@ -2414,7 +2415,12 @@ can be retrieved using <a href="./#limnd2.metadata.PictureMetadata.channels"><co
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.PictureMetadataPicturePlanes" href="#limnd2.metadata.PictureMetadataPicturePlanes">PictureMetadataPicturePlanes</a></code>
+                      <code><a class="autorefs autorefs-internal" title="PictureMetadataPicturePlanes
+
+
+  
+      dataclass
+   (limnd2.metadata.PictureMetadataPicturePlanes)" href="#limnd2.metadata.PictureMetadataPicturePlanes">PictureMetadataPicturePlanes</a></code>
                   </span>
               </p>
             </td>
@@ -2542,6 +2548,7 @@ can be retrieved using <a href="./#limnd2.metadata.PictureMetadata.channels"><co
 
 
 
+
   <div class="doc doc-children">
 
 
@@ -2569,6 +2576,7 @@ can be retrieved using <a href="./#limnd2.metadata.PictureMetadata.channels"><co
     <div class="doc doc-contents ">
 
         <p>Returns names of all channels (planes).</p>
+
     </div>
 
 </div>
@@ -2586,12 +2594,18 @@ can be retrieved using <a href="./#limnd2.metadata.PictureMetadata.channels"><co
   </span>
 
 <a href="#limnd2.metadata.PictureMetadata.channels" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">channels</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneDesc" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span><span class="p">]</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">channels</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneDesc
+
+
+  
+      dataclass
+   (limnd2.metadata.PicturePlaneDesc)" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span><span class="p">]</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Returns list of channels (planes) in the image.</p>
+
     </div>
 
 </div>
@@ -2615,6 +2629,7 @@ can be retrieved using <a href="./#limnd2.metadata.PictureMetadata.channels"><co
     <div class="doc doc-contents ">
 
         <p>Returns colors of each component as normalized tuple in a list.</p>
+
     </div>
 
 </div>
@@ -2638,6 +2653,7 @@ can be retrieved using <a href="./#limnd2.metadata.PictureMetadata.channels"><co
     <div class="doc doc-contents ">
 
         <p>Returns names of all components.</p>
+
     </div>
 
 </div>
@@ -2661,6 +2677,7 @@ can be retrieved using <a href="./#limnd2.metadata.PictureMetadata.channels"><co
     <div class="doc doc-contents ">
 
         <p>Checks if image is an RGB image.</p>
+
     </div>
 
 </div>
@@ -2684,6 +2701,7 @@ can be retrieved using <a href="./#limnd2.metadata.PictureMetadata.channels"><co
     <div class="doc doc-contents ">
 
         <p>Checks if metadata have correct number of channels.</p>
+
     </div>
 
 </div>
@@ -2698,12 +2716,18 @@ can be retrieved using <a href="./#limnd2.metadata.PictureMetadata.channels"><co
 
 
 <a href="#limnd2.metadata.PictureMetadata.cameraName" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">cameraName</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneDesc" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="str">str</span></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">cameraName</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneDesc
+
+
+  
+      dataclass
+   (limnd2.metadata.PicturePlaneDesc)" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="str">str</span></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Returns camera name using either <a href="./#limnd2.metadata.PicturePlaneDesc"><code>PicturePlaneDesc</code></a> instance or an index of channel.</p>
+
 
     </div>
 
@@ -2778,6 +2802,7 @@ can be retrieved using <a href="./#limnd2.metadata.PictureMetadata.channels"><co
       </tbody>
     </table>
 
+
     </div>
 
 </div>
@@ -2790,12 +2815,18 @@ can be retrieved using <a href="./#limnd2.metadata.PictureMetadata.channels"><co
 
 
 <a href="#limnd2.metadata.PictureMetadata.microscopeName" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">microscopeName</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneDesc" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="str">str</span></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">microscopeName</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneDesc
+
+
+  
+      dataclass
+   (limnd2.metadata.PicturePlaneDesc)" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="str">str</span></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Returns microscope name using either <a href="./#limnd2.metadata.PicturePlaneDesc"><code>PicturePlaneDesc</code></a> instance or an index of channel.</p>
+
 
     </div>
 
@@ -2809,12 +2840,18 @@ can be retrieved using <a href="./#limnd2.metadata.PictureMetadata.channels"><co
 
 
 <a href="#limnd2.metadata.PictureMetadata.objectiveMagnification" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">objectiveMagnification</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneDesc" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="float">float</span></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">objectiveMagnification</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneDesc
+
+
+  
+      dataclass
+   (limnd2.metadata.PicturePlaneDesc)" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="float">float</span></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Returns objective magnification using either <a href="./#limnd2.metadata.PicturePlaneDesc"><code>PicturePlaneDesc</code></a> instance or an index of channel.</p>
+
 
     </div>
 
@@ -2828,12 +2865,18 @@ can be retrieved using <a href="./#limnd2.metadata.PictureMetadata.channels"><co
 
 
 <a href="#limnd2.metadata.PictureMetadata.objectiveName" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">objectiveName</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneDesc" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="str">str</span></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">objectiveName</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneDesc
+
+
+  
+      dataclass
+   (limnd2.metadata.PicturePlaneDesc)" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="str">str</span></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Returns name of objective using either <a href="./#limnd2.metadata.PicturePlaneDesc"><code>PicturePlaneDesc</code></a> instance or an index of channel.</p>
+
 
     </div>
 
@@ -2847,12 +2890,18 @@ can be retrieved using <a href="./#limnd2.metadata.PictureMetadata.channels"><co
 
 
 <a href="#limnd2.metadata.PictureMetadata.objectiveNumericAperture" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">objectiveNumericAperture</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneDesc" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="float">float</span></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">objectiveNumericAperture</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneDesc
+
+
+  
+      dataclass
+   (limnd2.metadata.PicturePlaneDesc)" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="float">float</span></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Returns objective numeric aperture using either <a href="./#limnd2.metadata.PicturePlaneDesc"><code>PicturePlaneDesc</code></a> instance or an index of channel.</p>
+
 
     </div>
 
@@ -2866,12 +2915,18 @@ can be retrieved using <a href="./#limnd2.metadata.PictureMetadata.channels"><co
 
 
 <a href="#limnd2.metadata.PictureMetadata.opticalConfigurations" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">opticalConfigurations</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneDesc" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">opticalConfigurations</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneDesc
+
+
+  
+      dataclass
+   (limnd2.metadata.PicturePlaneDesc)" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Returns list of optical configurations.</p>
+
 
     </div>
 
@@ -2885,12 +2940,18 @@ can be retrieved using <a href="./#limnd2.metadata.PictureMetadata.channels"><co
 
 
 <a href="#limnd2.metadata.PictureMetadata.refractiveIndex" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">refractiveIndex</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneDesc" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="float">float</span></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">refractiveIndex</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneDesc
+
+
+  
+      dataclass
+   (limnd2.metadata.PicturePlaneDesc)" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="float">float</span></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Returns refractive index using either <a href="./#limnd2.metadata.PicturePlaneDesc"><code>PicturePlaneDesc</code></a> instance or an index of channel.</p>
+
 
     </div>
 
@@ -2904,13 +2965,24 @@ can be retrieved using <a href="./#limnd2.metadata.PictureMetadata.channels"><co
 
 
 <a href="#limnd2.metadata.PictureMetadata.sampleSettings" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">sampleSettings</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneDesc" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.SampleSettings" href="#limnd2.metadata.SampleSettings">SampleSettings</a></span> <span class="o">|</span> <span class="kc">None</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">sampleSettings</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneDesc
+
+
+  
+      dataclass
+   (limnd2.metadata.PicturePlaneDesc)" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="SampleSettings
+
+
+  
+      dataclass
+   (limnd2.metadata.SampleSettings)" href="#limnd2.metadata.SampleSettings">SampleSettings</a></span> <span class="o">|</span> <span class="kc">None</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Returns an instance of <a href="./#limnd2.metadata.SampleSettings"><code>SampleSettings</code></a> using either
 <a href="./#limnd2.metadata.PicturePlaneDesc"><code>PicturePlaneDesc</code></a> instance or an index of channel.</p>
+
 
     </div>
 
@@ -2997,7 +3069,12 @@ from all members of <code>sPlaneNew</code>.</p>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><span title="list">list</span>[<a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneDesc" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a>]</code>
+                      <code><span title="list">list</span>[<a class="autorefs autorefs-internal" title="PicturePlaneDesc
+
+
+  
+      dataclass
+   (limnd2.metadata.PicturePlaneDesc)" href="#limnd2.metadata.PicturePlaneDesc">PicturePlaneDesc</a>]</code>
                   </span>
               </p>
             </td>
@@ -3026,13 +3103,19 @@ one sample setting can be used for one or multiple planes.</p>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><span title="list">list</span>[<a class="autorefs autorefs-internal" title="limnd2.metadata.SampleSettings" href="#limnd2.metadata.SampleSettings">SampleSettings</a>]</code>
+                      <code><span title="list">list</span>[<a class="autorefs autorefs-internal" title="SampleSettings
+
+
+  
+      dataclass
+   (limnd2.metadata.SampleSettings)" href="#limnd2.metadata.SampleSettings">SampleSettings</a>]</code>
                   </span>
               </p>
             </td>
           </tr>
       </tbody>
     </table>
+
 
 
 
@@ -3093,6 +3176,7 @@ one sample setting can be used for one or multiple planes.</p>
           </tr>
       </tbody>
     </table>
+
     </div>
 
 </div>
@@ -3167,6 +3251,7 @@ one sample setting can be used for one or multiple planes.</p>
           </tr>
       </tbody>
     </table>
+
 
     </div>
 
@@ -3273,7 +3358,7 @@ See <a href="./#limnd2.metadata.PictureMetadataPicturePlanes"><code>PictureMetad
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></code>
+                      <code><a class="autorefs autorefs-internal" title="PicturePlaneModalityFlags (limnd2.metadata.PicturePlaneModalityFlags)" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></code>
                   </span>
               </p>
             </td>
@@ -3287,7 +3372,12 @@ See <a href="./#limnd2.metadata.PictureMetadataPicturePlanes"><code>PictureMetad
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.FluorescentProbe" href="#limnd2.metadata.FluorescentProbe">FluorescentProbe</a></code>
+                      <code><a class="autorefs autorefs-internal" title="FluorescentProbe
+
+
+  
+      dataclass
+   (limnd2.metadata.FluorescentProbe)" href="#limnd2.metadata.FluorescentProbe">FluorescentProbe</a></code>
                   </span>
               </p>
             </td>
@@ -3301,7 +3391,12 @@ See <a href="./#limnd2.metadata.PictureMetadataPicturePlanes"><code>PictureMetad
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalFilterPath" href="#limnd2.metadata.OpticalFilterPath">OpticalFilterPath</a></code>
+                      <code><a class="autorefs autorefs-internal" title="OpticalFilterPath
+
+
+  
+      dataclass
+   (limnd2.metadata.OpticalFilterPath)" href="#limnd2.metadata.OpticalFilterPath">OpticalFilterPath</a></code>
                   </span>
               </p>
             </td>
@@ -3373,6 +3468,7 @@ See <a href="./#limnd2.metadata.PictureMetadataPicturePlanes"><code>PictureMetad
 
 
 
+
   <div class="doc doc-children">
 
 
@@ -3400,6 +3496,7 @@ See <a href="./#limnd2.metadata.PictureMetadataPicturePlanes"><code>PictureMetad
     <div class="doc doc-contents ">
 
         <p>Get the color of the picture plane as an RGB tuple normalized to range [0.0, 1.0].</p>
+
     </div>
 
 </div>
@@ -3423,6 +3520,7 @@ See <a href="./#limnd2.metadata.PictureMetadataPicturePlanes"><code>PictureMetad
     <div class="doc doc-contents ">
 
         <p>Get the color of the picture plane as HTML string.</p>
+
     </div>
 
 </div>
@@ -3446,6 +3544,7 @@ See <a href="./#limnd2.metadata.PictureMetadataPicturePlanes"><code>PictureMetad
     <div class="doc doc-contents ">
 
         <p>Get the color of the picture plane as an RGB tuple.</p>
+
     </div>
 
 </div>
@@ -3470,6 +3569,7 @@ See <a href="./#limnd2.metadata.PictureMetadataPicturePlanes"><code>PictureMetad
     <div class="doc doc-contents ">
 
         <p>Returns the single emission wavelength for the picture plane, calculated from the fluorescent probe or optical filter path.</p>
+
     </div>
 
 </div>
@@ -3494,6 +3594,7 @@ See <a href="./#limnd2.metadata.PictureMetadataPicturePlanes"><code>PictureMetad
     <div class="doc doc-contents ">
 
         <p>Returns the single excitation wavelength for the picture plane, calculated from the fluorescent probe or optical filter path.</p>
+
     </div>
 
 </div>
@@ -3517,6 +3618,7 @@ See <a href="./#limnd2.metadata.PictureMetadataPicturePlanes"><code>PictureMetad
     <div class="doc doc-contents ">
 
         <p>Returns whether the picture plane is a brightfield image.</p>
+
     </div>
 
 </div>
@@ -3540,6 +3642,7 @@ See <a href="./#limnd2.metadata.PictureMetadataPicturePlanes"><code>PictureMetad
     <div class="doc doc-contents ">
 
         <p>Returns whether the picture plane is a contrast image.</p>
+
     </div>
 
 </div>
@@ -3563,6 +3666,7 @@ See <a href="./#limnd2.metadata.PictureMetadataPicturePlanes"><code>PictureMetad
     <div class="doc doc-contents ">
 
         <p>Returns whether the picture plane is a darkfield image.</p>
+
     </div>
 
 </div>
@@ -3586,6 +3690,7 @@ See <a href="./#limnd2.metadata.PictureMetadataPicturePlanes"><code>PictureMetad
     <div class="doc doc-contents ">
 
         <p>Returns whether the picture plane is a fluorescence image.</p>
+
     </div>
 
 </div>
@@ -3609,6 +3714,7 @@ See <a href="./#limnd2.metadata.PictureMetadataPicturePlanes"><code>PictureMetad
     <div class="doc doc-contents ">
 
         <p>Returns a list of modalities present in the picture plane converted to strings.</p>
+
     </div>
 
 </div>
@@ -3669,7 +3775,12 @@ properties such as name, type, and family.</p>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.CameraSetting" href="#limnd2.metadata.CameraSetting">CameraSetting</a></code>
+                      <code><a class="autorefs autorefs-internal" title="CameraSetting
+
+
+  
+      dataclass
+   (limnd2.metadata.CameraSetting)" href="#limnd2.metadata.CameraSetting">CameraSetting</a></code>
                   </span>
               </p>
             </td>
@@ -3684,7 +3795,12 @@ microscope names, size, and usage.</p>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.DeviceSetting" href="#limnd2.metadata.DeviceSetting">DeviceSetting</a></code>
+                      <code><a class="autorefs autorefs-internal" title="DeviceSetting
+
+
+  
+      dataclass
+   (limnd2.metadata.DeviceSetting)" href="#limnd2.metadata.DeviceSetting">DeviceSetting</a></code>
                   </span>
               </p>
             </td>
@@ -3699,7 +3815,12 @@ numerical aperture, and refractive index.</p>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.ObjectiveSetting" href="#limnd2.metadata.ObjectiveSetting">ObjectiveSetting</a></code>
+                      <code><a class="autorefs autorefs-internal" title="ObjectiveSetting
+
+
+  
+      dataclass
+   (limnd2.metadata.ObjectiveSetting)" href="#limnd2.metadata.ObjectiveSetting">ObjectiveSetting</a></code>
                   </span>
               </p>
             </td>
@@ -3714,13 +3835,19 @@ numerical aperture, and refractive index.</p>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><span title="list">list</span>[<a class="autorefs autorefs-internal" title="limnd2.metadata.SampleSettingsOC" href="#limnd2.metadata.SampleSettingsOC">SampleSettingsOC</a>]</code>
+                      <code><span title="list">list</span>[<a class="autorefs autorefs-internal" title="SampleSettingsOC
+
+
+  
+      dataclass
+   (limnd2.metadata.SampleSettingsOC)" href="#limnd2.metadata.SampleSettingsOC">SampleSettingsOC</a>]</code>
                   </span>
               </p>
             </td>
           </tr>
       </tbody>
     </table>
+
 
 
 
@@ -3757,6 +3884,7 @@ numerical aperture, and refractive index.</p>
     <div class="doc doc-contents ">
 
         <p>Return name of the camera used to aquire given sample.</p>
+
     </div>
 
 </div>
@@ -3780,6 +3908,7 @@ numerical aperture, and refractive index.</p>
     <div class="doc doc-contents ">
 
         <p>Return name of the microscope used to aquire given sample.</p>
+
     </div>
 
 </div>
@@ -3803,6 +3932,7 @@ numerical aperture, and refractive index.</p>
     <div class="doc doc-contents ">
 
         <p>Return name of the camera used to aquire given sample.</p>
+
     </div>
 
 </div>
@@ -3826,6 +3956,7 @@ numerical aperture, and refractive index.</p>
     <div class="doc doc-contents ">
 
         <p>Return magification of used objective.</p>
+
     </div>
 
 </div>
@@ -3849,6 +3980,7 @@ numerical aperture, and refractive index.</p>
     <div class="doc doc-contents ">
 
         <p>Return name of the objective used to aquire given sample.</p>
+
     </div>
 
 </div>
@@ -3872,6 +4004,7 @@ numerical aperture, and refractive index.</p>
     <div class="doc doc-contents ">
 
         <p>Return numerical aperture of used objective lens.</p>
+
     </div>
 
 </div>
@@ -3895,6 +4028,7 @@ numerical aperture, and refractive index.</p>
     <div class="doc doc-contents ">
 
         <p>Return list of all optical configurations.</p>
+
     </div>
 
 </div>
@@ -3918,6 +4052,7 @@ numerical aperture, and refractive index.</p>
     <div class="doc doc-contents ">
 
         <p>Return refractive index of the medium in given sample.</p>
+
     </div>
 
 </div>
@@ -4015,6 +4150,7 @@ numerical aperture, and refractive index.</p>
 
 
 
+
   <div class="doc doc-children">
 
 
@@ -4102,6 +4238,7 @@ numerical aperture, and refractive index.</p>
 
 
 
+
   <div class="doc doc-children">
 
 
@@ -4133,7 +4270,27 @@ numerical aperture, and refractive index.</p>
   </span>
 
 <a href="#limnd2.metadata.FluorescentProbe" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">FluorescentProbe</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">m_sName</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.STRING">STRING</span></span><span class="p">),</span> <span class="n">m_uiColor</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="mi">16777215</span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.UINT32">UINT32</span></span><span class="p">),</span> <span class="n">m_ExcitationSpectrum</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalSpectrum" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalSpectrum" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.LEVEL">LEVEL</span></span><span class="p">),</span> <span class="n">m_EmissionSpectrum</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalSpectrum" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalSpectrum" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.LEVEL">LEVEL</span></span><span class="p">))</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">FluorescentProbe</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">m_sName</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.STRING">STRING</span></span><span class="p">),</span> <span class="n">m_uiColor</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="mi">16777215</span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.UINT32">UINT32</span></span><span class="p">),</span> <span class="n">m_ExcitationSpectrum</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="OpticalSpectrum
+
+
+  
+      dataclass
+   (limnd2.metadata.OpticalSpectrum)" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="n"><a class="autorefs autorefs-internal" title="OpticalSpectrum
+
+
+  
+      dataclass
+   (limnd2.metadata.OpticalSpectrum)" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.LEVEL">LEVEL</span></span><span class="p">),</span> <span class="n">m_EmissionSpectrum</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="OpticalSpectrum
+
+
+  
+      dataclass
+   (limnd2.metadata.OpticalSpectrum)" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="n"><a class="autorefs autorefs-internal" title="OpticalSpectrum
+
+
+  
+      dataclass
+   (limnd2.metadata.OpticalSpectrum)" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.LEVEL">LEVEL</span></span><span class="p">))</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4188,7 +4345,12 @@ the wavelengths at which the probe absorbs light.</p>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalSpectrum" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></code>
+                      <code><a class="autorefs autorefs-internal" title="OpticalSpectrum
+
+
+  
+      dataclass
+   (limnd2.metadata.OpticalSpectrum)" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></code>
                   </span>
               </p>
             </td>
@@ -4203,13 +4365,19 @@ the wavelengths at which the probe emits light after excitation.</p>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalSpectrum" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></code>
+                      <code><a class="autorefs autorefs-internal" title="OpticalSpectrum
+
+
+  
+      dataclass
+   (limnd2.metadata.OpticalSpectrum)" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></code>
                   </span>
               </p>
             </td>
           </tr>
       </tbody>
     </table>
+
 
 
 
@@ -4339,6 +4507,7 @@ the wavelengths at which the probe emits light after excitation.</p>
 
 
 
+
   <div class="doc doc-children">
 
 
@@ -4424,7 +4593,7 @@ the wavelengths at which the probe emits light after excitation.</p>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalFilterPlacement" href="#limnd2.metadata.OpticalFilterPlacement">OpticalFilterPlacement</a></code>
+                      <code><a class="autorefs autorefs-internal" title="OpticalFilterPlacement (limnd2.metadata.OpticalFilterPlacement)" href="#limnd2.metadata.OpticalFilterPlacement">OpticalFilterPlacement</a></code>
                   </span>
               </p>
             </td>
@@ -4438,7 +4607,7 @@ the wavelengths at which the probe emits light after excitation.</p>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalFilterNature" href="#limnd2.metadata.OpticalFilterNature">OpticalFilterNature</a></code>
+                      <code><a class="autorefs autorefs-internal" title="OpticalFilterNature (limnd2.metadata.OpticalFilterNature)" href="#limnd2.metadata.OpticalFilterNature">OpticalFilterNature</a></code>
                   </span>
               </p>
             </td>
@@ -4452,7 +4621,7 @@ the wavelengths at which the probe emits light after excitation.</p>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalFilterSpectType" href="#limnd2.metadata.OpticalFilterSpectType">OpticalFilterSpectType</a></code>
+                      <code><a class="autorefs autorefs-internal" title="OpticalFilterSpectType (limnd2.metadata.OpticalFilterSpectType)" href="#limnd2.metadata.OpticalFilterSpectType">OpticalFilterSpectType</a></code>
                   </span>
               </p>
             </td>
@@ -4480,7 +4649,12 @@ the wavelengths at which the probe emits light after excitation.</p>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalSpectrum" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></code>
+                      <code><a class="autorefs autorefs-internal" title="OpticalSpectrum
+
+
+  
+      dataclass
+   (limnd2.metadata.OpticalSpectrum)" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></code>
                   </span>
               </p>
             </td>
@@ -4494,7 +4668,12 @@ the wavelengths at which the probe emits light after excitation.</p>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalSpectrum" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></code>
+                      <code><a class="autorefs autorefs-internal" title="OpticalSpectrum
+
+
+  
+      dataclass
+   (limnd2.metadata.OpticalSpectrum)" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></code>
                   </span>
               </p>
             </td>
@@ -4508,13 +4687,19 @@ the wavelengths at which the probe emits light after excitation.</p>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalSpectrum" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></code>
+                      <code><a class="autorefs autorefs-internal" title="OpticalSpectrum
+
+
+  
+      dataclass
+   (limnd2.metadata.OpticalSpectrum)" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></code>
                   </span>
               </p>
             </td>
           </tr>
       </tbody>
     </table>
+
 
 
 
@@ -4648,6 +4833,7 @@ the wavelengths at which the probe emits light after excitation.</p>
 
 
 
+
   <div class="doc doc-children">
 
 
@@ -4679,7 +4865,12 @@ the wavelengths at which the probe emits light after excitation.</p>
   </span>
 
 <a href="#limnd2.metadata.OpticalFilterPath" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">OpticalFilterPath</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">m_sDescr</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.STRING">STRING</span></span><span class="p">),</span> <span class="n">m_uiCount</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.UINT32">UINT32</span></span><span class="p">),</span> <span class="n">m_pFilter</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalFilter" href="#limnd2.metadata.OpticalFilter">OpticalFilter</a></span><span class="p">]</span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="n"><span title="list">list</span></span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.LEVEL">LEVEL</span></span><span class="p">))</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">OpticalFilterPath</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">m_sDescr</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.STRING">STRING</span></span><span class="p">),</span> <span class="n">m_uiCount</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.UINT32">UINT32</span></span><span class="p">),</span> <span class="n">m_pFilter</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="OpticalFilter
+
+
+  
+      dataclass
+   (limnd2.metadata.OpticalFilter)" href="#limnd2.metadata.OpticalFilter">OpticalFilter</a></span><span class="p">]</span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="n"><span title="list">list</span></span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.LEVEL">LEVEL</span></span><span class="p">))</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4733,13 +4924,19 @@ the wavelengths at which the probe emits light after excitation.</p>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><span title="list">list</span>[<a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalFilter" href="#limnd2.metadata.OpticalFilter">OpticalFilter</a>]</code>
+                      <code><span title="list">list</span>[<a class="autorefs autorefs-internal" title="OpticalFilter
+
+
+  
+      dataclass
+   (limnd2.metadata.OpticalFilter)" href="#limnd2.metadata.OpticalFilter">OpticalFilter</a>]</code>
                   </span>
               </p>
             </td>
           </tr>
       </tbody>
     </table>
+
 
 
 
@@ -4776,6 +4973,7 @@ the wavelengths at which the probe emits light after excitation.</p>
     <div class="doc doc-contents ">
 
         <p>Returns whether the filter path is valid (has at least one filter).</p>
+
     </div>
 
 </div>
@@ -4797,6 +4995,7 @@ the wavelengths at which the probe emits light after excitation.</p>
 
         <p>Finds the excitation wavelength that is closest to a given emission wavelength from the filters in the path.</p>
 
+
     </div>
 
 </div>
@@ -4815,6 +5014,7 @@ the wavelengths at which the probe emits light after excitation.</p>
     <div class="doc doc-contents ">
 
         <p>Calculates the mean emission wavelength based on the emission spectra of the filters in the path.</p>
+
 
     </div>
 
@@ -4953,6 +5153,7 @@ the wavelengths at which the probe emits light after excitation.</p>
           </tr>
       </tbody>
     </table>
+
 
 
 
@@ -5128,6 +5329,7 @@ the wavelengths at which the probe emits light after excitation.</p>
 
 
 
+
   <div class="doc doc-children">
 
 
@@ -5159,7 +5361,12 @@ the wavelengths at which the probe emits light after excitation.</p>
   </span>
 
 <a href="#limnd2.metadata.OpticalSpectrum" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">OpticalSpectrum</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">uiCount</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.UINT32">UINT32</span></span><span class="p">),</span> <span class="n">bPoints</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.BOOL">BOOL</span></span><span class="p">),</span> <span class="n">pPoint</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalSpectrumPoint" href="#limnd2.metadata.OpticalSpectrumPoint">OpticalSpectrumPoint</a></span><span class="p">]</span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="n"><span title="list">list</span></span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.LEVEL">LEVEL</span></span><span class="p">))</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">OpticalSpectrum</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">uiCount</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.UINT32">UINT32</span></span><span class="p">),</span> <span class="n">bPoints</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.BOOL">BOOL</span></span><span class="p">),</span> <span class="n">pPoint</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="OpticalSpectrumPoint
+
+
+  
+      dataclass
+   (limnd2.metadata.OpticalSpectrumPoint)" href="#limnd2.metadata.OpticalSpectrumPoint">OpticalSpectrumPoint</a></span><span class="p">]</span> <span class="o">=</span> <span class="n"><span title="limnd2.lite_variant.LV_field">LV_field</span></span><span class="p">(</span><span class="n"><span title="list">list</span></span><span class="p">,</span> <span class="n"><span title="limnd2.lite_variant.ELxLiteVariantType.LEVEL">LEVEL</span></span><span class="p">))</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5213,13 +5420,19 @@ the wavelengths at which the probe emits light after excitation.</p>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><span title="list">list</span>[<a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalSpectrumPoint" href="#limnd2.metadata.OpticalSpectrumPoint">OpticalSpectrumPoint</a>]</code>
+                      <code><span title="list">list</span>[<a class="autorefs autorefs-internal" title="OpticalSpectrumPoint
+
+
+  
+      dataclass
+   (limnd2.metadata.OpticalSpectrumPoint)" href="#limnd2.metadata.OpticalSpectrumPoint">OpticalSpectrumPoint</a>]</code>
                   </span>
               </p>
             </td>
           </tr>
       </tbody>
     </table>
+
 
 
 
@@ -5256,6 +5469,7 @@ the wavelengths at which the probe emits light after excitation.</p>
     <div class="doc doc-contents ">
 
         <p>Returns number of points in the optical spectrum.</p>
+
     </div>
 
 </div>
@@ -5279,6 +5493,7 @@ the wavelengths at which the probe emits light after excitation.</p>
     <div class="doc doc-contents ">
 
         <p>Check whether the optical spectrum is valid (has at least one point).</p>
+
     </div>
 
 </div>
@@ -5297,12 +5512,28 @@ the wavelengths at which the probe emits light after excitation.</p>
   </span>
 
 <a href="#limnd2.metadata.OpticalSpectrum.combine" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">combine</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalSpectrum" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalSpectrum" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalSpectrum" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">combine</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="OpticalSpectrum
+
+
+  
+      dataclass
+   (limnd2.metadata.OpticalSpectrum)" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="OpticalSpectrum
+
+
+  
+      dataclass
+   (limnd2.metadata.OpticalSpectrum)" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="OpticalSpectrum
+
+
+  
+      dataclass
+   (limnd2.metadata.OpticalSpectrum)" href="#limnd2.metadata.OpticalSpectrum">OpticalSpectrum</a></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Combines two optical spectra into a single spectrum.</p>
+
 
     </div>
 
@@ -5322,6 +5553,7 @@ the wavelengths at which the probe emits light after excitation.</p>
     <div class="doc doc-contents ">
 
         <p>Finds the index and value of the maximum dTValue in the spectrum.</p>
+
 
     </div>
 
@@ -5366,6 +5598,7 @@ the wavelengths at which the probe emits light after excitation.</p>
       </tbody>
     </table>
 
+
     </div>
 
 </div>
@@ -5385,6 +5618,7 @@ the wavelengths at which the probe emits light after excitation.</p>
 
         <p>Returns the single representative wavelength for the spectrum, calculated as the peak wavelength or weighted average of wavelengths.</p>
 
+
     </div>
 
 </div>
@@ -5403,6 +5637,7 @@ the wavelengths at which the probe emits light after excitation.</p>
     <div class="doc doc-contents ">
 
         <p>Returns the minimum and maximum wavelengths of the spectrum.</p>
+
 
     </div>
 
@@ -5460,7 +5695,7 @@ the wavelengths at which the probe emits light after excitation.</p>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.OpticalSpectrumPointType" href="#limnd2.metadata.OpticalSpectrumPointType">OpticalSpectrumPointType</a></code>
+                      <code><a class="autorefs autorefs-internal" title="OpticalSpectrumPointType (limnd2.metadata.OpticalSpectrumPointType)" href="#limnd2.metadata.OpticalSpectrumPointType">OpticalSpectrumPointType</a></code>
                   </span>
               </p>
             </td>
@@ -5495,6 +5730,7 @@ the wavelengths at which the probe emits light after excitation.</p>
           </tr>
       </tbody>
     </table>
+
 
 
 
@@ -5642,6 +5878,7 @@ the wavelengths at which the probe emits light after excitation.</p>
 
 
 
+
   <div class="doc doc-children">
 
 
@@ -5679,6 +5916,7 @@ the wavelengths at which the probe emits light after excitation.</p>
 <p class="admonition-title">Warning</p>
 <p>In modern .nd2 files this modality enum should be converted to <a href="./#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a> instance using <a href="./#limnd2.metadata.PicturePlaneModalityFlags.from_modality">from_modality()</a> function.</p>
 </div>
+
 
 
 
@@ -5730,6 +5968,7 @@ the wavelengths at which the probe emits light after excitation.</p>
 
 
 
+
   <div class="doc doc-children">
 
 
@@ -5752,7 +5991,7 @@ the wavelengths at which the probe emits light after excitation.</p>
   </span>
 
 <a href="#limnd2.metadata.PicturePlaneModalityFlags.from_modality" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">from_modality</span><span class="p">(</span><span class="n">mod</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModality" href="#limnd2.metadata.PicturePlaneModality">PicturePlaneModality</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">from_modality</span><span class="p">(</span><span class="n">mod</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneModality (limnd2.metadata.PicturePlaneModality)" href="#limnd2.metadata.PicturePlaneModality">PicturePlaneModality</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneModalityFlags (limnd2.metadata.PicturePlaneModalityFlags)" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5779,7 +6018,7 @@ the wavelengths at which the probe emits light after excitation.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModality" href="#limnd2.metadata.PicturePlaneModality">PicturePlaneModality</a></code>
+                      <code><a class="autorefs autorefs-internal" title="PicturePlaneModality (limnd2.metadata.PicturePlaneModality)" href="#limnd2.metadata.PicturePlaneModality">PicturePlaneModality</a></code>
                   </span>
               </p>
             </td>
@@ -5799,7 +6038,7 @@ the wavelengths at which the probe emits light after excitation.</p>
           <tr class="doc-section-item">
             <td>
                 <span class="doc-returns-annotation">
-                    <code><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></code>
+                    <code><a class="autorefs autorefs-internal" title="PicturePlaneModalityFlags (limnd2.metadata.PicturePlaneModalityFlags)" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></code>
                 </span>
             </td>
             <td class="doc-returns-details">
@@ -5810,6 +6049,7 @@ the wavelengths at which the probe emits light after excitation.</p>
           </tr>
       </tbody>
     </table>
+
 
     </div>
 
@@ -5827,7 +6067,7 @@ the wavelengths at which the probe emits light after excitation.</p>
   </span>
 
 <a href="#limnd2.metadata.PicturePlaneModalityFlags.from_modality_string" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">from_modality_string</span><span class="p">(</span><span class="n">modality</span><span class="p">:</span> <span class="n"><span title="str">str</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">from_modality_string</span><span class="p">(</span><span class="n">modality</span><span class="p">:</span> <span class="n"><span title="str">str</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneModalityFlags (limnd2.metadata.PicturePlaneModalityFlags)" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5874,7 +6114,7 @@ the wavelengths at which the probe emits light after excitation.</p>
           <tr class="doc-section-item">
             <td>
                 <span class="doc-returns-annotation">
-                    <code><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></code>
+                    <code><a class="autorefs autorefs-internal" title="PicturePlaneModalityFlags (limnd2.metadata.PicturePlaneModalityFlags)" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></code>
                 </span>
             </td>
             <td class="doc-returns-details">
@@ -5885,6 +6125,7 @@ the wavelengths at which the probe emits light after excitation.</p>
           </tr>
       </tbody>
     </table>
+
 
     </div>
 
@@ -5902,7 +6143,7 @@ the wavelengths at which the probe emits light after excitation.</p>
   </span>
 
 <a href="#limnd2.metadata.PicturePlaneModalityFlags.modality_OME_map" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">modality_OME_map</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span><span class="p">]</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">modality_OME_map</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneModalityFlags (limnd2.metadata.PicturePlaneModalityFlags)" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span><span class="p">]</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5913,6 +6154,7 @@ the wavelengths at which the probe emits light after excitation.</p>
 <p>When parsing OME-XML, you must convert <code>AcquisitionMode</code> and <code>ContrastMethod</code> attributes separately
 and use binary or with the flags.</p>
 </div>
+
 
     </div>
 
@@ -5937,6 +6179,7 @@ and use binary or with the flags.</p>
 
         <p>Returns list of known modality strings ("Wide-field", "Brightfield", ...).</p>
 
+
     </div>
 
 </div>
@@ -5953,12 +6196,13 @@ and use binary or with the flags.</p>
   </span>
 
 <a href="#limnd2.metadata.PicturePlaneModalityFlags.modality_string_map" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">modality_string_map</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span><span class="p">]</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">modality_string_map</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneModalityFlags (limnd2.metadata.PicturePlaneModalityFlags)" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span><span class="p">]</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Returns mapping of known modality strings ("Wide-field", "Brightfield", ...) to <code>PicturePlaneModalityFlags</code>.</p>
+
 
     </div>
 
@@ -5976,7 +6220,7 @@ and use binary or with the flags.</p>
   </span>
 
 <a href="#limnd2.metadata.PicturePlaneModalityFlags.to_str_list" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">to_str_list</span><span class="p">(</span><span class="n">flags</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">to_str_list</span><span class="p">(</span><span class="n">flags</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneModalityFlags (limnd2.metadata.PicturePlaneModalityFlags)" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -6003,7 +6247,7 @@ and use binary or with the flags.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></code>
+                      <code><a class="autorefs autorefs-internal" title="PicturePlaneModalityFlags (limnd2.metadata.PicturePlaneModalityFlags)" href="#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></code>
                   </span>
               </p>
             </td>
@@ -6034,6 +6278,7 @@ and use binary or with the flags.</p>
           </tr>
       </tbody>
     </table>
+
 
     </div>
 
@@ -6093,6 +6338,7 @@ and use binary or with the flags.</p>
           </tr>
       </tbody>
     </table>
+
 
 
 

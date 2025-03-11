@@ -1144,6 +1144,7 @@ Those instances should be used with <code>Nd2Writer</code> instance for altering
 
 
 
+
   <div class="doc doc-children">
 
 
@@ -1162,7 +1163,12 @@ Those instances should be used with <code>Nd2Writer</code> instance for altering
 
 
 <a href="#limnd2.metadata_factory.MetadataFactory" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">MetadataFactory</span><span class="p">(</span><span class="n">planes</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="limnd2.metadata.Any">Any</span></span><span class="p">]</span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata_factory.Plane" href="#limnd2.metadata_factory.Plane">Plane</a></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">pixel_calibration</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n"><span title="limnd2.metadata.Any">Any</span></span><span class="p">)</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">MetadataFactory</span><span class="p">(</span><span class="n">planes</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="limnd2.metadata.Any">Any</span></span><span class="p">]</span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="Plane
+
+
+  
+      dataclass
+   (limnd2.metadata_factory.Plane)" href="#limnd2.metadata_factory.Plane">Plane</a></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">pixel_calibration</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n"><span title="limnd2.metadata.Any">Any</span></span><span class="p">)</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1238,6 +1244,7 @@ You can add channel using <a href="./#limnd2.metadata_factory.Plane"><code>Plane
 
 
 
+
   <div class="doc doc-children">
 
 
@@ -1256,12 +1263,18 @@ You can add channel using <a href="./#limnd2.metadata_factory.Plane"><code>Plane
 
 
 <a href="#limnd2.metadata_factory.MetadataFactory.__call__" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="fm">__call__</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nf"><a class="autorefs autorefs-internal" title="limnd2.metadata.PictureMetadata" href="../metadata/#limnd2.metadata.PictureMetadata">PictureMetadata</a></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="fm">__call__</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nf"><a class="autorefs autorefs-internal" title="PictureMetadata
+
+
+  
+      dataclass
+   (limnd2.metadata.PictureMetadata)" href="../metadata/#limnd2.metadata.PictureMetadata">PictureMetadata</a></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Creates a new PictureMetadata instance from the factory settings.</p>
+
 
     </div>
 
@@ -1275,7 +1288,17 @@ You can add channel using <a href="./#limnd2.metadata_factory.Plane"><code>Plane
 
 
 <a href="#limnd2.metadata_factory.MetadataFactory.addPlane" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">addPlane</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata_factory.Plane" href="#limnd2.metadata_factory.Plane">Plane</a></span> <span class="o">|</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="limnd2.metadata.Any">Any</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata_factory.Plane" href="#limnd2.metadata_factory.Plane">Plane</a></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">addPlane</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="Plane
+
+
+  
+      dataclass
+   (limnd2.metadata_factory.Plane)" href="#limnd2.metadata_factory.Plane">Plane</a></span> <span class="o">|</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="limnd2.metadata.Any">Any</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="Plane
+
+
+  
+      dataclass
+   (limnd2.metadata_factory.Plane)" href="#limnd2.metadata_factory.Plane">Plane</a></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1303,7 +1326,12 @@ You can add channel using <a href="./#limnd2.metadata_factory.Plane"><code>Plane
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="limnd2.metadata_factory.Plane" href="#limnd2.metadata_factory.Plane">Plane</a> | <span title="dict">dict</span>[<span title="str">str</span>, <span title="limnd2.metadata.Any">Any</span>]</code>
+                      <code><a class="autorefs autorefs-internal" title="Plane
+
+
+  
+      dataclass
+   (limnd2.metadata_factory.Plane)" href="#limnd2.metadata_factory.Plane">Plane</a> | <span title="dict">dict</span>[<span title="str">str</span>, <span title="limnd2.metadata.Any">Any</span>]</code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -1335,6 +1363,7 @@ You can add channel using <a href="./#limnd2.metadata_factory.Plane"><code>Plane
       </tbody>
     </table>
 
+
     </div>
 
 </div>
@@ -1347,12 +1376,18 @@ You can add channel using <a href="./#limnd2.metadata_factory.Plane"><code>Plane
 
 
 <a href="#limnd2.metadata_factory.MetadataFactory.createMetadata" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">createMetadata</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PictureMetadata" href="../metadata/#limnd2.metadata.PictureMetadata">PictureMetadata</a></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">createMetadata</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="PictureMetadata
+
+
+  
+      dataclass
+   (limnd2.metadata.PictureMetadata)" href="../metadata/#limnd2.metadata.PictureMetadata">PictureMetadata</a></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Creates a new PictureMetadata instance from the factory settings.</p>
+
 
     </div>
 
@@ -1379,7 +1414,7 @@ You can add channel using <a href="./#limnd2.metadata_factory.Plane"><code>Plane
   </span>
 
 <a href="#limnd2.metadata_factory.Plane" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">Plane</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">modality</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModality" href="../metadata/#limnd2.metadata.PicturePlaneModality">PicturePlaneModality</a></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="../metadata/#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">excitation_wavelength</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">emission_wavelength</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">objective_magnification</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">objective_numerical_aperture</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">zoom_magnification</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">immersion_refractive_index</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pinhole_diameter</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">camera_name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">microscope_name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">Plane</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">modality</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneModality (limnd2.metadata.PicturePlaneModality)" href="../metadata/#limnd2.metadata.PicturePlaneModality">PicturePlaneModality</a></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneModalityFlags (limnd2.metadata.PicturePlaneModalityFlags)" href="../metadata/#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">excitation_wavelength</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">emission_wavelength</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">objective_magnification</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">objective_numerical_aperture</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">zoom_magnification</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">immersion_refractive_index</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pinhole_diameter</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">camera_name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">microscope_name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1419,7 +1454,7 @@ You can add channel using <a href="./#limnd2.metadata_factory.Plane"><code>Plane
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><span title="str">str</span> | <a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModality" href="../metadata/#limnd2.metadata.PicturePlaneModality">PicturePlaneModality</a> | <a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="../metadata/#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></code>
+                      <code><span title="str">str</span> | <a class="autorefs autorefs-internal" title="PicturePlaneModality (limnd2.metadata.PicturePlaneModality)" href="../metadata/#limnd2.metadata.PicturePlaneModality">PicturePlaneModality</a> | <a class="autorefs autorefs-internal" title="PicturePlaneModalityFlags (limnd2.metadata.PicturePlaneModalityFlags)" href="../metadata/#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></code>
                   </span>
               </p>
             </td>
@@ -1575,6 +1610,7 @@ You can add channel using <a href="./#limnd2.metadata_factory.Plane"><code>Plane
 
 
 
+
   <div class="doc doc-children">
 
 
@@ -1593,7 +1629,7 @@ You can add channel using <a href="./#limnd2.metadata_factory.Plane"><code>Plane
 
 
 <a href="#limnd2.metadata_factory.Plane._modalityFlags" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">_modalityFlags</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="../metadata/#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">_modalityFlags</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneModalityFlags (limnd2.metadata.PicturePlaneModalityFlags)" href="../metadata/#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1613,7 +1649,7 @@ Do not use this class if you simply read existing .nd2 file.</p>
           <tr class="doc-section-item">
             <td>
                 <span class="doc-returns-annotation">
-                    <code><a class="autorefs autorefs-internal" title="limnd2.metadata.PicturePlaneModalityFlags" href="../metadata/#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></code>
+                    <code><a class="autorefs autorefs-internal" title="PicturePlaneModalityFlags (limnd2.metadata.PicturePlaneModalityFlags)" href="../metadata/#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></code>
                 </span>
             </td>
             <td class="doc-returns-details">
@@ -1624,6 +1660,7 @@ Do not use this class if you simply read existing .nd2 file.</p>
           </tr>
       </tbody>
     </table>
+
 
     </div>
 
