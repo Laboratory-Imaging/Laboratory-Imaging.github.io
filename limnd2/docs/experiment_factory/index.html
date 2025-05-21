@@ -905,6 +905,123 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Conversion tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Conversion tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../convert_image/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Convert image to ND2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../convert_sequence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Convert image sequence to ND2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../convert_image_source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LimImageSource.py
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -965,6 +1082,122 @@
   
   <span class="md-ellipsis">
     nd2file.py
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Command line tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Command line tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli_index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index ND2 files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli_convert_image/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Convert image to ND2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli_convert_sequence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Convert image sequence to ND2
     
   </span>
   
@@ -1110,11 +1343,11 @@ you should not use any part of this module if you only read an <code>.nd2</code>
 
 
 
-<h2 id="limnd2.experiment_factory.ExperimentFactory" class="doc doc-heading">
+<h3 id="limnd2.experiment_factory.ExperimentFactory" class="doc doc-heading">
             <span class="doc doc-object-name doc-class-name">ExperimentFactory</span>
 
 
-<a href="#limnd2.experiment_factory.ExperimentFactory" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#limnd2.experiment_factory.ExperimentFactory" class="headerlink" title="Permanent link">&para;</a></h3>
 <div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">ExperimentFactory</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">z</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </span></code></pre></div>
 
@@ -1126,7 +1359,7 @@ directly on factory constructor or by modifying values later.</p>
 <p>To actually create experiment instance, make sure to call either
 <a href="./#limnd2.experiment_factory.ExperimentFactory.createExperiment"><code>.createExperiment()</code></a>
 method or use call operator.</p>
-<h4 id="limnd2.experiment_factory.ExperimentFactory--sample-usage">Sample usage<a class="headerlink" href="#limnd2.experiment_factory.ExperimentFactory--sample-usage" title="Permanent link">&para;</a></h4>
+<h5 id="limnd2.experiment_factory.ExperimentFactory--sample-usage">Sample usage<a class="headerlink" href="#limnd2.experiment_factory.ExperimentFactory--sample-usage" title="Permanent link">&para;</a></h5>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">limnd2.experiment_factory</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExperimentFactory</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># only frame counts</span>
@@ -1215,11 +1448,11 @@ even though Z-stack step property was defined.</p>
 <div class="doc doc-object doc-function">
 
 
-<h3 id="limnd2.experiment_factory.ExperimentFactory.__call__" class="doc doc-heading">
+<h4 id="limnd2.experiment_factory.ExperimentFactory.__call__" class="doc doc-heading">
             <span class="doc doc-object-name doc-function-name">__call__</span>
 
 
-<a href="#limnd2.experiment_factory.ExperimentFactory.__call__" class="headerlink" title="Permanent link">&para;</a></h3>
+<a href="#limnd2.experiment_factory.ExperimentFactory.__call__" class="headerlink" title="Permanent link">&para;</a></h4>
 <div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="fm">__call__</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nf"><a class="autorefs autorefs-internal" title="ExperimentLevel
 
 
@@ -1240,11 +1473,11 @@ even though Z-stack step property was defined.</p>
 <div class="doc doc-object doc-function">
 
 
-<h3 id="limnd2.experiment_factory.ExperimentFactory.createExperiment" class="doc doc-heading">
+<h4 id="limnd2.experiment_factory.ExperimentFactory.createExperiment" class="doc doc-heading">
             <span class="doc doc-object-name doc-function-name">createExperiment</span>
 
 
-<a href="#limnd2.experiment_factory.ExperimentFactory.createExperiment" class="headerlink" title="Permanent link">&para;</a></h3>
+<a href="#limnd2.experiment_factory.ExperimentFactory.createExperiment" class="headerlink" title="Permanent link">&para;</a></h4>
 <div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">createExperiment</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="ExperimentLevel
 
 
