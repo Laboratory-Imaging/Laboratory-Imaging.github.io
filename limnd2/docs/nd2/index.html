@@ -909,6 +909,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.dimensionSizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      dimensionSizes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#limnd2.nd2.Nd2Reader.generateLoopIndexes" class="md-nav__link">
     <span class="md-ellipsis">
       generateLoopIndexes
@@ -930,6 +939,15 @@
   <a href="#limnd2.nd2.Nd2Reader.result_size_on_disk" class="md-nav__link">
     <span class="md-ellipsis">
       result_size_on_disk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.series_export" class="md-nav__link">
+    <span class="md-ellipsis">
+      series_export
     </span>
   </a>
   
@@ -1630,6 +1648,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.dimensionSizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      dimensionSizes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#limnd2.nd2.Nd2Reader.generateLoopIndexes" class="md-nav__link">
     <span class="md-ellipsis">
       generateLoopIndexes
@@ -1651,6 +1678,15 @@
   <a href="#limnd2.nd2.Nd2Reader.result_size_on_disk" class="md-nav__link">
     <span class="md-ellipsis">
       result_size_on_disk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.series_export" class="md-nav__link">
+    <span class="md-ellipsis">
+      series_export
     </span>
   </a>
   
@@ -2527,6 +2563,26 @@ for example <code>zoom60000_na1400_ex561_pitch15000_size1500_im65_tm0</code>.</p
 <div class="doc doc-object doc-function">
 
 
+<h4 id="limnd2.nd2.Nd2Reader.dimensionSizes" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">dimensionSizes</span>
+
+
+<a href="#limnd2.nd2.Nd2Reader.dimensionSizes" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">dimensionSizes</span><span class="p">(</span><span class="n">skipSpectralLoop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="int">int</span></span><span class="p">]</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns a dictionary with dimension names as keys and their sizes as values.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
 <h4 id="limnd2.nd2.Nd2Reader.generateLoopIndexes" class="doc doc-heading">
             <span class="doc doc-object-name doc-function-name">generateLoopIndexes</span>
 
@@ -2626,6 +2682,129 @@ for example <code>zoom60000_na1400_ex561_pitch15000_size1500_im65_tm0</code>.</p
     <div class="doc doc-contents ">
 
         <p>Returns size of the result.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="limnd2.nd2.Nd2Reader.series_export" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">series_export</span>
+
+
+<a href="#limnd2.nd2.Nd2Reader.series_export" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">series_export</span><span class="p">(</span><span class="n">folder</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">|</span> <span class="n"><span title="pathlib.Path">Path</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">prefix</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">dimension_order</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">bits</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">progress_to_json</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Exports the ND2 file content as a series of image files (e.g., TIFFs).</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>folder</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The directory where exported files will be saved.
+If None, a subdirectory named after the ND2 file (e.g., "myfile_export")
+will be created in the same directory as the ND2 file.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span> | <span title="pathlib.Path">Path</span> | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>prefix</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The common file prefix for all exported files.
+If None, the base name of the ND2 file (e.g., "myfile") will be used.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span> | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>dimension_order</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>A list of strings specifying the order of dimensions for naming and
+E.g., ['t', 'z', 'c']. Loop names can be found in self.experiment.dimnames().
+If None, a default order will be used based on available dimensions.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="list">list</span>[<span title="str">str</span>] | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>bits</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The bit depth for exported images.</p>
+<ul>
+<li><code>-1</code> or None: Use the original bit depth of the ND2 file.</li>
+<li><code>8</code>: Export as 8-bit images.</li>
+<li><code>16</code>: Export as 16-bit images.</li>
+</ul>
+<p>Data will be scaled if necessary.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="int">int</span> | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
     </div>
