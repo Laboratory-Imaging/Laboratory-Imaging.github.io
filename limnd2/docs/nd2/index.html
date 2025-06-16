@@ -918,6 +918,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.frame_export" class="md-nav__link">
+    <span class="md-ellipsis">
+      frame_export
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#limnd2.nd2.Nd2Reader.generateLoopIndexes" class="md-nav__link">
     <span class="md-ellipsis">
       generateLoopIndexes
@@ -1651,6 +1660,15 @@
   <a href="#limnd2.nd2.Nd2Reader.dimensionSizes" class="md-nav__link">
     <span class="md-ellipsis">
       dimensionSizes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.frame_export" class="md-nav__link">
+    <span class="md-ellipsis">
+      frame_export
     </span>
   </a>
   
@@ -2574,6 +2592,33 @@ for example <code>zoom60000_na1400_ex561_pitch15000_size1500_im65_tm0</code>.</p
     <div class="doc doc-contents ">
 
         <p>Returns a dictionary with dimension names as keys and their sizes as values.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="limnd2.nd2.Nd2Reader.frame_export" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">frame_export</span>
+
+
+<a href="#limnd2.nd2.Nd2Reader.frame_export" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">frame_export</span><span class="p">(</span><span class="n">frame_index</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">output_path</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">|</span> <span class="n"><span title="pathlib.Path">Path</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">target_bit_depth</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">progress_to_json</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Export a single frame from the ND2 file to a TIFF file.
+Parameters:
+    frame_index: int
+        The index of the frame to export.
+    output_path: str | Path
+        The path to save the exported TIFF file.
+    target_bit_depth: int | None
+        If specified, converts the image to this bit depth.</p>
 
 
     </div>
