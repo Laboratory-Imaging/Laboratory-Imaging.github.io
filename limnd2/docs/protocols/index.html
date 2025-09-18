@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../metadata/">
+        <link rel="prev" href="../metadata_factory/">
       
       
-        <link rel="next" href="../protocols/">
+        <link rel="next" href="../convert_image/">
       
       
       <link rel="icon" href="../static/lim_logo.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>metadata_factory.py - LimND2</title>
+        <title>protocols.py - LimND2</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#metadata-factory-module" class="md-skip">
+        <a href="#protocols-module" class="md-skip">
           Skip to content
         </a>
       
@@ -298,7 +298,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              metadata_factory.py
+              protocols.py
             
           </span>
         </div>
@@ -802,6 +802,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadata_factory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    metadata_factory.py
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -819,7 +842,7 @@
   
   
   <span class="md-ellipsis">
-    metadata_factory.py
+    protocols.py
     
   </span>
   
@@ -832,7 +855,7 @@
   
   
   <span class="md-ellipsis">
-    metadata_factory.py
+    protocols.py
     
   </span>
   
@@ -855,61 +878,145 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#limnd2.metadata_factory.MetadataFactory" class="md-nav__link">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol" class="md-nav__link">
     <span class="md-ellipsis">
-      MetadataFactory
+      Nd2ReaderProtocol
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="MetadataFactory">
+    <nav class="md-nav" aria-label="Nd2ReaderProtocol">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#limnd2.metadata_factory.MetadataFactory.pixel_calibration" class="md-nav__link">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.experiment" class="md-nav__link">
     <span class="md-ellipsis">
-      pixel_calibration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="pixel_calibration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata_factory.MetadataFactory.pixel_calibration--sample-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sample usage
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata_factory.MetadataFactory.__call__" class="md-nav__link">
-    <span class="md-ellipsis">
-      __call__
+      experiment
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#limnd2.metadata_factory.MetadataFactory.addPlane" class="md-nav__link">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.imageAttributes" class="md-nav__link">
     <span class="md-ellipsis">
-      addPlane
+      imageAttributes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#limnd2.metadata_factory.MetadataFactory.createMetadata" class="md-nav__link">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.is3d" class="md-nav__link">
     <span class="md-ellipsis">
-      createMetadata
+      is3d
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.is8bitRgb" class="md-nav__link">
+    <span class="md-ellipsis">
+      is8bitRgb
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.isFloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      isFloat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.isMono" class="md-nav__link">
+    <span class="md-ellipsis">
+      isMono
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.isRgb" class="md-nav__link">
+    <span class="md-ellipsis">
+      isRgb
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.pictureMetadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      pictureMetadata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.results" class="md-nav__link">
+    <span class="md-ellipsis">
+      results
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.storage_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      storage_info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.version" class="md-nav__link">
+    <span class="md-ellipsis">
+      version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.chunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      chunk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.dimensionSizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      dimensionSizes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.generateLoopIndexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      generateLoopIndexes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.image" class="md-nav__link">
+    <span class="md-ellipsis">
+      image
     </span>
   </a>
   
@@ -921,11 +1028,146 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#limnd2.metadata_factory.Plane" class="md-nav__link">
+  <a href="#limnd2.protocols.Nd2WriterProtocol" class="md-nav__link">
     <span class="md-ellipsis">
-      Plane
+      Nd2WriterProtocol
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Nd2WriterProtocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2WriterProtocol.experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2WriterProtocol.imageAttributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      imageAttributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2WriterProtocol.pictureMetadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      pictureMetadata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2WriterProtocol.finalize" class="md-nav__link">
+    <span class="md-ellipsis">
+      finalize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2WriterProtocol.setImage" class="md-nav__link">
+    <span class="md-ellipsis">
+      setImage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.protocols.ResultsProtocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResultsProtocol
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ResultsProtocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.ResultsProtocol.items" class="md-nav__link">
+    <span class="md-ellipsis">
+      items
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.ResultsProtocol.storage_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      storage_info
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.protocols.StorageInfoProtocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      StorageInfoProtocol
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="StorageInfoProtocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.StorageInfoProtocol.filename" class="md-nav__link">
+    <span class="md-ellipsis">
+      filename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.StorageInfoProtocol.last_modified" class="md-nav__link">
+    <span class="md-ellipsis">
+      last_modified
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.StorageInfoProtocol.size_on_disk" class="md-nav__link">
+    <span class="md-ellipsis">
+      size_on_disk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.StorageInfoProtocol.url" class="md-nav__link">
+    <span class="md-ellipsis">
+      url
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -933,29 +1175,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../protocols/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    protocols.py
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1298,61 +1517,145 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#limnd2.metadata_factory.MetadataFactory" class="md-nav__link">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol" class="md-nav__link">
     <span class="md-ellipsis">
-      MetadataFactory
+      Nd2ReaderProtocol
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="MetadataFactory">
+    <nav class="md-nav" aria-label="Nd2ReaderProtocol">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#limnd2.metadata_factory.MetadataFactory.pixel_calibration" class="md-nav__link">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.experiment" class="md-nav__link">
     <span class="md-ellipsis">
-      pixel_calibration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="pixel_calibration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata_factory.MetadataFactory.pixel_calibration--sample-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sample usage
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limnd2.metadata_factory.MetadataFactory.__call__" class="md-nav__link">
-    <span class="md-ellipsis">
-      __call__
+      experiment
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#limnd2.metadata_factory.MetadataFactory.addPlane" class="md-nav__link">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.imageAttributes" class="md-nav__link">
     <span class="md-ellipsis">
-      addPlane
+      imageAttributes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#limnd2.metadata_factory.MetadataFactory.createMetadata" class="md-nav__link">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.is3d" class="md-nav__link">
     <span class="md-ellipsis">
-      createMetadata
+      is3d
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.is8bitRgb" class="md-nav__link">
+    <span class="md-ellipsis">
+      is8bitRgb
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.isFloat" class="md-nav__link">
+    <span class="md-ellipsis">
+      isFloat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.isMono" class="md-nav__link">
+    <span class="md-ellipsis">
+      isMono
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.isRgb" class="md-nav__link">
+    <span class="md-ellipsis">
+      isRgb
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.pictureMetadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      pictureMetadata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.results" class="md-nav__link">
+    <span class="md-ellipsis">
+      results
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.storage_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      storage_info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.version" class="md-nav__link">
+    <span class="md-ellipsis">
+      version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.chunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      chunk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.dimensionSizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      dimensionSizes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.generateLoopIndexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      generateLoopIndexes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2ReaderProtocol.image" class="md-nav__link">
+    <span class="md-ellipsis">
+      image
     </span>
   </a>
   
@@ -1364,11 +1667,146 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#limnd2.metadata_factory.Plane" class="md-nav__link">
+  <a href="#limnd2.protocols.Nd2WriterProtocol" class="md-nav__link">
     <span class="md-ellipsis">
-      Plane
+      Nd2WriterProtocol
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Nd2WriterProtocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2WriterProtocol.experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      experiment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2WriterProtocol.imageAttributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      imageAttributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2WriterProtocol.pictureMetadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      pictureMetadata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2WriterProtocol.finalize" class="md-nav__link">
+    <span class="md-ellipsis">
+      finalize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.Nd2WriterProtocol.setImage" class="md-nav__link">
+    <span class="md-ellipsis">
+      setImage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.protocols.ResultsProtocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResultsProtocol
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ResultsProtocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.ResultsProtocol.items" class="md-nav__link">
+    <span class="md-ellipsis">
+      items
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.ResultsProtocol.storage_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      storage_info
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.protocols.StorageInfoProtocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      StorageInfoProtocol
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="StorageInfoProtocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.StorageInfoProtocol.filename" class="md-nav__link">
+    <span class="md-ellipsis">
+      filename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.StorageInfoProtocol.last_modified" class="md-nav__link">
+    <span class="md-ellipsis">
+      last_modified
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.StorageInfoProtocol.size_on_disk" class="md-nav__link">
+    <span class="md-ellipsis">
+      size_on_disk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.protocols.StorageInfoProtocol.url" class="md-nav__link">
+    <span class="md-ellipsis">
+      url
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1391,7 +1829,7 @@
   
 
 
-<h1 id="metadata-factory-module">Metadata factory module<a class="headerlink" href="#metadata-factory-module" title="Permanent link">&para;</a></h1>
+<h1 id="protocols-module">Protocols module<a class="headerlink" href="#protocols-module" title="Permanent link">&para;</a></h1>
 
 
 <div class="doc doc-object doc-module">
@@ -1400,14 +1838,6 @@
 
 
     <div class="doc doc-contents first">
-
-        <p>This module contains helper classes and functions for creating <code>PictureMetadata</code> instances using simplified parameters for channels and microscope settings.
-Those instances should be used with <code>Nd2Writer</code> instance for altering / creating <code>.nd2</code> files.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Since this module is used to creating metadata data structures, you should not use any part of this module if you only read an .nd2 file.</p>
-</div>
-<p>For creating metadata, you should use <a href="./#limnd2.metadata_factory.MetadataFactory"><code>MetadataFactory</code></a> class.</p>
 
 
 
@@ -1432,18 +1862,767 @@ Those instances should be used with <code>Nd2Writer</code> instance for altering
 
 
 
-<h3 id="limnd2.metadata_factory.MetadataFactory" class="doc doc-heading">
-            <span class="doc doc-object-name doc-class-name">MetadataFactory</span>
+<h3 id="limnd2.protocols.Nd2ReaderProtocol" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">Nd2ReaderProtocol</span>
 
 
-<a href="#limnd2.metadata_factory.MetadataFactory" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">MetadataFactory</span><span class="p">(</span><span class="n">planes</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="limnd2.metadata.Any">Any</span></span><span class="p">]</span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="Plane
+<a href="#limnd2.protocols.Nd2ReaderProtocol" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Protocol for Nd2Reader instance for reading <code>.nd2</code> files and its attributes, metadata, properties, image data and so on.</p>
+<p>Also see <a href="../#reading-nd2-files">Quickstart</a> for an
+example of how to use this class and how to read individual chunks, attributes, metadata and so on.</p>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.Nd2ReaderProtocol.experiment" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">experiment</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.protocols.Nd2ReaderProtocol.experiment" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">experiment</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="ExperimentLevel
 
 
   
       dataclass
-   (limnd2.metadata_factory.Plane)" href="#limnd2.metadata_factory.Plane">Plane</a></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">pixel_calibration</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n"><span title="limnd2.metadata.Any">Any</span></span><span class="p">)</span>
+   (limnd2.experiment.ExperimentLevel)" href="../experiment/#limnd2.experiment.ExperimentLevel">ExperimentLevel</a></span> <span class="o">|</span> <span class="kc">None</span>
 </span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Attribute to get experiments in an <code>.nd2</code> file.</p>
+<p>See <a href="../experiment/#limnd2.experiment.ExperimentLevel"><code>ExperimentLevel</code></a> class for more information.</p>
+<p>In order to create an instance of <code>ExperimentLevel</code> class, use <a href="../experiment_factory/#limnd2.experiment_factory.ExperimentFactory"><code>ExperimentFactory</code></a> class.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.Nd2ReaderProtocol.imageAttributes" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">imageAttributes</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.protocols.Nd2ReaderProtocol.imageAttributes" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">imageAttributes</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="ImageAttributes
+
+
+  
+      dataclass
+   (limnd2.attributes.ImageAttributes)" href="../attributes/#limnd2.attributes.ImageAttributes">ImageAttributes</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Attribute to get attributes of an <code>.nd2</code> file.</p>
+<p>See <a href="../attributes/#limnd2.attributes.ImageAttributes"><code>ImageAttributes</code></a> class for more information.</p>
+<p>In order to create an instance of <code>ImageAttributes</code> class from simple parameters, use <a href="../attributes/#limnd2.attributes.ImageAttributes.create"><code>ImageAttributes.create</code></a> method.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.Nd2ReaderProtocol.is3d" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">is3d</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.protocols.Nd2ReaderProtocol.is3d" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">is3d</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns <code>True</code> if the file contains valid z-stack, otherwise <code>False</code>.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.Nd2ReaderProtocol.is8bitRgb" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">is8bitRgb</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.protocols.Nd2ReaderProtocol.is8bitRgb" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">is8bitRgb</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns <code>True</code> if the file contains 8-bit RGB data, otherwise <code>False</code>.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.Nd2ReaderProtocol.isFloat" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">isFloat</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.protocols.Nd2ReaderProtocol.isFloat" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">isFloat</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns <code>True</code> if the file data is 32-bit float, otherwise <code>False</code>.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.Nd2ReaderProtocol.isMono" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">isMono</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.protocols.Nd2ReaderProtocol.isMono" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">isMono</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns <code>True</code> if the file contains only one component, otherwise <code>False</code>.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.Nd2ReaderProtocol.isRgb" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">isRgb</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.protocols.Nd2ReaderProtocol.isRgb" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">isRgb</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns <code>True</code> if the file contains RGB data, otherwise <code>False</code>.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.Nd2ReaderProtocol.pictureMetadata" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">pictureMetadata</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.protocols.Nd2ReaderProtocol.pictureMetadata" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pictureMetadata</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="PictureMetadata
+
+
+  
+      dataclass
+   (limnd2.metadata.PictureMetadata)" href="../metadata/#limnd2.metadata.PictureMetadata">PictureMetadata</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Attribute to get metadata of an <code>.nd2</code> file.</p>
+<p>See <a href="../metadata/#limnd2.metadata.PictureMetadata"><code>PictureMetadata</code></a> class for more information.</p>
+<p>In order to create an instance of <code>PictureMetadata</code> class, use <a href="../metadata_factory/#limnd2.metadata_factory.MetadataFactory"><code>MetadataFactory</code></a> class.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.Nd2ReaderProtocol.results" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">results</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.protocols.Nd2ReaderProtocol.results" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">results</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="ResultsProtocol (limnd2.protocols.ResultsProtocol)" href="#limnd2.protocols.ResultsProtocol">ResultsProtocol</a></span> <span class="o">|</span> <span class="kc">None</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns a ResultsProtocol with all results in the accompanying <code>.h5</code> file.</p>
+<p>Each result potentially contains tabular results (tables, graphs, ...) and binary layers.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.Nd2ReaderProtocol.storage_info" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">storage_info</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.protocols.Nd2ReaderProtocol.storage_info" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">storage_info</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="StorageInfoProtocol (limnd2.protocols.StorageInfoProtocol)" href="#limnd2.protocols.StorageInfoProtocol">StorageInfoProtocol</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns storage information.</p>
+<p>See <a href="#limnd2.protocols.Nd2ReaderProtocol.storage_info--limnd2.protocols.StorageInfoProtocol"><code>StorageInfoProtocol</code></a> for more information.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.Nd2ReaderProtocol.version" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">version</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.protocols.Nd2ReaderProtocol.version" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">version</span><span class="p">:</span> <span class="n"><span title="tuple">tuple</span></span><span class="p">[</span><span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n"><span title="int">int</span></span><span class="p">]</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns the version of the <code>.nd2</code> file as a tuple of two integers.</p>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="limnd2.protocols.Nd2ReaderProtocol.chunk" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">chunk</span>
+
+
+<a href="#limnd2.protocols.Nd2ReaderProtocol.chunk" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">chunk</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n"><span title="bytes">bytes</span></span> <span class="o">|</span> <span class="n"><span title="str">str</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="bytes">bytes</span></span> <span class="o">|</span> <span class="n"><span title="memoryview">memoryview</span></span> <span class="o">|</span> <span class="kc">None</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns data for specific chunk name</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>name</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Name of the chunk to retrieve.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="bytes">bytes</span> | <span title="str">str</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="limnd2.protocols.Nd2ReaderProtocol.dimensionSizes" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">dimensionSizes</span>
+
+
+<a href="#limnd2.protocols.Nd2ReaderProtocol.dimensionSizes" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">dimensionSizes</span><span class="p">(</span><span class="n">skipSpectralLoop</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="int">int</span></span><span class="p">]</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns a dictionary with dimension names as keys and their sizes as values.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="limnd2.protocols.Nd2ReaderProtocol.generateLoopIndexes" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">generateLoopIndexes</span>
+
+
+<a href="#limnd2.protocols.Nd2ReaderProtocol.generateLoopIndexes" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">generateLoopIndexes</span><span class="p">(</span><span class="n">named</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="list">list</span></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Generates indexes for all loops in the experiment.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="limnd2.protocols.Nd2ReaderProtocol.image" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">image</span>
+
+
+<a href="#limnd2.protocols.Nd2ReaderProtocol.image" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">image</span><span class="p">(</span><span class="n">seqindex</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n">rect</span><span class="p">:</span> <span class="n"><span title="tuple">tuple</span></span><span class="p">[</span><span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n"><span title="int">int</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="limnd2.base.NumpyArrayLike">NumpyArrayLike</span></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Get image data from specified frame as NumPy array.</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>seqindex</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Image sequence index you want to get.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="int">int</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>rect</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Rectangle (x, y, w, h) of the image to get image to get.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="tuple">tuple</span>[<span title="int">int</span>, <span title="int">int</span>, <span title="int">int</span>, <span title="int">int</span>] | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="limnd2.protocols.Nd2WriterProtocol" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">Nd2WriterProtocol</span>
+
+
+<a href="#limnd2.protocols.Nd2WriterProtocol" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">Nd2WriterProtocol</span><span class="p">(</span><span class="n">file</span><span class="p">:</span> <span class="n"><span title="limnd2.base.FileLikeObject">FileLikeObject</span></span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">append</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">chunker_kwargs</span><span class="p">:</span> <span class="n"><span title="dict">dict</span></span> <span class="o">=</span> <span class="p">{})</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+
+        <p>Experimental ND2 file writer.</p>
+<p>Supports encoding of all image attributes, most commonly used experiments and most of image metadata.
+Currently does not support encoding of Well-plates, binary layers, ROIs and any custom data and text into chunk.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Data is written in chunks, so you can write data in any order you want, image data however can
+only be written after image attributes are set, if you write same chunk multiple times, all chunks will be saved,
+however only the last one will be used.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>As explained in <a href="../#writing-to-nd2-file">Quickstart</a>, image data can only be written <strong>after</strong>
+image attributes are set, but if you want to write image data into <code>.nd2</code> file without knowing how many frames there is
+(for example with continuous writing),
+you can pass <code>ImageAttributes</code> instance when creating <code>.nd2</code> using custom chunker argument as shown below.</p>
+<p>Setting <code>ImageAttributes</code> this way <strong>will not store them in <code>.nd2</code> file</strong> and you still <strong>have to store them at some point</strong>,
+however you can do so after you know how many frames there is.</p>
+<div class="language-py highlight"><span class="filename">Example os using chunker arguments to set image attributes</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">attributes</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">ImageAttributes</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">width</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">height</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">component_count</span> <span class="o">=</span> <span class="n">COMPONENT_COUNT</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">bits</span> <span class="o">=</span> <span class="n">BITS</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">sequence_count</span> <span class="o">=</span> <span class="o">...</span>  <span class="c1"># will be set later</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">with</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">Nd2Writer</span><span class="p">(</span><span class="s2">&quot;outfile.nd2&quot;</span><span class="p">,</span> <span class="n">chunker_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;with_image_attributes&quot;</span><span class="p">:</span> <span class="n">attributes</span><span class="p">})</span> <span class="k">as</span> <span class="n">nd2</span><span class="p">:</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="c1"># you can now set image data without setting attributes</span>
+</span></code></pre></div>
+</div>
+<p>See <a href="../#writing-to-nd2-file">Quickstart</a> for an example of how to use this class and how to write individual chunks.</p>
+
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>file</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Filename of the ND2 file.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="str">str</span> | <span title="pathlib.Path">Path</span> | <span title="int">int</span> | <span title="typing.BinaryIO">BinaryIO</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>chunker_kwargs</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Additional parameters for chunker.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="dict">dict</span></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>{}</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.Nd2WriterProtocol.experiment" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">experiment</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
+  </span>
+
+<a href="#limnd2.protocols.Nd2WriterProtocol.experiment" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">experiment</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="ExperimentLevel
+
+
+  
+      dataclass
+   (limnd2.experiment.ExperimentLevel)" href="../experiment/#limnd2.experiment.ExperimentLevel">ExperimentLevel</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Attribute to get or set experiments in an <code>.nd2</code> file.</p>
+<p>See <a href="../experiment/#limnd2.experiment.ExperimentLevel"><code>ExperimentLevel</code></a> class for more information.</p>
+<p>In order to create an instance of <code>ExperimentLevel</code> class, use <a href="../experiment_factory/#limnd2.experiment_factory.ExperimentFactory"><code>ExperimentFactory</code></a> class.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.Nd2WriterProtocol.imageAttributes" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">imageAttributes</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
+  </span>
+
+<a href="#limnd2.protocols.Nd2WriterProtocol.imageAttributes" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">imageAttributes</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="ImageAttributes
+
+
+  
+      dataclass
+   (limnd2.attributes.ImageAttributes)" href="../attributes/#limnd2.attributes.ImageAttributes">ImageAttributes</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Attribute to get or set attributes of an <code>.nd2</code> file.</p>
+<p>See <a href="../attributes/#limnd2.attributes.ImageAttributes"><code>ImageAttributes</code></a> class for more information.</p>
+<p>In order to create an instance of <code>ImageAttributes</code> class from simple parameters, use <a href="../attributes/#limnd2.attributes.ImageAttributes.create"><code>ImageAttributes.create</code></a> method.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.Nd2WriterProtocol.pictureMetadata" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">pictureMetadata</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
+  </span>
+
+<a href="#limnd2.protocols.Nd2WriterProtocol.pictureMetadata" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pictureMetadata</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="PictureMetadata
+
+
+  
+      dataclass
+   (limnd2.metadata.PictureMetadata)" href="../metadata/#limnd2.metadata.PictureMetadata">PictureMetadata</a></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Attribute to get or set metadata of an <code>.nd2</code> file.</p>
+<p>See <a href="../metadata/#limnd2.metadata.PictureMetadata"><code>PictureMetadata</code></a> class for more information.</p>
+<p>In order to create an instance of <code>PictureMetadata</code> class, use <a href="../metadata_factory/#limnd2.metadata_factory.MetadataFactory"><code>MetadataFactory</code></a> class.</p>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="limnd2.protocols.Nd2WriterProtocol.finalize" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">finalize</span>
+
+
+<a href="#limnd2.protocols.Nd2WriterProtocol.finalize" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">finalize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Explicitly finalize the file, this is not needed if you use <code>with</code> statement.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="limnd2.protocols.Nd2WriterProtocol.setImage" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">setImage</span>
+
+
+<a href="#limnd2.protocols.Nd2WriterProtocol.setImage" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">setImage</span><span class="p">(</span><span class="n">seq_index</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n"><span title="limnd2.base.NumpyArrayLike">NumpyArrayLike</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Seta image data using specified frame index.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You must manually keep track of the frame index and make sure that you are not
+overwriting the same frame multiple times and that images are written sequentially.</p>
+</div>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="limnd2.protocols.ResultsProtocol" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">ResultsProtocol</span>
+
+
+<a href="#limnd2.protocols.ResultsProtocol" class="headerlink" title="Permanent link">&para;</a></h3>
+
 
     <div class="doc doc-contents ">
 
@@ -1470,81 +2649,47 @@ Those instances should be used with <code>Nd2Writer</code> instance for altering
 
 
 
-<h4 id="limnd2.metadata_factory.MetadataFactory.pixel_calibration" class="doc doc-heading">
-            <span class="doc doc-object-name doc-attribute-name">pixel_calibration</span>
+<h4 id="limnd2.protocols.ResultsProtocol.items" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">items</span>
 
 
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
-<a href="#limnd2.metadata_factory.MetadataFactory.pixel_calibration" class="headerlink" title="Permanent link">&para;</a></h4>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pixel_calibration</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="n"><span title="limnd2.metadata_factory.MetadataFactory(pixel_calibration)">pixel_calibration</span></span>
+<a href="#limnd2.protocols.ResultsProtocol.items" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">items</span><span class="p">:</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="limnd2.results.ResultItem">ResultItem</span></span><span class="p">]</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
-        <p>Helper class for creating metadata, see examples below on how to create metadata witch channels and microscope settings.</p>
-<p>To actually create metadata instance, make sure to call either <a href="./#limnd2.metadata_factory.MetadataFactory.createMetadata"><code>.createMetadata()</code></a>
-method or use call operator.</p>
-<h6 id="limnd2.metadata_factory.MetadataFactory.pixel_calibration--sample-usage">Sample usage<a class="headerlink" href="#limnd2.metadata_factory.MetadataFactory.pixel_calibration--sample-usage" title="Permanent link">&para;</a></h6>
-<p>Make sure to import MetadataFactory class before using it, optionally you can use Plane dataclass if you wish to use it.</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">limnd2.metadata_factory</span><span class="w"> </span><span class="kn">import</span> <span class="n">MetadataFactory</span><span class="p">,</span> <span class="n">Plane</span>
+        <p>Returns a dictionary of all results in the accompanying <code>.h5</code> file.</p>
+<p>Each result potentially contains tabular results (tables, graphs, ...) and binary layers.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.ResultsProtocol.storage_info" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">storage_info</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.protocols.ResultsProtocol.storage_info" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">storage_info</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="StorageInfoProtocol (limnd2.protocols.StorageInfoProtocol)" href="#limnd2.protocols.StorageInfoProtocol">StorageInfoProtocol</a></span>
 </span></code></pre></div>
-<p>You can create channels and microscope settings on <a href="./#limnd2.metadata_factory.MetadataFactory"><code>MetadataFactory</code></a> constructor,
-or add them later using <a href="./#limnd2.metadata_factory.MetadataFactory.addPlane"><code>.addPlane()</code></a> method.</p>
-<p>When you add microscope settings to <a href="./#limnd2.metadata_factory.MetadataFactory"><code>MetadataFactory</code></a> constructor, those settings will be used for all channels,
-unless you overwrite them by providing replacement values when creating individual channel.</p>
-<p>In following example <code>objective_magnification</code> is applied to all channels, <code>immersion_refractive_index</code> however is only applied to <code>Channel2</code>.</p>
-<p>To see whole list of microscope settings that can be applied per channel or per whole factory, see <a href="./#limnd2.metadata_factory.Plane"><code>Plane</code></a> dataclass.</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Create all data on constructor (miscroscope settings and channels)</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">factory</span> <span class="o">=</span> <span class="n">MetadataFactory</span><span class="p">([{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Channel1&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;red&quot;</span><span class="p">},</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>                           <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Channel2&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;immersion_refractive_index&quot;</span> <span class="p">:</span> <span class="mf">1.2</span><span class="p">}],</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>                          <span class="n">pixel_calibration</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>                          <span class="n">objective_magnification</span> <span class="o">=</span> <span class="mf">40.0</span><span class="p">)</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">factory</span><span class="o">.</span><span class="n">createMetadata</span><span class="p">())</span>
-</span></code></pre></div>
-<p>You can also create factory instance with global microscope settings and add channels later.</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Create factory instance with global microscope settings</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">factory</span> <span class="o">=</span> <span class="n">MetadataFactory</span><span class="p">(</span><span class="n">immersion_refractive_index</span><span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>                        <span class="n">objective_magnification</span><span class="o">=</span> <span class="mf">40.0</span><span class="p">,</span> <span class="n">pixel_calibration</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-</span></code></pre></div>
-<p>You can add channel using named arguments.
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>factory.addPlane(name = &quot;Channel 1&quot;,
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>                 emission_wavelength = 500,
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>                 color = &quot;blue&quot;)
-</span></code></pre></div>
-You can add channel using <a href="./#limnd2.metadata_factory.Plane"><code>Plane</code></a> dataclass.
-<div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">factory</span><span class="o">.</span><span class="n">addPlane</span><span class="p">(</span><span class="n">Plane</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Channel 2&quot;</span><span class="p">,</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>                       <span class="n">excitation_wavelength</span> <span class="o">=</span> <span class="mi">600</span><span class="p">,</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>                       <span class="n">emission_wavelength</span> <span class="o">=</span> <span class="mi">700</span><span class="p">,</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>                       <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span><span class="p">))</span>
-</span></code></pre></div></p>
-<p>Or you can add channels using a dictionary.
-<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">factory</span><span class="o">.</span><span class="n">addPlane</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Channel 3&quot;</span><span class="p">,</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>                <span class="s2">&quot;immersion_refractive_index&quot;</span><span class="p">:</span> <span class="mf">1.6</span><span class="p">,</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>                <span class="s2">&quot;objective_magnification&quot;</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">})</span>
-</span></code></pre></div></p>
-<p>You can also create channel, store it in a variable and modify it.
-<div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">plane</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">addPlane</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Channel 4&quot;</span><span class="p">})</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">plane</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;green&quot;</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">plane</span><span class="o">.</span><span class="n">camera_name</span> <span class="o">=</span> <span class="s2">&quot;Camera channel 4&quot;</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">plane</span><span class="o">.</span><span class="n">modality</span> <span class="o">=</span> <span class="s2">&quot;Brightfield&quot;</span>
-</span></code></pre></div></p>
-<p>Or you can access existing channel using its index</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">factory</span><span class="o">.</span><span class="n">getChannel</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">pinhole_diameter</span> <span class="o">=</span> <span class="mi">50</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">factory</span><span class="o">.</span><span class="n">getChannel</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">microscope_name</span> <span class="o">=</span> <span class="s2">&quot;Microscope for channel 3&quot;</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">factory</span><span class="o">.</span><span class="n">getChannel</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;green&quot;</span>
-</span></code></pre></div>
-<p>Or you can access existing channel using its channel name</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">factory</span><span class="o">.</span><span class="n">getChannel</span><span class="p">(</span><span class="s2">&quot;Channel 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">factory</span><span class="o">.</span><span class="n">getChannel</span><span class="p">(</span><span class="s2">&quot;Channel 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">immersion_refractive_index</span> <span class="o">=</span> <span class="mf">1.6</span>
-</span></code></pre></div>
-<p>Finally create metadata using createMetadata method
-<div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">factory</span><span class="o">.</span><span class="n">createMetadata</span><span class="p">())</span>
-</span></code></pre></div></p>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns storage information.</p>
+<p>See <a href="./#limnd2.protocols.StorageInfoProtocol"><code>StorageInfoProtocol</code></a> for more information.</p>
 
     </div>
 
@@ -1552,144 +2697,6 @@ You can add channel using <a href="./#limnd2.metadata_factory.Plane"><code>Plane
 
 
 
-
-<div class="doc doc-object doc-function">
-
-
-<h4 id="limnd2.metadata_factory.MetadataFactory.__call__" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">__call__</span>
-
-
-<a href="#limnd2.metadata_factory.MetadataFactory.__call__" class="headerlink" title="Permanent link">&para;</a></h4>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">__call__</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="PictureMetadata
-
-
-  
-      dataclass
-   (limnd2.metadata.PictureMetadata)" href="../metadata/#limnd2.metadata.PictureMetadata">PictureMetadata</a></span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Creates a new PictureMetadata instance from the factory settings.</p>
-
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h4 id="limnd2.metadata_factory.MetadataFactory.addPlane" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">addPlane</span>
-
-
-<a href="#limnd2.metadata_factory.MetadataFactory.addPlane" class="headerlink" title="Permanent link">&para;</a></h4>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">addPlane</span><span class="p">(</span><span class="n">plane</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="Plane
-
-
-  
-      dataclass
-   (limnd2.metadata_factory.Plane)" href="#limnd2.metadata_factory.Plane">Plane</a></span> <span class="o">|</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="limnd2.metadata.Any">Any</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="Plane
-
-
-  
-      dataclass
-   (limnd2.metadata_factory.Plane)" href="#limnd2.metadata_factory.Plane">Plane</a></span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Adds a new channel to the factory, see examples on how to use this method and
-<a href="./#limnd2.metadata_factory.Plane"><code>Plane</code></a> dataclass to see what settings can be applied.</p>
-
-
-<table>
-      <thead>
-        <tr>
-          <th><span class="doc-section-title">PARAMETER</span></th>
-          <th><span>DESCRIPTION</span></th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                <code>plane</code>
-            </td>
-            <td class="doc-param-details">
-              <div class="doc-md-description">
-                <p>A <a href="./#limnd2.metadata_factory.Plane"><code>Plane</code></a> object or a dictionary with plane settings.</p>
-              </div>
-              <p>
-                  <span class="doc-param-annotation">
-                    <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-internal" title="Plane
-
-
-  
-      dataclass
-   (limnd2.metadata_factory.Plane)" href="#limnd2.metadata_factory.Plane">Plane</a> | <span title="dict">dict</span>[<span title="str">str</span>, <span title="limnd2.metadata.Any">Any</span>]</code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>None</code>
-                  </span>
-              </p>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td>
-                <code>**kwargs</code>
-            </td>
-            <td class="doc-param-details">
-              <div class="doc-md-description">
-                <p>Additional settings for the plane.</p>
-              </div>
-              <p>
-                  <span class="doc-param-annotation">
-                    <b>TYPE:</b>
-                      <code><span title="dict">dict</span></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>{}</code>
-                  </span>
-              </p>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h4 id="limnd2.metadata_factory.MetadataFactory.createMetadata" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">createMetadata</span>
-
-
-<a href="#limnd2.metadata_factory.MetadataFactory.createMetadata" class="headerlink" title="Permanent link">&para;</a></h4>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">createMetadata</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">number_of_channels_fallback</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">is_rgb_fallback</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="PictureMetadata
-
-
-  
-      dataclass
-   (limnd2.metadata.PictureMetadata)" href="../metadata/#limnd2.metadata.PictureMetadata">PictureMetadata</a></span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents ">
-
-        <p>Creates a new PictureMetadata instance from the factory settings.</p>
-
-
-    </div>
-
-</div>
 
 
 
@@ -1703,230 +2710,15 @@ You can add channel using <a href="./#limnd2.metadata_factory.Plane"><code>Plane
 
 
 
-<h3 id="limnd2.metadata_factory.Plane" class="doc doc-heading">
-            <span class="doc doc-object-name doc-class-name">Plane</span>
+<h3 id="limnd2.protocols.StorageInfoProtocol" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">StorageInfoProtocol</span>
 
 
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
-  </span>
+<a href="#limnd2.protocols.StorageInfoProtocol" class="headerlink" title="Permanent link">&para;</a></h3>
 
-<a href="#limnd2.metadata_factory.Plane" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">Plane</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">modality</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneModality (limnd2.metadata.PicturePlaneModality)" href="../metadata/#limnd2.metadata.PicturePlaneModality">PicturePlaneModality</a></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="PicturePlaneModalityFlags (limnd2.metadata.PicturePlaneModalityFlags)" href="../metadata/#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">excitation_wavelength</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">emission_wavelength</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">objective_magnification</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">objective_numerical_aperture</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">zoom_magnification</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">immersion_refractive_index</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pinhole_diameter</span><span class="p">:</span> <span class="n"><span title="float">float</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">camera_name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">microscope_name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">filter_name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">acquisition_time</span><span class="p">:</span> <span class="n"><span title="limnd2.metadata.datetime.datetime">datetime</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
-</span></code></pre></div>
 
     <div class="doc doc-contents ">
 
-
-        <p>A class to represent a plane in metadata, see attributes list to see what settings can be applied.</p>
-
-
-<table>
-      <thead>
-        <tr>
-          <th><span class="doc-section-title">ATTRIBUTE</span></th>
-          <th><span>DESCRIPTION</span></th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td><code><span title="limnd2.metadata_factory.Plane.name">name</span></code></td>
-            <td class="doc-attribute-details">
-              <div class="doc-md-description">
-                <p>The name of the plane.</p>
-              </div>
-              <p>
-                  <span class="doc-attribute-annotation">
-                    <b>TYPE:</b>
-                      <code><span title="str">str</span></code>
-                  </span>
-              </p>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="limnd2.metadata_factory.Plane.modality">modality</span></code></td>
-            <td class="doc-attribute-details">
-              <div class="doc-md-description">
-                <p>The modality of the plane, can be a string (e.g., fluorescence, brightfield) or an instance of PicturePlaneModality or PicturePlaneModalityFlags.</p>
-              </div>
-              <p>
-                  <span class="doc-attribute-annotation">
-                    <b>TYPE:</b>
-                      <code><span title="str">str</span> | <a class="autorefs autorefs-internal" title="PicturePlaneModality (limnd2.metadata.PicturePlaneModality)" href="../metadata/#limnd2.metadata.PicturePlaneModality">PicturePlaneModality</a> | <a class="autorefs autorefs-internal" title="PicturePlaneModalityFlags (limnd2.metadata.PicturePlaneModalityFlags)" href="../metadata/#limnd2.metadata.PicturePlaneModalityFlags">PicturePlaneModalityFlags</a></code>
-                  </span>
-              </p>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="limnd2.metadata_factory.Plane.excitation_wavelength">excitation_wavelength</span></code></td>
-            <td class="doc-attribute-details">
-              <div class="doc-md-description">
-                <p>The excitation wavelength in nanometers.</p>
-              </div>
-              <p>
-                  <span class="doc-attribute-annotation">
-                    <b>TYPE:</b>
-                      <code><span title="int">int</span></code>
-                  </span>
-              </p>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="limnd2.metadata_factory.Plane.emission_wavelength">emission_wavelength</span></code></td>
-            <td class="doc-attribute-details">
-              <div class="doc-md-description">
-                <p>The emission wavelength in nanometers.</p>
-              </div>
-              <p>
-                  <span class="doc-attribute-annotation">
-                    <b>TYPE:</b>
-                      <code><span title="int">int</span></code>
-                  </span>
-              </p>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="limnd2.metadata_factory.Plane.filter_name">filter_name</span></code></td>
-            <td class="doc-attribute-details">
-              <div class="doc-md-description">
-                <p>The name of the filter used.</p>
-              </div>
-              <p>
-                  <span class="doc-attribute-annotation">
-                    <b>TYPE:</b>
-                      <code><span title="str">str</span></code>
-                  </span>
-              </p>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="limnd2.metadata_factory.Plane.color">color</span></code></td>
-            <td class="doc-attribute-details">
-              <div class="doc-md-description">
-                <p>The color associated with the plane.</p>
-              </div>
-              <p>
-                  <span class="doc-attribute-annotation">
-                    <b>TYPE:</b>
-                      <code><span title="str">str</span></code>
-                  </span>
-              </p>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="limnd2.metadata_factory.Plane.objective_magnification">objective_magnification</span></code></td>
-            <td class="doc-attribute-details">
-              <div class="doc-md-description">
-                <p>The magnification of the objective lens. (overrides setting from MetadataFactory)</p>
-              </div>
-              <p>
-                  <span class="doc-attribute-annotation">
-                    <b>TYPE:</b>
-                      <code><span title="float">float</span></code>
-                  </span>
-              </p>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="limnd2.metadata_factory.Plane.objective_numerical_aperture">objective_numerical_aperture</span></code></td>
-            <td class="doc-attribute-details">
-              <div class="doc-md-description">
-                <p>The numerical aperture of the objective lens. (overrides setting from MetadataFactory)</p>
-              </div>
-              <p>
-                  <span class="doc-attribute-annotation">
-                    <b>TYPE:</b>
-                      <code><span title="float">float</span></code>
-                  </span>
-              </p>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="limnd2.metadata_factory.Plane.zoom_magnification">zoom_magnification</span></code></td>
-            <td class="doc-attribute-details">
-              <div class="doc-md-description">
-                <p>The zoom magnification. (overrides setting from MetadataFactory)</p>
-              </div>
-              <p>
-                  <span class="doc-attribute-annotation">
-                    <b>TYPE:</b>
-                      <code><span title="float">float</span></code>
-                  </span>
-              </p>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="limnd2.metadata_factory.Plane.immersion_refractive_index">immersion_refractive_index</span></code></td>
-            <td class="doc-attribute-details">
-              <div class="doc-md-description">
-                <p>The refractive index of the immersion medium. (overrides setting from MetadataFactory)</p>
-              </div>
-              <p>
-                  <span class="doc-attribute-annotation">
-                    <b>TYPE:</b>
-                      <code><span title="float">float</span></code>
-                  </span>
-              </p>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="limnd2.metadata_factory.Plane.pinhole_diameter">pinhole_diameter</span></code></td>
-            <td class="doc-attribute-details">
-              <div class="doc-md-description">
-                <p>The diameter of the pinhole. (overrides setting from MetadataFactory)</p>
-              </div>
-              <p>
-                  <span class="doc-attribute-annotation">
-                    <b>TYPE:</b>
-                      <code><span title="float">float</span></code>
-                  </span>
-              </p>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="limnd2.metadata_factory.Plane.camera_name">camera_name</span></code></td>
-            <td class="doc-attribute-details">
-              <div class="doc-md-description">
-                <p>The name of the camera used. (overrides setting from MetadataFactory)</p>
-              </div>
-              <p>
-                  <span class="doc-attribute-annotation">
-                    <b>TYPE:</b>
-                      <code><span title="str">str</span></code>
-                  </span>
-              </p>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="limnd2.metadata_factory.Plane.microscope_name">microscope_name</span></code></td>
-            <td class="doc-attribute-details">
-              <div class="doc-md-description">
-                <p>The name of the microscope used. (overrides setting from MetadataFactory)</p>
-              </div>
-              <p>
-                  <span class="doc-attribute-annotation">
-                    <b>TYPE:</b>
-                      <code><span title="str">str</span></code>
-                  </span>
-              </p>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="limnd2.metadata_factory.Plane.acquisition_time">acquisition_time</span></code></td>
-            <td class="doc-attribute-details">
-              <div class="doc-md-description">
-                <p>Acquistion time of the plane.</p>
-              </div>
-              <p>
-                  <span class="doc-attribute-annotation">
-                    <b>TYPE:</b>
-                      <code><span title="limnd2.metadata.datetime.datetime">datetime</span></code>
-                  </span>
-              </p>
-            </td>
-          </tr>
-      </tbody>
-    </table>
 
 
 
@@ -1945,6 +2737,102 @@ You can add channel using <a href="./#limnd2.metadata_factory.Plane"><code>Plane
 
 
 
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.StorageInfoProtocol.filename" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">filename</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.protocols.StorageInfoProtocol.filename" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">filename</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">|</span> <span class="kc">None</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns the filename of the file if available, otherwise <code>None</code>.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.StorageInfoProtocol.last_modified" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">last_modified</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.protocols.StorageInfoProtocol.last_modified" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">last_modified</span><span class="p">:</span> <span class="n"><span title="datetime.datetime">datetime</span></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns the modify time of the file on disk.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.StorageInfoProtocol.size_on_disk" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">size_on_disk</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.protocols.StorageInfoProtocol.size_on_disk" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">size_on_disk</span><span class="p">:</span> <span class="n"><span title="int">int</span></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns the number of bytes the file takes on disk.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.protocols.StorageInfoProtocol.url" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">url</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.protocols.StorageInfoProtocol.url" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">url</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">|</span> <span class="kc">None</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns the URL of the file if available, otherwise <code>None</code>.</p>
+
+    </div>
+
+</div>
 
 
 
