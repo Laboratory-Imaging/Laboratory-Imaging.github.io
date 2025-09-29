@@ -1015,6 +1015,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#limnd2.tools.conversion.LimImageSource.LimImageSource.metadata_as_pattern_settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      metadata_as_pattern_settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#limnd2.tools.conversion.LimImageSource.LimImageSource.nd2_attributes" class="md-nav__link">
     <span class="md-ellipsis">
       nd2_attributes
@@ -1043,6 +1052,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.tools.conversion.LimImageSource.merge_four_fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      merge_four_fields
+    </span>
+  </a>
   
 </li>
       
@@ -1311,6 +1329,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#limnd2.tools.conversion.LimImageSource.LimImageSource.metadata_as_pattern_settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      metadata_as_pattern_settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#limnd2.tools.conversion.LimImageSource.LimImageSource.nd2_attributes" class="md-nav__link">
     <span class="md-ellipsis">
       nd2_attributes
@@ -1339,6 +1366,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limnd2.tools.conversion.LimImageSource.merge_four_fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      merge_four_fields
+    </span>
+  </a>
   
 </li>
       
@@ -1497,6 +1533,26 @@ In other file formats, this will return empty dictionary.</p>
 <div class="doc doc-object doc-function">
 
 
+<h4 id="limnd2.tools.conversion.LimImageSource.LimImageSource.metadata_as_pattern_settings" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">metadata_as_pattern_settings</span>
+
+
+<a href="#limnd2.tools.conversion.LimImageSource.LimImageSource.metadata_as_pattern_settings" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">metadata_as_pattern_settings</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="dict">dict</span></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Return metadata as a dictionary for internal usage in QML.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
 <h4 id="limnd2.tools.conversion.LimImageSource.LimImageSource.nd2_attributes" class="doc doc-heading">
             <span class="doc doc-object-name doc-function-name">nd2_attributes</span>
 
@@ -1586,6 +1642,34 @@ This will automatically detect the file type and create the appropriate LimImage
 
 </div>
 
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="limnd2.tools.conversion.LimImageSource.merge_four_fields" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">merge_four_fields</span>
+
+
+<a href="#limnd2.tools.conversion.LimImageSource.merge_four_fields" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">merge_four_fields</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Merge only: time_step, z_step, channels, metadata.
+Rules:
+  - Keep A as source of truth.
+  - For numbers: fill A.<field> from B only if A.<field> is None.
+  - For channels: if A.channels already has anything (non-empty), LEAVE IT AS-IS.
+                  Only if A.channels is None/empty, copy B.channels.
+  - For metadata: if A.metadata is None, take B.metadata; otherwise fill unset
+                  pixel_calibration and append planes missing by name.
+Mutates and returns 'a'.</p>
+
+
+    </div>
+
+</div>
 
 
 
