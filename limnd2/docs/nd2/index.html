@@ -778,10 +778,32 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        calibration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#limnd2.nd2.Nd2Reader.results" class="md-nav__link">
     <span class="md-ellipsis">
       
         results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shape
       
     </span>
   </a>
@@ -804,6 +826,17 @@
     <span class="md-ellipsis">
       
         crestDeepSimRawDataIndices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.delayedImageData" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        delayedImageData
       
     </span>
   </a>
@@ -1425,10 +1458,32 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        calibration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#limnd2.nd2.Nd2Reader.results" class="md-nav__link">
     <span class="md-ellipsis">
       
         results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shape
       
     </span>
   </a>
@@ -1451,6 +1506,17 @@
     <span class="md-ellipsis">
       
         crestDeepSimRawDataIndices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.delayedImageData" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        delayedImageData
       
     </span>
   </a>
@@ -1623,6 +1689,31 @@
 
 
 
+<h4 id="limnd2.nd2.Nd2Reader.calibration" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">calibration</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.nd2.Nd2Reader.calibration" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">calibration</span><span class="p">:</span> <span class="n"><span title="tuple">tuple</span></span><span class="p">[</span><span class="n"><span title="float">float</span></span><span class="p">,</span> <span class="n"><span title="float">float</span></span><span class="p">,</span> <span class="n"><span title="float">float</span></span><span class="p">,</span> <span class="n"><span title="float">float</span></span><span class="p">,</span> <span class="n"><span title="float">float</span></span><span class="p">,</span> <span class="n"><span title="float">float</span></span><span class="p">]</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns 6D canonical data calibration (T in ms, 0, Z in um, Y in um, X in um, 0) 0 is for uncalibrated.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h4 id="limnd2.nd2.Nd2Reader.results" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">results</span>
 
@@ -1640,6 +1731,31 @@
 
         <p>Returns a dictionary of all results in the accompanying <code>.h5</code> file.</p>
 <p>Each result potentially contains tabular results (tables, graphs, ...) and binary layers.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.nd2.Nd2Reader.shape" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">shape</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-cached"><code>cached</code></small>
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.nd2.Nd2Reader.shape" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">shape</span><span class="p">:</span> <span class="n"><span title="tuple">tuple</span></span><span class="p">[</span><span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n"><span title="int">int</span></span><span class="p">]</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns 6D canonical data shape (T, M, Z, Y, X, C).</p>
 
     </div>
 
@@ -1882,6 +1998,26 @@ for example <code>zoom60000_na1400_ex561_pitch15000_size1500_im65_tm0</code>.</p
         <p>Returns all valid indices for deepSIM data in the <code>.nd2</code> file.</p>
 <p>Indices are returned as tuples of (sequence_index, component_index) in a list.</p>
 <p>See <a href="./#limnd2.nd2.Nd2Reader.crestDeepSimRawData"><code>crestDeepSimRawData()</code></a> method that uses those indices to retrieve deepSIM data.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="limnd2.nd2.Nd2Reader.delayedImageData" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">delayedImageData</span>
+
+
+<a href="#limnd2.nd2.Nd2Reader.delayedImageData" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">delayedImageData</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><span title="typing.Any">Any</span></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Returns 6D canonical data shape (T, M, Z, Y, X, C).</p>
 
 
     </div>
