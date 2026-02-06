@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nd2file" class="md-skip">
+        <a href="#nd2file-compatibility-layer" class="md-skip">
           Skip to content
         </a>
       
@@ -1131,7 +1131,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#limnd2.nd2file.ND2File" class="md-nav__link">
+  <a href="#limnd2.nd2_compatability.nd2file.ND2File" class="md-nav__link">
     <span class="md-ellipsis">
       
         ND2File
@@ -1143,7 +1143,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#limnd2.nd2file.ND2File.attributes" class="md-nav__link">
+  <a href="#limnd2.nd2_compatability.nd2file.ND2File.attributes" class="md-nav__link">
     <span class="md-ellipsis">
       
         attributes
@@ -1154,7 +1154,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#limnd2.nd2file.ND2File.experiment" class="md-nav__link">
+  <a href="#limnd2.nd2_compatability.nd2file.ND2File.experiment" class="md-nav__link">
     <span class="md-ellipsis">
       
         experiment
@@ -1165,7 +1165,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#limnd2.nd2file.ND2File.path" class="md-nav__link">
+  <a href="#limnd2.nd2_compatability.nd2file.ND2File.path" class="md-nav__link">
     <span class="md-ellipsis">
       
         path
@@ -1176,10 +1176,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#limnd2.nd2file.ND2File.version" class="md-nav__link">
+  <a href="#limnd2.nd2_compatability.nd2file.ND2File.version" class="md-nav__link">
     <span class="md-ellipsis">
       
         version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2_compatability.nd2file.ND2File.jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        jobs
       
     </span>
   </a>
@@ -1374,7 +1385,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#limnd2.nd2file.ND2File" class="md-nav__link">
+  <a href="#limnd2.nd2_compatability.nd2file.ND2File" class="md-nav__link">
     <span class="md-ellipsis">
       
         ND2File
@@ -1386,7 +1397,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#limnd2.nd2file.ND2File.attributes" class="md-nav__link">
+  <a href="#limnd2.nd2_compatability.nd2file.ND2File.attributes" class="md-nav__link">
     <span class="md-ellipsis">
       
         attributes
@@ -1397,7 +1408,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#limnd2.nd2file.ND2File.experiment" class="md-nav__link">
+  <a href="#limnd2.nd2_compatability.nd2file.ND2File.experiment" class="md-nav__link">
     <span class="md-ellipsis">
       
         experiment
@@ -1408,7 +1419,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#limnd2.nd2file.ND2File.path" class="md-nav__link">
+  <a href="#limnd2.nd2_compatability.nd2file.ND2File.path" class="md-nav__link">
     <span class="md-ellipsis">
       
         path
@@ -1419,10 +1430,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#limnd2.nd2file.ND2File.version" class="md-nav__link">
+  <a href="#limnd2.nd2_compatability.nd2file.ND2File.version" class="md-nav__link">
     <span class="md-ellipsis">
       
         version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2_compatability.nd2file.ND2File.jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        jobs
       
     </span>
   </a>
@@ -1454,7 +1476,9 @@
   
 
 
-<h1 id="nd2file">Nd2File<a class="headerlink" href="#nd2file" title="Permanent link">&para;</a></h1>
+<h1 id="nd2file-compatibility-layer">ND2File (compatibility layer)<a class="headerlink" href="#nd2file-compatibility-layer" title="Permanent link">&para;</a></h1>
+<p><code>ND2File</code> now lives in <code>limnd2.nd2_compatability</code>. The old
+<code>limnd2.nd2file</code> module is a shim kept for backward compatibility.</p>
 
 
 <div class="doc doc-object doc-module">
@@ -1499,12 +1523,12 @@ and for his invaluable input in helping us develop the <code>limnd2</code> libra
 
 
 
-<h3 id="limnd2.nd2file.ND2File" class="doc doc-heading">
+<h3 id="limnd2.nd2_compatability.nd2file.ND2File" class="doc doc-heading">
             <span class="doc doc-object-name doc-class-name">ND2File</span>
 
 
-<a href="#limnd2.nd2file.ND2File" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">ND2File</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n"><span title="limnd2.nd2file_types.FileOrBinaryIO">FileOrBinaryIO</span></span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">validate_frames</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">search_window</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+<a href="#limnd2.nd2_compatability.nd2file.ND2File" class="headerlink" title="Permanent link">&para;</a></h3>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">ND2File</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n"><span title="limnd2.nd2_compatability.nd2file_types.FileOrBinaryIO">FileOrBinaryIO</span></span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">validate_frames</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">search_window</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1533,7 +1557,7 @@ and for his invaluable input in helping us develop the <code>limnd2</code> libra
 
 
 
-<h4 id="limnd2.nd2file.ND2File.attributes" class="doc doc-heading">
+<h4 id="limnd2.nd2_compatability.nd2file.ND2File.attributes" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">attributes</span>
 
 
@@ -1542,8 +1566,8 @@ and for his invaluable input in helping us develop the <code>limnd2</code> libra
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
-<a href="#limnd2.nd2file.ND2File.attributes" class="headerlink" title="Permanent link">&para;</a></h4>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">attributes</span><span class="p">:</span> <span class="n"><span title="limnd2.nd2file_types.Attributes">Attributes</span></span>
+<a href="#limnd2.nd2_compatability.nd2file.ND2File.attributes" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">attributes</span><span class="p">:</span> <span class="n"><span title="limnd2.nd2_compatability.nd2file_types.Attributes">Attributes</span></span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1558,7 +1582,7 @@ and for his invaluable input in helping us develop the <code>limnd2</code> libra
 
 
 
-<h4 id="limnd2.nd2file.ND2File.experiment" class="doc doc-heading">
+<h4 id="limnd2.nd2_compatability.nd2file.ND2File.experiment" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">experiment</span>
 
 
@@ -1567,8 +1591,8 @@ and for his invaluable input in helping us develop the <code>limnd2</code> libra
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
-<a href="#limnd2.nd2file.ND2File.experiment" class="headerlink" title="Permanent link">&para;</a></h4>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">experiment</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="limnd2.nd2file_types.ExpLoop">ExpLoop</span></span><span class="p">]</span>
+<a href="#limnd2.nd2_compatability.nd2file.ND2File.experiment" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">experiment</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="limnd2.nd2_compatability.nd2file_types.ExpLoop">ExpLoop</span></span><span class="p">]</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1583,7 +1607,7 @@ and for his invaluable input in helping us develop the <code>limnd2</code> libra
 
 
 
-<h4 id="limnd2.nd2file.ND2File.path" class="doc doc-heading">
+<h4 id="limnd2.nd2_compatability.nd2file.ND2File.path" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">path</span>
 
 
@@ -1591,7 +1615,7 @@ and for his invaluable input in helping us develop the <code>limnd2</code> libra
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
-<a href="#limnd2.nd2file.ND2File.path" class="headerlink" title="Permanent link">&para;</a></h4>
+<a href="#limnd2.nd2_compatability.nd2file.ND2File.path" class="headerlink" title="Permanent link">&para;</a></h4>
 <div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">path</span><span class="p">:</span> <span class="n"><span title="str">str</span></span>
 </span></code></pre></div>
 
@@ -1607,7 +1631,7 @@ and for his invaluable input in helping us develop the <code>limnd2</code> libra
 
 
 
-<h4 id="limnd2.nd2file.ND2File.version" class="doc doc-heading">
+<h4 id="limnd2.nd2_compatability.nd2file.ND2File.version" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">version</span>
 
 
@@ -1616,7 +1640,7 @@ and for his invaluable input in helping us develop the <code>limnd2</code> libra
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
 
-<a href="#limnd2.nd2file.ND2File.version" class="headerlink" title="Permanent link">&para;</a></h4>
+<a href="#limnd2.nd2_compatability.nd2file.ND2File.version" class="headerlink" title="Permanent link">&para;</a></h4>
 <div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">version</span><span class="p">:</span> <span class="n"><span title="tuple">tuple</span></span><span class="p">[</span><span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
 </span></code></pre></div>
 
@@ -1630,6 +1654,28 @@ and for his invaluable input in helping us develop the <code>limnd2</code> libra
 
 
 
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="limnd2.nd2_compatability.nd2file.ND2File.jobs" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">jobs</span>
+
+
+<a href="#limnd2.nd2_compatability.nd2file.ND2File.jobs" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">jobs</span><span class="p">()</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Return JOBS metadata if available, else None.</p>
+<p>limnd2 compatibility layer does not currently parse JOBS metadata,
+so this returns None for now.</p>
+
+
+    </div>
+
+</div>
 
 
 
