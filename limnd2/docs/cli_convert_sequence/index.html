@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../static/lim_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -1639,10 +1639,6 @@
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If you use <code>-mx</code> or <code>-my</code> arguments, you can not use <code>-m</code> argument anymore.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
 <p>Dimension indexes are 1-based, meaning the first capture group is index 1.</p>
 </div>
 <details class="example">
@@ -1780,6 +1776,18 @@
 <li>
 <p><code>--multiprocessing</code></p>
 <p>Use multiple threads to write the ND2 file.</p>
+</li>
+<li>
+<p><code>--flatten_duplicates</code></p>
+<p>Flatten duplicate logical dimensions into one output axis.
+This flag is required when you:
+- map several capture groups to the same logical dimension (for example repeated <code>--channel</code> or repeated <code>--zstack</code>)
+- combine <code>--multipoint_x/--multipoint_y</code> with <code>--multipoint</code>
+- merge filename dimensions with in-file dimensions of the same type (for example regex <code>channel</code> + in-file <code>channel</code>)</p>
+</li>
+<li>
+<p><code>--allow_missing_files</code></p>
+<p>Allow sparse filename grids and fill missing frame/channel combinations with black data. Without this flag, missing combinations fail in strict mode.</p>
 </li>
 </ul>
 <h2 id="example-usage">Example usage<a class="headerlink" href="#example-usage" title="Permanent link">&para;</a></h2>
