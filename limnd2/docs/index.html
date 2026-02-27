@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="static/lim_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
     
     
       
@@ -708,34 +708,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Prerequisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#optional-dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Optional Dependencies
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installing-from-pypi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installing from PyPI
-      
-    </span>
-  </a>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1381,7 +1353,7 @@
   <span class="md-ellipsis">
     
   
-    Compatability
+    Compatibility
   
 
     
@@ -1397,7 +1369,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Compatability
+    Compatibility
   
 
           </label>
@@ -1571,6 +1543,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cli_sequence_export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Export sequence to images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cli_frame_export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Export one frame
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1621,34 +1649,6 @@
     <span class="md-ellipsis">
       
         Prerequisites
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prerequisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#optional-dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Optional Dependencies
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installing-from-pypi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installing from PyPI
       
     </span>
   </a>
@@ -1919,98 +1919,78 @@
 
 
 <h1 id="limnd2-package">limnd2 package<a class="headerlink" href="#limnd2-package" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This Python package is not yet available for the public, both the package and the documentation is still being worked on.</p>
-</div>
 <p>A Python library for reading and writing <code>.nd2</code> files produced by Nikon NIS-Elements Software.</p>
 <p>Built upon <a href="https://github.com/tlambert03/nd2">tlambert03/nd2</a> with a compatible drop-in interface, adding write capabilities and extended metadata support.</p>
+<blockquote>
+<p>[!WARNING]
+This library is still in active development.
+Current version: <code>0.3.0</code>.
+Until <code>1.0</code>, behavior and API can change, and some changes may be released without a version number bump.
+GitHub Issues and Pull Requests are currently disabled.
+If you have a problem or question, contact: <code>techsupp@lim.cz</code>.</p>
+</blockquote>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
-<p>limnd2 package requires the following core dependencies:</p>
+<p>Base <code>limnd2</code> requires:</p>
 <ul>
 <li>python&gt;=3.9</li>
 <li>numpy</li>
 <li>ome_types</li>
-<li>tifffile</li>
-<li>imagecodecs</li>
-<li>Pillow</li>
 </ul>
-<h4 id="optional-dependencies">Optional Dependencies<a class="headerlink" href="#optional-dependencies" title="Permanent link">&para;</a></h4>
-<p>For working with results and analytics features, install the optional <code>results</code> extras:</p>
+<p>Optional extras enable specific workflows:</p>
 <ul>
-<li>h5py</li>
-<li>pandas</li>
+<li><code>limnd2[results]</code> - load analysis tables from <code>.h5</code> files (<code>h5py</code>, <code>pandas</code>)</li>
+<li><code>limnd2[commonff]</code> - shared image format deps (<code>Pillow</code>, <code>tifffile</code>, <code>zarr</code>)</li>
+<li><code>limnd2[legacy]</code> - read legacy JPEG2000 ND2 (<code>imagecodecs</code>)</li>
+<li><code>limnd2[all]</code> - all runtime extras</li>
 </ul>
-<p>Install with: <code>pip install limnd2[results]</code> or <code>uv pip install limnd2[results]</code></p>
-<h3 id="installing-from-pypi">Installing from PyPI<a class="headerlink" href="#installing-from-pypi" title="Permanent link">&para;</a></h3>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This Python package is not released on PyPI yet, use manual installation.</p>
-</div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>limnd2
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># With optional results support</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>pip<span class="w"> </span>install<span class="w"> </span>limnd2<span class="o">[</span>results<span class="o">]</span>
+<p>Install examples from our package index:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span>limnd2
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span><span class="s2">&quot;limnd2[results]&quot;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span><span class="s2">&quot;limnd2[commonff,legacy]&quot;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span><span class="s2">&quot;limnd2[all]&quot;</span>
+</span></code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span>limnd2
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span><span class="s2">&quot;limnd2[results]&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span><span class="s2">&quot;limnd2[commonff,legacy]&quot;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span><span class="s2">&quot;limnd2[all]&quot;</span>
+</span></code></pre></div>
+<p>Quick install check:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import limnd2; print(limnd2.__version__)&quot;</span>
 </span></code></pre></div>
 <h3 id="manual-installation">Manual Installation<a class="headerlink" href="#manual-installation" title="Permanent link">&para;</a></h3>
 <p>This project uses <code>pyproject.toml</code> for dependency management and can be installed with either <code>pip</code> or <code>uv</code>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Using uv (recommended)</label><label for="__tabbed_1_2">Using pip</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Laboratory-Imaging/limnd2.git
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>limnd2
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>uv<span class="w"> </span>venv
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># Windows</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>.venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Linux/MacOS</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1"># source .venv/bin/activate</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;.[dev]&quot;</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Laboratory-Imaging/limnd2.git
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">cd</span><span class="w"> </span>limnd2
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>uv<span class="w"> </span>venv
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1"># Windows</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>.venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># Linux/MacOS</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1"># source .venv/bin/activate</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;.[dev]&quot;</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Laboratory-Imaging/limnd2.git
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">cd</span><span class="w"> </span>limnd2
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>env
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># Windows</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>env<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Linux/MacOS</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1"># source env/bin/activate</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;.[dev]&quot;</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Laboratory-Imaging/limnd2.git
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">cd</span><span class="w"> </span>limnd2
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>env
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># Windows</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>env<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Linux/MacOS</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># source env/bin/activate</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;.[dev]&quot;</span>
 </span></code></pre></div>
 </div>
 </div>
 </div>
-<!---
-### Installation from PyPI
-
-!!! warning
-    This Python package is not released on PyPI yet, use manual installation.
-
-You can install this package from PyPI by running following command:
-
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>limnd2
-</span></code></pre></div>
-
-### Manual Installation
-
-#### Windows
-
-Run following commands in a folder where you want to install this package.
-
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">Laboratory-Imaging</span><span class="p">/</span><span class="n">limnd2</span><span class="p">.</span><span class="n">git</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">cd </span><span class="n">limnd2</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">python</span> <span class="n">-m</span> <span class="n">venv</span> <span class="n">env</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">env</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">activate</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">python</span> <span class="n">-m</span> <span class="n">pip</span> <span class="n">install</span> <span class="p">-</span><span class="n">-upgrade</span> <span class="n">pip</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">pip</span> <span class="n">install</span> <span class="n">-r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
-</span></code></pre></div>
--->
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <h3 id="reading-nd2-files">Reading <code>.nd2</code> files<a class="headerlink" href="#reading-nd2-files" title="Permanent link">&para;</a></h3>
 <p>An example Python file showcasing how to read an <code>.nd2</code> file with this library is found at GitHub repo for this page: <a href="https://github.com/Laboratory-Imaging/limnd2/blob/main/examples/example_reader.py">example_reader.py</a>.</p>
@@ -2369,7 +2349,7 @@ number of components and number of frames in nd2 file.</p>
 </details>
 <h4 id="other-data-and-metadata">Other data and metadata<a class="headerlink" href="#other-data-and-metadata" title="Permanent link">&para;</a></h4>
 <p>Attributes, experiments, metadata, and image data are the most important parts of an .nd2 file, which is why they were the focus of this guide. The limnd2 module can also access information about binary layers, ROIs, and other data stored in the file. However, at this time, we do not provide a guide on how to read these additional components.</p>
-<p>If this causes any issues or you need further clarification, please feel free to head over to the <a href="https://github.com/Laboratory-Imaging/limnd2/discussions">Discussion page on our GitHub repository</a> and let us know.</p>
+<p>If this causes any issues or you need further clarification, contact <code>techsupp@lim.cz</code>.</p>
 <h3 id="writing-to-nd2-file">Writing to <code>.nd2</code> file<a class="headerlink" href="#writing-to-nd2-file" title="Permanent link">&para;</a></h3>
 <p>This package also allows you to write into and create <code>.nd2</code> files using <code>Nd2Writer</code> class, an example of how to do this, you can look into <a href="https://github.com/Laboratory-Imaging/limnd2/blob/main/examples/example_writer.py">example_writer.py</a>, which will also be described below.</p>
 <p>In the example below we will create new <code>.nd2</code> file with preset width, height, bits per component, component count and sequence count. Instead of using actual image data we will use NumPy to generate arrays filled with random noise, which we will store in the result file.</p>
@@ -2542,7 +2522,7 @@ however you can do so after you know how many frames there is.</p>
 <li><a href="nd2file/">nd2file.py</a> - serves as a wrapper around limnd2 library to provide same interface to nd2 library by Talley Lambert</li>
 </ul>
 <h2 id="feedback">Feedback<a class="headerlink" href="#feedback" title="Permanent link">&para;</a></h2>
-<p>Did you find a bug? Do you have a question about this package or an idea for improvement? Join the discussion <a href="https://github.com/Laboratory-Imaging/limnd2/discussions">here</a>.</p>
+<p>For questions, bug reports, or feature requests, contact <code>techsupp@lim.cz</code>.</p>
 
 
 

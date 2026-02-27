@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../static/lim_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
     
     
       
@@ -1042,7 +1042,7 @@
   <span class="md-ellipsis">
     
   
-    Compatability
+    Compatibility
   
 
     
@@ -1058,7 +1058,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Compatability
+    Compatibility
   
 
           </label>
@@ -1312,6 +1312,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli_sequence_export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Export sequence to images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli_frame_export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Export one frame
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1399,12 +1455,12 @@
 
 
 <h1 id="index-nd2-files">Index ND2 files<a class="headerlink" href="#index-nd2-files" title="Permanent link">&para;</a></h1>
-<p>Following command line tool allows you to index ND2 files is specified directory and extract basic metadata:</p>
+<p>This command line tool indexes ND2 files in a specified directory and extracts basic metadata:</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>limnd2-index<span class="w"> </span>&lt;arguments&gt;
 </span></code></pre></div>
-<p>Script also allows you to filter, sort, and format the output. The output can be formatted as a table, CSV, or JSON.</p>
-<p>As an example, the following command will index all ND2 files in the current directory and output the results as a table, filter only specific columns, and select images with resolution greater than 1000 pixels:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>limnd2-index.exe<span class="w"> </span>.<span class="w"> </span>-i<span class="w"> </span>Name,Size,Experiment,Resolution<span class="w"> </span>-F<span class="w"> </span><span class="s2">&quot;int(Resolution.split(&#39;x&#39;)[0]) &gt; 1000&quot;</span>
+<p>The script also supports filtering, sorting, and output formatting (<code>table</code>, <code>csv</code>, <code>json</code>).</p>
+<p>As an example, the following command indexes ND2 files in the current directory, keeps selected columns, and filters images with width greater than 1000 pixels:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>limnd2-index<span class="w"> </span>.<span class="w"> </span>-c<span class="w"> </span>Name,Size,Experiment,Resolution<span class="w"> </span>-F<span class="w"> </span><span class="s2">&quot;int(Resolution.split(&#39;x&#39;)[0]) &gt; 1000&quot;</span>
 </span></code></pre></div>
 <p><strong>Output:</strong></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>+-----------------------------+----------+----------------+--------------+
@@ -1444,11 +1500,19 @@
 </li>
 <li>
 <p><code>--include &lt;list&gt;</code>, <code>-i &lt;list&gt;</code></p>
-<p>Comma-separated list of columns to include in the output. Optional.</p>
+<p>Comma-separated list of columns to add to the default output. Optional.</p>
+</li>
+<li>
+<p><code>--columns &lt;list&gt;</code>, <code>-c &lt;list&gt;</code></p>
+<p>Exact comma-separated list of columns to output (replaces default column selection). Optional.</p>
 </li>
 <li>
 <p><code>--exclude &lt;list&gt;</code>, <code>-e &lt;list&gt;</code></p>
-<p>Comma-separated list of columns to exclude from the output. Optional.</p>
+<p>Comma-separated list of columns to remove from the selected output columns. Optional.</p>
+</li>
+<li>
+<p><code>--all-columns</code></p>
+<p>Show all columns by default (instead of hiding selected columns). Optional.</p>
 </li>
 <li>
 <p><code>--no-header</code></p>
@@ -1516,6 +1580,11 @@
 <td>Bit depth</td>
 </tr>
 <tr>
+<td><code>Compression</code></td>
+<td><code>str</code></td>
+<td>Compression mode and parameter</td>
+</tr>
+<tr>
 <td><code>Resolution</code></td>
 <td><code>str</code></td>
 <td>Image resolution</td>
@@ -1531,6 +1600,11 @@
 <td>Binary metadata</td>
 </tr>
 <tr>
+<td><code>Downsampled</code></td>
+<td><code>str</code></td>
+<td>Downsampled pyramid information</td>
+</tr>
+<tr>
 <td><code>Software</code></td>
 <td><code>str</code></td>
 <td>Acquisition software</td>
@@ -1542,6 +1616,7 @@
 </tr>
 </tbody>
 </table>
+<p>Default output hides: <code>Compression</code>, <code>Downsampled</code>, <code>Software</code>, <code>Grabber</code>.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Here are some example usages of the <code>limnd2-index</code> command:</p>
 <details class="example">
@@ -1560,13 +1635,13 @@
 </span></code></pre></div>
 </details>
 <details class="example">
-<summary>Sort output by acquisition date</summary>
+<summary>Sort output by frame count</summary>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>limnd2-index<span class="w"> </span>./data<span class="w"> </span>--sort-by<span class="w"> </span>Frames
 </span></code></pre></div>
 </details>
 <details class="example">
 <summary>Output results as CSV and include only specific columns</summary>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>limnd2-index<span class="w"> </span>./data<span class="w"> </span>--format<span class="w"> </span>csv<span class="w"> </span>--include<span class="w"> </span>Name,Experiment
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>limnd2-index<span class="w"> </span>./data<span class="w"> </span>--format<span class="w"> </span>csv<span class="w"> </span>--columns<span class="w"> </span>Name,Experiment
 </span></code></pre></div>
 </details>
 <details class="example">

@@ -16,12 +16,14 @@
         <link rel="prev" href="../cli_convert_image/">
       
       
+        <link rel="next" href="../cli_sequence_export/">
+      
       
         
       
       
       <link rel="icon" href="../static/lim_logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
     
     
       
@@ -1040,7 +1042,7 @@
   <span class="md-ellipsis">
     
   
-    Compatability
+    Compatibility
   
 
     
@@ -1056,7 +1058,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Compatability
+    Compatibility
   
 
           </label>
@@ -1388,6 +1390,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli_sequence_export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Export sequence to images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli_frame_export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Export one frame
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1674,7 +1732,7 @@
 </li>
 <li>
 <p><code>-o &lt;output_directory&gt;</code>, <code>--output_dir &lt;output_directory&gt;</code></p>
-<p>Specify output directory for the ND2 / JSON file <em>(same as input folder by default).</em></p>
+<p>Specify output directory for ND2 output <em>(same as input folder by default).</em> This option cannot be combined with <code>--json</code>.</p>
 </li>
 </ul>
 <div class="admonition warning">
@@ -1695,11 +1753,11 @@
 <ul>
 <li>
 <p><code>-zstep &lt;value&gt;</code>, <code>--zstack_step &lt;value&gt;</code></p>
-<p>Z-stack step size in micrometers (default: 100).</p>
+<p>Z-stack step size in micrometers.</p>
 </li>
 <li>
 <p><code>-tstep &lt;value&gt;</code>, <code>--timeloop_step &lt;value&gt;</code></p>
-<p>Time step in milliseconds (default: 100).</p>
+<p>Time step in milliseconds.</p>
 </li>
 </ul>
 <h3 id="metadata-arguments">Metadata arguments<a class="headerlink" href="#metadata-arguments" title="Permanent link">&para;</a></h3>
@@ -1748,27 +1806,27 @@
 </li>
 <li>
 <p><code>--pixel_calibration &lt;value&gt;</code></p>
-<p>Set pixel calibration value (in micrometers per pixel). Default is <code>0.0</code>.</p>
+<p>Set pixel calibration value (in micrometers per pixel).</p>
 </li>
 <li>
 <p><code>--ms-objective_magnification &lt;value&gt;</code></p>
-<p>Microscope objective magnification. Default is <code>-1.0</code> (unspecified).</p>
+<p>Microscope objective magnification.</p>
 </li>
 <li>
 <p><code>--ms-objective_numerical_aperture &lt;value&gt;</code></p>
-<p>Microscope objective numerical aperture. Default is <code>-1.0</code> (unspecified).</p>
+<p>Microscope objective numerical aperture.</p>
 </li>
 <li>
 <p><code>--ms-zoom_magnification &lt;value&gt;</code></p>
-<p>Microscope zoom magnification. Default is <code>-1.0</code> (unspecified).</p>
+<p>Microscope zoom magnification.</p>
 </li>
 <li>
 <p><code>--ms-immersion_refractive_index &lt;value&gt;</code></p>
-<p>Microscope immersion medium refractive index. Default is <code>-1.0</code> (unspecified).</p>
+<p>Microscope immersion medium refractive index.</p>
 </li>
 <li>
 <p><code>--ms-pinhole_diameter &lt;value&gt;</code></p>
-<p>Microscope pinhole diameter. Default is <code>-1.0</code> (unspecified).</p>
+<p>Microscope pinhole diameter.</p>
 </li>
 </ul>
 <h3 id="other-arguments">Other arguments<a class="headerlink" href="#other-arguments" title="Permanent link">&para;</a></h3>
@@ -1791,7 +1849,7 @@ This flag is required when you:
 </li>
 </ul>
 <h2 id="example-usage">Example usage<a class="headerlink" href="#example-usage" title="Permanent link">&para;</a></h2>
-<p>Below are some example commands for <code>limnd2-convert-sequence-to-nd2</code>. A</p>
+<p>Below are some example commands for <code>limnd2-convert-sequence-to-nd2</code>.</p>
 <details class="example">
 <summary>Basic Z-stack and Time-lapse conversion</summary>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>limnd2-convert-sequence-to-nd2<span class="w"> </span>./tiffs<span class="w"> </span><span class="s2">&quot;exportz(\d+)t(\d+).tif&quot;</span>
@@ -1812,7 +1870,7 @@ This flag is required when you:
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span>-s<span class="w"> </span>--zstack<span class="w"> </span><span class="m">1</span><span class="w"> </span>--timeloop<span class="w"> </span><span class="m">2</span><span class="w"> </span>-n<span class="w"> </span>result.nd2
 </span></code></pre></div>
 <ul>
-<li><code>-s result.nd2</code> Use simplified regular expression.</li>
+<li><code>-s</code> Use simplified regular expression.</li>
 <li><code>-n result.nd2</code>: Name of the output ND2 file.</li>
 <li><code>-o ./output</code>: Output directory for the ND2 file.</li>
 </ul>
@@ -1824,7 +1882,7 @@ This flag is required when you:
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span>--ms-objective_numerical_aperture<span class="w"> </span><span class="m">1</span>.3<span class="w"> </span>--ms-immersion_refractive_index<span class="w"> </span><span class="m">1</span>.5
 </span></code></pre></div>
 <ul>
-<li><code>--pixel_calibration 65</code>: Pixel size in nanometers.</li>
+<li><code>--pixel_calibration 65</code>: Pixel size in micrometers per pixel.</li>
 <li><code>--ms-objective_magnification 40</code>: Microscope objective magnification.</li>
 <li><code>--ms-objective_numerical_aperture 1.3</code>: Numerical aperture of the objective.</li>
 <li><code>--ms-immersion_refractive_index 1.5</code>: Immersion medium refractive index.</li>
