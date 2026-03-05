@@ -1365,8 +1365,30 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#wellplate-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wellplate arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planner-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planner output
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1574,8 +1596,30 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#wellplate-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wellplate arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planner-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planner output
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1848,12 +1892,55 @@ This flag is required when you:
 <p>Allow sparse filename grids and fill missing frame/channel combinations with black data. Without this flag, missing combinations fail in strict mode.</p>
 </li>
 </ul>
+<h3 id="wellplate-arguments">Wellplate arguments<a class="headerlink" href="#wellplate-arguments" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><code>--wellplate-mode &lt;mode&gt;</code></p>
+<p>Control automatic wellplate chunk generation from filename multipoint values. Supported values:
+- <code>auto</code>: infer wellplate layout and frame-to-well mapping when well-like tokens are detected.
+- <code>off</code>: disable automatic wellplate generation.</p>
+</li>
+<li>
+<p><code>--wellplate-rows &lt;count&gt;</code></p>
+<p>Override inferred wellplate row count.</p>
+</li>
+<li>
+<p><code>--wellplate-columns &lt;count&gt;</code></p>
+<p>Override inferred wellplate column count.</p>
+</li>
+<li>
+<p><code>--wellplate-name &lt;name&gt;</code></p>
+<p>Override generated wellplate descriptor name.</p>
+</li>
+<li>
+<p><code>--wellplate-row-naming &lt;value&gt;</code></p>
+<p>Override row naming mode written to the wellplate descriptor.</p>
+</li>
+<li>
+<p><code>--wellplate-column-naming &lt;value&gt;</code></p>
+<p>Override column naming mode written to the wellplate descriptor.</p>
+</li>
+</ul>
+<h2 id="planner-output">Planner output<a class="headerlink" href="#planner-output" title="Permanent link">&para;</a></h2>
+<p><code>limnd2-plan-sequence</code> accepts the same sequence parsing arguments and returns JSON metadata preview without writing ND2 output.</p>
+<p>When wellplate inference is available, planner output now includes:</p>
+<ul>
+<li><code>has_wellplate_settings</code>: boolean flag indicating whether inferred wellplate settings are present.</li>
+<li><code>wellplate_settings</code>: object with inferred settings and preview values.
+  Typical keys include <code>name</code>, <code>rows</code>, <code>columns</code>, <code>row_naming</code>, <code>column_naming</code>, <code>frame_count</code>, <code>unique_well_count</code>, and <code>wells_preview</code>.</li>
+</ul>
+<details class="example">
+<summary>Plan sequence with wellplate inference preview</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>limnd2-plan-sequence<span class="w"> </span>./tiffs<span class="w"> </span><span class="s2">&quot;06_translocation_v01(.+?)(.+?)\.tif&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span>--multipoint_x<span class="w"> </span><span class="m">1</span><span class="w"> </span>--multipoint_y<span class="w"> </span><span class="m">2</span><span class="w"> </span>--extension<span class="w"> </span>tif<span class="w"> </span>--flatten_duplicates
+</span></code></pre></div>
+</details>
 <h2 id="example-usage">Example usage<a class="headerlink" href="#example-usage" title="Permanent link">&para;</a></h2>
 <p>Below are some example commands for <code>limnd2-convert-sequence-to-nd2</code>.</p>
 <details class="example">
 <summary>Basic Z-stack and Time-lapse conversion</summary>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>limnd2-convert-sequence-to-nd2<span class="w"> </span>./tiffs<span class="w"> </span><span class="s2">&quot;exportz(\d+)t(\d+).tif&quot;</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span>--zstack<span class="w"> </span><span class="m">1</span><span class="w"> </span>--timeloop<span class="w"> </span><span class="m">2</span><span class="w"> </span>-tstep<span class="w"> </span><span class="m">120</span><span class="w"> </span>-zstep<span class="w"> </span><span class="m">130</span><span class="w"> </span>-n<span class="w"> </span>test.nd2<span class="w"> </span>-o<span class="w"> </span>./tiffs
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>limnd2-convert-sequence-to-nd2<span class="w"> </span>./tiffs<span class="w"> </span><span class="s2">&quot;exportz(\d+)t(\d+).tif&quot;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span>--zstack<span class="w"> </span><span class="m">1</span><span class="w"> </span>--timeloop<span class="w"> </span><span class="m">2</span><span class="w"> </span>-tstep<span class="w"> </span><span class="m">120</span><span class="w"> </span>-zstep<span class="w"> </span><span class="m">130</span><span class="w"> </span>-n<span class="w"> </span>test.nd2<span class="w"> </span>-o<span class="w"> </span>./tiffs
 </span></code></pre></div>
 <ul>
 <li><code>./tiffs</code>: Input folder containing the TIFF files.</li>
@@ -1866,8 +1953,8 @@ This flag is required when you:
 </details>
 <details class="example">
 <summary>Using simplified regular expression, specifying output file and directory</summary>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>limnd2-convert-sequence-to-nd2<span class="w"> </span>./tiffs<span class="w"> </span><span class="s2">&quot;exportz*t*.tif&quot;</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span>-s<span class="w"> </span>--zstack<span class="w"> </span><span class="m">1</span><span class="w"> </span>--timeloop<span class="w"> </span><span class="m">2</span><span class="w"> </span>-n<span class="w"> </span>result.nd2
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>limnd2-convert-sequence-to-nd2<span class="w"> </span>./tiffs<span class="w"> </span><span class="s2">&quot;exportz*t*.tif&quot;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span>-s<span class="w"> </span>--zstack<span class="w"> </span><span class="m">1</span><span class="w"> </span>--timeloop<span class="w"> </span><span class="m">2</span><span class="w"> </span>-n<span class="w"> </span>result.nd2
 </span></code></pre></div>
 <ul>
 <li><code>-s</code> Use simplified regular expression.</li>
@@ -1877,9 +1964,9 @@ This flag is required when you:
 </details>
 <details class="example">
 <summary>Pixel calibration and microscope settings</summary>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>limnd2-convert-sequence-to-nd2<span class="w"> </span>./tiffs<span class="w"> </span><span class="s2">&quot;exportz(\d+)t(\d+).tif&quot;</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span>--zstack<span class="w"> </span><span class="m">1</span><span class="w"> </span>--timeloop<span class="w"> </span><span class="m">2</span><span class="w"> </span>--pixel_calibration<span class="w"> </span><span class="m">65</span><span class="w"> </span>--ms-objective_magnification<span class="w"> </span><span class="m">40</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span>--ms-objective_numerical_aperture<span class="w"> </span><span class="m">1</span>.3<span class="w"> </span>--ms-immersion_refractive_index<span class="w"> </span><span class="m">1</span>.5
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>limnd2-convert-sequence-to-nd2<span class="w"> </span>./tiffs<span class="w"> </span><span class="s2">&quot;exportz(\d+)t(\d+).tif&quot;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span>--zstack<span class="w"> </span><span class="m">1</span><span class="w"> </span>--timeloop<span class="w"> </span><span class="m">2</span><span class="w"> </span>--pixel_calibration<span class="w"> </span><span class="m">65</span><span class="w"> </span>--ms-objective_magnification<span class="w"> </span><span class="m">40</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span>--ms-objective_numerical_aperture<span class="w"> </span><span class="m">1</span>.3<span class="w"> </span>--ms-immersion_refractive_index<span class="w"> </span><span class="m">1</span>.5
 </span></code></pre></div>
 <ul>
 <li><code>--pixel_calibration 65</code>: Pixel size in micrometers per pixel.</li>
@@ -1891,16 +1978,16 @@ This flag is required when you:
 <details class="example">
 <summary>Assigning channels and custom channel settings</summary>
 <p>Suppose you have the following files in your folder:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>exportz1c_dapi.tif
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>exportz1c_dia.tif
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>exportz2c_dapi.tif
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>exportz2c_dia.tif
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>...
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>exportz1c_dapi.tif
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>exportz1c_dia.tif
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>exportz2c_dapi.tif
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>exportz2c_dia.tif
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>...
 </span></code></pre></div></p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>limnd2-convert-sequence-to-nd2<span class="w"> </span>./tiffs<span class="w"> </span><span class="s2">&quot;exportz(\d+)c_(.+?).tif&quot;</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span>--zstack<span class="w"> </span><span class="m">1</span><span class="w"> </span>--channel<span class="w"> </span><span class="m">2</span><span class="w"> </span>-n<span class="w"> </span>test2.nd2<span class="w"> </span>-o<span class="w"> </span>./tiffs<span class="w"> </span>--multiprocessing
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span>--channel-setting<span class="w"> </span>dapi<span class="p">|</span>DAPI<span class="w"> </span>Channel<span class="p">|</span>Wide-field<span class="p">|</span><span class="m">620</span><span class="p">|</span><span class="m">750</span><span class="p">|</span><span class="c1">#FF0000</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span>--channel-setting<span class="w"> </span>dia<span class="p">|</span>DIA<span class="w"> </span>Channel<span class="p">|</span>DIC<span class="p">|</span><span class="m">495</span><span class="p">|</span><span class="m">570</span><span class="p">|</span>Green
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>limnd2-convert-sequence-to-nd2<span class="w"> </span>./tiffs<span class="w"> </span><span class="s2">&quot;exportz(\d+)c_(.+?).tif&quot;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span>--zstack<span class="w"> </span><span class="m">1</span><span class="w"> </span>--channel<span class="w"> </span><span class="m">2</span><span class="w"> </span>-n<span class="w"> </span>test2.nd2<span class="w"> </span>-o<span class="w"> </span>./tiffs<span class="w"> </span>--multiprocessing
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span>--channel-setting<span class="w"> </span>dapi<span class="p">|</span>DAPI<span class="w"> </span>Channel<span class="p">|</span>Wide-field<span class="p">|</span><span class="m">620</span><span class="p">|</span><span class="m">750</span><span class="p">|</span><span class="c1">#FF0000</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span>--channel-setting<span class="w"> </span>dia<span class="p">|</span>DIA<span class="w"> </span>Channel<span class="p">|</span>DIC<span class="p">|</span><span class="m">495</span><span class="p">|</span><span class="m">570</span><span class="p">|</span>Green
 </span></code></pre></div>
 <ul>
 <li><code>--channel 2</code>: Second capture group is the channel dimension.</li>

@@ -1091,6 +1091,39 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Writer.setWellplate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setWellplate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Writer.setWellplateDesc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setWellplateDesc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Writer.setWellplateFrameInfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setWellplateFrameInfo
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2019,6 +2052,39 @@
     <span class="md-ellipsis">
       
         setImage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Writer.setWellplate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setWellplate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Writer.setWellplateDesc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setWellplateDesc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Writer.setWellplateFrameInfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setWellplateFrameInfo
       
     </span>
   </a>
@@ -3147,7 +3213,10 @@ lower level frames of size (w // d, h // d).</p>
 
         <p>ND2 file writer.</p>
 <p>Supports encoding of all image attributes, most commonly used experiments and most of image metadata.
-Currently does not support encoding of Well-plates, binary layers, ROIs and any custom data and text into chunk.</p>
+Wellplate support is available through dedicated writer helpers (<code>setWellplateDesc</code>,
+<code>setWellplateFrameInfo</code>, <code>setWellplate</code>) that write raw wellplate chunks.
+Writing binary layers, ROIs and generic custom text/data chunks is still not
+covered by high-level APIs.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Data is written in chunks, so you can write data in any order you want, image data however can
@@ -3381,6 +3450,66 @@ however you can do so after you know how many frames there is.</p>
 <p>You must manually keep track of the frame index and make sure that you are not
 overwriting the same frame multiple times and that images are written sequentially.</p>
 </div>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="limnd2.nd2.Nd2Writer.setWellplate" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">setWellplate</span>
+
+
+<a href="#limnd2.nd2.Nd2Writer.setWellplate" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">setWellplate</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">desc</span><span class="p">:</span> <span class="n"><span title="limnd2.experiment.WellplateDesc">WellplateDesc</span></span> <span class="o">|</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">frame_info</span><span class="p">:</span> <span class="n"><span title="limnd2.experiment.WellplateFrameInfo">WellplateFrameInfo</span></span> <span class="o">|</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">]</span> <span class="o">|</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Convenience helper for writing both wellplate descriptor and frame info chunks.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="limnd2.nd2.Nd2Writer.setWellplateDesc" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">setWellplateDesc</span>
+
+
+<a href="#limnd2.nd2.Nd2Writer.setWellplateDesc" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">setWellplateDesc</span><span class="p">(</span><span class="n">desc</span><span class="p">:</span> <span class="n"><span title="limnd2.experiment.WellplateDesc">WellplateDesc</span></span> <span class="o">|</span> <span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Write wellplate descriptor chunk (<code>CustomData|WellPlateDesc_0!</code>).</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="limnd2.nd2.Nd2Writer.setWellplateFrameInfo" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">setWellplateFrameInfo</span>
+
+
+<a href="#limnd2.nd2.Nd2Writer.setWellplateFrameInfo" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">setWellplateFrameInfo</span><span class="p">(</span><span class="n">frame_info</span><span class="p">:</span> <span class="n"><span title="limnd2.experiment.WellplateFrameInfo">WellplateFrameInfo</span></span> <span class="o">|</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="dict">dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">]</span> <span class="o">|</span> <span class="n"><span title="typing.Any">Any</span></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Write wellplate frame info chunk (<code>CustomData|WellPlateFrameInfoZJSON!</code>).</p>
 
 
     </div>
