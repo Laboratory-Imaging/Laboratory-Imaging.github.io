@@ -739,6 +739,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#ome-zarr-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OME-Zarr export
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reading-nd2-files" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1684,6 +1695,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#ome-zarr-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OME-Zarr export
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reading-nd2-files" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1941,19 +1963,22 @@ If you have a problem or question, contact: <code>techsupp@lim.cz</code>.</p>
 <ul>
 <li><code>limnd2[results]</code> - load analysis tables from <code>.h5</code> files (<code>h5py</code>, <code>pandas</code>)</li>
 <li><code>limnd2[commonff]</code> - shared image format deps (<code>Pillow</code>, <code>tifffile</code>, <code>zarr</code>)</li>
+<li><code>limnd2[ome-zarr]</code> - OME-Zarr export and tools (<code>dask</code>, <code>ome-zarr</code>, <code>zarr</code>, <code>fsspec</code>, <code>s3fs</code>)</li>
 <li><code>limnd2[legacy]</code> - read legacy JPEG2000 ND2 (<code>imagecodecs</code>)</li>
-<li><code>limnd2[all]</code> - all runtime extras</li>
+<li><code>limnd2[all]</code> - main runtime extras (does not include <code>ome-zarr</code> yet)</li>
 </ul>
 <p>Install examples from our package index:</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span>limnd2
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span><span class="s2">&quot;limnd2[results]&quot;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span><span class="s2">&quot;limnd2[commonff,legacy]&quot;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span><span class="s2">&quot;limnd2[all]&quot;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span><span class="s2">&quot;limnd2[ome-zarr]&quot;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span><span class="s2">&quot;limnd2[all]&quot;</span>
 </span></code></pre></div>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span>limnd2
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span><span class="s2">&quot;limnd2[results]&quot;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span><span class="s2">&quot;limnd2[commonff,legacy]&quot;</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span><span class="s2">&quot;limnd2[all]&quot;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span><span class="s2">&quot;limnd2[ome-zarr]&quot;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span><span class="s2">&quot;limnd2[all]&quot;</span>
 </span></code></pre></div>
 <p>Quick install check:</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import limnd2; print(limnd2.__version__)&quot;</span>
@@ -1992,6 +2017,29 @@ If you have a problem or question, contact: <code>techsupp@lim.cz</code>.</p>
 </div>
 </div>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<h3 id="ome-zarr-export">OME-Zarr export<a class="headerlink" href="#ome-zarr-export" title="Permanent link">&para;</a></h3>
+<p>Install the extra:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>pip<span class="w"> </span>install<span class="w"> </span>--index-url<span class="w"> </span>https://pypi.lim-dev.xyz/simple<span class="w"> </span><span class="s2">&quot;limnd2[ome-zarr]&quot;</span>
+</span></code></pre></div>
+<p>Python API:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">limnd2</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">with</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">Nd2Reader</span><span class="p">(</span><span class="s2">&quot;file.nd2&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">reader</span><span class="p">:</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="n">reader</span><span class="o">.</span><span class="n">to_ome_zarr</span><span class="p">(</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        <span class="s2">&quot;file.ome.zarr&quot;</span><span class="p">,</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        <span class="n">include_binaries</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        <span class="n">use_dask</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>        <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="p">)</span>
+</span></code></pre></div>
+<p>CLI:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>limnd2-ome-zarr-export<span class="w"> </span>file.nd2
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>limnd2-ome-zarr-export<span class="w"> </span>file.nd2<span class="w"> </span>--output-folder<span class="w"> </span>.<span class="se">\e</span>xports
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>limnd2-ome-zarr-export<span class="w"> </span>file.nd2<span class="w"> </span>--s3-prefix<span class="w"> </span>s3://my-bucket/ome-zarr
+</span></code></pre></div>
+<p>GUI:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>limnd2-ome-zarr-exporter
+</span></code></pre></div>
 <h3 id="reading-nd2-files">Reading <code>.nd2</code> files<a class="headerlink" href="#reading-nd2-files" title="Permanent link">&para;</a></h3>
 <p>An example Python file showcasing how to read an <code>.nd2</code> file with this library is found at GitHub repo for this page: <a href="https://github.com/Laboratory-Imaging/limnd2/blob/main/examples/example_reader.py">example_reader.py</a>.</p>
 <p>You can read the following from <code>.nd2</code> files:</p>
@@ -2010,34 +2058,34 @@ If you have a problem or question, contact: <code>techsupp@lim.cz</code>.</p>
 </div>
 <h4 id="opening-nd2-file">Opening <code>.nd2</code> file<a class="headerlink" href="#opening-nd2-file" title="Permanent link">&para;</a></h4>
 <p>An <code>.nd2</code> file can be opened using <code>Nd2Reader</code> class like this:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">nd2</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">Nd2Reader</span><span class="p">(</span><span class="s2">&quot;file.nd2&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">nd2</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">Nd2Reader</span><span class="p">(</span><span class="s2">&quot;file.nd2&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>However it is recommended to open <code>.nd2</code> files (especially when writing) using <code>with</code> statement to automatically close the file.</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="k">with</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">Nd2Reader</span><span class="p">(</span><span class="s2">&quot;file.nd2&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">nd2</span><span class="p">:</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="k">with</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">Nd2Reader</span><span class="p">(</span><span class="s2">&quot;file.nd2&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">nd2</span><span class="p">:</span>
 </span></code></pre></div></td></tr></table></div>
 <h4 id="summary-image-information">Summary image information<a class="headerlink" href="#summary-image-information" title="Permanent link">&para;</a></h4>
 <p>Quick access to information about the file can be gained with the <code>generalImageInfo</code> helper function:</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-7">7</a></span>
-<span class="normal"><a href="#__codelineno-7-8">8</a></span>
-<span class="normal"><a href="#__codelineno-7-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Summary information&quot;</span><span class="p">)</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">generalImageInfo</span><span class="p">(</span><span class="n">nd2</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-7">7</a></span>
+<span class="normal"><a href="#__codelineno-11-8">8</a></span>
+<span class="normal"><a href="#__codelineno-11-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Summary information&quot;</span><span class="p">)</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">generalImageInfo</span><span class="p">(</span><span class="n">nd2</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <details class="example">
 <summary>See example output</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Summary information
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>filename: file.nd2
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>path: C:\Users\user\Desktop\nd2_files
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>bit_depth: 32bit float
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>loops: XY(25), Z(5)
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>dimension: 1024 x 1024 (2 comps 32bit float) x 125 frames: XY(25), Z(5)
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>file_size: 6732537856
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>frame_res: 1024 x 1024
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>volume_size: 40MB
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>sizes: 6GB on disk, 8MB frame, 40MB volume
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>calibration: 0.432 µm/px
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>mtime: 06/07/21 14:17:56
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>app_created: NIS-Elements AR 5.20.00 (Build 1423)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Summary information
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>filename: file.nd2
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>path: C:\Users\user\Desktop\nd2_files
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>bit_depth: 32bit float
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>loops: XY(25), Z(5)
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>dimension: 1024 x 1024 (2 comps 32bit float) x 125 frames: XY(25), Z(5)
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>file_size: 6732537856
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>frame_res: 1024 x 1024
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>volume_size: 40MB
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>sizes: 6GB on disk, 8MB frame, 40MB volume
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>calibration: 0.432 µm/px
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>mtime: 06/07/21 14:17:56
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>app_created: NIS-Elements AR 5.20.00 (Build 1423)
 </span></code></pre></div>
 </details>
 <h4 id="image-attributes">Image attributes<a class="headerlink" href="#image-attributes" title="Permanent link">&para;</a></h4>
@@ -2045,54 +2093,54 @@ If you have a problem or question, contact: <code>techsupp@lim.cz</code>.</p>
 number of components and number of frames in nd2 file.</p>
 <p>For all properties and methods of this dataclass see <a href="attributes/">attributes.py</a>.</p>
 <p>To get image attributes use <code>imageAttributes</code> attribute of <code>Nd2Reader</code> instance created in previous step.</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="n">attributes</span> <span class="o">=</span> <span class="n">nd2</span><span class="o">.</span><span class="n">imageAttributes</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="n">attributes</span> <span class="o">=</span> <span class="n">nd2</span><span class="o">.</span><span class="n">imageAttributes</span>
 </span></code></pre></div></td></tr></table></div>
 <p>Then you can use following properties to get information about the file:</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-21">21</a></span>
-<span class="normal"><a href="#__codelineno-10-22">22</a></span>
-<span class="normal"><a href="#__codelineno-10-23">23</a></span>
-<span class="normal"><a href="#__codelineno-10-24">24</a></span>
-<span class="normal"><a href="#__codelineno-10-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Image resolution: </span><span class="si">{</span><span class="n">attributes</span><span class="o">.</span><span class="n">width</span><span class="si">}</span><span class="s2"> x </span><span class="si">{</span><span class="n">attributes</span><span class="o">.</span><span class="n">height</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of components: </span><span class="si">{</span><span class="n">attributes</span><span class="o">.</span><span class="n">componentCount</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of frames: </span><span class="si">{</span><span class="n">attributes</span><span class="o">.</span><span class="n">frameCount</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Image size (in bytes): </span><span class="si">{</span><span class="n">attributes</span><span class="o">.</span><span class="n">imageBytes</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Python data type: </span><span class="si">{</span><span class="n">attributes</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-21">21</a></span>
+<span class="normal"><a href="#__codelineno-14-22">22</a></span>
+<span class="normal"><a href="#__codelineno-14-23">23</a></span>
+<span class="normal"><a href="#__codelineno-14-24">24</a></span>
+<span class="normal"><a href="#__codelineno-14-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Image resolution: </span><span class="si">{</span><span class="n">attributes</span><span class="o">.</span><span class="n">width</span><span class="si">}</span><span class="s2"> x </span><span class="si">{</span><span class="n">attributes</span><span class="o">.</span><span class="n">height</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-14-22"><a id="__codelineno-14-22" name="__codelineno-14-22"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of components: </span><span class="si">{</span><span class="n">attributes</span><span class="o">.</span><span class="n">componentCount</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-14-23"><a id="__codelineno-14-23" name="__codelineno-14-23"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of frames: </span><span class="si">{</span><span class="n">attributes</span><span class="o">.</span><span class="n">frameCount</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-14-24"><a id="__codelineno-14-24" name="__codelineno-14-24"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Image size (in bytes): </span><span class="si">{</span><span class="n">attributes</span><span class="o">.</span><span class="n">imageBytes</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-14-25"><a id="__codelineno-14-25" name="__codelineno-14-25"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Python data type: </span><span class="si">{</span><span class="n">attributes</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <details class="example">
 <summary>See example output</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Image resolution: 1024 x 1024
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Number of components: 2
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Number of frames: 125
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>Image size (in bytes): 8388608
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>Python data type: &lt;class &#39;numpy.float32&#39;&gt;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Image resolution: 1024 x 1024
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>Number of components: 2
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>Number of frames: 125
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>Image size (in bytes): 8388608
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>Python data type: &lt;class &#39;numpy.float32&#39;&gt;
 </span></code></pre></div>
 </details>
 <h4 id="image-data">Image data<a class="headerlink" href="#image-data" title="Permanent link">&para;</a></h4>
 <p>This library uses NumPy arrays to store image data found in the <code>.nd2</code> file, if you want to access image data itself, you can do so by using <a href="nd2/#limnd2.nd2.Nd2Reader.image"><code>.image()</code></a> method with index of the image you want to get like this:</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-30">30</a></span>
-<span class="normal"><a href="#__codelineno-12-31">31</a></span>
-<span class="normal"><a href="#__codelineno-12-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-30"><a id="__codelineno-12-30" name="__codelineno-12-30"></a><span class="n">image</span> <span class="o">=</span> <span class="n">nd2</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>        <span class="c1"># get first image</span>
-</span><span id="__span-12-31"><a id="__codelineno-12-31" name="__codelineno-12-31"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">image</span><span class="p">))</span>
-</span><span id="__span-12-32"><a id="__codelineno-12-32" name="__codelineno-12-32"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Numpy array shape:&quot;</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s2">&quot;stored datatype:&quot;</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-30">30</a></span>
+<span class="normal"><a href="#__codelineno-16-31">31</a></span>
+<span class="normal"><a href="#__codelineno-16-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-30"><a id="__codelineno-16-30" name="__codelineno-16-30"></a><span class="n">image</span> <span class="o">=</span> <span class="n">nd2</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>        <span class="c1"># get first image</span>
+</span><span id="__span-16-31"><a id="__codelineno-16-31" name="__codelineno-16-31"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">image</span><span class="p">))</span>
+</span><span id="__span-16-32"><a id="__codelineno-16-32" name="__codelineno-16-32"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Numpy array shape:&quot;</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s2">&quot;stored datatype:&quot;</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <details class="example">
 <summary>See example output</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&lt;class &#39;numpy.ndarray&#39;&gt;
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Numpy array shape: (1024, 1024, 2) stored datatype: float32
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>&lt;class &#39;numpy.ndarray&#39;&gt;
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>Numpy array shape: (1024, 1024, 2) stored datatype: float32
 </span></code></pre></div>
 </details>
 <p>If you want to get all images in the <code>.nd2</code> file, use a for loop with <code>frameCount</code> property from image attributes.</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-35">35</a></span>
-<span class="normal"><a href="#__codelineno-14-36">36</a></span>
-<span class="normal"><a href="#__codelineno-14-37">37</a></span>
-<span class="normal"><a href="#__codelineno-14-38">38</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-35"><a id="__codelineno-14-35" name="__codelineno-14-35"></a><span class="n">images</span> <span class="o">=</span> <span class="p">[]</span>
-</span><span id="__span-14-36"><a id="__codelineno-14-36" name="__codelineno-14-36"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">attributes</span><span class="o">.</span><span class="n">frameCount</span><span class="p">):</span>
-</span><span id="__span-14-37"><a id="__codelineno-14-37" name="__codelineno-14-37"></a>    <span class="n">images</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nd2</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-</span><span id="__span-14-38"><a id="__codelineno-14-38" name="__codelineno-14-38"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Obtained </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">images</span><span class="p">)</span><span class="si">}</span><span class="s2"> frames.&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-35">35</a></span>
+<span class="normal"><a href="#__codelineno-18-36">36</a></span>
+<span class="normal"><a href="#__codelineno-18-37">37</a></span>
+<span class="normal"><a href="#__codelineno-18-38">38</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-35"><a id="__codelineno-18-35" name="__codelineno-18-35"></a><span class="n">images</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-18-36"><a id="__codelineno-18-36" name="__codelineno-18-36"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">attributes</span><span class="o">.</span><span class="n">frameCount</span><span class="p">):</span>
+</span><span id="__span-18-37"><a id="__codelineno-18-37" name="__codelineno-18-37"></a>    <span class="n">images</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nd2</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</span><span id="__span-18-38"><a id="__codelineno-18-38" name="__codelineno-18-38"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Obtained </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">images</span><span class="p">)</span><span class="si">}</span><span class="s2"> frames.&quot;</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <details class="example">
 <summary>See example output</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Obtained 125 frames.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Obtained 125 frames.
 </span></code></pre></div>
 </details>
 <h4 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h4>
@@ -2106,51 +2154,51 @@ number of components and number of frames in nd2 file.</p>
 <li>much more, see <a href="metadata/">metadata.py</a> for full information about <code>.nd2</code> metadata</li>
 </ul>
 <p>To get metadata, use <code>pictureMetadata</code> attribute like this:</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-66">66</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-66"><a id="__codelineno-16-66" name="__codelineno-16-66"></a><span class="n">metadata</span> <span class="o">=</span> <span class="n">nd2</span><span class="o">.</span><span class="n">pictureMetadata</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-66">66</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-66"><a id="__codelineno-20-66" name="__codelineno-20-66"></a><span class="n">metadata</span> <span class="o">=</span> <span class="n">nd2</span><span class="o">.</span><span class="n">pictureMetadata</span>
 </span></code></pre></div></td></tr></table></div>
 <p>To iterate over planes in the image, use the <code>channels</code> property from metadata, then use <code>.sampleSettings()</code> to get sample settings for each plane.</p>
 <p>With channel and settings stored in separate variables, you can then access selected attributes like this:</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-68">68</a></span>
-<span class="normal"><a href="#__codelineno-17-69">69</a></span>
-<span class="normal"><a href="#__codelineno-17-70">70</a></span>
-<span class="normal"><a href="#__codelineno-17-71">71</a></span>
-<span class="normal"><a href="#__codelineno-17-72">72</a></span>
-<span class="normal"><a href="#__codelineno-17-73">73</a></span>
-<span class="normal"><a href="#__codelineno-17-74">74</a></span>
-<span class="normal"><a href="#__codelineno-17-75">75</a></span>
-<span class="normal"><a href="#__codelineno-17-76">76</a></span>
-<span class="normal"><a href="#__codelineno-17-77">77</a></span>
-<span class="normal"><a href="#__codelineno-17-78">78</a></span>
-<span class="normal"><a href="#__codelineno-17-79">79</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-68"><a id="__codelineno-17-68" name="__codelineno-17-68"></a><span class="k">for</span> <span class="n">channel</span> <span class="ow">in</span> <span class="n">metadata</span><span class="o">.</span><span class="n">channels</span><span class="p">:</span>
-</span><span id="__span-17-69"><a id="__codelineno-17-69" name="__codelineno-17-69"></a>    <span class="n">settings</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">sampleSettings</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
-</span><span id="__span-17-70"><a id="__codelineno-17-70" name="__codelineno-17-70"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Channel name:&quot;</span><span class="p">,</span> <span class="n">channel</span><span class="o">.</span><span class="n">sDescription</span><span class="p">)</span>
-</span><span id="__span-17-71"><a id="__codelineno-17-71" name="__codelineno-17-71"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Modality:&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">limnd2</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">PicturePlaneModalityFlags</span><span class="o">.</span><span class="n">to_str_list</span><span class="p">(</span><span class="n">channel</span><span class="o">.</span><span class="n">uiModalityMask</span><span class="p">)))</span>
-</span><span id="__span-17-72"><a id="__codelineno-17-72" name="__codelineno-17-72"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Emission wavelength:&quot;</span><span class="p">,</span> <span class="n">channel</span><span class="o">.</span><span class="n">emissionWavelengthNm</span><span class="p">)</span>
-</span><span id="__span-17-73"><a id="__codelineno-17-73" name="__codelineno-17-73"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Excitation wavelength:&quot;</span><span class="p">,</span> <span class="n">channel</span><span class="o">.</span><span class="n">excitationWavelengthNm</span><span class="p">)</span>
-</span><span id="__span-17-74"><a id="__codelineno-17-74" name="__codelineno-17-74"></a>
-</span><span id="__span-17-75"><a id="__codelineno-17-75" name="__codelineno-17-75"></a>    <span class="k">if</span> <span class="n">settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="__span-17-76"><a id="__codelineno-17-76" name="__codelineno-17-76"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Camera name&quot;</span><span class="p">,</span> <span class="n">settings</span><span class="o">.</span><span class="n">cameraName</span><span class="p">)</span>
-</span><span id="__span-17-77"><a id="__codelineno-17-77" name="__codelineno-17-77"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Microscope name&quot;</span><span class="p">,</span> <span class="n">settings</span><span class="o">.</span><span class="n">microscopeName</span><span class="p">)</span>
-</span><span id="__span-17-78"><a id="__codelineno-17-78" name="__codelineno-17-78"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Objective magnification&quot;</span><span class="p">,</span> <span class="n">settings</span><span class="o">.</span><span class="n">objectiveMagnification</span><span class="p">)</span>
-</span><span id="__span-17-79"><a id="__codelineno-17-79" name="__codelineno-17-79"></a>        <span class="nb">print</span><span class="p">()</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-68">68</a></span>
+<span class="normal"><a href="#__codelineno-21-69">69</a></span>
+<span class="normal"><a href="#__codelineno-21-70">70</a></span>
+<span class="normal"><a href="#__codelineno-21-71">71</a></span>
+<span class="normal"><a href="#__codelineno-21-72">72</a></span>
+<span class="normal"><a href="#__codelineno-21-73">73</a></span>
+<span class="normal"><a href="#__codelineno-21-74">74</a></span>
+<span class="normal"><a href="#__codelineno-21-75">75</a></span>
+<span class="normal"><a href="#__codelineno-21-76">76</a></span>
+<span class="normal"><a href="#__codelineno-21-77">77</a></span>
+<span class="normal"><a href="#__codelineno-21-78">78</a></span>
+<span class="normal"><a href="#__codelineno-21-79">79</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-21-68"><a id="__codelineno-21-68" name="__codelineno-21-68"></a><span class="k">for</span> <span class="n">channel</span> <span class="ow">in</span> <span class="n">metadata</span><span class="o">.</span><span class="n">channels</span><span class="p">:</span>
+</span><span id="__span-21-69"><a id="__codelineno-21-69" name="__codelineno-21-69"></a>    <span class="n">settings</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">sampleSettings</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+</span><span id="__span-21-70"><a id="__codelineno-21-70" name="__codelineno-21-70"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Channel name:&quot;</span><span class="p">,</span> <span class="n">channel</span><span class="o">.</span><span class="n">sDescription</span><span class="p">)</span>
+</span><span id="__span-21-71"><a id="__codelineno-21-71" name="__codelineno-21-71"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Modality:&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">limnd2</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">PicturePlaneModalityFlags</span><span class="o">.</span><span class="n">to_str_list</span><span class="p">(</span><span class="n">channel</span><span class="o">.</span><span class="n">uiModalityMask</span><span class="p">)))</span>
+</span><span id="__span-21-72"><a id="__codelineno-21-72" name="__codelineno-21-72"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Emission wavelength:&quot;</span><span class="p">,</span> <span class="n">channel</span><span class="o">.</span><span class="n">emissionWavelengthNm</span><span class="p">)</span>
+</span><span id="__span-21-73"><a id="__codelineno-21-73" name="__codelineno-21-73"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Excitation wavelength:&quot;</span><span class="p">,</span> <span class="n">channel</span><span class="o">.</span><span class="n">excitationWavelengthNm</span><span class="p">)</span>
+</span><span id="__span-21-74"><a id="__codelineno-21-74" name="__codelineno-21-74"></a>
+</span><span id="__span-21-75"><a id="__codelineno-21-75" name="__codelineno-21-75"></a>    <span class="k">if</span> <span class="n">settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-21-76"><a id="__codelineno-21-76" name="__codelineno-21-76"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Camera name&quot;</span><span class="p">,</span> <span class="n">settings</span><span class="o">.</span><span class="n">cameraName</span><span class="p">)</span>
+</span><span id="__span-21-77"><a id="__codelineno-21-77" name="__codelineno-21-77"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Microscope name&quot;</span><span class="p">,</span> <span class="n">settings</span><span class="o">.</span><span class="n">microscopeName</span><span class="p">)</span>
+</span><span id="__span-21-78"><a id="__codelineno-21-78" name="__codelineno-21-78"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Objective magnification&quot;</span><span class="p">,</span> <span class="n">settings</span><span class="o">.</span><span class="n">objectiveMagnification</span><span class="p">)</span>
+</span><span id="__span-21-79"><a id="__codelineno-21-79" name="__codelineno-21-79"></a>        <span class="nb">print</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <details class="example">
 <summary>See example output</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Channel name: DETECTOR A
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a> Modality: Camera AUX
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a> Emission wavelength: 520.0
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a> Excitation wavelength: 488.0
-</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a> Camera name Nikon A1 LFOV
-</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a> Microscope name Ti2 Microscope
-</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a> Objective magnification 40.0
-</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>
-</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>Channel name: DETECTOR B
-</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a> Modality: Camera AUX
-</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a> Emission wavelength: 650.0
-</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a> Excitation wavelength: 488.0
-</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a> Camera name Nikon A1 LFOV
-</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a> Microscope name Ti2 Microscope
-</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a> Objective magnification 40.0
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Channel name: DETECTOR A
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a> Modality: Camera AUX
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a> Emission wavelength: 520.0
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a> Excitation wavelength: 488.0
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a> Camera name Nikon A1 LFOV
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a> Microscope name Ti2 Microscope
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a> Objective magnification 40.0
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>Channel name: DETECTOR B
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a> Modality: Camera AUX
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a> Emission wavelength: 650.0
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a> Excitation wavelength: 488.0
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a> Camera name Nikon A1 LFOV
+</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a> Microscope name Ti2 Microscope
+</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a> Objective magnification 40.0
 </span></code></pre></div>
 </details>
 <h4 id="experiment-data">Experiment data<a class="headerlink" href="#experiment-data" title="Permanent link">&para;</a></h4>
@@ -2162,205 +2210,205 @@ number of components and number of frames in nd2 file.</p>
 </ul>
 <p>An image can have no experiment, a single experiment, or a combination of multiple experiments.</p>
 <p>To obtain data structure with information about used experiments, use <code>experiment</code> property.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-43">43</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-43"><a id="__codelineno-19-43" name="__codelineno-19-43"></a><span class="n">experiment</span> <span class="o">=</span> <span class="n">nd2</span><span class="o">.</span><span class="n">experiment</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-43">43</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-23-43"><a id="__codelineno-23-43" name="__codelineno-23-43"></a><span class="n">experiment</span> <span class="o">=</span> <span class="n">nd2</span><span class="o">.</span><span class="n">experiment</span>
 </span></code></pre></div></td></tr></table></div>
 <p>Then to see what kind of experiment <code>.nd2</code> file contains, iterate over this structure (when present):</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-45">45</a></span>
-<span class="normal"><a href="#__codelineno-20-46">46</a></span>
-<span class="normal"><a href="#__codelineno-20-47">47</a></span>
-<span class="normal"><a href="#__codelineno-20-48">48</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-45"><a id="__codelineno-20-45" name="__codelineno-20-45"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Experiment loops in image:&quot;</span><span class="p">)</span>
-</span><span id="__span-20-46"><a id="__codelineno-20-46" name="__codelineno-20-46"></a><span class="k">if</span> <span class="n">experiment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="__span-20-47"><a id="__codelineno-20-47" name="__codelineno-20-47"></a>    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">experiment</span><span class="p">:</span>
-</span><span id="__span-20-48"><a id="__codelineno-20-48" name="__codelineno-20-48"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Experiment name: </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, number of frames: </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">count</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-45">45</a></span>
+<span class="normal"><a href="#__codelineno-24-46">46</a></span>
+<span class="normal"><a href="#__codelineno-24-47">47</a></span>
+<span class="normal"><a href="#__codelineno-24-48">48</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-45"><a id="__codelineno-24-45" name="__codelineno-24-45"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Experiment loops in image:&quot;</span><span class="p">)</span>
+</span><span id="__span-24-46"><a id="__codelineno-24-46" name="__codelineno-24-46"></a><span class="k">if</span> <span class="n">experiment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-24-47"><a id="__codelineno-24-47" name="__codelineno-24-47"></a>    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">experiment</span><span class="p">:</span>
+</span><span id="__span-24-48"><a id="__codelineno-24-48" name="__codelineno-24-48"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Experiment name: </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, number of frames: </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">count</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <details class="example">
 <summary>See example output</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Experiment loops in image:
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>Experiment name: Multipoint, number of frames: 25
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>Experiment name: Z-Stack, number of frames: 5
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Experiment loops in image:
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>Experiment name: Multipoint, number of frames: 25
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>Experiment name: Z-Stack, number of frames: 5
 </span></code></pre></div>
 </details>
 <p>Now if we want to access attributes and methods for specific loop type, we can use .findLevel() method with ExperimentLoopType type as parameter, in this example we search for Z-Stack experiment = use value ExperimentLoopType.eEtZStackLoop.</p>
 <p>Then we can access data for this experiment through parameters of this experiment, in this example we use attributes and properties of ExperimentZStackLoop.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-51">51</a></span>
-<span class="normal"><a href="#__codelineno-22-52">52</a></span>
-<span class="normal"><a href="#__codelineno-22-53">53</a></span>
-<span class="normal"><a href="#__codelineno-22-54">54</a></span>
-<span class="normal"><a href="#__codelineno-22-55">55</a></span>
-<span class="normal"><a href="#__codelineno-22-56">56</a></span>
-<span class="normal"><a href="#__codelineno-22-57">57</a></span>
-<span class="normal"><a href="#__codelineno-22-58">58</a></span>
-<span class="normal"><a href="#__codelineno-22-59">59</a></span>
-<span class="normal"><a href="#__codelineno-22-60">60</a></span>
-<span class="normal"><a href="#__codelineno-22-61">61</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-22-51"><a id="__codelineno-22-51" name="__codelineno-22-51"></a><span class="n">zstack</span> <span class="o">=</span> <span class="p">(</span>
-</span><span id="__span-22-52"><a id="__codelineno-22-52" name="__codelineno-22-52"></a>    <span class="n">experiment</span><span class="o">.</span><span class="n">findLevel</span><span class="p">(</span><span class="n">limnd2</span><span class="o">.</span><span class="n">ExperimentLoopType</span><span class="o">.</span><span class="n">eEtZStackLoop</span><span class="p">)</span>
-</span><span id="__span-22-53"><a id="__codelineno-22-53" name="__codelineno-22-53"></a>    <span class="k">if</span> <span class="n">experiment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-</span><span id="__span-22-54"><a id="__codelineno-22-54" name="__codelineno-22-54"></a>    <span class="k">else</span> <span class="kc">None</span>
-</span><span id="__span-22-55"><a id="__codelineno-22-55" name="__codelineno-22-55"></a><span class="p">)</span>
-</span><span id="__span-22-56"><a id="__codelineno-22-56" name="__codelineno-22-56"></a>
-</span><span id="__span-22-57"><a id="__codelineno-22-57" name="__codelineno-22-57"></a><span class="k">if</span> <span class="n">zstack</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="__span-22-58"><a id="__codelineno-22-58" name="__codelineno-22-58"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distance between frames:&quot;</span><span class="p">,</span> <span class="n">zstack</span><span class="o">.</span><span class="n">uLoopPars</span><span class="o">.</span><span class="n">dZStep</span><span class="p">,</span> <span class="s2">&quot;μm&quot;</span><span class="p">)</span>
-</span><span id="__span-22-59"><a id="__codelineno-22-59" name="__codelineno-22-59"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Home index:&quot;</span><span class="p">,</span> <span class="n">zstack</span><span class="o">.</span><span class="n">uLoopPars</span><span class="o">.</span><span class="n">homeIndex</span><span class="p">)</span>
-</span><span id="__span-22-60"><a id="__codelineno-22-60" name="__codelineno-22-60"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Top position:&quot;</span><span class="p">,</span> <span class="n">zstack</span><span class="o">.</span><span class="n">uLoopPars</span><span class="o">.</span><span class="n">top</span><span class="p">,</span> <span class="s2">&quot;μm&quot;</span><span class="p">)</span>
-</span><span id="__span-22-61"><a id="__codelineno-22-61" name="__codelineno-22-61"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bottom position:&quot;</span><span class="p">,</span> <span class="n">zstack</span><span class="o">.</span><span class="n">uLoopPars</span><span class="o">.</span><span class="n">bottom</span><span class="p">,</span> <span class="s2">&quot;μm&quot;</span><span class="p">)</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-51">51</a></span>
+<span class="normal"><a href="#__codelineno-26-52">52</a></span>
+<span class="normal"><a href="#__codelineno-26-53">53</a></span>
+<span class="normal"><a href="#__codelineno-26-54">54</a></span>
+<span class="normal"><a href="#__codelineno-26-55">55</a></span>
+<span class="normal"><a href="#__codelineno-26-56">56</a></span>
+<span class="normal"><a href="#__codelineno-26-57">57</a></span>
+<span class="normal"><a href="#__codelineno-26-58">58</a></span>
+<span class="normal"><a href="#__codelineno-26-59">59</a></span>
+<span class="normal"><a href="#__codelineno-26-60">60</a></span>
+<span class="normal"><a href="#__codelineno-26-61">61</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-26-51"><a id="__codelineno-26-51" name="__codelineno-26-51"></a><span class="n">zstack</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="__span-26-52"><a id="__codelineno-26-52" name="__codelineno-26-52"></a>    <span class="n">experiment</span><span class="o">.</span><span class="n">findLevel</span><span class="p">(</span><span class="n">limnd2</span><span class="o">.</span><span class="n">ExperimentLoopType</span><span class="o">.</span><span class="n">eEtZStackLoop</span><span class="p">)</span>
+</span><span id="__span-26-53"><a id="__codelineno-26-53" name="__codelineno-26-53"></a>    <span class="k">if</span> <span class="n">experiment</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+</span><span id="__span-26-54"><a id="__codelineno-26-54" name="__codelineno-26-54"></a>    <span class="k">else</span> <span class="kc">None</span>
+</span><span id="__span-26-55"><a id="__codelineno-26-55" name="__codelineno-26-55"></a><span class="p">)</span>
+</span><span id="__span-26-56"><a id="__codelineno-26-56" name="__codelineno-26-56"></a>
+</span><span id="__span-26-57"><a id="__codelineno-26-57" name="__codelineno-26-57"></a><span class="k">if</span> <span class="n">zstack</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-26-58"><a id="__codelineno-26-58" name="__codelineno-26-58"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distance between frames:&quot;</span><span class="p">,</span> <span class="n">zstack</span><span class="o">.</span><span class="n">uLoopPars</span><span class="o">.</span><span class="n">dZStep</span><span class="p">,</span> <span class="s2">&quot;μm&quot;</span><span class="p">)</span>
+</span><span id="__span-26-59"><a id="__codelineno-26-59" name="__codelineno-26-59"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Home index:&quot;</span><span class="p">,</span> <span class="n">zstack</span><span class="o">.</span><span class="n">uLoopPars</span><span class="o">.</span><span class="n">homeIndex</span><span class="p">)</span>
+</span><span id="__span-26-60"><a id="__codelineno-26-60" name="__codelineno-26-60"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Top position:&quot;</span><span class="p">,</span> <span class="n">zstack</span><span class="o">.</span><span class="n">uLoopPars</span><span class="o">.</span><span class="n">top</span><span class="p">,</span> <span class="s2">&quot;μm&quot;</span><span class="p">)</span>
+</span><span id="__span-26-61"><a id="__codelineno-26-61" name="__codelineno-26-61"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bottom position:&quot;</span><span class="p">,</span> <span class="n">zstack</span><span class="o">.</span><span class="n">uLoopPars</span><span class="o">.</span><span class="n">bottom</span><span class="p">,</span> <span class="s2">&quot;μm&quot;</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <details class="example">
 <summary>See example output</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Distance between frames: 4.0 μm
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>Home index: 2
-</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>Top position: 5.0 μm
-</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>Bottom position: -5.0 μm
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Distance between frames: 4.0 μm
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>Home index: 2
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>Top position: 5.0 μm
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>Bottom position: -5.0 μm
 </span></code></pre></div>
 </details>
 <p>For all attributes of all experiments type look into <a href="experiment/">experiment.py</a></p>
 <h4 id="text-information">Text information<a class="headerlink" href="#text-information" title="Permanent link">&para;</a></h4>
 <p>More information about components can be in <code>imageTextInfo</code> dataclass, though this information is stored as a string:</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-12">12</a></span>
-<span class="normal"><a href="#__codelineno-24-13">13</a></span>
-<span class="normal"><a href="#__codelineno-24-14">14</a></span>
-<span class="normal"><a href="#__codelineno-24-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;More information&quot;</span><span class="p">)</span>
-</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13"></a><span class="k">if</span> <span class="n">nd2</span><span class="o">.</span><span class="n">imageTextInfo</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="__span-24-14"><a id="__codelineno-24-14" name="__codelineno-24-14"></a>    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">nd2</span><span class="o">.</span><span class="n">imageTextInfo</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-</span><span id="__span-24-15"><a id="__codelineno-24-15" name="__codelineno-24-15"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_reader.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-12">12</a></span>
+<span class="normal"><a href="#__codelineno-28-13">13</a></span>
+<span class="normal"><a href="#__codelineno-28-14">14</a></span>
+<span class="normal"><a href="#__codelineno-28-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-28-12"><a id="__codelineno-28-12" name="__codelineno-28-12"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;More information&quot;</span><span class="p">)</span>
+</span><span id="__span-28-13"><a id="__codelineno-28-13" name="__codelineno-28-13"></a><span class="k">if</span> <span class="n">nd2</span><span class="o">.</span><span class="n">imageTextInfo</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-28-14"><a id="__codelineno-28-14" name="__codelineno-28-14"></a>    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">nd2</span><span class="o">.</span><span class="n">imageTextInfo</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span><span id="__span-28-15"><a id="__codelineno-28-15" name="__codelineno-28-15"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <details class="example">
 <summary>See example output</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>More information
-</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>imageId:
-</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>type:
-</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>group:
-</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>sampleId:
-</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>author:
-</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>description: Metadata:
-</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>Dimensions: XY(25) x Z(5)
-</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>Camera Name: Nikon A1 LFOV
-</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>Numerical Aperture: 1.15
-</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>Refractive Index: 1.333
-</span><span id="__span-25-12"><a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>Number of Picture Planes: 2
-</span><span id="__span-25-13"><a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>Plane #1:
-</span><span id="__span-25-14"><a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a>    Name: DETECTOR A
-</span><span id="__span-25-15"><a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a>    Component Count: 1
-</span><span id="__span-25-16"><a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a>    Modality: AUX
-</span><span id="__span-25-17"><a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a>    Microscope Settings:   Microscope: Ti2 Microscope
-</span><span id="__span-25-18"><a id="__codelineno-25-18" name="__codelineno-25-18" href="#__codelineno-25-18"></a>    External Phase, position: 0
-</span><span id="__span-25-19"><a id="__codelineno-25-19" name="__codelineno-25-19" href="#__codelineno-25-19"></a>    Polarizer, position: Out
-</span><span id="__span-25-20"><a id="__codelineno-25-20" name="__codelineno-25-20" href="#__codelineno-25-20"></a>    DIC Prism, position: In
-</span><span id="__span-25-21"><a id="__codelineno-25-21" name="__codelineno-25-21" href="#__codelineno-25-21"></a>    Bertrand Lens, position: Out
-</span><span id="__span-25-22"><a id="__codelineno-25-22" name="__codelineno-25-22" href="#__codelineno-25-22"></a>    Nikon Ti2, FilterChanger(Turret-Lo): 1 (Empty)
-</span><span id="__span-25-23"><a id="__codelineno-25-23" name="__codelineno-25-23" href="#__codelineno-25-23"></a>    Nikon Ti2, FilterChanger(Turret-Up): 1 (Empty)
-</span><span id="__span-25-24"><a id="__codelineno-25-24" name="__codelineno-25-24" href="#__codelineno-25-24"></a>    Nikon Ti2, Shutter(FL-Lo): Closed
-</span><span id="__span-25-25"><a id="__codelineno-25-25" name="__codelineno-25-25" href="#__codelineno-25-25"></a>    Nikon Ti2, Shutter(FL-Up): Closed
-</span><span id="__span-25-26"><a id="__codelineno-25-26" name="__codelineno-25-26" href="#__codelineno-25-26"></a>    LightPath: L100
-</span><span id="__span-25-27"><a id="__codelineno-25-27" name="__codelineno-25-27" href="#__codelineno-25-27"></a>    Analyzer Slider: Extracted
-</span><span id="__span-25-28"><a id="__codelineno-25-28" name="__codelineno-25-28" href="#__codelineno-25-28"></a>    Condenser: 3 (OPEN)
-</span><span id="__span-25-29"><a id="__codelineno-25-29" name="__codelineno-25-29" href="#__codelineno-25-29"></a>    PFS, state: Off
-</span><span id="__span-25-30"><a id="__codelineno-25-30" name="__codelineno-25-30" href="#__codelineno-25-30"></a>    PFS, offset: 5700
-</span><span id="__span-25-31"><a id="__codelineno-25-31" name="__codelineno-25-31" href="#__codelineno-25-31"></a>    PFS, mirror: Inserted
-</span><span id="__span-25-32"><a id="__codelineno-25-32" name="__codelineno-25-32" href="#__codelineno-25-32"></a>    PFS, Dish Type: Glass
-</span><span id="__span-25-33"><a id="__codelineno-25-33" name="__codelineno-25-33" href="#__codelineno-25-33"></a>    Zoom: 1.00x
-</span><span id="__span-25-34"><a id="__codelineno-25-34" name="__codelineno-25-34" href="#__codelineno-25-34"></a>    Eyepiece Ports:
-</span><span id="__span-25-35"><a id="__codelineno-25-35" name="__codelineno-25-35" href="#__codelineno-25-35"></a>        Port 1: Off  (Camera)
-</span><span id="__span-25-36"><a id="__codelineno-25-36" name="__codelineno-25-36" href="#__codelineno-25-36"></a>        Port 2: On  (Eye)
-</span><span id="__span-25-37"><a id="__codelineno-25-37" name="__codelineno-25-37" href="#__codelineno-25-37"></a>
-</span><span id="__span-25-38"><a id="__codelineno-25-38" name="__codelineno-25-38" href="#__codelineno-25-38"></a>    LAPP Upper Ports:
-</span><span id="__span-25-39"><a id="__codelineno-25-39" name="__codelineno-25-39" href="#__codelineno-25-39"></a>        Port 1: Off  (1)
-</span><span id="__span-25-40"><a id="__codelineno-25-40" name="__codelineno-25-40" href="#__codelineno-25-40"></a>        Port 2: On  (2)
-</span><span id="__span-25-41"><a id="__codelineno-25-41" name="__codelineno-25-41" href="#__codelineno-25-41"></a>
-</span><span id="__span-25-42"><a id="__codelineno-25-42" name="__codelineno-25-42" href="#__codelineno-25-42"></a>    LAPP Lower Ports:
-</span><span id="__span-25-43"><a id="__codelineno-25-43" name="__codelineno-25-43" href="#__codelineno-25-43"></a>        Port 1: Off  (H-TIRF Direct XY-F)
-</span><span id="__span-25-44"><a id="__codelineno-25-44" name="__codelineno-25-44" href="#__codelineno-25-44"></a>        Port 2: Off  (2)
-</span><span id="__span-25-45"><a id="__codelineno-25-45" name="__codelineno-25-45" href="#__codelineno-25-45"></a>        Port 3: On  (3)
-</span><span id="__span-25-46"><a id="__codelineno-25-46" name="__codelineno-25-46" href="#__codelineno-25-46"></a>
-</span><span id="__span-25-47"><a id="__codelineno-25-47" name="__codelineno-25-47" href="#__codelineno-25-47"></a>    H-TIRF  X: 0.0
-</span><span id="__span-25-48"><a id="__codelineno-25-48" name="__codelineno-25-48" href="#__codelineno-25-48"></a>    H-TIRF  Y: 0.0
-</span><span id="__span-25-49"><a id="__codelineno-25-49" name="__codelineno-25-49" href="#__codelineno-25-49"></a>    H-TIRF  Focus: 0.0
-</span><span id="__span-25-50"><a id="__codelineno-25-50" name="__codelineno-25-50" href="#__codelineno-25-50"></a>    H-TIRF  X: 0.0
-</span><span id="__span-25-51"><a id="__codelineno-25-51" name="__codelineno-25-51" href="#__codelineno-25-51"></a>    H-TIRF  Y: 0.0
-</span><span id="__span-25-52"><a id="__codelineno-25-52" name="__codelineno-25-52" href="#__codelineno-25-52"></a>    H-TIRF  Focus: 0.0
-</span><span id="__span-25-53"><a id="__codelineno-25-53" name="__codelineno-25-53" href="#__codelineno-25-53"></a>    E-TIRF1 Angle: 0.0
-</span><span id="__span-25-54"><a id="__codelineno-25-54" name="__codelineno-25-54" href="#__codelineno-25-54"></a>    E-TIRF1 Direction: 0.0
-</span><span id="__span-25-55"><a id="__codelineno-25-55" name="__codelineno-25-55" href="#__codelineno-25-55"></a>    NIDAQ, FilterChanger(FilterWheel): 1 (Empty)
-</span><span id="__span-25-56"><a id="__codelineno-25-56" name="__codelineno-25-56" href="#__codelineno-25-56"></a>    NIDAQ, Shutter(LUN-F): Closed
-</span><span id="__span-25-57"><a id="__codelineno-25-57" name="__codelineno-25-57" href="#__codelineno-25-57"></a>    NIDAQ, Shutter(LUN4): Closed
-</span><span id="__span-25-58"><a id="__codelineno-25-58" name="__codelineno-25-58" href="#__codelineno-25-58"></a>    NIDAQ, Shutter(AUX1): Closed
-</span><span id="__span-25-59"><a id="__codelineno-25-59" name="__codelineno-25-59" href="#__codelineno-25-59"></a>    NIDAQ, Shutter(EPI): Closed
-</span><span id="__span-25-60"><a id="__codelineno-25-60" name="__codelineno-25-60" href="#__codelineno-25-60"></a>    NIDAQ, MultiLaser(LUN-F):
-</span><span id="__span-25-61"><a id="__codelineno-25-61" name="__codelineno-25-61" href="#__codelineno-25-61"></a>        Line:1; ExW:405; Power: 34.8; On
-</span><span id="__span-25-62"><a id="__codelineno-25-62" name="__codelineno-25-62" href="#__codelineno-25-62"></a>
-</span><span id="__span-25-63"><a id="__codelineno-25-63" name="__codelineno-25-63" href="#__codelineno-25-63"></a>    NIDAQ, MultiLaser(LUN4):
-</span><span id="__span-25-64"><a id="__codelineno-25-64" name="__codelineno-25-64" href="#__codelineno-25-64"></a>        Line:1; ExW:405; Power: 30.0; Off
-</span><span id="__span-25-65"><a id="__codelineno-25-65" name="__codelineno-25-65" href="#__codelineno-25-65"></a>        Line:2; ExW:488; Power: 30.0; Off
-</span><span id="__span-25-66"><a id="__codelineno-25-66" name="__codelineno-25-66" href="#__codelineno-25-66"></a>        Line:3; ExW:561; Power: 30.0; On
-</span><span id="__span-25-67"><a id="__codelineno-25-67" name="__codelineno-25-67" href="#__codelineno-25-67"></a>        Line:4; ExW:640; Power: 30.0; Off
-</span><span id="__span-25-68"><a id="__codelineno-25-68" name="__codelineno-25-68" href="#__codelineno-25-68"></a>
-</span><span id="__span-25-69"><a id="__codelineno-25-69" name="__codelineno-25-69" href="#__codelineno-25-69"></a>Plane #2:
-</span><span id="__span-25-70"><a id="__codelineno-25-70" name="__codelineno-25-70" href="#__codelineno-25-70"></a>    Name: DETECTOR B
-</span><span id="__span-25-71"><a id="__codelineno-25-71" name="__codelineno-25-71" href="#__codelineno-25-71"></a>    Component Count: 1
-</span><span id="__span-25-72"><a id="__codelineno-25-72" name="__codelineno-25-72" href="#__codelineno-25-72"></a>    Modality: AUX
-</span><span id="__span-25-73"><a id="__codelineno-25-73" name="__codelineno-25-73" href="#__codelineno-25-73"></a>    Microscope Settings:   Microscope: Ti2 Microscope
-</span><span id="__span-25-74"><a id="__codelineno-25-74" name="__codelineno-25-74" href="#__codelineno-25-74"></a>    External Phase, position: 0
-</span><span id="__span-25-75"><a id="__codelineno-25-75" name="__codelineno-25-75" href="#__codelineno-25-75"></a>    Polarizer, position: Out
-</span><span id="__span-25-76"><a id="__codelineno-25-76" name="__codelineno-25-76" href="#__codelineno-25-76"></a>    DIC Prism, position: In
-</span><span id="__span-25-77"><a id="__codelineno-25-77" name="__codelineno-25-77" href="#__codelineno-25-77"></a>    Bertrand Lens, position: Out
-</span><span id="__span-25-78"><a id="__codelineno-25-78" name="__codelineno-25-78" href="#__codelineno-25-78"></a>    Nikon Ti2, FilterChanger(Turret-Lo): 1 (Empty)
-</span><span id="__span-25-79"><a id="__codelineno-25-79" name="__codelineno-25-79" href="#__codelineno-25-79"></a>    Nikon Ti2, FilterChanger(Turret-Up): 1 (Empty)
-</span><span id="__span-25-80"><a id="__codelineno-25-80" name="__codelineno-25-80" href="#__codelineno-25-80"></a>    Nikon Ti2, Shutter(FL-Lo): Closed
-</span><span id="__span-25-81"><a id="__codelineno-25-81" name="__codelineno-25-81" href="#__codelineno-25-81"></a>    Nikon Ti2, Shutter(FL-Up): Closed
-</span><span id="__span-25-82"><a id="__codelineno-25-82" name="__codelineno-25-82" href="#__codelineno-25-82"></a>    LightPath: L100
-</span><span id="__span-25-83"><a id="__codelineno-25-83" name="__codelineno-25-83" href="#__codelineno-25-83"></a>    Analyzer Slider: Extracted
-</span><span id="__span-25-84"><a id="__codelineno-25-84" name="__codelineno-25-84" href="#__codelineno-25-84"></a>    Condenser: 3 (OPEN)
-</span><span id="__span-25-85"><a id="__codelineno-25-85" name="__codelineno-25-85" href="#__codelineno-25-85"></a>    PFS, state: Off
-</span><span id="__span-25-86"><a id="__codelineno-25-86" name="__codelineno-25-86" href="#__codelineno-25-86"></a>    PFS, offset: 5700
-</span><span id="__span-25-87"><a id="__codelineno-25-87" name="__codelineno-25-87" href="#__codelineno-25-87"></a>    PFS, mirror: Inserted
-</span><span id="__span-25-88"><a id="__codelineno-25-88" name="__codelineno-25-88" href="#__codelineno-25-88"></a>    PFS, Dish Type: Glass
-</span><span id="__span-25-89"><a id="__codelineno-25-89" name="__codelineno-25-89" href="#__codelineno-25-89"></a>    Zoom: 1.00x
-</span><span id="__span-25-90"><a id="__codelineno-25-90" name="__codelineno-25-90" href="#__codelineno-25-90"></a>    Eyepiece Ports:
-</span><span id="__span-25-91"><a id="__codelineno-25-91" name="__codelineno-25-91" href="#__codelineno-25-91"></a>        Port 1: Off  (Camera)
-</span><span id="__span-25-92"><a id="__codelineno-25-92" name="__codelineno-25-92" href="#__codelineno-25-92"></a>        Port 2: On  (Eye)
-</span><span id="__span-25-93"><a id="__codelineno-25-93" name="__codelineno-25-93" href="#__codelineno-25-93"></a>
-</span><span id="__span-25-94"><a id="__codelineno-25-94" name="__codelineno-25-94" href="#__codelineno-25-94"></a>    LAPP Upper Ports:
-</span><span id="__span-25-95"><a id="__codelineno-25-95" name="__codelineno-25-95" href="#__codelineno-25-95"></a>        Port 1: Off  (1)
-</span><span id="__span-25-96"><a id="__codelineno-25-96" name="__codelineno-25-96" href="#__codelineno-25-96"></a>        Port 2: On  (2)
-</span><span id="__span-25-97"><a id="__codelineno-25-97" name="__codelineno-25-97" href="#__codelineno-25-97"></a>
-</span><span id="__span-25-98"><a id="__codelineno-25-98" name="__codelineno-25-98" href="#__codelineno-25-98"></a>    LAPP Lower Ports:
-</span><span id="__span-25-99"><a id="__codelineno-25-99" name="__codelineno-25-99" href="#__codelineno-25-99"></a>        Port 1: Off  (H-TIRF Direct XY-F)
-</span><span id="__span-25-100"><a id="__codelineno-25-100" name="__codelineno-25-100" href="#__codelineno-25-100"></a>        Port 2: Off  (2)
-</span><span id="__span-25-101"><a id="__codelineno-25-101" name="__codelineno-25-101" href="#__codelineno-25-101"></a>        Port 3: On  (3)
-</span><span id="__span-25-102"><a id="__codelineno-25-102" name="__codelineno-25-102" href="#__codelineno-25-102"></a>
-</span><span id="__span-25-103"><a id="__codelineno-25-103" name="__codelineno-25-103" href="#__codelineno-25-103"></a>    H-TIRF  X: 0.0
-</span><span id="__span-25-104"><a id="__codelineno-25-104" name="__codelineno-25-104" href="#__codelineno-25-104"></a>    H-TIRF  Y: 0.0
-</span><span id="__span-25-105"><a id="__codelineno-25-105" name="__codelineno-25-105" href="#__codelineno-25-105"></a>    H-TIRF  Focus: 0.0
-</span><span id="__span-25-106"><a id="__codelineno-25-106" name="__codelineno-25-106" href="#__codelineno-25-106"></a>    H-TIRF  X: 0.0
-</span><span id="__span-25-107"><a id="__codelineno-25-107" name="__codelineno-25-107" href="#__codelineno-25-107"></a>    H-TIRF  Y: 0.0
-</span><span id="__span-25-108"><a id="__codelineno-25-108" name="__codelineno-25-108" href="#__codelineno-25-108"></a>    H-TIRF  Focus: 0.0
-</span><span id="__span-25-109"><a id="__codelineno-25-109" name="__codelineno-25-109" href="#__codelineno-25-109"></a>    E-TIRF1 Angle: 0.0
-</span><span id="__span-25-110"><a id="__codelineno-25-110" name="__codelineno-25-110" href="#__codelineno-25-110"></a>    E-TIRF1 Direction: 0.0
-</span><span id="__span-25-111"><a id="__codelineno-25-111" name="__codelineno-25-111" href="#__codelineno-25-111"></a>    NIDAQ, FilterChanger(FilterWheel): 1 (Empty)
-</span><span id="__span-25-112"><a id="__codelineno-25-112" name="__codelineno-25-112" href="#__codelineno-25-112"></a>    NIDAQ, Shutter(LUN-F): Closed
-</span><span id="__span-25-113"><a id="__codelineno-25-113" name="__codelineno-25-113" href="#__codelineno-25-113"></a>    NIDAQ, Shutter(LUN4): Closed
-</span><span id="__span-25-114"><a id="__codelineno-25-114" name="__codelineno-25-114" href="#__codelineno-25-114"></a>    NIDAQ, Shutter(AUX1): Closed
-</span><span id="__span-25-115"><a id="__codelineno-25-115" name="__codelineno-25-115" href="#__codelineno-25-115"></a>    NIDAQ, Shutter(EPI): Closed
-</span><span id="__span-25-116"><a id="__codelineno-25-116" name="__codelineno-25-116" href="#__codelineno-25-116"></a>    NIDAQ, MultiLaser(LUN-F):
-</span><span id="__span-25-117"><a id="__codelineno-25-117" name="__codelineno-25-117" href="#__codelineno-25-117"></a>        Line:1; ExW:405; Power: 34.8; On
-</span><span id="__span-25-118"><a id="__codelineno-25-118" name="__codelineno-25-118" href="#__codelineno-25-118"></a>
-</span><span id="__span-25-119"><a id="__codelineno-25-119" name="__codelineno-25-119" href="#__codelineno-25-119"></a>    NIDAQ, MultiLaser(LUN4):
-</span><span id="__span-25-120"><a id="__codelineno-25-120" name="__codelineno-25-120" href="#__codelineno-25-120"></a>        Line:1; ExW:405; Power: 30.0; Off
-</span><span id="__span-25-121"><a id="__codelineno-25-121" name="__codelineno-25-121" href="#__codelineno-25-121"></a>        Line:2; ExW:488; Power: 30.0; Off
-</span><span id="__span-25-122"><a id="__codelineno-25-122" name="__codelineno-25-122" href="#__codelineno-25-122"></a>        Line:3; ExW:561; Power: 30.0; On
-</span><span id="__span-25-123"><a id="__codelineno-25-123" name="__codelineno-25-123" href="#__codelineno-25-123"></a>        Line:4; ExW:640; Power: 30.0; Off
-</span><span id="__span-25-124"><a id="__codelineno-25-124" name="__codelineno-25-124" href="#__codelineno-25-124"></a>
-</span><span id="__span-25-125"><a id="__codelineno-25-125" name="__codelineno-25-125" href="#__codelineno-25-125"></a>Z Stack Loop: 5
-</span><span id="__span-25-126"><a id="__codelineno-25-126" name="__codelineno-25-126" href="#__codelineno-25-126"></a>- Step: 4 µm
-</span><span id="__span-25-127"><a id="__codelineno-25-127" name="__codelineno-25-127" href="#__codelineno-25-127"></a>- Device: Ti2 ZDrive
-</span><span id="__span-25-128"><a id="__codelineno-25-128" name="__codelineno-25-128" href="#__codelineno-25-128"></a>capturing: Nikon A1 LFOV
-</span><span id="__span-25-129"><a id="__codelineno-25-129" name="__codelineno-25-129" href="#__codelineno-25-129"></a>
-</span><span id="__span-25-130"><a id="__codelineno-25-130" name="__codelineno-25-130" href="#__codelineno-25-130"></a>sampling:
-</span><span id="__span-25-131"><a id="__codelineno-25-131" name="__codelineno-25-131" href="#__codelineno-25-131"></a>location:
-</span><span id="__span-25-132"><a id="__codelineno-25-132" name="__codelineno-25-132" href="#__codelineno-25-132"></a>date: 9/22/2068  12:28:28 AM
-</span><span id="__span-25-133"><a id="__codelineno-25-133" name="__codelineno-25-133" href="#__codelineno-25-133"></a>conclusion:
-</span><span id="__span-25-134"><a id="__codelineno-25-134" name="__codelineno-25-134" href="#__codelineno-25-134"></a>info1:
-</span><span id="__span-25-135"><a id="__codelineno-25-135" name="__codelineno-25-135" href="#__codelineno-25-135"></a>info2:
-</span><span id="__span-25-136"><a id="__codelineno-25-136" name="__codelineno-25-136" href="#__codelineno-25-136"></a>optics: Apo LWD 40x WI λS DIC N2
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>More information
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>imageId:
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>type:
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>group:
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>sampleId:
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>author:
+</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>description: Metadata:
+</span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>Dimensions: XY(25) x Z(5)
+</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>Camera Name: Nikon A1 LFOV
+</span><span id="__span-29-10"><a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>Numerical Aperture: 1.15
+</span><span id="__span-29-11"><a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>Refractive Index: 1.333
+</span><span id="__span-29-12"><a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>Number of Picture Planes: 2
+</span><span id="__span-29-13"><a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a>Plane #1:
+</span><span id="__span-29-14"><a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a>    Name: DETECTOR A
+</span><span id="__span-29-15"><a id="__codelineno-29-15" name="__codelineno-29-15" href="#__codelineno-29-15"></a>    Component Count: 1
+</span><span id="__span-29-16"><a id="__codelineno-29-16" name="__codelineno-29-16" href="#__codelineno-29-16"></a>    Modality: AUX
+</span><span id="__span-29-17"><a id="__codelineno-29-17" name="__codelineno-29-17" href="#__codelineno-29-17"></a>    Microscope Settings:   Microscope: Ti2 Microscope
+</span><span id="__span-29-18"><a id="__codelineno-29-18" name="__codelineno-29-18" href="#__codelineno-29-18"></a>    External Phase, position: 0
+</span><span id="__span-29-19"><a id="__codelineno-29-19" name="__codelineno-29-19" href="#__codelineno-29-19"></a>    Polarizer, position: Out
+</span><span id="__span-29-20"><a id="__codelineno-29-20" name="__codelineno-29-20" href="#__codelineno-29-20"></a>    DIC Prism, position: In
+</span><span id="__span-29-21"><a id="__codelineno-29-21" name="__codelineno-29-21" href="#__codelineno-29-21"></a>    Bertrand Lens, position: Out
+</span><span id="__span-29-22"><a id="__codelineno-29-22" name="__codelineno-29-22" href="#__codelineno-29-22"></a>    Nikon Ti2, FilterChanger(Turret-Lo): 1 (Empty)
+</span><span id="__span-29-23"><a id="__codelineno-29-23" name="__codelineno-29-23" href="#__codelineno-29-23"></a>    Nikon Ti2, FilterChanger(Turret-Up): 1 (Empty)
+</span><span id="__span-29-24"><a id="__codelineno-29-24" name="__codelineno-29-24" href="#__codelineno-29-24"></a>    Nikon Ti2, Shutter(FL-Lo): Closed
+</span><span id="__span-29-25"><a id="__codelineno-29-25" name="__codelineno-29-25" href="#__codelineno-29-25"></a>    Nikon Ti2, Shutter(FL-Up): Closed
+</span><span id="__span-29-26"><a id="__codelineno-29-26" name="__codelineno-29-26" href="#__codelineno-29-26"></a>    LightPath: L100
+</span><span id="__span-29-27"><a id="__codelineno-29-27" name="__codelineno-29-27" href="#__codelineno-29-27"></a>    Analyzer Slider: Extracted
+</span><span id="__span-29-28"><a id="__codelineno-29-28" name="__codelineno-29-28" href="#__codelineno-29-28"></a>    Condenser: 3 (OPEN)
+</span><span id="__span-29-29"><a id="__codelineno-29-29" name="__codelineno-29-29" href="#__codelineno-29-29"></a>    PFS, state: Off
+</span><span id="__span-29-30"><a id="__codelineno-29-30" name="__codelineno-29-30" href="#__codelineno-29-30"></a>    PFS, offset: 5700
+</span><span id="__span-29-31"><a id="__codelineno-29-31" name="__codelineno-29-31" href="#__codelineno-29-31"></a>    PFS, mirror: Inserted
+</span><span id="__span-29-32"><a id="__codelineno-29-32" name="__codelineno-29-32" href="#__codelineno-29-32"></a>    PFS, Dish Type: Glass
+</span><span id="__span-29-33"><a id="__codelineno-29-33" name="__codelineno-29-33" href="#__codelineno-29-33"></a>    Zoom: 1.00x
+</span><span id="__span-29-34"><a id="__codelineno-29-34" name="__codelineno-29-34" href="#__codelineno-29-34"></a>    Eyepiece Ports:
+</span><span id="__span-29-35"><a id="__codelineno-29-35" name="__codelineno-29-35" href="#__codelineno-29-35"></a>        Port 1: Off  (Camera)
+</span><span id="__span-29-36"><a id="__codelineno-29-36" name="__codelineno-29-36" href="#__codelineno-29-36"></a>        Port 2: On  (Eye)
+</span><span id="__span-29-37"><a id="__codelineno-29-37" name="__codelineno-29-37" href="#__codelineno-29-37"></a>
+</span><span id="__span-29-38"><a id="__codelineno-29-38" name="__codelineno-29-38" href="#__codelineno-29-38"></a>    LAPP Upper Ports:
+</span><span id="__span-29-39"><a id="__codelineno-29-39" name="__codelineno-29-39" href="#__codelineno-29-39"></a>        Port 1: Off  (1)
+</span><span id="__span-29-40"><a id="__codelineno-29-40" name="__codelineno-29-40" href="#__codelineno-29-40"></a>        Port 2: On  (2)
+</span><span id="__span-29-41"><a id="__codelineno-29-41" name="__codelineno-29-41" href="#__codelineno-29-41"></a>
+</span><span id="__span-29-42"><a id="__codelineno-29-42" name="__codelineno-29-42" href="#__codelineno-29-42"></a>    LAPP Lower Ports:
+</span><span id="__span-29-43"><a id="__codelineno-29-43" name="__codelineno-29-43" href="#__codelineno-29-43"></a>        Port 1: Off  (H-TIRF Direct XY-F)
+</span><span id="__span-29-44"><a id="__codelineno-29-44" name="__codelineno-29-44" href="#__codelineno-29-44"></a>        Port 2: Off  (2)
+</span><span id="__span-29-45"><a id="__codelineno-29-45" name="__codelineno-29-45" href="#__codelineno-29-45"></a>        Port 3: On  (3)
+</span><span id="__span-29-46"><a id="__codelineno-29-46" name="__codelineno-29-46" href="#__codelineno-29-46"></a>
+</span><span id="__span-29-47"><a id="__codelineno-29-47" name="__codelineno-29-47" href="#__codelineno-29-47"></a>    H-TIRF  X: 0.0
+</span><span id="__span-29-48"><a id="__codelineno-29-48" name="__codelineno-29-48" href="#__codelineno-29-48"></a>    H-TIRF  Y: 0.0
+</span><span id="__span-29-49"><a id="__codelineno-29-49" name="__codelineno-29-49" href="#__codelineno-29-49"></a>    H-TIRF  Focus: 0.0
+</span><span id="__span-29-50"><a id="__codelineno-29-50" name="__codelineno-29-50" href="#__codelineno-29-50"></a>    H-TIRF  X: 0.0
+</span><span id="__span-29-51"><a id="__codelineno-29-51" name="__codelineno-29-51" href="#__codelineno-29-51"></a>    H-TIRF  Y: 0.0
+</span><span id="__span-29-52"><a id="__codelineno-29-52" name="__codelineno-29-52" href="#__codelineno-29-52"></a>    H-TIRF  Focus: 0.0
+</span><span id="__span-29-53"><a id="__codelineno-29-53" name="__codelineno-29-53" href="#__codelineno-29-53"></a>    E-TIRF1 Angle: 0.0
+</span><span id="__span-29-54"><a id="__codelineno-29-54" name="__codelineno-29-54" href="#__codelineno-29-54"></a>    E-TIRF1 Direction: 0.0
+</span><span id="__span-29-55"><a id="__codelineno-29-55" name="__codelineno-29-55" href="#__codelineno-29-55"></a>    NIDAQ, FilterChanger(FilterWheel): 1 (Empty)
+</span><span id="__span-29-56"><a id="__codelineno-29-56" name="__codelineno-29-56" href="#__codelineno-29-56"></a>    NIDAQ, Shutter(LUN-F): Closed
+</span><span id="__span-29-57"><a id="__codelineno-29-57" name="__codelineno-29-57" href="#__codelineno-29-57"></a>    NIDAQ, Shutter(LUN4): Closed
+</span><span id="__span-29-58"><a id="__codelineno-29-58" name="__codelineno-29-58" href="#__codelineno-29-58"></a>    NIDAQ, Shutter(AUX1): Closed
+</span><span id="__span-29-59"><a id="__codelineno-29-59" name="__codelineno-29-59" href="#__codelineno-29-59"></a>    NIDAQ, Shutter(EPI): Closed
+</span><span id="__span-29-60"><a id="__codelineno-29-60" name="__codelineno-29-60" href="#__codelineno-29-60"></a>    NIDAQ, MultiLaser(LUN-F):
+</span><span id="__span-29-61"><a id="__codelineno-29-61" name="__codelineno-29-61" href="#__codelineno-29-61"></a>        Line:1; ExW:405; Power: 34.8; On
+</span><span id="__span-29-62"><a id="__codelineno-29-62" name="__codelineno-29-62" href="#__codelineno-29-62"></a>
+</span><span id="__span-29-63"><a id="__codelineno-29-63" name="__codelineno-29-63" href="#__codelineno-29-63"></a>    NIDAQ, MultiLaser(LUN4):
+</span><span id="__span-29-64"><a id="__codelineno-29-64" name="__codelineno-29-64" href="#__codelineno-29-64"></a>        Line:1; ExW:405; Power: 30.0; Off
+</span><span id="__span-29-65"><a id="__codelineno-29-65" name="__codelineno-29-65" href="#__codelineno-29-65"></a>        Line:2; ExW:488; Power: 30.0; Off
+</span><span id="__span-29-66"><a id="__codelineno-29-66" name="__codelineno-29-66" href="#__codelineno-29-66"></a>        Line:3; ExW:561; Power: 30.0; On
+</span><span id="__span-29-67"><a id="__codelineno-29-67" name="__codelineno-29-67" href="#__codelineno-29-67"></a>        Line:4; ExW:640; Power: 30.0; Off
+</span><span id="__span-29-68"><a id="__codelineno-29-68" name="__codelineno-29-68" href="#__codelineno-29-68"></a>
+</span><span id="__span-29-69"><a id="__codelineno-29-69" name="__codelineno-29-69" href="#__codelineno-29-69"></a>Plane #2:
+</span><span id="__span-29-70"><a id="__codelineno-29-70" name="__codelineno-29-70" href="#__codelineno-29-70"></a>    Name: DETECTOR B
+</span><span id="__span-29-71"><a id="__codelineno-29-71" name="__codelineno-29-71" href="#__codelineno-29-71"></a>    Component Count: 1
+</span><span id="__span-29-72"><a id="__codelineno-29-72" name="__codelineno-29-72" href="#__codelineno-29-72"></a>    Modality: AUX
+</span><span id="__span-29-73"><a id="__codelineno-29-73" name="__codelineno-29-73" href="#__codelineno-29-73"></a>    Microscope Settings:   Microscope: Ti2 Microscope
+</span><span id="__span-29-74"><a id="__codelineno-29-74" name="__codelineno-29-74" href="#__codelineno-29-74"></a>    External Phase, position: 0
+</span><span id="__span-29-75"><a id="__codelineno-29-75" name="__codelineno-29-75" href="#__codelineno-29-75"></a>    Polarizer, position: Out
+</span><span id="__span-29-76"><a id="__codelineno-29-76" name="__codelineno-29-76" href="#__codelineno-29-76"></a>    DIC Prism, position: In
+</span><span id="__span-29-77"><a id="__codelineno-29-77" name="__codelineno-29-77" href="#__codelineno-29-77"></a>    Bertrand Lens, position: Out
+</span><span id="__span-29-78"><a id="__codelineno-29-78" name="__codelineno-29-78" href="#__codelineno-29-78"></a>    Nikon Ti2, FilterChanger(Turret-Lo): 1 (Empty)
+</span><span id="__span-29-79"><a id="__codelineno-29-79" name="__codelineno-29-79" href="#__codelineno-29-79"></a>    Nikon Ti2, FilterChanger(Turret-Up): 1 (Empty)
+</span><span id="__span-29-80"><a id="__codelineno-29-80" name="__codelineno-29-80" href="#__codelineno-29-80"></a>    Nikon Ti2, Shutter(FL-Lo): Closed
+</span><span id="__span-29-81"><a id="__codelineno-29-81" name="__codelineno-29-81" href="#__codelineno-29-81"></a>    Nikon Ti2, Shutter(FL-Up): Closed
+</span><span id="__span-29-82"><a id="__codelineno-29-82" name="__codelineno-29-82" href="#__codelineno-29-82"></a>    LightPath: L100
+</span><span id="__span-29-83"><a id="__codelineno-29-83" name="__codelineno-29-83" href="#__codelineno-29-83"></a>    Analyzer Slider: Extracted
+</span><span id="__span-29-84"><a id="__codelineno-29-84" name="__codelineno-29-84" href="#__codelineno-29-84"></a>    Condenser: 3 (OPEN)
+</span><span id="__span-29-85"><a id="__codelineno-29-85" name="__codelineno-29-85" href="#__codelineno-29-85"></a>    PFS, state: Off
+</span><span id="__span-29-86"><a id="__codelineno-29-86" name="__codelineno-29-86" href="#__codelineno-29-86"></a>    PFS, offset: 5700
+</span><span id="__span-29-87"><a id="__codelineno-29-87" name="__codelineno-29-87" href="#__codelineno-29-87"></a>    PFS, mirror: Inserted
+</span><span id="__span-29-88"><a id="__codelineno-29-88" name="__codelineno-29-88" href="#__codelineno-29-88"></a>    PFS, Dish Type: Glass
+</span><span id="__span-29-89"><a id="__codelineno-29-89" name="__codelineno-29-89" href="#__codelineno-29-89"></a>    Zoom: 1.00x
+</span><span id="__span-29-90"><a id="__codelineno-29-90" name="__codelineno-29-90" href="#__codelineno-29-90"></a>    Eyepiece Ports:
+</span><span id="__span-29-91"><a id="__codelineno-29-91" name="__codelineno-29-91" href="#__codelineno-29-91"></a>        Port 1: Off  (Camera)
+</span><span id="__span-29-92"><a id="__codelineno-29-92" name="__codelineno-29-92" href="#__codelineno-29-92"></a>        Port 2: On  (Eye)
+</span><span id="__span-29-93"><a id="__codelineno-29-93" name="__codelineno-29-93" href="#__codelineno-29-93"></a>
+</span><span id="__span-29-94"><a id="__codelineno-29-94" name="__codelineno-29-94" href="#__codelineno-29-94"></a>    LAPP Upper Ports:
+</span><span id="__span-29-95"><a id="__codelineno-29-95" name="__codelineno-29-95" href="#__codelineno-29-95"></a>        Port 1: Off  (1)
+</span><span id="__span-29-96"><a id="__codelineno-29-96" name="__codelineno-29-96" href="#__codelineno-29-96"></a>        Port 2: On  (2)
+</span><span id="__span-29-97"><a id="__codelineno-29-97" name="__codelineno-29-97" href="#__codelineno-29-97"></a>
+</span><span id="__span-29-98"><a id="__codelineno-29-98" name="__codelineno-29-98" href="#__codelineno-29-98"></a>    LAPP Lower Ports:
+</span><span id="__span-29-99"><a id="__codelineno-29-99" name="__codelineno-29-99" href="#__codelineno-29-99"></a>        Port 1: Off  (H-TIRF Direct XY-F)
+</span><span id="__span-29-100"><a id="__codelineno-29-100" name="__codelineno-29-100" href="#__codelineno-29-100"></a>        Port 2: Off  (2)
+</span><span id="__span-29-101"><a id="__codelineno-29-101" name="__codelineno-29-101" href="#__codelineno-29-101"></a>        Port 3: On  (3)
+</span><span id="__span-29-102"><a id="__codelineno-29-102" name="__codelineno-29-102" href="#__codelineno-29-102"></a>
+</span><span id="__span-29-103"><a id="__codelineno-29-103" name="__codelineno-29-103" href="#__codelineno-29-103"></a>    H-TIRF  X: 0.0
+</span><span id="__span-29-104"><a id="__codelineno-29-104" name="__codelineno-29-104" href="#__codelineno-29-104"></a>    H-TIRF  Y: 0.0
+</span><span id="__span-29-105"><a id="__codelineno-29-105" name="__codelineno-29-105" href="#__codelineno-29-105"></a>    H-TIRF  Focus: 0.0
+</span><span id="__span-29-106"><a id="__codelineno-29-106" name="__codelineno-29-106" href="#__codelineno-29-106"></a>    H-TIRF  X: 0.0
+</span><span id="__span-29-107"><a id="__codelineno-29-107" name="__codelineno-29-107" href="#__codelineno-29-107"></a>    H-TIRF  Y: 0.0
+</span><span id="__span-29-108"><a id="__codelineno-29-108" name="__codelineno-29-108" href="#__codelineno-29-108"></a>    H-TIRF  Focus: 0.0
+</span><span id="__span-29-109"><a id="__codelineno-29-109" name="__codelineno-29-109" href="#__codelineno-29-109"></a>    E-TIRF1 Angle: 0.0
+</span><span id="__span-29-110"><a id="__codelineno-29-110" name="__codelineno-29-110" href="#__codelineno-29-110"></a>    E-TIRF1 Direction: 0.0
+</span><span id="__span-29-111"><a id="__codelineno-29-111" name="__codelineno-29-111" href="#__codelineno-29-111"></a>    NIDAQ, FilterChanger(FilterWheel): 1 (Empty)
+</span><span id="__span-29-112"><a id="__codelineno-29-112" name="__codelineno-29-112" href="#__codelineno-29-112"></a>    NIDAQ, Shutter(LUN-F): Closed
+</span><span id="__span-29-113"><a id="__codelineno-29-113" name="__codelineno-29-113" href="#__codelineno-29-113"></a>    NIDAQ, Shutter(LUN4): Closed
+</span><span id="__span-29-114"><a id="__codelineno-29-114" name="__codelineno-29-114" href="#__codelineno-29-114"></a>    NIDAQ, Shutter(AUX1): Closed
+</span><span id="__span-29-115"><a id="__codelineno-29-115" name="__codelineno-29-115" href="#__codelineno-29-115"></a>    NIDAQ, Shutter(EPI): Closed
+</span><span id="__span-29-116"><a id="__codelineno-29-116" name="__codelineno-29-116" href="#__codelineno-29-116"></a>    NIDAQ, MultiLaser(LUN-F):
+</span><span id="__span-29-117"><a id="__codelineno-29-117" name="__codelineno-29-117" href="#__codelineno-29-117"></a>        Line:1; ExW:405; Power: 34.8; On
+</span><span id="__span-29-118"><a id="__codelineno-29-118" name="__codelineno-29-118" href="#__codelineno-29-118"></a>
+</span><span id="__span-29-119"><a id="__codelineno-29-119" name="__codelineno-29-119" href="#__codelineno-29-119"></a>    NIDAQ, MultiLaser(LUN4):
+</span><span id="__span-29-120"><a id="__codelineno-29-120" name="__codelineno-29-120" href="#__codelineno-29-120"></a>        Line:1; ExW:405; Power: 30.0; Off
+</span><span id="__span-29-121"><a id="__codelineno-29-121" name="__codelineno-29-121" href="#__codelineno-29-121"></a>        Line:2; ExW:488; Power: 30.0; Off
+</span><span id="__span-29-122"><a id="__codelineno-29-122" name="__codelineno-29-122" href="#__codelineno-29-122"></a>        Line:3; ExW:561; Power: 30.0; On
+</span><span id="__span-29-123"><a id="__codelineno-29-123" name="__codelineno-29-123" href="#__codelineno-29-123"></a>        Line:4; ExW:640; Power: 30.0; Off
+</span><span id="__span-29-124"><a id="__codelineno-29-124" name="__codelineno-29-124" href="#__codelineno-29-124"></a>
+</span><span id="__span-29-125"><a id="__codelineno-29-125" name="__codelineno-29-125" href="#__codelineno-29-125"></a>Z Stack Loop: 5
+</span><span id="__span-29-126"><a id="__codelineno-29-126" name="__codelineno-29-126" href="#__codelineno-29-126"></a>- Step: 4 µm
+</span><span id="__span-29-127"><a id="__codelineno-29-127" name="__codelineno-29-127" href="#__codelineno-29-127"></a>- Device: Ti2 ZDrive
+</span><span id="__span-29-128"><a id="__codelineno-29-128" name="__codelineno-29-128" href="#__codelineno-29-128"></a>capturing: Nikon A1 LFOV
+</span><span id="__span-29-129"><a id="__codelineno-29-129" name="__codelineno-29-129" href="#__codelineno-29-129"></a>
+</span><span id="__span-29-130"><a id="__codelineno-29-130" name="__codelineno-29-130" href="#__codelineno-29-130"></a>sampling:
+</span><span id="__span-29-131"><a id="__codelineno-29-131" name="__codelineno-29-131" href="#__codelineno-29-131"></a>location:
+</span><span id="__span-29-132"><a id="__codelineno-29-132" name="__codelineno-29-132" href="#__codelineno-29-132"></a>date: 9/22/2068  12:28:28 AM
+</span><span id="__span-29-133"><a id="__codelineno-29-133" name="__codelineno-29-133" href="#__codelineno-29-133"></a>conclusion:
+</span><span id="__span-29-134"><a id="__codelineno-29-134" name="__codelineno-29-134" href="#__codelineno-29-134"></a>info1:
+</span><span id="__span-29-135"><a id="__codelineno-29-135" name="__codelineno-29-135" href="#__codelineno-29-135"></a>info2:
+</span><span id="__span-29-136"><a id="__codelineno-29-136" name="__codelineno-29-136" href="#__codelineno-29-136"></a>optics: Apo LWD 40x WI λS DIC N2
 </span></code></pre></div>
 </details>
 <h4 id="other-data-and-metadata">Other data and metadata<a class="headerlink" href="#other-data-and-metadata" title="Permanent link">&para;</a></h4>
@@ -2370,34 +2418,34 @@ number of components and number of frames in nd2 file.</p>
 <p>This package also allows you to write into and create <code>.nd2</code> files using <code>Nd2Writer</code> class, an example of how to do this, you can look into <a href="https://github.com/Laboratory-Imaging/limnd2/blob/main/examples/example_writer.py">example_writer.py</a>, which will also be described below.</p>
 <p>In the example below we will create new <code>.nd2</code> file with preset width, height, bits per component, component count and sequence count. Instead of using actual image data we will use NumPy to generate arrays filled with random noise, which we will store in the result file.</p>
 <p>Here are the settings that will be used to generate image attributes and NumPy arrays with image data.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-27">27</a></span>
-<span class="normal"><a href="#__codelineno-26-28">28</a></span>
-<span class="normal"><a href="#__codelineno-26-29">29</a></span>
-<span class="normal"><a href="#__codelineno-26-30">30</a></span>
-<span class="normal"><a href="#__codelineno-26-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-26-27"><a id="__codelineno-26-27" name="__codelineno-26-27"></a><span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>
-</span><span id="__span-26-28"><a id="__codelineno-26-28" name="__codelineno-26-28"></a><span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">200</span>
-</span><span id="__span-26-29"><a id="__codelineno-26-29" name="__codelineno-26-29"></a><span class="n">COMPONENT_COUNT</span> <span class="o">=</span> <span class="mi">2</span>
-</span><span id="__span-26-30"><a id="__codelineno-26-30" name="__codelineno-26-30"></a><span class="n">BITS</span> <span class="o">=</span> <span class="mi">8</span>
-</span><span id="__span-26-31"><a id="__codelineno-26-31" name="__codelineno-26-31"></a><span class="n">SEQUENCE_COUNT</span> <span class="o">=</span> <span class="mi">10</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-27">27</a></span>
+<span class="normal"><a href="#__codelineno-30-28">28</a></span>
+<span class="normal"><a href="#__codelineno-30-29">29</a></span>
+<span class="normal"><a href="#__codelineno-30-30">30</a></span>
+<span class="normal"><a href="#__codelineno-30-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-30-27"><a id="__codelineno-30-27" name="__codelineno-30-27"></a><span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>
+</span><span id="__span-30-28"><a id="__codelineno-30-28" name="__codelineno-30-28"></a><span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">200</span>
+</span><span id="__span-30-29"><a id="__codelineno-30-29" name="__codelineno-30-29"></a><span class="n">COMPONENT_COUNT</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span id="__span-30-30"><a id="__codelineno-30-30" name="__codelineno-30-30"></a><span class="n">BITS</span> <span class="o">=</span> <span class="mi">8</span>
+</span><span id="__span-30-31"><a id="__codelineno-30-31" name="__codelineno-30-31"></a><span class="n">SEQUENCE_COUNT</span> <span class="o">=</span> <span class="mi">10</span>
 </span></code></pre></div></td></tr></table></div>
 <p>We will also add 2 experiments in the file to showcase how Experiment creation works. We have 10 frames as defined above, we will split them into 5 timeloop indices and 2 Z-stack indices, we will also define step between frames on each axis:</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-34">34</a></span>
-<span class="normal"><a href="#__codelineno-27-35">35</a></span>
-<span class="normal"><a href="#__codelineno-27-36">36</a></span>
-<span class="normal"><a href="#__codelineno-27-37">37</a></span>
-<span class="normal"><a href="#__codelineno-27-38">38</a></span>
-<span class="normal"><a href="#__codelineno-27-39">39</a></span>
-<span class="normal"><a href="#__codelineno-27-40">40</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-27-34"><a id="__codelineno-27-34" name="__codelineno-27-34"></a><span class="c1"># timeloop experiment settings</span>
-</span><span id="__span-27-35"><a id="__codelineno-27-35" name="__codelineno-27-35"></a><span class="n">TIMELOOP_COUNT</span> <span class="o">=</span> <span class="mi">5</span>
-</span><span id="__span-27-36"><a id="__codelineno-27-36" name="__codelineno-27-36"></a><span class="n">TIMELOOP_STEP</span> <span class="o">=</span> <span class="mi">150</span>
-</span><span id="__span-27-37"><a id="__codelineno-27-37" name="__codelineno-27-37"></a>
-</span><span id="__span-27-38"><a id="__codelineno-27-38" name="__codelineno-27-38"></a><span class="c1"># zstack experiment settings</span>
-</span><span id="__span-27-39"><a id="__codelineno-27-39" name="__codelineno-27-39"></a><span class="n">ZSTACK_COUNT</span> <span class="o">=</span> <span class="mi">2</span>
-</span><span id="__span-27-40"><a id="__codelineno-27-40" name="__codelineno-27-40"></a><span class="n">ZSTACK_STEP</span> <span class="o">=</span> <span class="mi">100</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-34">34</a></span>
+<span class="normal"><a href="#__codelineno-31-35">35</a></span>
+<span class="normal"><a href="#__codelineno-31-36">36</a></span>
+<span class="normal"><a href="#__codelineno-31-37">37</a></span>
+<span class="normal"><a href="#__codelineno-31-38">38</a></span>
+<span class="normal"><a href="#__codelineno-31-39">39</a></span>
+<span class="normal"><a href="#__codelineno-31-40">40</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-31-34"><a id="__codelineno-31-34" name="__codelineno-31-34"></a><span class="c1"># timeloop experiment settings</span>
+</span><span id="__span-31-35"><a id="__codelineno-31-35" name="__codelineno-31-35"></a><span class="n">TIMELOOP_COUNT</span> <span class="o">=</span> <span class="mi">5</span>
+</span><span id="__span-31-36"><a id="__codelineno-31-36" name="__codelineno-31-36"></a><span class="n">TIMELOOP_STEP</span> <span class="o">=</span> <span class="mi">150</span>
+</span><span id="__span-31-37"><a id="__codelineno-31-37" name="__codelineno-31-37"></a>
+</span><span id="__span-31-38"><a id="__codelineno-31-38" name="__codelineno-31-38"></a><span class="c1"># zstack experiment settings</span>
+</span><span id="__span-31-39"><a id="__codelineno-31-39" name="__codelineno-31-39"></a><span class="n">ZSTACK_COUNT</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span id="__span-31-40"><a id="__codelineno-31-40" name="__codelineno-31-40"></a><span class="n">ZSTACK_STEP</span> <span class="o">=</span> <span class="mi">100</span>
 </span></code></pre></div></td></tr></table></div>
 <h4 id="opening-creating-nd2-file-for-writing">Opening / creating <code>.nd2</code> file for writing<a class="headerlink" href="#opening-creating-nd2-file-for-writing" title="Permanent link">&para;</a></h4>
 <p>With constants defined, we can open <code>.nd2</code> file for reading using Nd2Writer class and <code>with</code> clause for automatic file closure.</p>
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-28-42"><a id="__codelineno-28-42" name="__codelineno-28-42"></a><span class="k">with</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">Nd2Writer</span><span class="p">(</span><span class="s2">&quot;outfile.nd2&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">nd2</span><span class="p">:</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-32-42"><a id="__codelineno-32-42" name="__codelineno-32-42"></a><span class="k">with</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">Nd2Writer</span><span class="p">(</span><span class="s2">&quot;outfile.nd2&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">nd2</span><span class="p">:</span>
 </span></code></pre></div></td></tr></table></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -2411,37 +2459,37 @@ image attributes are set, but if you want to write image data into <code>.nd2</c
 you can pass <code>ImageAttributes</code> instance when creating <code>.nd2</code> using custom chunker argument as shown below.</p>
 <p>Setting <code>ImageAttributes</code> this way <strong>will not store them in <code>.nd2</code> file</strong> and you still <strong>have to store them at some point</strong>,
 however you can do so after you know how many frames there is.</p>
-<div class="language-py highlight"><span class="filename">Example of using chunker arguments to set image attributes</span><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">attributes</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">ImageAttributes</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
-</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>    <span class="n">width</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="p">,</span>
-</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>    <span class="n">height</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="p">,</span>
-</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>    <span class="n">component_count</span> <span class="o">=</span> <span class="n">COMPONENT_COUNT</span><span class="p">,</span>
-</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>    <span class="n">bits</span> <span class="o">=</span> <span class="n">BITS</span><span class="p">,</span>
-</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>    <span class="n">sequence_count</span> <span class="o">=</span> <span class="o">...</span>  <span class="c1"># will be set later</span>
-</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="p">)</span>
-</span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>
-</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a><span class="k">with</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">Nd2Writer</span><span class="p">(</span><span class="s2">&quot;outfile.nd2&quot;</span><span class="p">,</span> <span class="n">chunker_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;with_image_attributes&quot;</span><span class="p">:</span> <span class="n">attributes</span><span class="p">})</span> <span class="k">as</span> <span class="n">nd2</span><span class="p">:</span>
-</span><span id="__span-29-10"><a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>    <span class="c1"># you can now set image data without setting attributes</span>
+<div class="language-py highlight"><span class="filename">Example of using chunker arguments to set image attributes</span><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">attributes</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">ImageAttributes</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>    <span class="n">width</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="p">,</span>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>    <span class="n">height</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="p">,</span>
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>    <span class="n">component_count</span> <span class="o">=</span> <span class="n">COMPONENT_COUNT</span><span class="p">,</span>
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>    <span class="n">bits</span> <span class="o">=</span> <span class="n">BITS</span><span class="p">,</span>
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>    <span class="n">sequence_count</span> <span class="o">=</span> <span class="o">...</span>  <span class="c1"># will be set later</span>
+</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="p">)</span>
+</span><span id="__span-33-8"><a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>
+</span><span id="__span-33-9"><a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a><span class="k">with</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">Nd2Writer</span><span class="p">(</span><span class="s2">&quot;outfile.nd2&quot;</span><span class="p">,</span> <span class="n">chunker_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;with_image_attributes&quot;</span><span class="p">:</span> <span class="n">attributes</span><span class="p">})</span> <span class="k">as</span> <span class="n">nd2</span><span class="p">:</span>
+</span><span id="__span-33-10"><a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>    <span class="c1"># you can now set image data without setting attributes</span>
 </span></code></pre></div>
 </div>
 <h4 id="creating-and-writing-image-attributes">Creating and writing image attributes<a class="headerlink" href="#creating-and-writing-image-attributes" title="Permanent link">&para;</a></h4>
 <p>Image attributes can be created using <code>ImageAttributes.create()</code> method, we can simply assign those to <code>imageAttributes</code> property of <code>Nd2Writer</code>.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-45">45</a></span>
-<span class="normal"><a href="#__codelineno-30-46">46</a></span>
-<span class="normal"><a href="#__codelineno-30-47">47</a></span>
-<span class="normal"><a href="#__codelineno-30-48">48</a></span>
-<span class="normal"><a href="#__codelineno-30-49">49</a></span>
-<span class="normal"><a href="#__codelineno-30-50">50</a></span>
-<span class="normal"><a href="#__codelineno-30-51">51</a></span>
-<span class="normal"><a href="#__codelineno-30-52">52</a></span>
-<span class="normal"><a href="#__codelineno-30-53">53</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-30-45"><a id="__codelineno-30-45" name="__codelineno-30-45"></a><span class="n">attributes</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">ImageAttributes</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
-</span><span id="__span-30-46"><a id="__codelineno-30-46" name="__codelineno-30-46"></a>    <span class="n">width</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="p">,</span>
-</span><span id="__span-30-47"><a id="__codelineno-30-47" name="__codelineno-30-47"></a>    <span class="n">height</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="p">,</span>
-</span><span id="__span-30-48"><a id="__codelineno-30-48" name="__codelineno-30-48"></a>    <span class="n">component_count</span> <span class="o">=</span> <span class="n">COMPONENT_COUNT</span><span class="p">,</span>
-</span><span id="__span-30-49"><a id="__codelineno-30-49" name="__codelineno-30-49"></a>    <span class="n">bits</span> <span class="o">=</span> <span class="n">BITS</span><span class="p">,</span>
-</span><span id="__span-30-50"><a id="__codelineno-30-50" name="__codelineno-30-50"></a>    <span class="n">sequence_count</span> <span class="o">=</span> <span class="n">SEQUENCE_COUNT</span>
-</span><span id="__span-30-51"><a id="__codelineno-30-51" name="__codelineno-30-51"></a><span class="p">)</span>
-</span><span id="__span-30-52"><a id="__codelineno-30-52" name="__codelineno-30-52"></a>
-</span><span id="__span-30-53"><a id="__codelineno-30-53" name="__codelineno-30-53"></a><span class="n">nd2</span><span class="o">.</span><span class="n">imageAttributes</span> <span class="o">=</span> <span class="n">attributes</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-45">45</a></span>
+<span class="normal"><a href="#__codelineno-34-46">46</a></span>
+<span class="normal"><a href="#__codelineno-34-47">47</a></span>
+<span class="normal"><a href="#__codelineno-34-48">48</a></span>
+<span class="normal"><a href="#__codelineno-34-49">49</a></span>
+<span class="normal"><a href="#__codelineno-34-50">50</a></span>
+<span class="normal"><a href="#__codelineno-34-51">51</a></span>
+<span class="normal"><a href="#__codelineno-34-52">52</a></span>
+<span class="normal"><a href="#__codelineno-34-53">53</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-34-45"><a id="__codelineno-34-45" name="__codelineno-34-45"></a><span class="n">attributes</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">attributes</span><span class="o">.</span><span class="n">ImageAttributes</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+</span><span id="__span-34-46"><a id="__codelineno-34-46" name="__codelineno-34-46"></a>    <span class="n">width</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="p">,</span>
+</span><span id="__span-34-47"><a id="__codelineno-34-47" name="__codelineno-34-47"></a>    <span class="n">height</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="p">,</span>
+</span><span id="__span-34-48"><a id="__codelineno-34-48" name="__codelineno-34-48"></a>    <span class="n">component_count</span> <span class="o">=</span> <span class="n">COMPONENT_COUNT</span><span class="p">,</span>
+</span><span id="__span-34-49"><a id="__codelineno-34-49" name="__codelineno-34-49"></a>    <span class="n">bits</span> <span class="o">=</span> <span class="n">BITS</span><span class="p">,</span>
+</span><span id="__span-34-50"><a id="__codelineno-34-50" name="__codelineno-34-50"></a>    <span class="n">sequence_count</span> <span class="o">=</span> <span class="n">SEQUENCE_COUNT</span>
+</span><span id="__span-34-51"><a id="__codelineno-34-51" name="__codelineno-34-51"></a><span class="p">)</span>
+</span><span id="__span-34-52"><a id="__codelineno-34-52" name="__codelineno-34-52"></a>
+</span><span id="__span-34-53"><a id="__codelineno-34-53" name="__codelineno-34-53"></a><span class="n">nd2</span><span class="o">.</span><span class="n">imageAttributes</span> <span class="o">=</span> <span class="n">attributes</span>
 </span></code></pre></div></td></tr></table></div>
 <h4 id="creating-and-writing-image-data">Creating and writing image data<a class="headerlink" href="#creating-and-writing-image-data" title="Permanent link">&para;</a></h4>
 <div class="admonition danger">
@@ -2454,70 +2502,70 @@ however you can do so after you know how many frames there is.</p>
 <p>You must manually keep track of index or the image you are storing, also as we with with random noise, the order in which images are inserted does not matter, however the images must be inserted in correct order with respect to used experiments.</p>
 <p>This is especially important if you are converting multidimensional image sequence to <code>.nd2</code> file.</p>
 </div>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-57">57</a></span>
-<span class="normal"><a href="#__codelineno-31-58">58</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-31-57"><a id="__codelineno-31-57" name="__codelineno-31-57"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">SEQUENCE_COUNT</span><span class="p">):</span>
-</span><span id="__span-31-58"><a id="__codelineno-31-58" name="__codelineno-31-58"></a>    <span class="n">nd2</span><span class="o">.</span><span class="n">setImage</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">create_random_noise</span><span class="p">(</span><span class="n">WIDTH</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">,</span> <span class="n">COMPONENT_COUNT</span><span class="p">,</span> <span class="n">BITS</span><span class="p">))</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-57">57</a></span>
+<span class="normal"><a href="#__codelineno-35-58">58</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-35-57"><a id="__codelineno-35-57" name="__codelineno-35-57"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">SEQUENCE_COUNT</span><span class="p">):</span>
+</span><span id="__span-35-58"><a id="__codelineno-35-58" name="__codelineno-35-58"></a>    <span class="n">nd2</span><span class="o">.</span><span class="n">setImage</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">create_random_noise</span><span class="p">(</span><span class="n">WIDTH</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">,</span> <span class="n">COMPONENT_COUNT</span><span class="p">,</span> <span class="n">BITS</span><span class="p">))</span>
 </span></code></pre></div></td></tr></table></div>
 <h4 id="creating-and-writing-experiments">Creating and writing experiments<a class="headerlink" href="#creating-and-writing-experiments" title="Permanent link">&para;</a></h4>
 <p>Experiments can be created with <a href="experiment_factory/#limnd2.experiment_factory.ExperimentFactory"><code>ExperimentFactory</code></a> from <a href="experiment_factory/"><code>experiment_factory</code></a> module. In this example, we will set count and step for timeloop and zstack experiments and then create the experiment data structure with the <code>createExperiment()</code> method.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-62">62</a></span>
-<span class="normal"><a href="#__codelineno-32-63">63</a></span>
-<span class="normal"><a href="#__codelineno-32-64">64</a></span>
-<span class="normal"><a href="#__codelineno-32-65">65</a></span>
-<span class="normal"><a href="#__codelineno-32-66">66</a></span>
-<span class="normal"><a href="#__codelineno-32-67">67</a></span>
-<span class="normal"><a href="#__codelineno-32-68">68</a></span>
-<span class="normal"><a href="#__codelineno-32-69">69</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-32-62"><a id="__codelineno-32-62" name="__codelineno-32-62"></a><span class="n">experiment_factory</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">experiment_factory</span><span class="o">.</span><span class="n">ExperimentFactory</span><span class="p">()</span>
-</span><span id="__span-32-63"><a id="__codelineno-32-63" name="__codelineno-32-63"></a><span class="n">experiment_factory</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="n">TIMELOOP_COUNT</span>
-</span><span id="__span-32-64"><a id="__codelineno-32-64" name="__codelineno-32-64"></a><span class="n">experiment_factory</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">step</span> <span class="o">=</span> <span class="n">TIMELOOP_STEP</span>
-</span><span id="__span-32-65"><a id="__codelineno-32-65" name="__codelineno-32-65"></a>
-</span><span id="__span-32-66"><a id="__codelineno-32-66" name="__codelineno-32-66"></a><span class="n">experiment_factory</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="n">ZSTACK_COUNT</span>
-</span><span id="__span-32-67"><a id="__codelineno-32-67" name="__codelineno-32-67"></a><span class="n">experiment_factory</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">step</span> <span class="o">=</span> <span class="n">ZSTACK_STEP</span>
-</span><span id="__span-32-68"><a id="__codelineno-32-68" name="__codelineno-32-68"></a>
-</span><span id="__span-32-69"><a id="__codelineno-32-69" name="__codelineno-32-69"></a><span class="n">nd2</span><span class="o">.</span><span class="n">experiment</span> <span class="o">=</span> <span class="n">experiment_factory</span><span class="o">.</span><span class="n">createExperiment</span><span class="p">()</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-62">62</a></span>
+<span class="normal"><a href="#__codelineno-36-63">63</a></span>
+<span class="normal"><a href="#__codelineno-36-64">64</a></span>
+<span class="normal"><a href="#__codelineno-36-65">65</a></span>
+<span class="normal"><a href="#__codelineno-36-66">66</a></span>
+<span class="normal"><a href="#__codelineno-36-67">67</a></span>
+<span class="normal"><a href="#__codelineno-36-68">68</a></span>
+<span class="normal"><a href="#__codelineno-36-69">69</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-36-62"><a id="__codelineno-36-62" name="__codelineno-36-62"></a><span class="n">experiment_factory</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">experiment_factory</span><span class="o">.</span><span class="n">ExperimentFactory</span><span class="p">()</span>
+</span><span id="__span-36-63"><a id="__codelineno-36-63" name="__codelineno-36-63"></a><span class="n">experiment_factory</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="n">TIMELOOP_COUNT</span>
+</span><span id="__span-36-64"><a id="__codelineno-36-64" name="__codelineno-36-64"></a><span class="n">experiment_factory</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">step</span> <span class="o">=</span> <span class="n">TIMELOOP_STEP</span>
+</span><span id="__span-36-65"><a id="__codelineno-36-65" name="__codelineno-36-65"></a>
+</span><span id="__span-36-66"><a id="__codelineno-36-66" name="__codelineno-36-66"></a><span class="n">experiment_factory</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="n">ZSTACK_COUNT</span>
+</span><span id="__span-36-67"><a id="__codelineno-36-67" name="__codelineno-36-67"></a><span class="n">experiment_factory</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">step</span> <span class="o">=</span> <span class="n">ZSTACK_STEP</span>
+</span><span id="__span-36-68"><a id="__codelineno-36-68" name="__codelineno-36-68"></a>
+</span><span id="__span-36-69"><a id="__codelineno-36-69" name="__codelineno-36-69"></a><span class="n">nd2</span><span class="o">.</span><span class="n">experiment</span> <span class="o">=</span> <span class="n">experiment_factory</span><span class="o">.</span><span class="n">createExperiment</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <h4 id="creating-and-writing-metadata">Creating and writing metadata<a class="headerlink" href="#creating-and-writing-metadata" title="Permanent link">&para;</a></h4>
 <p>Metadata are created in similar way using <a href="metadata_factory/#limnd2.metadata_factory.MetadataFactory"><code>MetadataFactory</code></a> from <a href="metadata_factory/"><code>metadata_factory</code></a> module.</p>
 <p>On the constructor we provide microscope settings for all planes, then we use <a href="metadata_factory/#limnd2.metadata_factory.MetadataFactory.addPlane"><code>addPlane()</code></a> method to add planes to the metadata with their settings, finally we create metadata with <a href="metadata_factory/#limnd2.metadata_factory.MetadataFactory.createMetadata"><code>createMetadata()</code></a> method and assign it to [<code>pictureMetadata</code>] property of [<code>Nd2Writer</code>].</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-73">73</a></span>
-<span class="normal"><a href="#__codelineno-33-74">74</a></span>
-<span class="normal"><a href="#__codelineno-33-75">75</a></span>
-<span class="normal"><a href="#__codelineno-33-76">76</a></span>
-<span class="normal"><a href="#__codelineno-33-77">77</a></span>
-<span class="normal"><a href="#__codelineno-33-78">78</a></span>
-<span class="normal"><a href="#__codelineno-33-79">79</a></span>
-<span class="normal"><a href="#__codelineno-33-80">80</a></span>
-<span class="normal"><a href="#__codelineno-33-81">81</a></span>
-<span class="normal"><a href="#__codelineno-33-82">82</a></span>
-<span class="normal"><a href="#__codelineno-33-83">83</a></span>
-<span class="normal"><a href="#__codelineno-33-84">84</a></span>
-<span class="normal"><a href="#__codelineno-33-85">85</a></span>
-<span class="normal"><a href="#__codelineno-33-86">86</a></span>
-<span class="normal"><a href="#__codelineno-33-87">87</a></span>
-<span class="normal"><a href="#__codelineno-33-88">88</a></span>
-<span class="normal"><a href="#__codelineno-33-89">89</a></span>
-<span class="normal"><a href="#__codelineno-33-90">90</a></span>
-<span class="normal"><a href="#__codelineno-33-91">91</a></span>
-<span class="normal"><a href="#__codelineno-33-92">92</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-33-73"><a id="__codelineno-33-73" name="__codelineno-33-73"></a><span class="n">metadata_factory</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">metadata_factory</span><span class="o">.</span><span class="n">MetadataFactory</span><span class="p">(</span>
-</span><span id="__span-33-74"><a id="__codelineno-33-74" name="__codelineno-33-74"></a>    <span class="n">zoom_magnification</span> <span class="o">=</span> <span class="mf">200.0</span><span class="p">,</span>
-</span><span id="__span-33-75"><a id="__codelineno-33-75" name="__codelineno-33-75"></a>    <span class="n">objective_magnification</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
-</span><span id="__span-33-76"><a id="__codelineno-33-76" name="__codelineno-33-76"></a>    <span class="n">pinhole_diameter</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
-</span><span id="__span-33-77"><a id="__codelineno-33-77" name="__codelineno-33-77"></a>    <span class="n">pixel_calibration</span> <span class="o">=</span> <span class="mf">10.0</span>
-</span><span id="__span-33-78"><a id="__codelineno-33-78" name="__codelineno-33-78"></a><span class="p">)</span>
-</span><span id="__span-33-79"><a id="__codelineno-33-79" name="__codelineno-33-79"></a>
-</span><span id="__span-33-80"><a id="__codelineno-33-80" name="__codelineno-33-80"></a><span class="n">metadata_factory</span><span class="o">.</span><span class="n">addPlane</span><span class="p">(</span>
-</span><span id="__span-33-81"><a id="__codelineno-33-81" name="__codelineno-33-81"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Blue channel&quot;</span><span class="p">,</span>
-</span><span id="__span-33-82"><a id="__codelineno-33-82" name="__codelineno-33-82"></a>    <span class="n">modality</span> <span class="o">=</span> <span class="s2">&quot;Confocal, Fluo&quot;</span><span class="p">,</span>
-</span><span id="__span-33-83"><a id="__codelineno-33-83" name="__codelineno-33-83"></a>    <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span>
-</span><span id="__span-33-84"><a id="__codelineno-33-84" name="__codelineno-33-84"></a><span class="p">)</span>
-</span><span id="__span-33-85"><a id="__codelineno-33-85" name="__codelineno-33-85"></a>
-</span><span id="__span-33-86"><a id="__codelineno-33-86" name="__codelineno-33-86"></a><span class="n">metadata_factory</span><span class="o">.</span><span class="n">addPlane</span><span class="p">(</span>
-</span><span id="__span-33-87"><a id="__codelineno-33-87" name="__codelineno-33-87"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Red channel&quot;</span><span class="p">,</span>
-</span><span id="__span-33-88"><a id="__codelineno-33-88" name="__codelineno-33-88"></a>    <span class="n">modality</span> <span class="o">=</span> <span class="s2">&quot;Confocal, Fluo&quot;</span><span class="p">,</span>
-</span><span id="__span-33-89"><a id="__codelineno-33-89" name="__codelineno-33-89"></a>    <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span>
-</span><span id="__span-33-90"><a id="__codelineno-33-90" name="__codelineno-33-90"></a><span class="p">)</span>
-</span><span id="__span-33-91"><a id="__codelineno-33-91" name="__codelineno-33-91"></a>
-</span><span id="__span-33-92"><a id="__codelineno-33-92" name="__codelineno-33-92"></a><span class="n">nd2</span><span class="o">.</span><span class="n">pictureMetadata</span> <span class="o">=</span> <span class="n">metadata_factory</span><span class="o">.</span><span class="n">createMetadata</span><span class="p">()</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">example_writer.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-73">73</a></span>
+<span class="normal"><a href="#__codelineno-37-74">74</a></span>
+<span class="normal"><a href="#__codelineno-37-75">75</a></span>
+<span class="normal"><a href="#__codelineno-37-76">76</a></span>
+<span class="normal"><a href="#__codelineno-37-77">77</a></span>
+<span class="normal"><a href="#__codelineno-37-78">78</a></span>
+<span class="normal"><a href="#__codelineno-37-79">79</a></span>
+<span class="normal"><a href="#__codelineno-37-80">80</a></span>
+<span class="normal"><a href="#__codelineno-37-81">81</a></span>
+<span class="normal"><a href="#__codelineno-37-82">82</a></span>
+<span class="normal"><a href="#__codelineno-37-83">83</a></span>
+<span class="normal"><a href="#__codelineno-37-84">84</a></span>
+<span class="normal"><a href="#__codelineno-37-85">85</a></span>
+<span class="normal"><a href="#__codelineno-37-86">86</a></span>
+<span class="normal"><a href="#__codelineno-37-87">87</a></span>
+<span class="normal"><a href="#__codelineno-37-88">88</a></span>
+<span class="normal"><a href="#__codelineno-37-89">89</a></span>
+<span class="normal"><a href="#__codelineno-37-90">90</a></span>
+<span class="normal"><a href="#__codelineno-37-91">91</a></span>
+<span class="normal"><a href="#__codelineno-37-92">92</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-37-73"><a id="__codelineno-37-73" name="__codelineno-37-73"></a><span class="n">metadata_factory</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">metadata_factory</span><span class="o">.</span><span class="n">MetadataFactory</span><span class="p">(</span>
+</span><span id="__span-37-74"><a id="__codelineno-37-74" name="__codelineno-37-74"></a>    <span class="n">zoom_magnification</span> <span class="o">=</span> <span class="mf">200.0</span><span class="p">,</span>
+</span><span id="__span-37-75"><a id="__codelineno-37-75" name="__codelineno-37-75"></a>    <span class="n">objective_magnification</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+</span><span id="__span-37-76"><a id="__codelineno-37-76" name="__codelineno-37-76"></a>    <span class="n">pinhole_diameter</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+</span><span id="__span-37-77"><a id="__codelineno-37-77" name="__codelineno-37-77"></a>    <span class="n">pixel_calibration</span> <span class="o">=</span> <span class="mf">10.0</span>
+</span><span id="__span-37-78"><a id="__codelineno-37-78" name="__codelineno-37-78"></a><span class="p">)</span>
+</span><span id="__span-37-79"><a id="__codelineno-37-79" name="__codelineno-37-79"></a>
+</span><span id="__span-37-80"><a id="__codelineno-37-80" name="__codelineno-37-80"></a><span class="n">metadata_factory</span><span class="o">.</span><span class="n">addPlane</span><span class="p">(</span>
+</span><span id="__span-37-81"><a id="__codelineno-37-81" name="__codelineno-37-81"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Blue channel&quot;</span><span class="p">,</span>
+</span><span id="__span-37-82"><a id="__codelineno-37-82" name="__codelineno-37-82"></a>    <span class="n">modality</span> <span class="o">=</span> <span class="s2">&quot;Confocal, Fluo&quot;</span><span class="p">,</span>
+</span><span id="__span-37-83"><a id="__codelineno-37-83" name="__codelineno-37-83"></a>    <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span>
+</span><span id="__span-37-84"><a id="__codelineno-37-84" name="__codelineno-37-84"></a><span class="p">)</span>
+</span><span id="__span-37-85"><a id="__codelineno-37-85" name="__codelineno-37-85"></a>
+</span><span id="__span-37-86"><a id="__codelineno-37-86" name="__codelineno-37-86"></a><span class="n">metadata_factory</span><span class="o">.</span><span class="n">addPlane</span><span class="p">(</span>
+</span><span id="__span-37-87"><a id="__codelineno-37-87" name="__codelineno-37-87"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Red channel&quot;</span><span class="p">,</span>
+</span><span id="__span-37-88"><a id="__codelineno-37-88" name="__codelineno-37-88"></a>    <span class="n">modality</span> <span class="o">=</span> <span class="s2">&quot;Confocal, Fluo&quot;</span><span class="p">,</span>
+</span><span id="__span-37-89"><a id="__codelineno-37-89" name="__codelineno-37-89"></a>    <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span>
+</span><span id="__span-37-90"><a id="__codelineno-37-90" name="__codelineno-37-90"></a><span class="p">)</span>
+</span><span id="__span-37-91"><a id="__codelineno-37-91" name="__codelineno-37-91"></a>
+</span><span id="__span-37-92"><a id="__codelineno-37-92" name="__codelineno-37-92"></a><span class="n">nd2</span><span class="o">.</span><span class="n">pictureMetadata</span> <span class="o">=</span> <span class="n">metadata_factory</span><span class="o">.</span><span class="n">createMetadata</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <h4 id="saving-file">Saving file<a class="headerlink" href="#saving-file" title="Permanent link">&para;</a></h4>
 <p>As we used <code>with</code> context manager, file is automatically saved and closed, if you did not use context manager, you need to manually call <code>.finalize()</code> method from <code>Nd2Writer</code> instance.</p>
