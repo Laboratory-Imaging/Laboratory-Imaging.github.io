@@ -1459,12 +1459,18 @@
 <p>Output bit depth (<code>-1</code>, <code>8</code>, <code>16</code>).</p>
 </li>
 <li>
+<p><code>--overwrite</code></p>
+<p>Overwrite existing output files.</p>
+</li>
+<li>
 <p><code>--progress-to-json</code></p>
-<p>Print progress in JSON format.</p>
+<p>Print legacy JSON progress to stdout for CLI integration.</p>
 </li>
 </ul>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>limnd2-sequence-export<span class="w"> </span>./input.nd2<span class="w"> </span>--folder<span class="w"> </span>./out<span class="w"> </span>--prefix<span class="w"> </span>exp1<span class="w"> </span>--bits<span class="w"> </span><span class="m">16</span>
+</span></code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>limnd2-sequence-export<span class="w"> </span>./input.nd2<span class="w"> </span>--folder<span class="w"> </span>./out<span class="w"> </span>--prefix<span class="w"> </span>exp1<span class="w"> </span>--bits<span class="w"> </span><span class="m">8</span><span class="w"> </span>--overwrite
 </span></code></pre></div>
 
 

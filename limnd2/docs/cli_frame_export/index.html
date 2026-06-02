@@ -1431,7 +1431,9 @@
 
 
 <h1 id="export-one-nd2-frame">Export one ND2 frame<a class="headerlink" href="#export-one-nd2-frame" title="Permanent link">&para;</a></h1>
-<p>This command exports one frame from an ND2 file to TIFF.</p>
+<p>This command exports one frame from an ND2 file to a single image file.
+Supported output formats are TIFF, PNG, and JPEG, selected from the output
+file extension.</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>limnd2-frame-export<span class="w"> </span>&lt;nd2file&gt;<span class="w"> </span><span class="o">[</span>arguments<span class="o">]</span>
 </span></code></pre></div>
 <h2 id="arguments">Arguments<a class="headerlink" href="#arguments" title="Permanent link">&para;</a></h2>
@@ -1446,19 +1448,25 @@
 </li>
 <li>
 <p><code>--output-path &lt;path&gt;</code></p>
-<p>Output TIFF path (default: <code>&lt;nd2filename&gt;.tiff</code>).</p>
+<p>Output image path (default: <code>&lt;nd2filename&gt;.tiff</code>).</p>
 </li>
 <li>
 <p><code>--target-bit-depth &lt;int&gt;</code></p>
-<p>Target bit depth for integer images (<code>-1</code>, <code>8</code>, <code>16</code>).</p>
+<p>Target bit depth for TIFF integer images (<code>-1</code>, <code>8</code>, <code>16</code>).</p>
+</li>
+<li>
+<p><code>--overwrite</code></p>
+<p>Overwrite an existing output file.</p>
 </li>
 <li>
 <p><code>--progress-to-json</code></p>
-<p>Print progress in JSON format.</p>
+<p>Print legacy JSON progress to stdout for CLI integration.</p>
 </li>
 </ul>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>limnd2-frame-export<span class="w"> </span>./input.nd2<span class="w"> </span>--frame-index<span class="w"> </span><span class="m">10</span><span class="w"> </span>--output-path<span class="w"> </span>./frame10.tiff<span class="w"> </span>--target-bit-depth<span class="w"> </span><span class="m">16</span>
+</span></code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>limnd2-frame-export<span class="w"> </span>./input.nd2<span class="w"> </span>--frame-index<span class="w"> </span><span class="m">10</span><span class="w"> </span>--output-path<span class="w"> </span>./frame10.png<span class="w"> </span>--overwrite
 </span></code></pre></div>
 
 
