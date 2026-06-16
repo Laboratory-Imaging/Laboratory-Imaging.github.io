@@ -1125,10 +1125,43 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Writer.setBinaryRasterData" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setBinaryRasterData
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Writer.setBinaryRasterDataTile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setBinaryRasterDataTile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#limnd2.nd2.Nd2Writer.setImage" class="md-nav__link">
     <span class="md-ellipsis">
       
         setImage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Writer.setImageTile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setImageTile
       
     </span>
   </a>
@@ -2136,10 +2169,43 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Writer.setBinaryRasterData" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setBinaryRasterData
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Writer.setBinaryRasterDataTile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setBinaryRasterDataTile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#limnd2.nd2.Nd2Writer.setImage" class="md-nav__link">
     <span class="md-ellipsis">
       
         setImage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Writer.setImageTile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        setImageTile
       
     </span>
   </a>
@@ -3608,6 +3674,47 @@ however you can do so after you know how many frames there is.</p>
 <div class="doc doc-object doc-function">
 
 
+<h4 id="limnd2.nd2.Nd2Writer.setBinaryRasterData" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">setBinaryRasterData</span>
+
+
+<a href="#limnd2.nd2.Nd2Writer.setBinaryRasterData" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">setBinaryRasterData</span><span class="p">(</span><span class="n">bin_id</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n">seq_index</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n"><span title="limnd2.base.NumpyArrayLike">NumpyArrayLike</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Set binary raster data using specified binary layer and frame index.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="limnd2.nd2.Nd2Writer.setBinaryRasterDataTile" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">setBinaryRasterDataTile</span>
+
+
+<a href="#limnd2.nd2.Nd2Writer.setBinaryRasterDataTile" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">setBinaryRasterDataTile</span><span class="p">(</span><span class="n">bin_id</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n">seq_index</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n"><span title="limnd2.base.NumpyArrayLike">NumpyArrayLike</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Set one binary raster data tile using specified binary layer, frame index,
+and tile-aligned pixel coordinates.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
 <h4 id="limnd2.nd2.Nd2Writer.setImage" class="doc doc-heading">
             <span class="doc doc-object-name doc-function-name">setImage</span>
 
@@ -3624,6 +3731,26 @@ however you can do so after you know how many frames there is.</p>
 <p>You must manually keep track of the frame index and make sure that you are not
 overwriting the same frame multiple times and that images are written sequentially.</p>
 </div>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="limnd2.nd2.Nd2Writer.setImageTile" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">setImageTile</span>
+
+
+<a href="#limnd2.nd2.Nd2Writer.setImageTile" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">setImageTile</span><span class="p">(</span><span class="n">seq_index</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n"><span title="limnd2.base.NumpyArrayLike">NumpyArrayLike</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Set image tile data using specified frame index and pixel coordinates.</p>
 
 
     </div>
