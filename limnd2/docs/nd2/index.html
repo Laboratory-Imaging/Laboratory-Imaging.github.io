@@ -991,6 +991,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.downsampleInfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      downsampleInfo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#limnd2.nd2.Nd2Reader.generateLoopIndexes" class="md-nav__link">
     <span class="md-ellipsis">
       generateLoopIndexes
@@ -1863,6 +1872,15 @@
   <a href="#limnd2.nd2.Nd2Reader.dimensionSizes" class="md-nav__link">
     <span class="md-ellipsis">
       dimensionSizes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.downsampleInfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      downsampleInfo
     </span>
   </a>
   
@@ -3012,6 +3030,29 @@ delayed chunks.</p>
 
         <p>Returns a dictionary with dimension names as keys and their sizes as values.</p>
 <p>TODO: consider replacing it with fixed order tuple</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="limnd2.nd2.Nd2Reader.downsampleInfo" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">downsampleInfo</span>
+
+
+<a href="#limnd2.nd2.Nd2Reader.downsampleInfo" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">downsampleInfo</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">include_frames</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="dict">dict</span></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Return JSON-serializable information about stored color-image pyramids.</p>
+<p>The report records chunk-map presence only; it does not decode image
+data. Set <code>include_frames</code> to include stored and missing sequence
+indices for each level.</p>
 
 
     </div>
