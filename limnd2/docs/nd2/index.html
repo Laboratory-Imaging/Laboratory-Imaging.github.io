@@ -910,6 +910,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.resultBinaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      resultBinaries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#limnd2.nd2.Nd2Reader.results" class="md-nav__link">
     <span class="md-ellipsis">
       results
@@ -1021,6 +1030,15 @@
   <a href="#limnd2.nd2.Nd2Reader.image" class="md-nav__link">
     <span class="md-ellipsis">
       image
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.resultBinaryData" class="md-nav__link">
+    <span class="md-ellipsis">
+      resultBinaryData
     </span>
   </a>
   
@@ -1806,6 +1824,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.resultBinaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      resultBinaries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#limnd2.nd2.Nd2Reader.results" class="md-nav__link">
     <span class="md-ellipsis">
       results
@@ -1917,6 +1944,15 @@
   <a href="#limnd2.nd2.Nd2Reader.image" class="md-nav__link">
     <span class="md-ellipsis">
       image
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limnd2.nd2.Nd2Reader.resultBinaryData" class="md-nav__link">
+    <span class="md-ellipsis">
+      resultBinaryData
     </span>
   </a>
   
@@ -2497,6 +2533,33 @@ example of how to use this class and how to read individual chunks, attributes, 
         <p>Attribute to get metadata of an <code>.nd2</code> file.</p>
 <p>See <a href="../metadata/#limnd2.metadata.PictureMetadata"><code>PictureMetadata</code></a> class for more information.</p>
 <p>In order to create an instance of <code>PictureMetadata</code> class, use <a href="../metadata_factory/#limnd2.metadata_factory.MetadataFactory"><code>MetadataFactory</code></a> class.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="limnd2.nd2.Nd2Reader.resultBinaries" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">resultBinaries</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#limnd2.nd2.Nd2Reader.resultBinaries" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">resultBinaries</span><span class="p">:</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="limnd2.results.BinaryResultItem">BinaryResultItem</span></span><span class="p">]</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>List binary layers stored in the accompanying results HDF5 file.</p>
+<p>Each item identifies the result it came from, its HDF5 location,
+metadata, pixel type, image shape, pyramid levels, and available frames.
+Pixel data is loaded only through :meth:<code>resultBinaryData</code>.</p>
 
     </div>
 
@@ -3201,6 +3264,26 @@ lower level frames of size (w // d, h // d).</p>
           </tr>
       </tbody>
     </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="limnd2.nd2.Nd2Reader.resultBinaryData" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">resultBinaryData</span>
+
+
+<a href="#limnd2.nd2.Nd2Reader.resultBinaryData" class="headerlink" title="Permanent link">&para;</a></h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">resultBinaryData</span><span class="p">(</span><span class="n">result_name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n">binary_name</span><span class="p">:</span> <span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n">frame_index</span><span class="p">:</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">downsample_level</span><span class="p">:</span> <span class="n"><span title="int">int</span></span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">rect</span><span class="p">:</span> <span class="n"><span title="tuple">tuple</span></span><span class="p">[</span><span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n"><span title="int">int</span></span><span class="p">,</span> <span class="n"><span title="int">int</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="limnd2.base.NumpyArrayLike">NumpyArrayLike</span></span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Return one binary-label frame from an accompanying results HDF5 file.</p>
 
 
     </div>
