@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530 340" width="400" role="img"
+ aria-label="4 by 6 wellplate with frame indexes in highlighted wells">
+<title>4 by 6 wellplate with frame indexes in highlighted wells</title>
+<rect x="0" y="0" width="530" height="340" rx="14" fill="#f6f8fb"/>
+<g font-family="system-ui, sans-serif" text-anchor="middle">
+<text x="60" y="35" font-size="15" fill="#42536a">1</text>
+<text x="138" y="35" font-size="15" fill="#42536a">2</text>
+<text x="216" y="35" font-size="15" fill="#42536a">3</text>
+<text x="294" y="35" font-size="15" fill="#42536a">4</text>
+<text x="372" y="35" font-size="15" fill="#42536a">5</text>
+<text x="450" y="35" font-size="15" fill="#42536a">6</text>
+<text x="19" y="85" font-size="15" fill="#42536a">A</text>
+<circle cx="60" cy="80" r="28" fill="#dcecff" stroke="#2765a7" stroke-width="2"/>
+<text x="60" y="77" font-size="12" font-weight="600" fill="#26374d">A1</text>
+<text x="60" y="93" font-size="10" fill="#244e7c">0</text>
+<circle cx="138" cy="80" r="28" fill="#dcecff" stroke="#2765a7" stroke-width="2"/>
+<text x="138" y="77" font-size="12" font-weight="600" fill="#26374d">A2</text>
+<text x="138" y="93" font-size="10" fill="#244e7c">1</text>
+<circle cx="216" cy="80" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="216" y="84" font-size="12" font-weight="600" fill="#26374d">A3</text>
+<circle cx="294" cy="80" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="294" y="84" font-size="12" font-weight="600" fill="#26374d">A4</text>
+<circle cx="372" cy="80" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="372" y="84" font-size="12" font-weight="600" fill="#26374d">A5</text>
+<circle cx="450" cy="80" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="450" y="84" font-size="12" font-weight="600" fill="#26374d">A6</text>
+<text x="19" y="155" font-size="15" fill="#42536a">B</text>
+<circle cx="60" cy="150" r="28" fill="#dcecff" stroke="#2765a7" stroke-width="2"/>
+<text x="60" y="147" font-size="12" font-weight="600" fill="#26374d">B1</text>
+<text x="60" y="163" font-size="10" fill="#244e7c">2</text>
+<circle cx="138" cy="150" r="28" fill="#dcecff" stroke="#2765a7" stroke-width="2"/>
+<text x="138" y="147" font-size="12" font-weight="600" fill="#26374d">B2</text>
+<text x="138" y="163" font-size="10" fill="#244e7c">3</text>
+<circle cx="216" cy="150" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="216" y="154" font-size="12" font-weight="600" fill="#26374d">B3</text>
+<circle cx="294" cy="150" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="294" y="154" font-size="12" font-weight="600" fill="#26374d">B4</text>
+<circle cx="372" cy="150" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="372" y="154" font-size="12" font-weight="600" fill="#26374d">B5</text>
+<circle cx="450" cy="150" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="450" y="154" font-size="12" font-weight="600" fill="#26374d">B6</text>
+<text x="19" y="225" font-size="15" fill="#42536a">C</text>
+<circle cx="60" cy="220" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="60" y="224" font-size="12" font-weight="600" fill="#26374d">C1</text>
+<circle cx="138" cy="220" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="138" y="224" font-size="12" font-weight="600" fill="#26374d">C2</text>
+<circle cx="216" cy="220" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="216" y="224" font-size="12" font-weight="600" fill="#26374d">C3</text>
+<circle cx="294" cy="220" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="294" y="224" font-size="12" font-weight="600" fill="#26374d">C4</text>
+<circle cx="372" cy="220" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="372" y="224" font-size="12" font-weight="600" fill="#26374d">C5</text>
+<circle cx="450" cy="220" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="450" y="224" font-size="12" font-weight="600" fill="#26374d">C6</text>
+<text x="19" y="295" font-size="15" fill="#42536a">D</text>
+<circle cx="60" cy="290" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="60" y="294" font-size="12" font-weight="600" fill="#26374d">D1</text>
+<circle cx="138" cy="290" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="138" y="294" font-size="12" font-weight="600" fill="#26374d">D2</text>
+<circle cx="216" cy="290" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="216" y="294" font-size="12" font-weight="600" fill="#26374d">D3</text>
+<circle cx="294" cy="290" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="294" y="294" font-size="12" font-weight="600" fill="#26374d">D4</text>
+<circle cx="372" cy="290" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="372" y="294" font-size="12" font-weight="600" fill="#26374d">D5</text>
+<circle cx="450" cy="290" r="28" fill="#ffffff" stroke="#aeb9c7" stroke-width="2"/>
+<text x="450" y="294" font-size="12" font-weight="600" fill="#26374d">D6</text>
+</g></svg>
