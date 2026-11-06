@@ -1808,6 +1808,19 @@ requested range must fit, including any empty wells.</p>
 </span></code></pre></div>
 </li>
 <li>
+<p><code>--wellplate-wells &lt;wells&gt;</code></p>
+<p>Assign distinct multipoint positions to a comma-separated list of wells in
+conversion order, for example <code>--wellplate-wells B2,B6,G11</code>. There must be
+exactly one list entry for each distinct multipoint position. The mapping
+repeats across time and Z; channels belong to the same frame. A well may
+appear more than once to assign multiple positions to it, for example
+<code>--wellplate-wells B2,B2,G11</code>.</p>
+<p>This option requires a multipoint dimension and cannot be combined with
+<code>--wellplate-start</code> or <code>--wellplate-end</code>, or with <code>--wellplate-mode off</code>.
+All listed wells must fit within any explicitly specified plate dimensions.
+Surround the list with quotes if it contains spaces.</p>
+</li>
+<li>
 <p><code>--wellplate-name &lt;name&gt;</code></p>
 <p>Override generated wellplate descriptor name.</p>
 </li>
