@@ -1832,7 +1832,8 @@ Surround the list with quotes if it contains spaces.</p>
 <ul>
 <li><code>has_wellplate_settings</code>: boolean flag indicating whether inferred wellplate settings are present.</li>
 <li><code>wellplate_settings</code>: object with inferred settings and preview values.
-  Typical keys include <code>name</code>, <code>rows</code>, <code>columns</code>, <code>row_naming</code>, <code>column_naming</code>, <code>frame_count</code>, <code>unique_well_count</code>, and <code>wells_preview</code>.</li>
+  Typical keys include <code>name</code>, <code>rows</code>, <code>columns</code>, <code>row_naming</code>, <code>column_naming</code>, <code>frame_count</code>, <code>unique_well_count</code>, and <code>wells_preview</code>.
+  <code>position_wells</code> contains the full well mapping in multipoint order, including repeated wells for multiple positions in one well. It is empty if a consistent position-to-well mapping cannot be determined.</li>
 </ul>
 <details class="example">
 <summary>Plan sequence with wellplate inference preview</summary>
