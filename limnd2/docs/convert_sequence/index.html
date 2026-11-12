@@ -1512,9 +1512,12 @@ we prepared a few examples that showcase how to use the <a href="./#limnd2.tools
 
     <div class="doc doc-contents ">
 
-        <p>Convert a sequence of images to ND2 format.
-This function takes a sequence of images (either as file paths or <a href="../convert_image_source/#limnd2.tools.conversion.LimImageSource.LimImageSource"><code>LimImageSource</code></a>  objects) and converts them to ND2 file.
-User can also provide custom attributes, experiment, and metadata for the ND2 file, if they are not provided, default values will be used.</p>
+        <p>Convert an ordered sequence of images to an ND2 file.</p>
+<p>The outer list in <code>input_data</code> defines the ND2 sequence order: its first
+entry becomes frame 0, its second entry becomes frame 1, and so on. The
+caller must sort the images to match the <code>experiment</code>'s nested dimension
+order, and provide a matching <code>experiment</code> for multidimensional sequences.
+See the examples below.</p>
 
 
 <table>
@@ -1531,15 +1534,24 @@ User can also provide custom attributes, experiment, and metadata for the ND2 fi
             </td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>1D or 2D list of file paths or <a href="../convert_image_source/#limnd2.tools.conversion.LimImageSource.LimImageSource"><code>LimImageSource</code></a>
-objects representing the images to be converted.
-If the input list is one dimensional, each image will be treated as a separate frame,
-if the input list is two dimensional, each sublist is treated as several channels in the same frame.</p>
+                <p>A non-empty list of file paths or
+<a href="../convert_image_source/#limnd2.tools.conversion.LimImageSource.LimImageSource"><code>LimImageSource</code></a>
+objects. For a flat list, each item supplies one frame. For a nested
+list, each inner list or tuple groups the channel images for one frame.
+Every group must have the same number of channels, in the same order.
+Use paths throughout the input or use <code>LimImageSource</code> objects
+throughout; do not mix the two forms.</p>
+<p>The outer list must follow the sequence order of <code>experiment</code>. In a
+standard experiment, the loop order is time, multipoint, then Z; Z
+changes fastest when all three loops are present.</p>
+<p>The caller must supply the correct ordering and number of frames.
+This function does not check filenames against the experiment or
+explicitly validate the experiment's frame count against the input.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><span title="str">str</span> | <span title="pathlib.Path">Path</span> | <a class="autorefs autorefs-internal" title="LimImageSource (limnd2.tools.conversion.LimImageSource.LimImageSource)" href="../convert_image_source/#limnd2.tools.conversion.LimImageSource.LimImageSource">LimImageSource</a></code>
+                      <code><span title="list">list</span>[<span title="str">str</span> | <span title="pathlib.Path">Path</span> | <a class="autorefs autorefs-internal" title="LimImageSource (limnd2.tools.conversion.LimImageSource.LimImageSource)" href="../convert_image_source/#limnd2.tools.conversion.LimImageSource.LimImageSource">LimImageSource</a>] | <span title="list">list</span>[<span title="list">list</span>[<span title="str">str</span> | <span title="pathlib.Path">Path</span> | <a class="autorefs autorefs-internal" title="LimImageSource (limnd2.tools.conversion.LimImageSource.LimImageSource)" href="../convert_image_source/#limnd2.tools.conversion.LimImageSource.LimImageSource">LimImageSource</a>]]</code>
                   </span>
               </p>
             </td>
@@ -1550,7 +1562,8 @@ if the input list is two dimensional, each sublist is treated as several channel
             </td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>Path where the resulting ND2 file will be saved.</p>
+                <p>Path where the resulting ND2 file will be saved. An existing file at
+this path is replaced.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -1566,7 +1579,7 @@ if the input list is two dimensional, each sublist is treated as several channel
             </td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>ND2 file atributes</p>
+                <p>ND2 image attributes. If omitted, they are calculated from the input.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>ND2 attributes must be correctly set, or the data may be shown incorrectly when viewing the ND2 file.
@@ -1581,7 +1594,7 @@ If you are unsure about the attributes, omit the argument and they will be calcu
 
   
       dataclass
-   (limnd2.ImageAttributes)" href="../attributes/#limnd2.attributes.ImageAttributes">ImageAttributes</a></code>
+   (limnd2.ImageAttributes)" href="../attributes/#limnd2.attributes.ImageAttributes">ImageAttributes</a> | None</code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -1596,13 +1609,20 @@ If you are unsure about the attributes, omit the argument and they will be calcu
             </td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>Experiment level for the ND2 file or a string describing what type of experiment to create <code>["timeloop", "zstack", "multipoint"]</code>.</p>
+                <p>Experiment describing the dimensions and loop order of <code>input_data</code>.
+Use an <code>ExperimentLevel</code> for a sequence with multiple dimensions. Its
+loop counts must match the input, and its loop order determines how
+each frame index is interpreted. <code>experiment.generateLoopIndexes(named=True)</code>
+can be used to inspect the expected coordinates in sequence order.</p>
+<p>For a single dimension, a string can create a <code>"timeloop"</code>, <code>"zstack"</code>,
+or <code>"multipoint"</code> experiment; <code>"t"</code>, <code>"z"</code>, and <code>"m"</code> are also accepted.
+If omitted, a multipoint experiment with one point per frame is created.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>ND2 experiment must also be correctly set (to match dimensions of the input data), if the experiment is omitted,
-the function will creare multipoint experiment with the number of points equal to the number of frames in the input data.</p>
-<p>It is also important that the files are ordered correctly with respect to the set experiment. In ideal case, files will be ordered
-by timeloop first, then multipoint, then zstack.</p>
+<p>The function writes the supplied experiment and frames without
+checking that their dimensions and order agree. An incorrect
+experiment or input order can associate images with the wrong
+time point, position, or Z plane.</p>
 </div>
               </div>
               <p>
@@ -1613,7 +1633,7 @@ by timeloop first, then multipoint, then zstack.</p>
 
   
       dataclass
-   (limnd2.ExperimentLevel)" href="../experiment/#limnd2.experiment.ExperimentLevel">ExperimentLevel</a> | <span title="str">str</span></code>
+   (limnd2.ExperimentLevel)" href="../experiment/#limnd2.experiment.ExperimentLevel">ExperimentLevel</a> | <span title="str">str</span> | None</code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -1628,10 +1648,12 @@ by timeloop first, then multipoint, then zstack.</p>
             </td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>Metadata for the ND2 file. If not provided, default metadata will be used (those are calulated based on number of channels).</p>
+                <p>Metadata for the ND2 file. If omitted, default metadata is created
+based on the number of channels.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>ND2 metadata must also be correctly set, number of channels in the metadata must match the number of channels in the input data.</p>
+<p>The number and order of channels in the metadata must match the
+channel images in <code>input_data</code>.</p>
 </div>
               </div>
               <p>
@@ -1642,7 +1664,7 @@ by timeloop first, then multipoint, then zstack.</p>
 
   
       dataclass
-   (limnd2.PictureMetadata)" href="../metadata/#limnd2.metadata.PictureMetadata">PictureMetadata</a></code>
+   (limnd2.PictureMetadata)" href="../metadata/#limnd2.metadata.PictureMetadata">PictureMetadata</a> | None</code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -1657,8 +1679,9 @@ by timeloop first, then multipoint, then zstack.</p>
             </td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>Optional wellplate description and frame mappings. Frame indexes must
-correspond to the sequence order of <code>input_data</code>.</p>
+                <p>Optional wellplate description and frame mappings. Each <code>seqIndex</code>
+refers to an outer-list index in <code>input_data</code>, so the mappings must
+match both the input frame order and the experiment.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -1692,17 +1715,55 @@ correspond to the sequence order of <code>input_data</code>.</p>
           <tr class="doc-section-item">
             <td>
                 <span class="doc-returns-annotation">
-                    <code><span title="pathlib.Path">Path</span></code>
+                    <code><span title="bool">bool</span></code>
                 </span>
             </td>
             <td class="doc-returns-details">
               <div class="doc-md-description">
-                <p>Path to the written ND2 file.</p>
+                <p><code>True</code> after the ND2 file is written successfully.</p>
               </div>
             </td>
           </tr>
       </tbody>
     </table>
+
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <p>The following example has one image per frame and an experiment with two
+time points, two multipoint positions, and two Z planes. The filenames are
+illustrative; replace them with paths to your images. With the time →
+multipoint → Z order, Z changes fastest:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">limnd2</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">limnd2.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">convert_sequence_to_nd2</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">experiment</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">ExperimentFactory</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">createExperiment</span><span class="p">()</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">images</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="s2">&quot;t0_m0_z0.tif&quot;</span><span class="p">,</span>  <span class="c1"># frame 0</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="s2">&quot;t0_m0_z1.tif&quot;</span><span class="p">,</span>  <span class="c1"># frame 1</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="s2">&quot;t0_m1_z0.tif&quot;</span><span class="p">,</span>  <span class="c1"># frame 2</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="s2">&quot;t0_m1_z1.tif&quot;</span><span class="p">,</span>  <span class="c1"># frame 3</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="s2">&quot;t1_m0_z0.tif&quot;</span><span class="p">,</span>  <span class="c1"># frame 4</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="s2">&quot;t1_m0_z1.tif&quot;</span><span class="p">,</span>  <span class="c1"># frame 5</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="s2">&quot;t1_m1_z0.tif&quot;</span><span class="p">,</span>  <span class="c1"># frame 6</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="s2">&quot;t1_m1_z1.tif&quot;</span><span class="p">,</span>  <span class="c1"># frame 7</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">]</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">convert_sequence_to_nd2</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="s2">&quot;single_channel.nd2&quot;</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="n">experiment</span><span class="p">)</span>
+</span></code></pre></div>
+<p>To combine separate channel images into the same frame, use one inner
+list per time/Z combination. Here every frame has a green channel followed
+by a red channel; the experiment has two time points and two Z planes:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">limnd2</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">limnd2.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">convert_sequence_to_nd2</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">experiment</span> <span class="o">=</span> <span class="n">limnd2</span><span class="o">.</span><span class="n">ExperimentFactory</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">createExperiment</span><span class="p">()</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">images</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="p">[</span><span class="s2">&quot;t0_z0_green.tif&quot;</span><span class="p">,</span> <span class="s2">&quot;t0_z0_red.tif&quot;</span><span class="p">],</span>  <span class="c1"># frame 0</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="p">[</span><span class="s2">&quot;t0_z1_green.tif&quot;</span><span class="p">,</span> <span class="s2">&quot;t0_z1_red.tif&quot;</span><span class="p">],</span>  <span class="c1"># frame 1</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="p">[</span><span class="s2">&quot;t1_z0_green.tif&quot;</span><span class="p">,</span> <span class="s2">&quot;t1_z0_red.tif&quot;</span><span class="p">],</span>  <span class="c1"># frame 2</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="p">[</span><span class="s2">&quot;t1_z1_green.tif&quot;</span><span class="p">,</span> <span class="s2">&quot;t1_z1_red.tif&quot;</span><span class="p">],</span>  <span class="c1"># frame 3</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">]</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">convert_sequence_to_nd2</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="s2">&quot;two_channels.nd2&quot;</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="n">experiment</span><span class="p">)</span>
+</span></code></pre></div>
 
 
     </div>
